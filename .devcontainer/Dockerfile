@@ -25,10 +25,10 @@ RUN apt-get update \
   git
 
 # Install pyenv
-RUN git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
-  && pyenv install ${PYTHON_VERSION} \
-  && pyenv global ${PYTHON_VERSION} \
-  && pyenv rehash \
-  && python -m pip install --upgrade pip \
-  && pip install matplotlib mpi4py \
-  && chmod -R 777 /.pyenv
+# RUN git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
+#   && pyenv install ${PYTHON_VERSION} \
+#   && pyenv global ${PYTHON_VERSION} \
+#   && pyenv rehash \
+#   && python -m pip install --upgrade pip \
+#   && pip install matplotlib mpi4py \
+#   && chmod -R 777 /.pyenv
