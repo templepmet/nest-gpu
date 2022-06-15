@@ -14,6 +14,7 @@ RUN groupadd --gid $GID $USERNAME \
 	&& echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USERNAME \
 	&& chmod 0440 /etc/sudoers.d/$USERNAME
 
+RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 	ca-certificates \
@@ -21,12 +22,14 @@ RUN apt-get update \
 	curl \
 	wget \
 	patch \
+	less \
 	make \
 	cmake \
 	gcc \
 	g++ \
 	openmpi-bin \
 	libopenmpi-dev \
+	libomp-dev \
 	openssl \
 	libssl-dev \
 	libbz2-dev \
@@ -34,7 +37,10 @@ RUN apt-get update \
 	libsqlite3-dev \
 	libffi-dev \
 	zlib1g-dev \
-	liblzma-dev
+	liblzma-dev \
+	libtool \
+	libtool-bin \
+	locales-all
 ENV CC=gcc
 ENV CXX=g++
 ENV CUDA_PATH=/usr/local/cuda
@@ -49,11 +55,20 @@ RUN git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
 	&& pyenv rehash
 
 # Install pip package
-RUN pip install numpy
+RUN pip install matplotlib mpi4py
 
 # Change non-root user
 USER ${USERNAME}
+
+# Install nestgpu
+ARG GIT_USER
+ARG GIT_TOKEN
+ENV NEST_GPU=/usr/local/nestgpu
+ENV PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
 WORKDIR /home/${USERNAME}
+RUN git clone https://${GIT_USER}:${GIT_TOKEN}@github.com/${GIT_USER}/nest-gpu.git/ installed_nest-gpu
+WORKDIR /home/${USERNAME}/installed_nest-gpu
+RUN ./install.sh
 
 # For singularity
 # ENTRYPOINT poetry install

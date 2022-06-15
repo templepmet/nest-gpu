@@ -7,6 +7,8 @@ services:
         USERNAME: "dev"
         UID: $UID
         GID: $GID
+        GIT_USER: $GIT_USER
+        GIT_TOKEN: $GIT_TOKEN
     deploy:
       resources:
         reservations:
