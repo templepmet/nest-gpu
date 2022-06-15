@@ -1,34 +1,62 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/cpp/.devcontainer/base.Dockerfile
+ARG VARIANT="11.6.2-devel-ubuntu20.04"
+FROM nvcr.io/nvidia/cuda:${VARIANT}
 
-# [Choice] Debian / Ubuntu version (use Debian 11/9, Ubuntu 18.04/21.04 on local arm64/Apple Silicon): debian-11, debian-10, debian-9, ubuntu-21.04, ubuntu-20.04, ubuntu-18.04
-ARG VARIANT="bullseye"
-FROM mcr.microsoft.com/vscode/devcontainers/cpp:0-${VARIANT}
-
-# [Optional] Uncomment this section to install additional packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
 ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBCONF_NOWARNINGS=yes
 
-ENV PYTHON_VERSION="3.9.5"
-ENV PYENV_ROOT="/.pyenv"
-ENV PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
-ENV PWD="/workspaces/nest-gpu"
-# ENV QULACS_OSAKA_PACKAGE="qulacs_osaka"
-# ENV QULACS_OSAKA_VERSION="0.3.1"
-# Add build artifact to PYTHONPATH and python can find qulacs.
-# Egg file name might vary depending on qulacs and python version.
-# ENV PYTHONPATH="${PWD}/dist/${QULACS_OSAKA_PACKAGE}-${QULACS_OSAKA_VERSION}-cp39-cp39-linux_x86_64.whl:${PYTHONPATH}"
-# ENV PYTHONPATH="${PWD}/build/lib.linux-x86_64-3.9:${PYTHONPATH}"
+# Create non-root user
+RUN apt-get update && apt-get install -y sudo
+ARG USERNAME
+ARG UID
+ARG GID
+RUN groupadd --gid $GID $USERNAME \
+	&& useradd --uid $UID --gid $GID -m $USERNAME -s /bin/bash \
+	&& echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USERNAME \
+	&& chmod 0440 /etc/sudoers.d/$USERNAME
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends \
-  git
+	&& apt-get install -y --no-install-recommends \
+	ca-certificates \
+	git \
+	curl \
+	wget \
+	patch \
+	make \
+	cmake \
+	gcc \
+	g++ \
+	openmpi-bin \
+	libopenmpi-dev \
+	openssl \
+	libssl-dev \
+	libbz2-dev \
+	libreadline-dev \
+	libsqlite3-dev \
+	libffi-dev \
+	zlib1g-dev \
+	liblzma-dev
+ENV CC=gcc
+ENV CXX=g++
+ENV CUDA_PATH=/usr/local/cuda
 
 # Install pyenv
-# RUN git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
-#   && pyenv install ${PYTHON_VERSION} \
-#   && pyenv global ${PYTHON_VERSION} \
-#   && pyenv rehash \
-#   && python -m pip install --upgrade pip \
-#   && pip install matplotlib mpi4py \
-#   && chmod -R 777 /.pyenv
+ENV PYTHON_VERSION="3.9.12"
+ENV PYENV_ROOT="/home/${USERNAME}/.pyenv"
+ENV PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
+RUN git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
+	&& pyenv install -v ${PYTHON_VERSION} \
+	&& pyenv global ${PYTHON_VERSION} \
+	&& pyenv rehash
+
+# Install pip package
+RUN pip install numpy
+
+# Change non-root user
+USER ${USERNAME}
+
+# clone cuQuantum v22.05 <- not need
+WORKDIR /home/${USERNAME}
+# RUN git clone https://github.com/NVIDIA/cuQuantum.git -b v22.05.0
+
+# For singularity
+# ENTRYPOINT poetry install

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  cuda:
+    build:
+      context: .
+      args:
+        USERNAME: "dev"
+        UID: $UID
+        GID: $GID
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    tty: true
+    volumes:
+      - ..:/home/dev/nest-gpu
+      # - /home/${USERNAME}/.gnupg:/home/dev/.gnupg
