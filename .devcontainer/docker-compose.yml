@@ -15,4 +15,3 @@ services:
     tty: true
     volumes:
       - ..:/home/dev/nest-gpu
-      # - /home/${USERNAME}/.gnupg:/home/dev/.gnupg

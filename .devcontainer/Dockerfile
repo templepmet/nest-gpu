@@ -53,10 +53,7 @@ RUN pip install numpy
 
 # Change non-root user
 USER ${USERNAME}
-
-# clone cuQuantum v22.05 <- not need
 WORKDIR /home/${USERNAME}
-# RUN git clone https://github.com/NVIDIA/cuQuantum.git -b v22.05.0
 
 # For singularity
 # ENTRYPOINT poetry install
