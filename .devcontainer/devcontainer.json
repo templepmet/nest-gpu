@@ -3,7 +3,7 @@
 {
 	"name": "nest-gpu",
 	"dockerComposeFile": "docker-compose.yml",
-	"service": "cuda",
+	"service": "base",
 	"remoteUser": "dev",
 	"workspaceFolder": "/home/dev/nest-gpu",
 

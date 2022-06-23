@@ -6,9 +6,9 @@ ENV DEBCONF_NOWARNINGS=yes
 
 # Create non-root user
 RUN apt-get update && apt-get install -y sudo
-ARG USERNAME
-ARG UID
-ARG GID
+ARG USERNAME="dev"
+ARG UID=1000
+ARG GID=1000
 RUN groupadd --gid $GID $USERNAME \
 	&& useradd --uid $UID --gid $GID -m $USERNAME -s /bin/bash \
 	&& echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USERNAME \
@@ -57,18 +57,13 @@ RUN git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
 # Install pip package
 RUN pip install matplotlib mpi4py
 
-# Change non-root user
-USER ${USERNAME}
-
 # Install nestgpu
 ARG GIT_USER
 ARG GIT_TOKEN
 ENV NEST_GPU=/usr/local/nestgpu
 ENV PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
+USER ${USERNAME}
 WORKDIR /home/${USERNAME}
 RUN git clone https://${GIT_USER}:${GIT_TOKEN}@github.com/${GIT_USER}/nest-gpu.git/ installed_nest-gpu
 WORKDIR /home/${USERNAME}/installed_nest-gpu
 RUN ./install.sh
-
-# For singularity
-# ENTRYPOINT poetry install

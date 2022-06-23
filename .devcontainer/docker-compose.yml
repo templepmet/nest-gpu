@@ -1,6 +1,7 @@
 version: '3'
 services:
-  cuda:
+  base:
+    container_name: nest-gpu
     build:
       context: .
       args:

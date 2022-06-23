@@ -6,6 +6,7 @@ from random import randrange
 
 ngpu.ConnectMpiInit();
 mpi_np = ngpu.MpiNp()
+print('mpi_np:', mpi_np)
 
 if (mpi_np != 2) | (len(sys.argv) != 2):
     print ("Usage: mpirun -np 2 python %s n_neurons" % sys.argv[0])
