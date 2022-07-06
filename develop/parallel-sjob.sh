@@ -3,10 +3,9 @@
 #SBATCH -J nestgpu              # Job name
 #SBATCH -o job.%j.out           # Name of stdout output file (%j expands to %jobId)
 #SBATCH -e job.%j.err           # Name of stderr output file (%j expands to %jobId)
-#SBATCH -N 2                    # Total number of nodes requested
-#SBATCH -n 2                    # Total number of mpi tasks requested
+#SBATCH -N 4                    # Total number of nodes requested
+#SBATCH -n 4                    # Total number of mpi tasks requested
 #SBATCH -t 00:30:00             # Run time (hh:mm:ss) - 1.5 hours
-# # SBATCH --nodelist c16
 
 echo Runnning on host `hostname`
 echo "Starting at `date`"
@@ -25,7 +24,8 @@ echo "Current working directory is `pwd`"
 # mpirun --mca btl openib,self,vader --mca btl_base_verbose 100 python hpc_benchmark.py
 
 # for Gigabit network
-mpirun --mca btl tcp,self,vader singularity exec --nv singularity/nest-gpu_without_pmix.sif python python/examples/brunel_mpi.py 10000
+# mpirun --mca btl tcp,self,vader singularity exec --nv nest-gpu.sif python brunel_mpi_without_remote.py 10000
+mpirun --mca btl tcp,self,vader singularity exec --nv nest-gpu.sif nvidia-smi
 
 # mpirun --mca btl tcp,self,vader singularity exec --nv singularity/nest-gpu.sif python hellompi.py # success
 # singularity exec -e --nv nest-gpu.sif python python/examples/example1.py # success

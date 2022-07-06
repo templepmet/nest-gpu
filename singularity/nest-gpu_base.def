@@ -1,6 +1,9 @@
 Bootstrap: docker
 From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 
+%files
+	.. /home/dev/installed_nest-gpu
+
 %environment
 	export USERNAME=dev
 	# export PATH="/home/${USERNAME}/.local/bin:$PATH"
@@ -93,8 +96,8 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	# Install nestgpu
 	export NEST_GPU=/usr/local/nestgpu
 	export PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
-	cd /home/${USERNAME}
-	git clone https://${GIT_USER:HOST}:${GIT_TOKEN:HOST}@github.com/${GIT_USER:HOST}/nest-gpu.git/ installed_nest-gpu
+	# cd /home/${USERNAME}
+	# git clone https://${GIT_USER:HOST}:${GIT_TOKEN:HOST}@github.com/${GIT_USER:HOST}/nest-gpu.git/ installed_nest-gpu
 	cd /home/${USERNAME}/installed_nest-gpu
 	./install.sh
 
