@@ -131,18 +131,18 @@ V1=[row[1] for row in data_list]
 V2=[row[2] for row in data_list]
 V3=[row[3] for row in data_list]
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-fig1 = plt.figure(1)
-fig1.suptitle("host " + str(mpi_id), fontsize=20)
-plt.plot(t, V1)
+# fig1 = plt.figure(1)
+# fig1.suptitle("host " + str(mpi_id), fontsize=20)
+# plt.plot(t, V1)
 
-fig2 = plt.figure(2)
-fig2.suptitle("host " + str(mpi_id), fontsize=20)
-plt.plot(t, V2)
+# fig2 = plt.figure(2)
+# fig2.suptitle("host " + str(mpi_id), fontsize=20)
+# plt.plot(t, V2)
 
-fig3 = plt.figure(3)
-fig3.suptitle("host " + str(mpi_id), fontsize=20)
-plt.plot(t, V3)
+# fig3 = plt.figure(3)
+# fig3.suptitle("host " + str(mpi_id), fontsize=20)
+# plt.plot(t, V3)
 
-plt.show()
+# plt.show()

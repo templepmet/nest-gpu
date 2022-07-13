@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/src/"
+            ],
+            "defines": [],
+            "compilerPath": "/opt/ohpc/pub/compiler/gcc/8.3.0/bin/gcc",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

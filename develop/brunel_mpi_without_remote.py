@@ -82,14 +82,14 @@ pg_syn_dict={"weight": poiss_weight, "delay": poiss_delay,
 ngpu.Connect(pg, neuron, pg_conn_dict, pg_syn_dict)
 
 
-filename = "test_brunel_mpi" + str(mpi_id) + ".dat"
-i_neuron_arr = [neuron[0], neuron[randrange(n_neurons)], neuron[n_neurons-1]]
-i_receptor_arr = [0, 0, 0]
+# filename = "test_brunel_mpi" + str(mpi_id) + ".dat"
+# i_neuron_arr = [neuron[0], neuron[randrange(n_neurons)], neuron[n_neurons-1]]
+# i_receptor_arr = [0, 0, 0]
 # any set of neuron indexes
 # create multimeter record of V_m
-var_name_arr = ["V_m", "V_m", "V_m"]
-record = ngpu.CreateRecord(filename, var_name_arr, i_neuron_arr,
-                                i_receptor_arr)
+# var_name_arr = ["V_m", "V_m", "V_m"]
+# record = ngpu.CreateRecord(filename, var_name_arr, i_neuron_arr,
+                                # i_receptor_arr)
 
 ######################################################################
 ## WRITE HERE REMOTE CONNECTIONS
@@ -121,28 +121,28 @@ record = ngpu.CreateRecord(filename, var_name_arr, i_neuron_arr,
 
 ngpu.Simulate()
 
-nrows=ngpu.GetRecordDataRows(record)
-ncol=ngpu.GetRecordDataColumns(record)
+# nrows=ngpu.GetRecordDataRows(record)
+# ncol=ngpu.GetRecordDataColumns(record)
 #print nrows, ncol
 
-data_list = ngpu.GetRecordData(record)
-t=[row[0] for row in data_list]
-V1=[row[1] for row in data_list]
-V2=[row[2] for row in data_list]
-V3=[row[3] for row in data_list]
+# data_list = ngpu.GetRecordData(record)
+# t=[row[0] for row in data_list]
+# V1=[row[1] for row in data_list]
+# V2=[row[2] for row in data_list]
+# V3=[row[3] for row in data_list]
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-fig1 = plt.figure(1)
-fig1.suptitle("host " + str(mpi_id), fontsize=20)
-plt.plot(t, V1)
+# fig1 = plt.figure(1)
+# fig1.suptitle("host " + str(mpi_id), fontsize=20)
+# plt.plot(t, V1)
 
-fig2 = plt.figure(2)
-fig2.suptitle("host " + str(mpi_id), fontsize=20)
-plt.plot(t, V2)
+# fig2 = plt.figure(2)
+# fig2.suptitle("host " + str(mpi_id), fontsize=20)
+# plt.plot(t, V2)
 
-fig3 = plt.figure(3)
-fig3.suptitle("host " + str(mpi_id), fontsize=20)
-plt.plot(t, V3)
+# fig3 = plt.figure(3)
+# fig3.suptitle("host " + str(mpi_id), fontsize=20)
+# plt.plot(t, V3)
 
-plt.show()
+# plt.show()
