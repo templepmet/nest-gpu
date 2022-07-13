@@ -21,10 +21,11 @@ echo "Current working directory is `pwd`"
 # execute ompi_info for more details
 
 # for Infiniband
-# mpirun --mca btl openib,self,vader --mca btl_base_verbose 100 singularity exec --nv nest-gpu.sif python brunel_mpi_without_remote.py 100000 > result.txt
+# mpirun --mca btl openib,self,vader singularity exec --nv nest-gpu.sif python brunel_mpi_without_remote.py 100000 > result.txt
 
 # for Gigabit network
-mpirun --mca btl tcp,self,vader singularity exec --nv nest-gpu.sif python brunel_mpi_without_remote.py 100000 > result/result${SLURM_JOB_ID}.txt
+mpirun --mca btl tcp,self,vader singularity exec --nv nest-gpu.sif python brunel_mpi_without_remote.py 1000000
+# mpirun --mca btl tcp,self,vader singularity exec --nv nest-gpu.sif python brunel_mpi_without_remote.py 100000 > result/result_${SLURM_JOB_ID}.txt
 
 echo ending
 echo Time is `date`

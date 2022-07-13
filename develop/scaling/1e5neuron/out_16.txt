@@ -1,0 +1,2168 @@
+Runnning on host c1
+Starting at Thu Jul 14 06:31:51 JST 2022
+Running on hosts: c[1-16]
+Running on 16 nodes.
+Running 16 tasks.
+Current working directory is /home/y-terans/workspace/nest-gpu/develop
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+mpi_np: 16
+Building on host  6  ...
+mpi_np: 16
+Building on host  9  ...
+mpi_np: 16
+Building on host  7  ...
+mpi_np: 16
+Building on host  13  ...
+mpi_np: 16
+Building on host  0  ...
+mpi_np: 16
+Building on host  1  ...
+mpi_np: 16
+Building on host  15  ...
+mpi_np: 16
+Building on host  14  ...
+mpi_np: 16
+mpi_np: 16
+Building on host  4  ...
+Building on host  2  ...
+mpi_np: 16
+Building on host  11  ...
+mpi_np: 16
+Building on host  10  ...
+mpi_np: 16
+Building on host  3  ...
+mpi_np: 16
+Building on host  5  ...
+mpi_np: 16
+Building on host  8  ...
+mpi_np: 16
+Building on host  12  ...
+MPI rank 13 : Calibrating ...
+MPI rank 5 : Calibrating ...
+MPI rank 4 : Calibrating ...
+MPI rank 3 : Calibrating ...
+MPI rank 9 : Calibrating ...
+MPI rank 12 : Calibrating ...
+MPI rank 6 : Calibrating ...
+MPI rank 7 : Calibrating ...
+MPI rank 0 : Calibrating ...
+MPI rank 8 : Calibrating ...
+MPI rank 11 : Calibrating ...
+MPI rank 1 : Calibrating ...
+MPI rank 15 : Calibrating ...
+MPI rank 10 : Calibrating ...
+MPI rank 2 : Calibrating ...
+MPI rank 14 : Calibrating ...
+MPI rank 0 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 12 : Simulating ...
+Neural activity simulation time: 1000.000
+MPI rank 2 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 3 : Simulating ...
+Neural activity simulation time: 1000.000
+MPI rank 15 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 1 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 8 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 14 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 6 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 9 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 5 : Simulating ...
+Neural activity simulation time: 1000.000
+MPI rank 7 : Simulating ...
+Neural activity simulation time: 1000.000
+MPI rank 4 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 10 : Simulating ...
+Neural activity simulation time: 1000.000
+MPI rank 11 : Simulating ...
+Neural activity simulation time: 1000.000
+MPI rank 13 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+0.000
+0.000
+0.000
+0.000
+0.000
+0.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+60.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+70.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+80.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+90.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+100.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+110.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+120.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+130.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+140.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+150.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+160.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+170.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+180.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+190.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+200.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+210.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+220.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+230.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+240.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+250.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+260.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+270.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+280.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+290.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+300.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+310.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+320.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+330.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+340.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+350.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+360.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+370.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+380.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+390.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+400.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+410.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+420.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+430.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+440.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+450.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+460.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+470.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+480.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+490.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+500.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+510.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+520.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+530.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+540.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+550.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+560.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+570.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+580.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+590.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+600.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+610.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+620.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+630.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+640.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+650.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+660.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+670.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+680.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+690.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+700.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+710.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+720.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+730.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+740.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+750.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+760.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+770.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+780.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+790.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+800.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+810.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+820.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+830.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+840.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+850.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+860.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+870.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+880.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+890.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+900.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+910.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+920.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+930.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+940.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+950.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+960.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+970.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+980.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+990.000
+1000.000
+1000.000
+1000.000
+
+MPI rank 0 :   SpikeBufferUpdate_time: 0.191107
+MPI rank 0 :   poisson_generator_time: 1.5295
+MPI rank 0 :   neuron_Update_time: 4.74733
+MPI rank 0 :   copy_ext_spike_time: 0.0620461
+MPI rank 0 :   SendExternalSpike_time: 0.073507
+MPI rank 0 :   SendSpikeToRemote_time: 0.468806
+MPI rank 0 :   RecvSpikeFromRemote_time: 12.4762
+MPI rank 0 :   NestedLoop_time: 0.0202507
+MPI rank 0 :   GetSpike_time: 0.348011
+MPI rank 0 :   SpikeReset_time: 0.0640065
+MPI rank 0 :   ExternalSpikeReset_time: 0.0763946
+MPI rank 0 :   SendSpikeToRemote_MPI_time: 0.375366
+MPI rank 0 :   RecvSpikeFromRemote_MPI_time: 12.4727
+MPI rank 0 :   SendSpikeToRemote_CUDAcp_time: 0.062797
+MPI rank 0 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 0 :   JoinSpike_time: 0.0245459
+MPI rank 0 : Building time: 5.37037
+MPI rank 0 : Simulation time: 21.6448
+1000.000
+1000.000
+1000.000
+1000.000
+1000.000
+1000.000
+1000.000
+1000.000
+1000.000
+1000.000
+1000.000
+1000.000
+1000.000
+
+
+
+
+
+
+
+MPI rank 15 :   SpikeBufferUpdate_time: 0.350257
+MPI rank 15 :   poisson_generator_time: 2.5348
+MPI rank 15 :   neuron_Update_time: 15.1141
+MPI rank 15 :   copy_ext_spike_time: 0.0594065
+
+
+
+
+
+
+
+
+MPI rank 14 :   SpikeBufferUpdate_time: 0.351917
+MPI rank 14 :   poisson_generator_time: 2.55208
+MPI rank 14 :   neuron_Update_time: 15.3149
+MPI rank 14 :   copy_ext_spike_time: 0.0611527
+MPI rank 14 :   SendExternalSpike_time: 0.0646548
+MPI rank 14 :   SendSpikeToRemote_time: 0.484892
+MPI rank 14 :   RecvSpikeFromRemote_time: 0.625015
+MPI rank 6 :   SpikeBufferUpdate_time: 0.352595
+MPI rank 6 :   poisson_generator_time: 2.53504
+MPI rank 6 :   neuron_Update_time: 15.1542
+MPI rank 6 :   copy_ext_spike_time: 0.0588895
+MPI rank 6 :   SendExternalSpike_time: 0.064834
+MPI rank 6 :   SendSpikeToRemote_time: 0.511158
+MPI rank 6 :   RecvSpikeFromRemote_time: 0.443613
+MPI rank 6 :   NestedLoop_time: 0.019874
+MPI rank 6 :   GetSpike_time: 1.01386
+MPI rank 6 :   SpikeReset_time: 0.0550721
+MPI rank 6 :   ExternalSpikeReset_time: 0.100129
+MPI rank 6 :   SendSpikeToRemote_MPI_time: 0.419325
+MPI rank 6 :   RecvSpikeFromRemote_MPI_time: 0.44017
+MPI rank 6 :   SendSpikeToRemote_CUDAcp_time: 0.0631216
+MPI rank 6 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 6 :   JoinSpike_time: 0.0222334
+MPI rank 6 : Building time: 5.63794
+MPI rank 6 : Simulation time: 21.6449
+MPI rank 9 :   SpikeBufferUpdate_time: 0.351687
+MPI rank 9 :   poisson_generator_time: 2.56407
+MPI rank 9 :   neuron_Update_time: 15.4753
+MPI rank 9 :   copy_ext_spike_time: 0.0593301
+MPI rank 9 :   SendExternalSpike_time: 0.0653973
+MPI rank 9 :   SendSpikeToRemote_time: 0.521597
+MPI rank 9 :   RecvSpikeFromRemote_time: 0.32834
+MPI rank 5 :   SpikeBufferUpdate_time: 0.35112
+MPI rank 5 :   poisson_generator_time: 2.55698
+MPI rank 5 :   neuron_Update_time: 15.4179
+MPI rank 5 :   copy_ext_spike_time: 0.058861
+MPI rank 5 :   SendExternalSpike_time: 0.0649473
+MPI rank 5 :   SendSpikeToRemote_time: 0.514138
+MPI rank 7 :   SpikeBufferUpdate_time: 0.351558
+MPI rank 7 :   poisson_generator_time: 2.54285
+MPI rank 7 :   neuron_Update_time: 15.2384
+MPI rank 7 :   copy_ext_spike_time: 0.0586402
+MPI rank 7 :   SendExternalSpike_time: 0.0641915
+MPI rank 7 :   SendSpikeToRemote_time: 0.495193
+MPI rank 7 :   RecvSpikeFromRemote_time: 0.476504
+MPI rank 4 :   SpikeBufferUpdate_time: 0.349039
+MPI rank 4 :   poisson_generator_time: 2.55937
+MPI rank 4 :   neuron_Update_time: 15.4495
+MPI rank 4 :   copy_ext_spike_time: 0.0593602
+MPI rank 10 :   SpikeBufferUpdate_time: 0.35116
+MPI rank 10 :   poisson_generator_time: 2.54445
+MPI rank 10 :   neuron_Update_time: 15.2448
+MPI rank 10 :   copy_ext_spike_time: 0.0595001
+MPI rank 10 :   SendExternalSpike_time: 0.0639064
+MPI rank 11 :   SpikeBufferUpdate_time: 0.349902
+MPI rank 11 :   poisson_generator_time: 2.5475
+MPI rank 11 :   neuron_Update_time: 15.2934
+MPI rank 13 :   SpikeBufferUpdate_time: 0.351582
+MPI rank 13 :   poisson_generator_time: 2.55924
+MPI rank 13 :   neuron_Update_time: 15.4032
+MPI rank 12 :   SpikeBufferUpdate_time: 0.351432
+MPI rank 12 :   poisson_generator_time: 2.55217
+MPI rank 12 :   neuron_Update_time: 15.3226
+MPI rank 2 :   SpikeBufferUpdate_time: 0.188793
+MPI rank 2 :   poisson_generator_time: 1.53445
+MPI rank 2 :   neuron_Update_time: 4.7434
+MPI rank 2 :   copy_ext_spike_time: 0.0617386
+MPI rank 2 :   SendExternalSpike_time: 0.0736053
+MPI rank 2 :   SendSpikeToRemote_time: 0.475419
+MPI rank 2 :   RecvSpikeFromRemote_time: 12.5752
+MPI rank 3 :   SpikeBufferUpdate_time: 0.351421
+MPI rank 3 :   poisson_generator_time: 2.55721
+MPI rank 3 :   neuron_Update_time: 15.4135
+MPI rank 3 :   copy_ext_spike_time: 0.0597917
+MPI rank 3 :   SendExternalSpike_time: 0.0648546
+MPI rank 3 :   SendSpikeToRemote_time: 0.523127
+MPI rank 15 :   SendExternalSpike_time: 0.0643336
+MPI rank 15 :   SendSpikeToRemote_time: 0.470073
+MPI rank 15 :   RecvSpikeFromRemote_time: 0.934864
+MPI rank 15 :   NestedLoop_time: 0.0190098
+MPI rank 15 :   GetSpike_time: 1.01409
+MPI rank 15 :   SpikeReset_time: 0.0548275
+MPI rank 15 :   ExternalSpikeReset_time: 0.098966
+MPI rank 15 :   SendSpikeToRemote_MPI_time: 0.379723
+MPI rank 15 :   RecvSpikeFromRemote_MPI_time: 0.931495
+MPI rank 1 :   SpikeBufferUpdate_time: 0.191735
+MPI rank 1 :   poisson_generator_time: 1.55299
+MPI rank 1 :   neuron_Update_time: 4.74041
+MPI rank 1 :   copy_ext_spike_time: 0.0622926
+MPI rank 8 :   SpikeBufferUpdate_time: 0.347061
+MPI rank 8 :   poisson_generator_time: 2.51915
+MPI rank 8 :   neuron_Update_time: 15.025
+MPI rank 8 :   copy_ext_spike_time: 0.0587443
+MPI rank 2 :   NestedLoop_time: 0.0208666
+MPI rank 2 :   GetSpike_time: 0.347376
+MPI rank 2 :   SpikeReset_time: 0.0638149
+MPI rank 2 :   ExternalSpikeReset_time: 0.0762996
+MPI rank 2 :   SendSpikeToRemote_MPI_time: 0.382122
+MPI rank 2 :   RecvSpikeFromRemote_MPI_time: 12.5716
+MPI rank 2 :   SendSpikeToRemote_CUDAcp_time: 0.0625233
+MPI rank 3 :   RecvSpikeFromRemote_time: 0.27502
+MPI rank 3 :   NestedLoop_time: 0.0189105
+MPI rank 3 :   GetSpike_time: 1.01281
+MPI rank 3 :   SpikeReset_time: 0.0542572
+MPI rank 3 :   ExternalSpikeReset_time: 0.100453
+MPI rank 15 :   SendSpikeToRemote_CUDAcp_time: 0.0618725
+MPI rank 15 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 15 :   JoinSpike_time: 0.0222644
+MPI rank 15 : Building time: 5.23665
+MPI rank 15 : Simulation time: 21.6449
+MPI rank 1 :   SendExternalSpike_time: 0.0748604
+MPI rank 1 :   SendSpikeToRemote_time: 0.469191
+MPI rank 1 :   RecvSpikeFromRemote_time: 12.5099
+MPI rank 1 :   NestedLoop_time: 0.020854
+MPI rank 1 :   GetSpike_time: 0.348238
+MPI rank 1 :   SpikeReset_time: 0.0642792
+MPI rank 8 :   SendExternalSpike_time: 0.0643739
+MPI rank 8 :   SendSpikeToRemote_time: 0.488215
+MPI rank 8 :   RecvSpikeFromRemote_time: 0.729114
+MPI rank 8 :   NestedLoop_time: 0.0193701
+MPI rank 8 :   GetSpike_time: 1.01578
+MPI rank 8 :   SpikeReset_time: 0.0547635
+MPI rank 14 :   NestedLoop_time: 0.0186446
+MPI rank 14 :   GetSpike_time: 1.01377
+MPI rank 14 :   SpikeReset_time: 0.0551821
+MPI rank 14 :   ExternalSpikeReset_time: 0.0998107
+MPI rank 14 :   SendSpikeToRemote_MPI_time: 0.393472
+MPI rank 14 :   RecvSpikeFromRemote_MPI_time: 0.621528
+MPI rank 9 :   NestedLoop_time: 0.0188361
+MPI rank 9 :   GetSpike_time: 1.01401
+MPI rank 9 :   SpikeReset_time: 0.0559905
+MPI rank 9 :   ExternalSpikeReset_time: 0.10218
+MPI rank 9 :   SendSpikeToRemote_MPI_time: 0.430292
+MPI rank 9 :   RecvSpikeFromRemote_MPI_time: 0.325038
+MPI rank 9 :   SendSpikeToRemote_CUDAcp_time: 0.0625792
+MPI rank 9 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 9 :   JoinSpike_time: 0.0225123
+MPI rank 9 : Building time: 6.12319
+MPI rank 5 :   RecvSpikeFromRemote_time: 0.287182
+MPI rank 5 :   NestedLoop_time: 0.0186874
+MPI rank 5 :   GetSpike_time: 1.01345
+MPI rank 5 :   SpikeReset_time: 0.0554219
+MPI rank 5 :   ExternalSpikeReset_time: 0.101628
+MPI rank 5 :   SendSpikeToRemote_MPI_time: 0.422727
+MPI rank 5 :   RecvSpikeFromRemote_MPI_time: 0.283858
+MPI rank 5 :   SendSpikeToRemote_CUDAcp_time: 0.0624374
+MPI rank 7 :   NestedLoop_time: 0.0185197
+MPI rank 7 :   GetSpike_time: 1.01529
+MPI rank 7 :   SpikeReset_time: 0.0547743
+MPI rank 7 :   ExternalSpikeReset_time: 0.10059
+MPI rank 7 :   SendSpikeToRemote_MPI_time: 0.405275
+MPI rank 7 :   RecvSpikeFromRemote_MPI_time: 0.473223
+MPI rank 7 :   SendSpikeToRemote_CUDAcp_time: 0.0618067
+MPI rank 4 :   SendExternalSpike_time: 0.0646964
+MPI rank 4 :   SendSpikeToRemote_time: 0.531827
+MPI rank 4 :   RecvSpikeFromRemote_time: 0.269281
+MPI rank 4 :   NestedLoop_time: 0.0194089
+MPI rank 4 :   GetSpike_time: 1.01561
+MPI rank 4 :   SpikeReset_time: 0.0548354
+MPI rank 4 :   ExternalSpikeReset_time: 0.10021
+MPI rank 10 :   SendSpikeToRemote_time: 0.510834
+MPI rank 10 :   RecvSpikeFromRemote_time: 0.480973
+MPI rank 10 :   NestedLoop_time: 0.0189679
+MPI rank 10 :   GetSpike_time: 1.01345
+MPI rank 10 :   SpikeReset_time: 0.054426
+MPI rank 10 :   ExternalSpikeReset_time: 0.100078
+MPI rank 11 :   copy_ext_spike_time: 0.0592401
+MPI rank 11 :   SendExternalSpike_time: 0.064723
+MPI rank 11 :   SendSpikeToRemote_time: 0.493863
+MPI rank 11 :   RecvSpikeFromRemote_time: 0.438108
+MPI rank 11 :   NestedLoop_time: 0.0183403
+MPI rank 11 :   GetSpike_time: 1.01386
+MPI rank 13 :   copy_ext_spike_time: 0.0587196
+MPI rank 13 :   SendExternalSpike_time: 0.0644236
+MPI rank 13 :   SendSpikeToRemote_time: 0.495322
+MPI rank 13 :   RecvSpikeFromRemote_time: 0.532427
+MPI rank 13 :   NestedLoop_time: 0.0193913
+MPI rank 13 :   GetSpike_time: 1.01523
+MPI rank 13 :   SpikeReset_time: 0.0542549
+MPI rank 12 :   copy_ext_spike_time: 0.0592054
+MPI rank 12 :   SendExternalSpike_time: 0.0644349
+MPI rank 12 :   SendSpikeToRemote_time: 0.519479
+MPI rank 12 :   RecvSpikeFromRemote_time: 0.425677
+MPI rank 12 :   NestedLoop_time: 0.0196825
+MPI rank 3 :   SendSpikeToRemote_MPI_time: 0.433377
+MPI rank 3 :   RecvSpikeFromRemote_MPI_time: 0.271635
+MPI rank 3 :   SendSpikeToRemote_CUDAcp_time: 0.0614119
+MPI rank 3 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 3 :   JoinSpike_time: 0.0219324
+MPI rank 3 : Building time: 5.51215
+MPI rank 3 : Simulation time: 21.645
+MPI rank 1 :   ExternalSpikeReset_time: 0.0770438
+MPI rank 1 :   SendSpikeToRemote_MPI_time: 0.375844
+MPI rank 1 :   RecvSpikeFromRemote_MPI_time: 12.5064
+MPI rank 1 :   SendSpikeToRemote_CUDAcp_time: 0.0627904
+MPI rank 1 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 8 :   ExternalSpikeReset_time: 0.0981005
+MPI rank 8 :   SendSpikeToRemote_MPI_time: 0.397797
+MPI rank 8 :   RecvSpikeFromRemote_MPI_time: 0.725732
+MPI rank 8 :   SendSpikeToRemote_CUDAcp_time: 0.0621785
+MPI rank 8 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 8 :   JoinSpike_time: 0.0219815
+MPI rank 8 : Building time: 6.08877
+MPI rank 14 :   SendSpikeToRemote_CUDAcp_time: 0.0626325
+MPI rank 14 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 14 :   JoinSpike_time: 0.0226343
+MPI rank 14 : Building time: 6.03537
+MPI rank 14 : Simulation time: 21.6449
+MPI rank 9 : Simulation time: 21.6449
+MPI rank 5 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 5 :   JoinSpike_time: 0.0226986
+MPI rank 5 : Building time: 5.87299
+MPI rank 5 : Simulation time: 21.645
+MPI rank 7 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 7 :   JoinSpike_time: 0.0219377
+MPI rank 7 : Building time: 5.61477
+MPI rank 7 : Simulation time: 21.645
+MPI rank 4 :   SendSpikeToRemote_MPI_time: 0.441648
+MPI rank 4 :   RecvSpikeFromRemote_MPI_time: 0.265973
+MPI rank 4 :   SendSpikeToRemote_CUDAcp_time: 0.0621504
+MPI rank 4 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 4 :   JoinSpike_time: 0.021877
+MPI rank 4 : Building time: 5.74687
+MPI rank 4 : Simulation time: 21.645
+MPI rank 10 :   SendSpikeToRemote_MPI_time: 0.419122
+MPI rank 10 :   RecvSpikeFromRemote_MPI_time: 0.477603
+MPI rank 10 :   SendSpikeToRemote_CUDAcp_time: 0.0628352
+MPI rank 10 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 10 :   JoinSpike_time: 0.0226434
+MPI rank 10 : Building time: 5.45879
+MPI rank 11 :   SpikeReset_time: 0.0551701
+MPI rank 11 :   ExternalSpikeReset_time: 0.101343
+MPI rank 11 :   SendSpikeToRemote_MPI_time: 0.402751
+MPI rank 11 :   RecvSpikeFromRemote_MPI_time: 0.434842
+MPI rank 11 :   SendSpikeToRemote_CUDAcp_time: 0.0627314
+MPI rank 11 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 11 :   JoinSpike_time: 0.0221571
+MPI rank 11 : Building time: 5.41839
+MPI rank 11 : Simulation time: 21.6449
+MPI rank 13 :   ExternalSpikeReset_time: 0.0999103
+MPI rank 13 :   SendSpikeToRemote_MPI_time: 0.402663
+MPI rank 13 :   RecvSpikeFromRemote_MPI_time: 0.529184
+MPI rank 13 :   SendSpikeToRemote_CUDAcp_time: 0.0632344
+MPI rank 13 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 13 :   JoinSpike_time: 0.0231168
+MPI rank 12 :   GetSpike_time: 1.01371
+MPI rank 12 :   SpikeReset_time: 0.0541732
+MPI rank 12 :   ExternalSpikeReset_time: 0.0992955
+MPI rank 12 :   SendSpikeToRemote_MPI_time: 0.428188
+MPI rank 12 :   RecvSpikeFromRemote_MPI_time: 0.422452
+MPI rank 12 :   SendSpikeToRemote_CUDAcp_time: 0.0629813
+MPI rank 12 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 12 :   JoinSpike_time: 0.0220477
+MPI rank 12 : Building time: 5.39872
+MPI rank 2 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 2 :   JoinSpike_time: 0.0246156
+MPI rank 2 : Building time: 4.79834
+MPI rank 2 : Simulation time: 21.645
+MPI rank 13 : Building time: 5.33215
+MPI rank 13 : Simulation time: 21.6449
+MPI rank 12 : Simulation time: 21.6448
+MPI rank 1 :   JoinSpike_time: 0.0243809
+MPI rank 1 : Building time: 5.5029
+MPI rank 1 : Simulation time: 21.6448
+MPI rank 8 : Simulation time: 21.6449
+MPI rank 10 : Simulation time: 21.645
+ending
+Time is Thu Jul 14 06:32:27 JST 2022

@@ -91,7 +91,7 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 		&& pyenv rehash
 
 	# Install pip package
-	pip install matplotlib mpi4py
+	pip install matplotlib mpi4py pynvml
 
 	# Install nestgpu
 	export NEST_GPU=/usr/local/nestgpu

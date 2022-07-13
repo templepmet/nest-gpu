@@ -2,7 +2,21 @@ import sys
 import ctypes
 import nestgpu as ngpu
 from random import randrange
+from pynvml import *
 
+def getMemInfo():
+	pid = os.getpid()
+	memInfo = {}
+	with open(f'/proc/{pid}/status') as f:
+		text = f.read()
+		memData = re.findall('(Vm.+?):\t.*?(\d*)\skB', text)
+		for data in memData:
+			memInfo[data[0]] = int(data[1])
+		return memInfo
+
+
+nvmlInit()
+handle = nvmlDeviceGetHandleByIndex(0)
 
 ngpu.ConnectMpiInit();
 mpi_np = ngpu.MpiNp()
@@ -15,6 +29,10 @@ if (len(sys.argv) != 2):
 order = int(sys.argv[1])//5
 
 mpi_id = ngpu.MpiId()
+
+print(f'Rank {mpi_id}: Before Buildng:', getMemInfo())
+print(nvmlDeviceGetMemoryInfo(handle))
+
 print("Building on host ", mpi_id, " ...")
 
 ngpu.SetKernelStatus("rnd_seed", 1234) # seed for GPU random numbers
@@ -47,6 +65,9 @@ neuron = ngpu.Create("aeif_cond_beta", n_neurons, n_receptors)
 exc_neuron = neuron[0:NE]      # excitatory neurons
 inh_neuron = neuron[NE:n_neurons]   # inhibitory neurons
   
+print(f'Rank {mpi_id}: After Create:', getMemInfo())
+print(nvmlDeviceGetMemoryInfo(handle))
+
 # receptor parameters
 E_rev = [0.0, -85.0]
 tau_decay = [1.0, 1.0]
@@ -81,6 +102,8 @@ pg_syn_dict={"weight": poiss_weight, "delay": poiss_delay,
 
 ngpu.Connect(pg, neuron, pg_conn_dict, pg_syn_dict)
 
+print(f'Rank {mpi_id}: After Connect:', getMemInfo())
+print(nvmlDeviceGetMemoryInfo(handle))
 
 # filename = "test_brunel_mpi" + str(mpi_id) + ".dat"
 # i_neuron_arr = [neuron[0], neuron[randrange(n_neurons)], neuron[n_neurons-1]]
@@ -120,6 +143,10 @@ ngpu.Connect(pg, neuron, pg_conn_dict, pg_syn_dict)
 # ngpu.RemoteConnect(1, inh_neuron, 0, neuron, ri_conn_dict, ri_syn_dict)
 
 ngpu.Simulate()
+
+print(f'Rank {mpi_id}: After Simulate:', getMemInfo())
+print(nvmlDeviceGetMemoryInfo(handle))
+
 
 # nrows=ngpu.GetRecordDataRows(record)
 # ncol=ngpu.GetRecordDataColumns(record)

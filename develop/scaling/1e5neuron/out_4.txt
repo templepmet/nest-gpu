@@ -1,0 +1,548 @@
+Runnning on host c4
+Starting at Thu Jul 14 06:30:32 JST 2022
+Running on hosts: c[4-7]
+Running on 4 nodes.
+Running 4 tasks.
+Current working directory is /home/y-terans/workspace/nest-gpu/develop
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+mpi_np: 4
+Building on host  3  ...
+mpi_np: 4
+Building on host  0  ...
+mpi_np: 4
+Building on host  1  ...
+mpi_np: 4
+Building on host  2  ...
+MPI rank 1 : Calibrating ...
+MPI rank 0 : Calibrating ...
+MPI rank 3 : Calibrating ...
+MPI rank 2 : Calibrating ...
+MPI rank 0 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 3 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 2 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 1 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+10.000
+10.000
+10.000
+10.000
+20.000
+20.000
+20.000
+20.000
+30.000
+30.000
+30.000
+30.000
+40.000
+40.000
+40.000
+40.000
+50.000
+50.000
+50.000
+50.000
+60.000
+60.000
+60.000
+60.000
+70.000
+70.000
+70.000
+70.000
+80.000
+80.000
+80.000
+80.000
+90.000
+90.000
+90.000
+90.000
+100.000
+100.000
+100.000
+100.000
+110.000
+110.000
+110.000
+110.000
+120.000
+120.000
+120.000
+120.000
+130.000
+130.000
+130.000
+130.000
+140.000
+140.000
+140.000
+140.000
+150.000
+150.000
+150.000
+150.000
+160.000
+160.000
+160.000
+160.000
+170.000
+170.000
+170.000
+170.000
+180.000
+180.000
+180.000
+180.000
+190.000
+190.000
+190.000
+190.000
+200.000
+200.000
+200.000
+200.000
+210.000
+210.000
+210.000
+210.000
+220.000
+220.000
+220.000
+220.000
+230.000
+230.000
+230.000
+230.000
+240.000
+240.000
+240.000
+240.000
+250.000
+250.000
+250.000
+250.000
+260.000
+260.000
+260.000
+260.000
+270.000
+270.000
+270.000
+270.000
+280.000
+280.000
+280.000
+280.000
+290.000
+290.000
+290.000
+290.000
+300.000
+300.000
+300.000
+300.000
+310.000
+310.000
+310.000
+310.000
+320.000
+320.000
+320.000
+320.000
+330.000
+330.000
+330.000
+330.000
+340.000
+340.000
+340.000
+340.000
+350.000
+350.000
+350.000
+350.000
+360.000
+360.000
+360.000
+360.000
+370.000
+370.000
+370.000
+370.000
+380.000
+380.000
+380.000
+380.000
+390.000
+390.000
+390.000
+390.000
+400.000
+400.000
+400.000
+400.000
+410.000
+410.000
+410.000
+410.000
+420.000
+420.000
+420.000
+420.000
+430.000
+430.000
+430.000
+430.000
+440.000
+440.000
+440.000
+440.000
+450.000
+450.000
+450.000
+450.000
+460.000
+460.000
+460.000
+460.000
+470.000
+470.000
+470.000
+470.000
+480.000
+480.000
+480.000
+480.000
+490.000
+490.000
+490.000
+490.000
+500.000
+500.000
+500.000
+500.000
+510.000
+510.000
+510.000
+510.000
+520.000
+520.000
+520.000
+520.000
+530.000
+530.000
+530.000
+530.000
+540.000
+540.000
+540.000
+540.000
+550.000
+550.000
+550.000
+550.000
+560.000
+560.000
+560.000
+560.000
+570.000
+570.000
+570.000
+570.000
+580.000
+580.000
+580.000
+580.000
+590.000
+590.000
+590.000
+590.000
+600.000
+600.000
+600.000
+600.000
+610.000
+610.000
+610.000
+610.000
+620.000
+620.000
+620.000
+620.000
+630.000
+630.000
+630.000
+630.000
+640.000
+640.000
+640.000
+640.000
+650.000
+650.000
+650.000
+650.000
+660.000
+660.000
+660.000
+660.000
+670.000
+670.000
+670.000
+670.000
+680.000
+680.000
+680.000
+680.000
+690.000
+690.000
+690.000
+690.000
+700.000
+700.000
+700.000
+700.000
+710.000
+710.000
+710.000
+710.000
+720.000
+720.000
+720.000
+720.000
+730.000
+730.000
+730.000
+730.000
+740.000
+740.000
+740.000
+740.000
+750.000
+750.000
+750.000
+750.000
+760.000
+760.000
+760.000
+760.000
+770.000
+770.000
+770.000
+770.000
+780.000
+780.000
+780.000
+780.000
+790.000
+790.000
+790.000
+790.000
+800.000
+800.000
+800.000
+800.000
+810.000
+810.000
+810.000
+810.000
+820.000
+820.000
+820.000
+820.000
+830.000
+830.000
+830.000
+830.000
+840.000
+840.000
+840.000
+840.000
+850.000
+850.000
+850.000
+850.000
+860.000
+860.000
+860.000
+860.000
+870.000
+870.000
+870.000
+870.000
+880.000
+880.000
+880.000
+880.000
+890.000
+890.000
+890.000
+890.000
+900.000
+900.000
+900.000
+900.000
+910.000
+910.000
+910.000
+910.000
+920.000
+920.000
+920.000
+920.000
+930.000
+930.000
+930.000
+930.000
+940.000
+940.000
+940.000
+940.000
+950.000
+950.000
+950.000
+950.000
+960.000
+960.000
+960.000
+960.000
+970.000
+970.000
+970.000
+970.000
+980.000
+980.000
+980.000
+980.000
+990.000
+990.000
+990.000
+990.000
+1000.000
+
+MPI rank 0 :   SpikeBufferUpdate_time: 0.350718
+MPI rank 0 :   poisson_generator_time: 2.55716
+MPI rank 0 :   neuron_Update_time: 15.3276
+MPI rank 0 :   copy_ext_spike_time: 0.0589208
+MPI rank 0 :   SendExternalSpike_time: 0.06468
+MPI rank 0 :   SendSpikeToRemote_time: 0.179093
+MPI rank 0 :   RecvSpikeFromRemote_time: 0.206654
+MPI rank 0 :   NestedLoop_time: 0.0180206
+MPI rank 0 :   GetSpike_time: 1.01524
+1000.000
+MPI rank 0 :   SpikeReset_time: 0.054378
+MPI rank 0 :   ExternalSpikeReset_time: 0.068993
+MPI rank 0 :   SendSpikeToRemote_MPI_time: 0.0889824
+MPI rank 0 :   RecvSpikeFromRemote_MPI_time: 0.203443
+MPI rank 0 :   SendSpikeToRemote_CUDAcp_time: 0.0619947
+MPI rank 0 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 0 :   JoinSpike_time: 0.0216513
+MPI rank 0 : Building time: 4.98472
+MPI rank 0 : Simulation time: 20.6257
+1000.000
+1000.000
+
+
+
+MPI rank 3 :   SpikeBufferUpdate_time: 0.349628
+MPI rank 3 :   poisson_generator_time: 2.53594
+MPI rank 3 :   neuron_Update_time: 15.0891
+MPI rank 3 :   copy_ext_spike_time: 0.0588644
+MPI rank 3 :   SendExternalSpike_time: 0.0646796
+MPI rank 2 :   SpikeBufferUpdate_time: 0.351377
+MPI rank 2 :   poisson_generator_time: 2.5618
+MPI rank 2 :   neuron_Update_time: 15.3974
+MPI rank 2 :   copy_ext_spike_time: 0.0585882
+MPI rank 1 :   SpikeBufferUpdate_time: 0.350103
+MPI rank 1 :   poisson_generator_time: 2.55907
+MPI rank 1 :   neuron_Update_time: 15.3478
+MPI rank 1 :   copy_ext_spike_time: 0.0587591
+MPI rank 1 :   SendExternalSpike_time: 0.0643585
+MPI rank 1 :   SendSpikeToRemote_time: 0.178272
+MPI rank 1 :   RecvSpikeFromRemote_time: 0.277432
+MPI rank 1 :   NestedLoop_time: 0.0180342
+MPI rank 3 :   SendSpikeToRemote_time: 0.170764
+MPI rank 3 :   RecvSpikeFromRemote_time: 0.688139
+MPI rank 3 :   NestedLoop_time: 0.0181786
+MPI rank 3 :   GetSpike_time: 1.01427
+MPI rank 3 :   SpikeReset_time: 0.0546409
+MPI rank 3 :   ExternalSpikeReset_time: 0.0685421
+MPI rank 3 :   SendSpikeToRemote_MPI_time: 0.0803367
+MPI rank 3 :   RecvSpikeFromRemote_MPI_time: 0.68496
+MPI rank 2 :   SendExternalSpike_time: 0.0638801
+MPI rank 2 :   SendSpikeToRemote_time: 0.178412
+MPI rank 2 :   RecvSpikeFromRemote_time: 0.239718
+MPI rank 2 :   NestedLoop_time: 0.0179312
+MPI rank 2 :   GetSpike_time: 1.01379
+MPI rank 3 :   SendSpikeToRemote_CUDAcp_time: 0.0620283
+MPI rank 3 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 3 :   JoinSpike_time: 0.0222367
+MPI rank 3 : Building time: 4.50405
+MPI rank 3 : Simulation time: 20.6256
+MPI rank 2 :   SpikeReset_time: 0.0541823
+MPI rank 2 :   ExternalSpikeReset_time: 0.0683432
+MPI rank 2 :   SendSpikeToRemote_MPI_time: 0.087394
+MPI rank 2 :   RecvSpikeFromRemote_MPI_time: 0.236568
+MPI rank 2 :   SendSpikeToRemote_CUDAcp_time: 0.0626422
+MPI rank 2 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 2 :   JoinSpike_time: 0.0220499
+MPI rank 1 :   GetSpike_time: 1.01372
+MPI rank 1 :   SpikeReset_time: 0.0540242
+MPI rank 1 :   ExternalSpikeReset_time: 0.0684101
+MPI rank 1 :   SendSpikeToRemote_MPI_time: 0.0883592
+MPI rank 1 :   RecvSpikeFromRemote_MPI_time: 0.27424
+MPI rank 1 :   SendSpikeToRemote_CUDAcp_time: 0.0618717
+MPI rank 1 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 1 :   JoinSpike_time: 0.021776
+MPI rank 2 : Building time: 6.10368
+MPI rank 2 : Simulation time: 20.6258
+MPI rank 1 : Building time: 6.17615
+MPI rank 1 : Simulation time: 20.6257
+ending
+Time is Thu Jul 14 06:31:04 JST 2022
