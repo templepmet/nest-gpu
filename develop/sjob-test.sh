@@ -20,15 +20,21 @@ echo "Current working directory is `pwd`"
 # --mca btl_base_verbose 100            for debug
 # execute ompi_info for more details
 
+# export SINGULARITY_BINDPATH="/usr/lib64:/usr/lib64/host,/etc/libibverbs.d"
+# export LD_LIBRARY_PATH=/usr/lib64:/usr/lib64/host
+
+# mpirun ${NQSV_MPIOPTS} -np 2 -ppn 1 singularity exec ¥
+# --env LD_LIBRARY_PATH=${LD_LIBRARY_PATH} ¥
+# imb-test.sif /opt/imb/IMB-MPI1 PingPong
+
 # for Infiniband
-mpirun --mca btl openib,self,vader singularity exec --nv nest-gpu.sif python brunel_mpi_without_remote.py 1000000
+mpirun --mca btl openib,self,vader singularity exec --nv nest-gpu.sif python hellompi.py
+# mpirun --mca btl openib,self,vader singularity exec -B /etc/libibverbs.d --nv nest-gpu.sif python hellompi.py
 
 # for Gigabit network
 # mpirun --mca btl tcp,self,vader singularity exec --nv nest-gpu.sif python brunel_mpi_without_remote.py 1000000
-# mpirun --mca btl tcp,self,vader singularity exec --nv nest-gpu.sif python brunel_mpi_without_remote.py 100000 > result/result_${SLURM_JOB_ID}.txt
 
 echo ending
 echo Time is `date`
 
 sleep 5
-

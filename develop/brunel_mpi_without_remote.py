@@ -1,3 +1,4 @@
+import re
 import sys
 import ctypes
 import nestgpu as ngpu
@@ -18,7 +19,7 @@ def getMemInfo():
 nvmlInit()
 handle = nvmlDeviceGetHandleByIndex(0)
 
-ngpu.ConnectMpiInit();
+ngpu.ConnectMpiInit()
 mpi_np = ngpu.MpiNp()
 print('mpi_np:', mpi_np)
 
@@ -30,8 +31,7 @@ order = int(sys.argv[1])//5
 
 mpi_id = ngpu.MpiId()
 
-print(f'Rank {mpi_id}: Before Buildng:', getMemInfo())
-print(nvmlDeviceGetMemoryInfo(handle))
+print(f'Rank {mpi_id}: Before Buildng:', getMemInfo(), nvmlDeviceGetMemoryInfo(handle))
 
 print("Building on host ", mpi_id, " ...")
 
@@ -65,8 +65,7 @@ neuron = ngpu.Create("aeif_cond_beta", n_neurons, n_receptors)
 exc_neuron = neuron[0:NE]      # excitatory neurons
 inh_neuron = neuron[NE:n_neurons]   # inhibitory neurons
   
-print(f'Rank {mpi_id}: After Create:', getMemInfo())
-print(nvmlDeviceGetMemoryInfo(handle))
+print(f'Rank {mpi_id}: After Create:', getMemInfo(), nvmlDeviceGetMemoryInfo(handle))
 
 # receptor parameters
 E_rev = [0.0, -85.0]
@@ -102,8 +101,7 @@ pg_syn_dict={"weight": poiss_weight, "delay": poiss_delay,
 
 ngpu.Connect(pg, neuron, pg_conn_dict, pg_syn_dict)
 
-print(f'Rank {mpi_id}: After Connect:', getMemInfo())
-print(nvmlDeviceGetMemoryInfo(handle))
+print(f'Rank {mpi_id}: After Connect:', getMemInfo(), nvmlDeviceGetMemoryInfo(handle))
 
 # filename = "test_brunel_mpi" + str(mpi_id) + ".dat"
 # i_neuron_arr = [neuron[0], neuron[randrange(n_neurons)], neuron[n_neurons-1]]
@@ -112,7 +110,7 @@ print(nvmlDeviceGetMemoryInfo(handle))
 # create multimeter record of V_m
 # var_name_arr = ["V_m", "V_m", "V_m"]
 # record = ngpu.CreateRecord(filename, var_name_arr, i_neuron_arr,
-                                # i_receptor_arr)
+#                                 i_receptor_arr)
 
 ######################################################################
 ## WRITE HERE REMOTE CONNECTIONS
@@ -144,13 +142,12 @@ print(nvmlDeviceGetMemoryInfo(handle))
 
 ngpu.Simulate()
 
-print(f'Rank {mpi_id}: After Simulate:', getMemInfo())
-print(nvmlDeviceGetMemoryInfo(handle))
+print(f'Rank {mpi_id}: After Simulate:', getMemInfo(), nvmlDeviceGetMemoryInfo(handle))
 
 
 # nrows=ngpu.GetRecordDataRows(record)
 # ncol=ngpu.GetRecordDataColumns(record)
-#print nrows, ncol
+# print nrows, ncol
 
 # data_list = ngpu.GetRecordData(record)
 # t=[row[0] for row in data_list]

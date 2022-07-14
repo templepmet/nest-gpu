@@ -1,5 +1,5 @@
 Runnning on host c1
-Starting at Thu Jul 14 08:07:17 JST 2022
+Starting at Thu Jul 14 13:04:45 JST 2022
 Running on hosts: c1
 Running on 1 nodes.
 Running 1 tasks.
@@ -15,7 +15,10 @@ Current working directory is /home/y-terans/workspace/nest-gpu/develop
  Homepage: https://github.com/nest/nest-gpu
 
 mpi_np: 1
+Rank 0: Before Buildng: {'VmPeak': 5422588, 'VmSize': 5421128, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 194548, 'VmRSS': 194548, 'VmData': 5179744, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 604, 'VmSwap': 0} c_nvmlMemory_t(total: 21464350720 B, free: 20970536960 B, used: 493813760 B)
 Building on host  0  ...
+Rank 0: After Create: {'VmPeak': 5697224, 'VmSize': 5687896, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 291508, 'VmRSS': 291508, 'VmData': 5431196, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 824, 'VmSwap': 0} c_nvmlMemory_t(total: 21464350720 B, free: 20792279040 B, used: 672071680 B)
+Rank 0: After Connect: {'VmPeak': 15011060, 'VmSize': 15011060, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9397588, 'VmRSS': 9397588, 'VmData': 14754360, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 19032, 'VmSwap': 0} c_nvmlMemory_t(total: 21464350720 B, free: 20792279040 B, used: 672071680 B)
 MPI rank 0 : Calibrating ...
 MPI rank 0 : Simulating ...
 Neural activity simulation time: 1000.000
@@ -121,23 +124,24 @@ Neural activity simulation time: 1000.000
 990.000
 1000.000
 
-MPI rank 0 :   SpikeBufferUpdate_time: 0.752336
-MPI rank 0 :   poisson_generator_time: 13.5259
-MPI rank 0 :   neuron_Update_time: 28.9729
-MPI rank 0 :   copy_ext_spike_time: 0.0600379
-MPI rank 0 :   SendExternalSpike_time: 0.0758219
-MPI rank 0 :   SendSpikeToRemote_time: 0.0898982
-MPI rank 0 :   RecvSpikeFromRemote_time: 0.00438175
-MPI rank 0 :   NestedLoop_time: 0.0178696
-MPI rank 0 :   GetSpike_time: 3.08943
-MPI rank 0 :   SpikeReset_time: 0.0601176
-MPI rank 0 :   ExternalSpikeReset_time: 0.0630592
-MPI rank 0 :   SendSpikeToRemote_MPI_time: 0.00132911
-MPI rank 0 :   RecvSpikeFromRemote_MPI_time: 0.00135412
-MPI rank 0 :   SendSpikeToRemote_CUDAcp_time: 0.0595566
+MPI rank 0 :   SpikeBufferUpdate_time: 0.751576
+MPI rank 0 :   poisson_generator_time: 13.5327
+MPI rank 0 :   neuron_Update_time: 28.9714
+MPI rank 0 :   copy_ext_spike_time: 0.0595731
+MPI rank 0 :   SendExternalSpike_time: 0.0756504
+MPI rank 0 :   SendSpikeToRemote_time: 0.0900686
+MPI rank 0 :   RecvSpikeFromRemote_time: 0.00436094
+MPI rank 0 :   NestedLoop_time: 0.0182561
+MPI rank 0 :   GetSpike_time: 3.08887
+MPI rank 0 :   SpikeReset_time: 0.0600409
+MPI rank 0 :   ExternalSpikeReset_time: 0.0628377
+MPI rank 0 :   SendSpikeToRemote_MPI_time: 0.00131677
+MPI rank 0 :   RecvSpikeFromRemote_MPI_time: 0.0013495
+MPI rank 0 :   SendSpikeToRemote_CUDAcp_time: 0.0598723
 MPI rank 0 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 0 :   JoinSpike_time: 0.0227739
-MPI rank 0 : Building time: 41.2897
-MPI rank 0 : Simulation time: 46.8161
+MPI rank 0 :   JoinSpike_time: 0.0225725
+MPI rank 0 : Building time: 37.6548
+MPI rank 0 : Simulation time: 46.8195
+Rank 0: After Simulate: {'VmPeak': 28677248, 'VmSize': 22112384, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 16017712, 'VmRSS': 9423852, 'VmData': 21852992, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 19088, 'VmSwap': 0} c_nvmlMemory_t(total: 21464350720 B, free: 13580173312 B, used: 7884177408 B)
 ending
-Time is Thu Jul 14 08:08:54 JST 2022
+Time is Thu Jul 14 13:06:16 JST 2022

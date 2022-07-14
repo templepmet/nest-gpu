@@ -1,5 +1,5 @@
 Runnning on host c1
-Starting at Thu Jul 14 08:11:07 JST 2022
+Starting at Thu Jul 14 13:08:33 JST 2022
 Running on hosts: c[1-12]
 Running on 12 nodes.
 Running 12 tasks.
@@ -125,76 +125,112 @@ Current working directory is /home/y-terans/workspace/nest-gpu/develop
  Homepage: https://github.com/nest/nest-gpu
 
 mpi_np: 12
-Building on host  5  ...
 mpi_np: 12
+mpi_np: 12
+mpi_np: 12
+Rank 9: Before Buildng: {'VmPeak': 13742692, 'VmSize': 13741268, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 218644, 'VmRSS': 218644, 'VmData': 13469536, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 652, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8397520896 B, used: 192413696 B)
+Building on host  9  ...
+Rank 1: Before Buildng: {'VmPeak': 9616940, 'VmSize': 9615464, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 194580, 'VmRSS': 194580, 'VmData': 9374080, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 604, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8511815680 B, used: 78118912 B)
+Building on host  1  ...
+Rank 6: Before Buildng: {'VmPeak': 13742720, 'VmSize': 13741268, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 220692, 'VmRSS': 220692, 'VmData': 13469536, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 652, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8397520896 B, used: 192413696 B)
+Building on host  6  ...
+Rank 2: Before Buildng: {'VmPeak': 9616924, 'VmSize': 9615464, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 196620, 'VmRSS': 196620, 'VmData': 9374080, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 604, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8511815680 B, used: 78118912 B)
 Building on host  2  ...
 mpi_np: 12
+mpi_np: 12
+Rank 0: Before Buildng: {'VmPeak': 5422592, 'VmSize': 5421124, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 194556, 'VmRSS': 194556, 'VmData': 5179740, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 616, 'VmSwap': 0} c_nvmlMemory_t(total: 21464350720 B, free: 20970536960 B, used: 493813760 B)
 Building on host  0  ...
+Rank 5: Before Buildng: {'VmPeak': 13741272, 'VmSize': 13741272, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 220444, 'VmRSS': 220444, 'VmData': 13469540, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 660, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8397520896 B, used: 192413696 B)
+Building on host  5  ...
 mpi_np: 12
-Building on host  4  ...
 mpi_np: 12
-Building on host  11  ...
-mpi_np: 12
-Building on host  3  ...
-mpi_np: 12
+Rank 8: Before Buildng: {'VmPeak': 13741268, 'VmSize': 13741268, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 222480, 'VmRSS': 222480, 'VmData': 13469536, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 656, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8397520896 B, used: 192413696 B)
 Building on host  8  ...
 mpi_np: 12
+mpi_np: 12
+Rank 4: Before Buildng: {'VmPeak': 13742736, 'VmSize': 13741268, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 222480, 'VmRSS': 222480, 'VmData': 13469536, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 664, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8397520896 B, used: 192413696 B)
+Building on host  4  ...
+Rank 11: Before Buildng: {'VmPeak': 13742720, 'VmSize': 13741268, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 222724, 'VmRSS': 222724, 'VmData': 13469536, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 660, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8397520896 B, used: 192413696 B)
+Building on host  11  ...
+Rank 10: Before Buildng: {'VmPeak': 13742728, 'VmSize': 13741268, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 222488, 'VmRSS': 222488, 'VmData': 13469536, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 660, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8397520896 B, used: 192413696 B)
 Building on host  10  ...
 mpi_np: 12
-Building on host  1  ...
+Rank 3: Before Buildng: {'VmPeak': 13742720, 'VmSize': 13741272, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 220724, 'VmRSS': 220724, 'VmData': 13469540, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 664, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8397520896 B, used: 192413696 B)
+Building on host  3  ...
 mpi_np: 12
-Building on host  9  ...
-mpi_np: 12
+Rank 7: Before Buildng: {'VmPeak': 13742728, 'VmSize': 13741268, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 222540, 'VmRSS': 222540, 'VmData': 13469536, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 656, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8397520896 B, used: 192413696 B)
 Building on host  7  ...
-mpi_np: 12
-Building on host  6  ...
-MPI rank 11 : Calibrating ...
-MPI rank 6 : Calibrating ...
+Rank 6: After Create: {'VmPeak': 14053176, 'VmSize': 14020412, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 309700, 'VmRSS': 309700, 'VmData': 13746632, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 832, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 8: After Create: {'VmPeak': 14053176, 'VmSize': 14020412, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 311644, 'VmRSS': 311644, 'VmData': 13746632, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 832, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 4: After Create: {'VmPeak': 14053180, 'VmSize': 14020416, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 311512, 'VmRSS': 311512, 'VmData': 13746636, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 836, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 11: After Create: {'VmPeak': 14053180, 'VmSize': 14020416, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 311892, 'VmRSS': 311892, 'VmData': 13746636, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 840, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 5: After Create: {'VmPeak': 14053180, 'VmSize': 14020416, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 309472, 'VmRSS': 309472, 'VmData': 13746636, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 832, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 3: After Create: {'VmPeak': 14053184, 'VmSize': 14020420, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 309756, 'VmRSS': 309756, 'VmData': 13746640, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 840, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 9: After Create: {'VmPeak': 14053176, 'VmSize': 14020412, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 307648, 'VmRSS': 307648, 'VmData': 13746632, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 828, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 10: After Create: {'VmPeak': 14053180, 'VmSize': 14020416, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 311520, 'VmRSS': 311520, 'VmData': 13746636, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 836, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 7: After Create: {'VmPeak': 14053180, 'VmSize': 14020416, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 311504, 'VmRSS': 311504, 'VmData': 13746636, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 832, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 0: After Create: {'VmPeak': 5697216, 'VmSize': 5687892, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 291388, 'VmRSS': 291388, 'VmData': 5431192, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 824, 'VmSwap': 0} c_nvmlMemory_t(total: 21464350720 B, free: 20792279040 B, used: 672071680 B)
+Rank 2: After Create: {'VmPeak': 9891560, 'VmSize': 9882232, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 293584, 'VmRSS': 293584, 'VmData': 9625532, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 828, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8511815680 B, used: 78118912 B)
+Rank 1: After Create: {'VmPeak': 9891560, 'VmSize': 9882232, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 291456, 'VmRSS': 291456, 'VmData': 9625532, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 824, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8511815680 B, used: 78118912 B)
+Rank 3: After Connect: {'VmPeak': 23326116, 'VmSize': 23326116, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9559160, 'VmRSS': 9559160, 'VmData': 23052336, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19012, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
 MPI rank 3 : Calibrating ...
+Rank 7: After Connect: {'VmPeak': 23319968, 'VmSize': 23319968, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9417736, 'VmRSS': 9417736, 'VmData': 23046188, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 18996, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
 MPI rank 7 : Calibrating ...
-MPI rank 5 : Calibrating ...
-MPI rank 10 : Calibrating ...
-MPI rank 2 : Calibrating ...
+Rank 4: After Connect: {'VmPeak': 23333600, 'VmSize': 23333600, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9453796, 'VmRSS': 9453796, 'VmData': 23059820, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19024, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
 MPI rank 4 : Calibrating ...
-MPI rank 1 : Calibrating ...
-MPI rank 0 : Calibrating ...
+Rank 8: After Connect: {'VmPeak': 23332952, 'VmSize': 23332952, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9467488, 'VmRSS': 9467488, 'VmData': 23059172, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19020, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
 MPI rank 8 : Calibrating ...
+Rank 5: After Connect: {'VmPeak': 23332236, 'VmSize': 23332236, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9404932, 'VmRSS': 9404932, 'VmData': 23058456, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19020, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+Rank 2: After Connect: {'VmPeak': 19193564, 'VmSize': 19193564, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9409180, 'VmRSS': 9409180, 'VmData': 18936864, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 19016, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8511815680 B, used: 78118912 B)
+MPI rank 5 : Calibrating ...
+MPI rank 2 : Calibrating ...
+Rank 10: After Connect: {'VmPeak': 23332808, 'VmSize': 23332808, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9426740, 'VmRSS': 9426740, 'VmData': 23059028, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19024, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+MPI rank 10 : Calibrating ...
+Rank 1: After Connect: {'VmPeak': 19208420, 'VmSize': 19208420, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9400856, 'VmRSS': 9400856, 'VmData': 18951720, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 19036, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8511815680 B, used: 78118912 B)
+MPI rank 1 : Calibrating ...
+Rank 9: After Connect: {'VmPeak': 23332880, 'VmSize': 23332880, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9403856, 'VmRSS': 9403856, 'VmData': 23059100, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19016, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
 MPI rank 9 : Calibrating ...
-MPI rank 0 : Simulating ...
+Rank 0: After Connect: {'VmPeak': 14990344, 'VmSize': 14990344, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9377616, 'VmRSS': 9377616, 'VmData': 14733644, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 18992, 'VmSwap': 0} c_nvmlMemory_t(total: 21464350720 B, free: 20792279040 B, used: 672071680 B)
+MPI rank 0 : Calibrating ...
+Rank 6: After Connect: {'VmPeak': 23332832, 'VmSize': 23332832, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9560280, 'VmRSS': 9560280, 'VmData': 23059052, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19020, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+MPI rank 6 : Calibrating ...
+Rank 11: After Connect: {'VmPeak': 23332952, 'VmSize': 23332952, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 9440860, 'VmRSS': 9440860, 'VmData': 23059172, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19028, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8236040192 B, used: 353894400 B)
+MPI rank 11 : Calibrating ...
+MPI rank 9 : Simulating ...
 Neural activity simulation time: 1000.000
 0.000
 MPI rank 1 : Simulating ...
 Neural activity simulation time: 1000.000
 0.000
-MPI rank 11 : Simulating ...
-Neural activity simulation time: 1000.000
-MPI rank 8 : Simulating ...
-Neural activity simulation time: 1000.000
-0.000
-MPI rank 2 : Simulating ...
-Neural activity simulation time: 1000.000
 MPI rank 5 : Simulating ...
 Neural activity simulation time: 1000.000
 0.000
 MPI rank 10 : Simulating ...
 Neural activity simulation time: 1000.000
+0.000
+MPI rank 2 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 6 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
 MPI rank 7 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 3 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+MPI rank 11 : Simulating ...
 Neural activity simulation time: 1000.000
 0.000
 MPI rank 4 : Simulating ...
 Neural activity simulation time: 1000.000
 0.000
-MPI rank 3 : Simulating ...
-Neural activity simulation time: 1000.000
-MPI rank 6 : Simulating ...
+MPI rank 0 : Simulating ...
 Neural activity simulation time: 1000.000
 0.000
-MPI rank 9 : Simulating ...
+MPI rank 8 : Simulating ...
 Neural activity simulation time: 1000.000
-0.000
-0.000
-0.000
-0.000
 0.000
 10.000
 10.000
@@ -1388,241 +1424,253 @@ Neural activity simulation time: 1000.000
 1000.000
 1000.000
 
-MPI rank 0 :   SpikeBufferUpdate_time: 0.762414
-MPI rank 0 :   poisson_generator_time: 14.6503
-MPI rank 0 :   neuron_Update_time: 33.1255
-MPI rank 0 :   copy_ext_spike_time: 0.0614232
-MPI rank 0 :   SendExternalSpike_time: 0.0806395
-MPI rank 0 :   SendSpikeToRemote_time: 0.349488
-MPI rank 0 :   RecvSpikeFromRemote_time: 125.099
-MPI rank 0 :   NestedLoop_time: 0.0216307
-MPI rank 0 :   GetSpike_time: 3.09402
-MPI rank 0 :   SpikeReset_time: 0.0638896
-MPI rank 0 :   ExternalSpikeReset_time: 0.0732456
-MPI rank 0 :   SendSpikeToRemote_MPI_time: 0.257127
-MPI rank 0 :   RecvSpikeFromRemote_MPI_time: 125.096
-MPI rank 0 :   SendSpikeToRemote_CUDAcp_time: 0.061899
+MPI rank 0 :   SpikeBufferUpdate_time: 0.763261
+MPI rank 0 :   poisson_generator_time: 14.6543
+MPI rank 0 :   neuron_Update_time: 33.1463
+MPI rank 0 :   copy_ext_spike_time: 0.0614977
+MPI rank 0 :   SendExternalSpike_time: 0.0802163
+MPI rank 0 :   SendSpikeToRemote_time: 0.128979
+MPI rank 0 :   RecvSpikeFromRemote_time: 125.153
+MPI rank 0 :   NestedLoop_time: 0.01951
+MPI rank 0 :   GetSpike_time: 3.09297
+MPI rank 0 :   SpikeReset_time: 0.0639718
+1000.000
+MPI rank 0 :   ExternalSpikeReset_time: 0.0737917
+MPI rank 0 :   SendSpikeToRemote_MPI_time: 0.0355527
+MPI rank 0 :   RecvSpikeFromRemote_MPI_time: 125.15
+MPI rank 0 :   SendSpikeToRemote_CUDAcp_time: 0.0617595
+
+1000.000
 MPI rank 0 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 0 :   JoinSpike_time: 0.0242889
-MPI rank 0 : Building time: 37.4366
-MPI rank 0 : Simulation time: 178.798
-1000.000
-1000.000
+MPI rank 0 :   JoinSpike_time: 0.0255628
+MPI rank 0 : Building time: 38.1489
+MPI rank 0 : Simulation time: 177.515
 
 1000.000
+
+MPI rank 1 :   SpikeBufferUpdate_time: 0.762822
+MPI rank 1 :   poisson_generator_time: 14.8161
+MPI rank 1 :   neuron_Update_time: 33.1332
+MPI rank 1 :   copy_ext_spike_time: 0.0620745
+MPI rank 1 :   SendExternalSpike_time: 0.0810683
+MPI rank 1 :   SendSpikeToRemote_time: 0.135314
+1000.000
+
 1000.000
 1000.000
 1000.000
+
 1000.000
 1000.000
-1000.000
+MPI rank 1 :   RecvSpikeFromRemote_time: 125.042
+MPI rank 1 :   NestedLoop_time: 0.0199805
+MPI rank 1 :   GetSpike_time: 3.09421
+MPI rank 1 :   SpikeReset_time: 0.064734
+MPI rank 1 :   ExternalSpikeReset_time: 0.0749061
+MPI rank 2 :   SpikeBufferUpdate_time: 0.760643
+MPI rank 2 :   poisson_generator_time: 14.6392
+MPI rank 2 :   neuron_Update_time: 33.1409
+MPI rank 2 :   copy_ext_spike_time: 0.062385
+MPI rank 2 :   SendExternalSpike_time: 0.0815578
+MPI rank 9 :   SpikeBufferUpdate_time: 2.01202
+MPI rank 9 :   poisson_generator_time: 24.0155
+
+
+Rank 0: After Simulate: {'VmPeak': 28656532, 'VmSize': 22513100, 'VmLck': 0, 'VmPin': 54520, 'VmHWM': 15997888, 'VmRSS': 9404320, 'VmData': 22253708, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 19052, 'VmSwap': 0} c_nvmlMemory_t(total: 21464350720 B, free: 13359972352 B, used: 8104378368 B)
+MPI rank 4 :   SpikeBufferUpdate_time: 2.00694
+MPI rank 4 :   poisson_generator_time: 23.9272
+MPI rank 4 :   neuron_Update_time: 140.561
+MPI rank 4 :   copy_ext_spike_time: 0.0618414
+MPI rank 4 :   SendExternalSpike_time: 0.0788635
+MPI rank 4 :   SendSpikeToRemote_time: 0.126951
 
 
 
+MPI rank 8 :   SpikeBufferUpdate_time: 1.99632
+MPI rank 8 :   poisson_generator_time: 23.6374
+MPI rank 8 :   neuron_Update_time: 137.346
+MPI rank 3 :   SpikeBufferUpdate_time: 2.00644
+MPI rank 3 :   poisson_generator_time: 23.8784
+MPI rank 10 :   SpikeBufferUpdate_time: 2.00675
+MPI rank 10 :   poisson_generator_time: 23.844
+MPI rank 7 :   SpikeBufferUpdate_time: 2.00787
+MPI rank 7 :   poisson_generator_time: 23.8937
+MPI rank 7 :   neuron_Update_time: 139.979
+MPI rank 8 :   copy_ext_spike_time: 0.0617138
+MPI rank 8 :   SendExternalSpike_time: 0.0787083
+MPI rank 8 :   SendSpikeToRemote_time: 0.12815
+MPI rank 8 :   RecvSpikeFromRemote_time: 4.76583
+MPI rank 8 :   NestedLoop_time: 0.0176915
 
-
-
-
-
-
-MPI rank 2 :   SpikeBufferUpdate_time: 0.760997
-MPI rank 2 :   poisson_generator_time: 14.6399
-MPI rank 2 :   neuron_Update_time: 33.1317
-MPI rank 2 :   copy_ext_spike_time: 0.0630445
-
-MPI rank 4 :   SpikeBufferUpdate_time: 2.00841
-MPI rank 4 :   poisson_generator_time: 23.9232
-MPI rank 4 :   neuron_Update_time: 140.511
-MPI rank 4 :   copy_ext_spike_time: 0.0618298
-MPI rank 4 :   SendExternalSpike_time: 0.0792501
-MPI rank 4 :   SendSpikeToRemote_time: 0.390143
-MPI rank 4 :   RecvSpikeFromRemote_time: 1.45503
-MPI rank 3 :   SpikeBufferUpdate_time: 2.00753
-MPI rank 3 :   poisson_generator_time: 23.8833
-MPI rank 3 :   neuron_Update_time: 139.957
-MPI rank 6 :   SpikeBufferUpdate_time: 2.00311
-MPI rank 6 :   poisson_generator_time: 23.7801
-MPI rank 6 :   neuron_Update_time: 138.659
-MPI rank 6 :   copy_ext_spike_time: 0.0615263
-MPI rank 6 :   SendExternalSpike_time: 0.0801417
-MPI rank 6 :   SendSpikeToRemote_time: 0.378182
-MPI rank 9 :   SpikeBufferUpdate_time: 2.01228
-MPI rank 9 :   poisson_generator_time: 24.0057
-MPI rank 9 :   neuron_Update_time: 141.566
-MPI rank 9 :   copy_ext_spike_time: 0.0609997
-MPI rank 11 :   SpikeBufferUpdate_time: 2.00583
-MPI rank 11 :   poisson_generator_time: 23.8381
-MPI rank 11 :   neuron_Update_time: 139.838
-MPI rank 11 :   copy_ext_spike_time: 0.0605431
-MPI rank 8 :   SpikeBufferUpdate_time: 2.00133
-MPI rank 8 :   poisson_generator_time: 23.6406
-MPI rank 8 :   neuron_Update_time: 137.373
-MPI rank 8 :   copy_ext_spike_time: 0.0621495
-MPI rank 8 :   SendExternalSpike_time: 0.0792713
-MPI rank 2 :   SendExternalSpike_time: 0.0818594
-MPI rank 2 :   SendSpikeToRemote_time: 0.351334
-MPI rank 2 :   RecvSpikeFromRemote_time: 125.105
-MPI rank 2 :   NestedLoop_time: 0.0208557
-MPI rank 2 :   GetSpike_time: 3.0958
-MPI rank 2 :   SpikeReset_time: 0.0646762
-MPI rank 2 :   ExternalSpikeReset_time: 0.0744233
-MPI rank 5 :   SpikeBufferUpdate_time: 2.00957
-MPI rank 5 :   poisson_generator_time: 23.9586
-MPI rank 5 :   neuron_Update_time: 140.989
-MPI rank 5 :   copy_ext_spike_time: 0.0612427
-MPI rank 5 :   SendExternalSpike_time: 0.0801492
-MPI rank 5 :   SendSpikeToRemote_time: 0.389719
-MPI rank 5 :   RecvSpikeFromRemote_time: 1.00133
-MPI rank 1 :   SpikeBufferUpdate_time: 0.763024
-MPI rank 1 :   poisson_generator_time: 14.8157
-MPI rank 1 :   neuron_Update_time: 33.1137
-MPI rank 1 :   copy_ext_spike_time: 0.0617871
-MPI rank 10 :   SpikeBufferUpdate_time: 2.00322
-MPI rank 10 :   poisson_generator_time: 23.8451
-MPI rank 10 :   neuron_Update_time: 139.596
-MPI rank 10 :   copy_ext_spike_time: 0.0617305
-MPI rank 10 :   SendExternalSpike_time: 0.0787589
-MPI rank 10 :   SendSpikeToRemote_time: 0.381458
-MPI rank 10 :   RecvSpikeFromRemote_time: 2.41225
-MPI rank 7 :   SpikeBufferUpdate_time: 2.00545
-MPI rank 7 :   poisson_generator_time: 23.895
-MPI rank 7 :   neuron_Update_time: 140.146
-MPI rank 7 :   copy_ext_spike_time: 0.061505
-MPI rank 7 :   SendExternalSpike_time: 0.079855
-MPI rank 3 :   copy_ext_spike_time: 0.0608626
-MPI rank 3 :   SendExternalSpike_time: 0.0792767
-MPI rank 3 :   SendSpikeToRemote_time: 0.380176
-MPI rank 3 :   RecvSpikeFromRemote_time: 2.01632
-MPI rank 3 :   NestedLoop_time: 0.0177749
-MPI rank 3 :   GetSpike_time: 9.09484
-MPI rank 6 :   RecvSpikeFromRemote_time: 3.46325
-MPI rank 6 :   NestedLoop_time: 0.0181905
-MPI rank 6 :   GetSpike_time: 9.0932
-MPI rank 6 :   SpikeReset_time: 0.0562813
-MPI rank 6 :   ExternalSpikeReset_time: 0.0898706
-MPI rank 9 :   SendExternalSpike_time: 0.08089
-MPI rank 9 :   SendSpikeToRemote_time: 0.390183
-MPI rank 9 :   RecvSpikeFromRemote_time: 0.351502
-MPI rank 9 :   NestedLoop_time: 0.0184539
-MPI rank 9 :   GetSpike_time: 9.10122
-MPI rank 11 :   SendExternalSpike_time: 0.0789143
-MPI rank 11 :   SendSpikeToRemote_time: 0.366517
-MPI rank 11 :   RecvSpikeFromRemote_time: 2.17955
-MPI rank 11 :   NestedLoop_time: 0.0180874
-MPI rank 11 :   GetSpike_time: 9.09288
-MPI rank 11 :   SpikeReset_time: 0.0549081
-MPI rank 11 :   ExternalSpikeReset_time: 0.088627
-MPI rank 11 :   SendSpikeToRemote_MPI_time: 0.276289
-MPI rank 8 :   SendSpikeToRemote_time: 0.364643
-MPI rank 8 :   RecvSpikeFromRemote_time: 4.83486
-MPI rank 8 :   NestedLoop_time: 0.0187932
-MPI rank 8 :   GetSpike_time: 9.09462
-MPI rank 8 :   SpikeReset_time: 0.0558056
-MPI rank 8 :   ExternalSpikeReset_time: 0.0893987
-MPI rank 2 :   SendSpikeToRemote_MPI_time: 0.257124
-MPI rank 2 :   RecvSpikeFromRemote_MPI_time: 125.101
-MPI rank 2 :   SendSpikeToRemote_CUDAcp_time: 0.0626966
-MPI rank 2 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 2 :   JoinSpike_time: 0.0252984
-MPI rank 2 : Building time: 37.0601
-MPI rank 2 : Simulation time: 178.799
-MPI rank 5 :   NestedLoop_time: 0.0181925
-MPI rank 5 :   GetSpike_time: 9.09686
-MPI rank 5 :   SpikeReset_time: 0.0557574
-MPI rank 5 :   ExternalSpikeReset_time: 0.0903259
-MPI rank 5 :   SendSpikeToRemote_MPI_time: 0.298649
-MPI rank 5 :   RecvSpikeFromRemote_MPI_time: 0.998129
-MPI rank 5 :   SendSpikeToRemote_CUDAcp_time: 0.062828
-MPI rank 5 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 5 :   JoinSpike_time: 0.0221748
-MPI rank 1 :   SendExternalSpike_time: 0.0814648
-MPI rank 1 :   SendSpikeToRemote_time: 0.345387
-MPI rank 1 :   RecvSpikeFromRemote_time: 124.97
-MPI rank 1 :   NestedLoop_time: 0.0205767
-MPI rank 1 :   GetSpike_time: 3.09423
-MPI rank 1 :   SpikeReset_time: 0.0645903
-MPI rank 10 :   NestedLoop_time: 0.0187457
-MPI rank 10 :   GetSpike_time: 9.09606
-MPI rank 10 :   SpikeReset_time: 0.0545683
-MPI rank 10 :   ExternalSpikeReset_time: 0.0899397
-MPI rank 10 :   SendSpikeToRemote_MPI_time: 0.290251
-MPI rank 10 :   RecvSpikeFromRemote_MPI_time: 2.40875
-MPI rank 7 :   SendSpikeToRemote_time: 0.38204
-MPI rank 7 :   RecvSpikeFromRemote_time: 1.86545
-MPI rank 7 :   NestedLoop_time: 0.0192305
-MPI rank 7 :   GetSpike_time: 9.09676
-MPI rank 7 :   SpikeReset_time: 0.0542584
-MPI rank 7 :   ExternalSpikeReset_time: 0.0892532
-MPI rank 7 :   SendSpikeToRemote_MPI_time: 0.291031
-MPI rank 7 :   RecvSpikeFromRemote_MPI_time: 1.86211
-MPI rank 7 :   SendSpikeToRemote_CUDAcp_time: 0.0621565
-MPI rank 4 :   NestedLoop_time: 0.0184893
-MPI rank 4 :   GetSpike_time: 9.09677
-MPI rank 4 :   SpikeReset_time: 0.0544134
-MPI rank 4 :   ExternalSpikeReset_time: 0.089382
-MPI rank 4 :   SendSpikeToRemote_MPI_time: 0.298066
-MPI rank 4 :   RecvSpikeFromRemote_MPI_time: 1.45166
-MPI rank 4 :   SendSpikeToRemote_CUDAcp_time: 0.0624438
-MPI rank 4 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 4 :   JoinSpike_time: 0.0233603
-MPI rank 4 : Building time: 37.8238
-MPI rank 4 : Simulation time: 178.799
-MPI rank 3 :   SpikeReset_time: 0.055897
-MPI rank 3 :   ExternalSpikeReset_time: 0.0910263
-MPI rank 3 :   SendSpikeToRemote_MPI_time: 0.290377
-MPI rank 3 :   RecvSpikeFromRemote_MPI_time: 2.01305
-MPI rank 3 :   SendSpikeToRemote_CUDAcp_time: 0.0615619
-MPI rank 6 :   SendSpikeToRemote_MPI_time: 0.28516
-MPI rank 6 :   RecvSpikeFromRemote_MPI_time: 3.45998
-MPI rank 6 :   SendSpikeToRemote_CUDAcp_time: 0.063099
-MPI rank 6 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 6 :   JoinSpike_time: 0.02357
-MPI rank 6 : Building time: 37.8322
-MPI rank 9 :   SpikeReset_time: 0.0561622
-MPI rank 9 :   ExternalSpikeReset_time: 0.090687
-MPI rank 9 :   SendSpikeToRemote_MPI_time: 0.298511
-MPI rank 9 :   RecvSpikeFromRemote_MPI_time: 0.348096
-MPI rank 9 :   SendSpikeToRemote_CUDAcp_time: 0.0628613
-MPI rank 9 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 9 :   JoinSpike_time: 0.0226518
-MPI rank 9 : Building time: 37.7017
-MPI rank 11 :   RecvSpikeFromRemote_MPI_time: 2.17617
-MPI rank 11 :   SendSpikeToRemote_CUDAcp_time: 0.0619489
-MPI rank 11 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 11 :   JoinSpike_time: 0.0220215
-MPI rank 11 : Building time: 37.7
-MPI rank 11 : Simulation time: 178.799
-MPI rank 8 :   SendSpikeToRemote_MPI_time: 0.272148
-MPI rank 8 :   RecvSpikeFromRemote_MPI_time: 4.83146
-MPI rank 8 :   SendSpikeToRemote_CUDAcp_time: 0.0636862
-MPI rank 8 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 8 :   JoinSpike_time: 0.0225236
-MPI rank 8 : Building time: 37.7306
-MPI rank 8 : Simulation time: 178.798
-MPI rank 5 : Building time: 38.4017
-MPI rank 5 : Simulation time: 178.8
-MPI rank 1 :   ExternalSpikeReset_time: 0.073991
-MPI rank 1 :   SendSpikeToRemote_MPI_time: 0.252378
-MPI rank 1 :   RecvSpikeFromRemote_MPI_time: 124.966
-MPI rank 1 :   SendSpikeToRemote_CUDAcp_time: 0.0624464
+MPI rank 1 :   SendSpikeToRemote_MPI_time: 0.0420491
+MPI rank 1 :   RecvSpikeFromRemote_MPI_time: 125.038
+MPI rank 1 :   SendSpikeToRemote_CUDAcp_time: 0.0629914
 MPI rank 1 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 10 :   SendSpikeToRemote_CUDAcp_time: 0.0626555
-MPI rank 10 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 10 :   JoinSpike_time: 0.022403
-MPI rank 10 : Building time: 37.8766
-MPI rank 10 : Simulation time: 178.799
+MPI rank 1 :   JoinSpike_time: 0.0243388
+MPI rank 1 : Building time: 37.8292
+MPI rank 2 :   SendSpikeToRemote_time: 0.135356
+MPI rank 2 :   RecvSpikeFromRemote_time: 125.206
+MPI rank 2 :   NestedLoop_time: 0.0209517
+MPI rank 2 :   GetSpike_time: 3.09358
+MPI rank 2 :   SpikeReset_time: 0.0641229
+MPI rank 2 :   ExternalSpikeReset_time: 0.0739411
+MPI rank 9 :   neuron_Update_time: 141.623
+MPI rank 9 :   copy_ext_spike_time: 0.0603519
+MPI rank 9 :   SendExternalSpike_time: 0.0808473
+MPI rank 9 :   SendSpikeToRemote_time: 0.133559
+MPI rank 9 :   RecvSpikeFromRemote_time: 0.166953
+MPI rank 9 :   NestedLoop_time: 0.0177196
+MPI rank 9 :   GetSpike_time: 9.09757
+MPI rank 9 :   SpikeReset_time: 0.0554507
+MPI rank 11 :   SpikeBufferUpdate_time: 2.0054
+MPI rank 11 :   poisson_generator_time: 23.8576
+MPI rank 5 :   SpikeBufferUpdate_time: 2.00956
+MPI rank 5 :   poisson_generator_time: 23.9532
+MPI rank 5 :   neuron_Update_time: 140.808
+MPI rank 4 :   RecvSpikeFromRemote_time: 1.25264
+MPI rank 4 :   NestedLoop_time: 0.0170839
+MPI rank 4 :   GetSpike_time: 9.09688
+MPI rank 4 :   SpikeReset_time: 0.0540398
+MPI rank 4 :   ExternalSpikeReset_time: 0.0896169
+MPI rank 4 :   SendSpikeToRemote_MPI_time: 0.0353617
+MPI rank 4 :   RecvSpikeFromRemote_MPI_time: 1.2495
+MPI rank 4 :   SendSpikeToRemote_CUDAcp_time: 0.063155
+MPI rank 3 :   neuron_Update_time: 140.09
+MPI rank 3 :   copy_ext_spike_time: 0.0607925
+MPI rank 3 :   SendExternalSpike_time: 0.0789475
+MPI rank 3 :   SendSpikeToRemote_time: 0.130832
+MPI rank 3 :   RecvSpikeFromRemote_time: 1.77958
+MPI rank 10 :   neuron_Update_time: 139.612
+MPI rank 10 :   copy_ext_spike_time: 0.0615213
+MPI rank 10 :   SendExternalSpike_time: 0.079091
+MPI rank 10 :   SendSpikeToRemote_time: 0.134314
+MPI rank 10 :   RecvSpikeFromRemote_time: 2.30338
+MPI rank 7 :   copy_ext_spike_time: 0.0605348
+MPI rank 7 :   SendExternalSpike_time: 0.079263
+MPI rank 7 :   SendSpikeToRemote_time: 0.131457
+MPI rank 7 :   RecvSpikeFromRemote_time: 1.88605
+MPI rank 7 :   NestedLoop_time: 0.0171195
+MPI rank 7 :   GetSpike_time: 9.09468
+MPI rank 7 :   SpikeReset_time: 0.055357
+MPI rank 8 :   GetSpike_time: 9.09428
+MPI rank 8 :   SpikeReset_time: 0.0556054
+MPI rank 8 :   ExternalSpikeReset_time: 0.0887514
+MPI rank 8 :   SendSpikeToRemote_MPI_time: 0.0360148
+MPI rank 8 :   RecvSpikeFromRemote_MPI_time: 4.76271
+MPI rank 6 :   SpikeBufferUpdate_time: 2.00223
+MPI rank 6 :   poisson_generator_time: 23.7446
+MPI rank 1 : Simulation time: 177.536
+MPI rank 2 :   SendSpikeToRemote_MPI_time: 0.0424435
+MPI rank 2 :   RecvSpikeFromRemote_MPI_time: 125.203
+MPI rank 2 :   SendSpikeToRemote_CUDAcp_time: 0.0627084
+MPI rank 2 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 2 :   JoinSpike_time: 0.0242127
+MPI rank 9 :   ExternalSpikeReset_time: 0.0905967
+MPI rank 9 :   SendSpikeToRemote_MPI_time: 0.0419881
+MPI rank 9 :   RecvSpikeFromRemote_MPI_time: 0.1638
+MPI rank 9 :   SendSpikeToRemote_CUDAcp_time: 0.0629037
+MPI rank 9 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 9 :   JoinSpike_time: 0.0224434
+MPI rank 11 :   neuron_Update_time: 139.825
+MPI rank 11 :   copy_ext_spike_time: 0.0604751
+MPI rank 11 :   SendExternalSpike_time: 0.0796235
+MPI rank 11 :   SendSpikeToRemote_time: 0.131637
+MPI rank 11 :   RecvSpikeFromRemote_time: 2.07592
+MPI rank 11 :   NestedLoop_time: 0.0173989
+MPI rank 5 :   copy_ext_spike_time: 0.0606369
+MPI rank 5 :   SendExternalSpike_time: 0.0792684
+MPI rank 5 :   SendSpikeToRemote_time: 0.131981
+MPI rank 5 :   RecvSpikeFromRemote_time: 1.01336
+MPI rank 5 :   NestedLoop_time: 0.017064
+MPI rank 5 :   GetSpike_time: 9.09541
+MPI rank 4 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 4 :   JoinSpike_time: 0.0222293
+MPI rank 4 : Building time: 38.2828
+MPI rank 4 : Simulation time: 177.517
+MPI rank 7 :   ExternalSpikeReset_time: 0.0903269
+MPI rank 7 :   SendSpikeToRemote_MPI_time: 0.0411828
+MPI rank 7 :   RecvSpikeFromRemote_MPI_time: 1.88296
+MPI rank 7 :   SendSpikeToRemote_CUDAcp_time: 0.0620486
 MPI rank 7 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 7 :   JoinSpike_time: 0.0222468
-MPI rank 7 : Building time: 37.7866
-MPI rank 7 : Simulation time: 178.8
+MPI rank 7 :   JoinSpike_time: 0.0221351
+MPI rank 7 : Building time: 38.4317
+MPI rank 7 : Simulation time: 177.532
+MPI rank 8 :   SendSpikeToRemote_CUDAcp_time: 0.0629455
+MPI rank 8 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 8 :   JoinSpike_time: 0.0229283
+MPI rank 8 : Building time: 38.4639
+MPI rank 8 : Simulation time: 177.51
+MPI rank 6 :   neuron_Update_time: 138.352
+MPI rank 6 :   copy_ext_spike_time: 0.0613964
+MPI rank 6 :   SendExternalSpike_time: 0.0793126
+MPI rank 6 :   SendSpikeToRemote_time: 0.134447
+MPI rank 6 :   RecvSpikeFromRemote_time: 3.66239
+Rank 1: After Simulate: {'VmPeak': 32874608, 'VmSize': 26731180, 'VmLck': 0, 'VmPin': 54516, 'VmHWM': 16020864, 'VmRSS': 9427384, 'VmData': 26471788, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 19100, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8511815680 B, used: 78118912 B)
+MPI rank 2 : Building time: 37.8337
+MPI rank 2 : Simulation time: 177.533
+MPI rank 9 : Building time: 38.3607
+MPI rank 9 : Simulation time: 177.537
+MPI rank 11 :   GetSpike_time: 9.09577
+MPI rank 11 :   SpikeReset_time: 0.0542578
+MPI rank 11 :   ExternalSpikeReset_time: 0.0884742
+MPI rank 11 :   SendSpikeToRemote_MPI_time: 0.0407339
+MPI rank 11 :   RecvSpikeFromRemote_MPI_time: 2.07272
+MPI rank 11 :   SendSpikeToRemote_CUDAcp_time: 0.062542
+MPI rank 11 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 11 :   JoinSpike_time: 0.0219842
+MPI rank 11 : Building time: 38.309
+MPI rank 5 :   SpikeReset_time: 0.0542347
+MPI rank 5 :   ExternalSpikeReset_time: 0.0898694
+MPI rank 5 :   SendSpikeToRemote_MPI_time: 0.0410165
+MPI rank 5 :   RecvSpikeFromRemote_MPI_time: 1.01015
+MPI rank 5 :   SendSpikeToRemote_CUDAcp_time: 0.0626853
+Rank 4: After Simulate: {'VmPeak': 36913772, 'VmSize': 30767384, 'VmLck': 0, 'VmPin': 54516, 'VmHWM': 16054256, 'VmRSS': 9454500, 'VmData': 30493604, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19036, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 803733504 B, used: 7786201088 B)
+MPI rank 3 :   NestedLoop_time: 0.016864
+MPI rank 3 :   GetSpike_time: 9.0963
+MPI rank 3 :   SpikeReset_time: 0.0549027
+MPI rank 3 :   ExternalSpikeReset_time: 0.0897367
+MPI rank 10 :   NestedLoop_time: 0.0174134
+MPI rank 10 :   GetSpike_time: 9.09537
+MPI rank 10 :   SpikeReset_time: 0.0562087
+MPI rank 10 :   ExternalSpikeReset_time: 0.0917564
+MPI rank 10 :   SendSpikeToRemote_MPI_time: 0.0421883
+MPI rank 10 :   RecvSpikeFromRemote_MPI_time: 2.3002
+MPI rank 10 :   SendSpikeToRemote_CUDAcp_time: 0.063427
+MPI rank 10 :   RecvSpikeFromRemote_CUDAcp_time: 0
+Rank 7: After Simulate: {'VmPeak': 36900140, 'VmSize': 30753752, 'VmLck': 0, 'VmPin': 54520, 'VmHWM': 16018312, 'VmRSS': 9418176, 'VmData': 30479972, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19008, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 803733504 B, used: 7786201088 B)
+Rank 8: After Simulate: {'VmPeak': 36913124, 'VmSize': 30766736, 'VmLck': 0, 'VmPin': 54516, 'VmHWM': 16068208, 'VmRSS': 9468068, 'VmData': 30492956, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19032, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 803733504 B, used: 7786201088 B)
+MPI rank 6 :   NestedLoop_time: 0.0174632
+MPI rank 6 :   GetSpike_time: 9.09635
+MPI rank 6 :   SpikeReset_time: 0.055418
+MPI rank 6 :   ExternalSpikeReset_time: 0.0892878
+MPI rank 6 :   SendSpikeToRemote_MPI_time: 0.0426056
+Rank 2: After Simulate: {'VmPeak': 32859752, 'VmSize': 26716324, 'VmLck': 0, 'VmPin': 54520, 'VmHWM': 16029808, 'VmRSS': 9435320, 'VmData': 26456932, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 107268, 'VmPTE': 19076, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8511815680 B, used: 78118912 B)
+Rank 9: After Simulate: {'VmPeak': 36913052, 'VmSize': 30766664, 'VmLck': 0, 'VmPin': 54516, 'VmHWM': 16004460, 'VmRSS': 9404124, 'VmData': 30492884, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19024, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 803733504 B, used: 7786201088 B)
+MPI rank 11 : Simulation time: 177.531
+MPI rank 5 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 5 :   JoinSpike_time: 0.0221089
+MPI rank 5 : Building time: 38.2903
+MPI rank 5 : Simulation time: 177.538
+MPI rank 3 :   SendSpikeToRemote_MPI_time: 0.040514
+MPI rank 3 :   RecvSpikeFromRemote_MPI_time: 1.7764
+MPI rank 3 :   SendSpikeToRemote_CUDAcp_time: 0.062053
 MPI rank 3 :   RecvSpikeFromRemote_CUDAcp_time: 0
-MPI rank 3 :   JoinSpike_time: 0.0219086
-MPI rank 3 : Building time: 37.7796
-MPI rank 3 : Simulation time: 178.799
-MPI rank 6 : Simulation time: 178.798
-MPI rank 9 : Simulation time: 178.799
-MPI rank 1 :   JoinSpike_time: 0.0244075
-MPI rank 1 : Building time: 37.2992
-MPI rank 1 : Simulation time: 178.798
+MPI rank 3 :   JoinSpike_time: 0.0221222
+MPI rank 10 :   JoinSpike_time: 0.0225775
+MPI rank 10 : Building time: 38.3231
+MPI rank 10 : Simulation time: 177.533
+MPI rank 6 :   RecvSpikeFromRemote_MPI_time: 3.65902
+MPI rank 6 :   SendSpikeToRemote_CUDAcp_time: 0.062877
+MPI rank 6 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 6 :   JoinSpike_time: 0.0227489
+MPI rank 6 : Building time: 38.5553
+Rank 11: After Simulate: {'VmPeak': 36913124, 'VmSize': 30766736, 'VmLck': 0, 'VmPin': 54516, 'VmHWM': 16041508, 'VmRSS': 9441108, 'VmData': 30492956, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19036, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 803733504 B, used: 7786201088 B)
+Rank 5: After Simulate: {'VmPeak': 36912408, 'VmSize': 30766020, 'VmLck': 0, 'VmPin': 54516, 'VmHWM': 16005752, 'VmRSS': 9405700, 'VmData': 30492240, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19032, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 803733504 B, used: 7786201088 B)
+MPI rank 3 : Building time: 38.3691
+MPI rank 3 : Simulation time: 177.531
+Rank 10: After Simulate: {'VmPeak': 36912980, 'VmSize': 30766592, 'VmLck': 0, 'VmPin': 54516, 'VmHWM': 16027196, 'VmRSS': 9427052, 'VmData': 30492812, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19036, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 803733504 B, used: 7786201088 B)
+MPI rank 6 : Simulation time: 177.532
+Rank 3: After Simulate: {'VmPeak': 36906288, 'VmSize': 30759900, 'VmLck': 0, 'VmPin': 54516, 'VmHWM': 16159616, 'VmRSS': 9559220, 'VmData': 30486120, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19020, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 803733504 B, used: 7786201088 B)
+Rank 6: After Simulate: {'VmPeak': 36913004, 'VmSize': 30766616, 'VmLck': 0, 'VmPin': 54516, 'VmHWM': 16160880, 'VmRSS': 9560484, 'VmData': 30492836, 'VmStk': 144, 'VmExe': 2596, 'VmLib': 97400, 'VmPTE': 19032, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 803733504 B, used: 7786201088 B)
 ending
-Time is Thu Jul 14 08:14:52 JST 2022
+Time is Thu Jul 14 13:12:17 JST 2022

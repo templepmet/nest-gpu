@@ -30,7 +30,7 @@ for nodes in nodes_list:
 	with open(f'../scaling/1e6neuron/out_{nodes}.txt') as f:
 		text = f.read()
 		for label in label_time:
-			t = float(re.findall(f'MPI rank {nodes-1} :   {label}: (.*)\n', text)[0])
+			t = float(re.findall(f'MPI rank 0 :   {label}: (.*)\n', text)[0])
 			raw[nodes][label] = t
 
 yy = []

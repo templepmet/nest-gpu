@@ -1,0 +1,8 @@
+Runnning on host c1
+Starting at Thu Jul 14 11:52:21 JST 2022
+Running on hosts: c[1-4]
+Running on 4 nodes.
+Running 4 tasks.
+Current working directory is /home/y-terans/workspace/nest-gpu/develop
+ending
+Time is Thu Jul 14 11:52:24 JST 2022

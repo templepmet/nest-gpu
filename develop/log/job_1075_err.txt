@@ -1,0 +1,28 @@
+  File "/home/y-terans/workspace/nest-gpu/develop/brunel_mpi_without_remote.py", line 153
+    print nrows, ncol
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(nrows, ncol)?
+  File "/home/y-terans/workspace/nest-gpu/develop/brunel_mpi_without_remote.py", line 153
+    print nrows, ncol
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(nrows, ncol)?
+  File "/home/y-terans/workspace/nest-gpu/develop/brunel_mpi_without_remote.py", line 153
+    print nrows, ncol
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(nrows, ncol)?
+  File "/home/y-terans/workspace/nest-gpu/develop/brunel_mpi_without_remote.py", line 153
+    print nrows, ncol
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(nrows, ncol)?
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+[c1:14982] PMIX ERROR: BAD-PARAM in file base/pnet_base_fns.c at line 112
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[1617,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
