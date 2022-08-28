@@ -40,5 +40,5 @@ python/test/log.txt
 
 .env
 *.sif
-*.def
-!nest-gpu_base.def
+# *.def
+# !nest-gpu_base.def
