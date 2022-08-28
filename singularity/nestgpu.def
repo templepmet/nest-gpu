@@ -110,6 +110,7 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	export PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
 	cd /opt/nestgpu_install
 	./install.sh
+	chmod -R 777 $NEST_GPU
 
 %runscript
 	# Install nestgpu from mount directory

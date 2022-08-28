@@ -40,5 +40,6 @@ python/test/log.txt
 
 .env
 *.sif
+nestgpu_sandbox/
 # *.def
 # !nest-gpu_base.def
