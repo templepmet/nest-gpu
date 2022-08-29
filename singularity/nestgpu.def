@@ -103,7 +103,9 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 		mpi4py \
 		pynvml \
 		dicthash \
-		scipy
+		scipy \
+		nested_dict \
+		pandas
 
 	# Install nestgpu
 	export NEST_GPU=/opt/nestgpu
