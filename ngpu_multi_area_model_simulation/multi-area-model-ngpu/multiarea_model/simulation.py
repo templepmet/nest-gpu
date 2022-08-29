@@ -17,7 +17,7 @@ is identified by a unique hash label.
 
 from mpi4py import MPI
 import json
-import neurongpu as ngpu
+import nestgpu as ngpu
 import numpy as np
 import os
 import pprint
