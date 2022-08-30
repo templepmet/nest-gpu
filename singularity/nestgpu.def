@@ -28,6 +28,9 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	export PYENV_ROOT=/opt/pyenv
 	export PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
 
+	# NEST
+	source /opt/nest/bin/nest_vars.sh
+
 	# NEST-GPU
 	export NEST_GPU=/opt/nestgpu
 	export PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
@@ -93,7 +96,7 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	export PYENV_ROOT="/opt/pyenv"
 	export PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
 	git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
-		&& pyenv install -v ${PYTHON_VERSION} \
+		&& CFLAGS="-fPIC" pyenv install -v ${PYTHON_VERSION} \
 		&& pyenv global ${PYTHON_VERSION} \
 		&& pyenv rehash
 
@@ -106,6 +109,32 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 		scipy \
 		nested_dict \
 		pandas
+
+	# Install nest
+	apt-get install -y --no-install-recommends \
+		cython \
+		libgsl-dev \
+		libltdl-dev \
+		libncurses-dev \
+		libboost-dev
+	cd /opt/
+	wget https://github.com/nest/nest-simulator/archive/refs/tags/v3.3.tar.gz
+	tar -xzvf v3.3.tar.gz
+	rm v3.3.tar.gz
+	cd nest-simulator-3.3/
+	mkdir build
+	cd build
+	cmake -DCMAKE_INSTALL_PREFIX:PATH=/opt/nest \
+  	-Dwith-python=ON \
+  	-Dwith-mpi=ON \
+  	-Dwith-openmp=ON \
+  	-Dwith-boost=ON \
+  	-Dwith-readline=ON \
+  	-Dwith-ltdl=ON \
+  	-Dwith-gsl=ON \
+		..
+	make -j8
+	make install
 
 	# Install nestgpu
 	export NEST_GPU=/opt/nestgpu
