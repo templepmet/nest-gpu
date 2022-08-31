@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-singularity exec --nv ../../singularity/nestgpu.sif python run_simulation.py
+mpirun -np 1 singularity exec --nv --no-home ../../singularity/nestgpu.sif python run_simulation.py

@@ -16,7 +16,7 @@ from mpi4py import MPI
 import shutil
 from multiarea_model.default_params import nested_update, sim_params
 
-import neurongpu as ngpu
+import nestgpu as ngpu
 
 ngpu.ConnectMpiInit()
 
