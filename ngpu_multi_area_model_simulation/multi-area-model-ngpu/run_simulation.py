@@ -22,6 +22,14 @@ ngpu.ConnectMpiInit()
 
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
+size = comm.Get_size()
+name = MPI.Get_processor_name()
+print(f'Hello World! I am process {rank} of {size} on {name}.\n')
+
+num_processes = size
+local_num_threads = int(os.environ['OMP_NUM_THREADS'])
+if rank == 0:
+    print(f'Simulation: {num_processes} process, {local_num_threads} thread')
 
 d = {}
 conn_params = {'g': -11.,
@@ -43,10 +51,16 @@ network_params = {'N_scaling': 1.,
                   'input_params': input_params,
                   'neuron_params': neuron_params}
 
+# sim_params = {'t_sim': 10000.,
+#               't_presim': 500.0,
+#               'num_processes': 32,
+#               'local_num_threads': 256,
+#               'recording_dict': {'record_vm': False}}
+
 sim_params = {'t_sim': 10000.,
               't_presim': 500.0,
-              'num_processes': 32,
-              'local_num_threads': 256,
+              'num_processes': num_processes,
+              'local_num_threads': local_num_threads,
               'recording_dict': {'record_vm': False}}
 
 theory_params = {'dt': 0.1}
