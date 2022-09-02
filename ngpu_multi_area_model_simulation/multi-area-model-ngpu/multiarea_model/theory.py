@@ -172,7 +172,7 @@ class Theory:
             initial_rates = next(gen)
             print("Iteration: {}".format(iteration))
             for i in range(dim):
-                nest.SetStatus([neurons[i]], {'rate': initial_rates[i]})
+                nest.SetStatus(neurons[i], {'rate': initial_rates[i]})
             # simulate
             nest.Simulate(T + dt)
             data = nest.GetStatus(multimeter)[0]['events']
