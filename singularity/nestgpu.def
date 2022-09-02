@@ -39,6 +39,9 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	# NEST-GPU
 	export NEST_GPU=/opt/nestgpu
 	export PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
+	
+	# matplotlib writable
+	export MPLCONFIGDIR=/tmp/matplotlib
 
 %post
 	# Initial settings
