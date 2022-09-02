@@ -69,6 +69,7 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	cmake \
 	gcc \
 	g++ \
+	gdb \
 	libomp-dev \
 	libibverbs-dev \
 	openssl \
