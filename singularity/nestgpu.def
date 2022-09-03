@@ -93,7 +93,8 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	tar -xvf openmpi-3.1.4.tar.gz
 	cd openmpi-3.1.4
 	mkdir $MPI_PATH
-	./configure --prefix=$MPI_PATH --with-cuda=$CUDA_PATH --with-verbs --with-pmix=internal --enable-install-pmix
+	./configure --prefix=$MPI_PATH --with-cuda=$CUDA_PATH --with-verbs
+	# ./configure --prefix=$MPI_PATH --with-cuda=$CUDA_PATH --with-verbs --with-pmix=internal --enable-install-pmix
 	make -j8
 	make install
 	export PATH=$MPI_PATH/bin:$PATH
