@@ -3,7 +3,7 @@
 rm -rf build
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/opt/nest \
+cmake -DCMAKE_INSTALL_PREFIX:PATH=$NEST \
 	-Dwith-python=ON \
 	-Dwith-mpi=ON \
 	-Dwith-openmp=ON \
@@ -13,4 +13,5 @@ cmake -DCMAKE_INSTALL_PREFIX:PATH=/opt/nest \
 	-Dwith-gsl=ON \
 	..
 make -j8
+rm -rf $NEST
 make install
