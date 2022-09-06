@@ -12,6 +12,8 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	../Makefile.am /opt/nestgpu_install/
 	../patch.sh /opt/nestgpu_install/
 	../postinstall.sh /opt/nestgpu_install/
+	
+	../nest-simulator-3.3 /opt/nest_install
 
 %environment
 	# Standard compiler
@@ -127,35 +129,21 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 		libltdl-dev \
 		libncurses-dev \
 		libboost-dev
-	cd /opt/
-	wget https://github.com/nest/nest-simulator/archive/refs/tags/v3.3.tar.gz
-	tar -xzvf v3.3.tar.gz
-	rm v3.3.tar.gz
-	cd nest-simulator-3.3/
-	mkdir build
-	cd build
-	cmake -DCMAKE_INSTALL_PREFIX:PATH=/opt/nest \
-  	-Dwith-python=ON \
-  	-Dwith-mpi=ON \
-  	-Dwith-openmp=ON \
-  	-Dwith-boost=ON \
-  	-Dwith-readline=ON \
-  	-Dwith-ltdl=ON \
-  	-Dwith-gsl=ON \
-		..
-	make -j8
-	make install
+	cd /opt/nest_install
+	./install.sh
 
 	# Install nestgpu
 	export NEST_GPU=/opt/nestgpu
-	export PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
 	cd /opt/nestgpu_install
 	./install.sh
 	chmod -R 777 $NEST_GPU
 
 %runscript
+	# Install nest from mount directory
+	cd /opt/nest_install
+	./install.sh
+
 	# Install nestgpu from mount directory
 	export NEST_GPU=/opt/nestgpu
-	export PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
 	cd /opt/nestgpu_install
 	./install.sh
