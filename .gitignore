@@ -43,3 +43,5 @@ python/test/log.txt
 nestgpu_sandbox/
 # *.def
 # !nest-gpu_base.def
+
+log_00.dat
