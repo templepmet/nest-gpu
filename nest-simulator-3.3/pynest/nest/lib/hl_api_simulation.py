@@ -215,15 +215,23 @@ def SetKernelStatus(params):
     GetKernelStatus
 
     """
+    print('through 0')
     # We need the nest module to be fully initialized in order to access the
     # _kernel_attr_names and _readonly_kernel_attrs. As hl_api_simulation is
     # imported during nest module initialization, we can't put the import on
     # the module level, but have to have it on the function level.
     import nest    # noqa
+    print('through 1')
+    print(params)
+    print(nest.dict_miss_is_error)
     raise_errors = params.get('dict_miss_is_error', nest.dict_miss_is_error)
+    print('through 2')
     valids = nest._kernel_attr_names
+    print('through 3')
     readonly = nest._readonly_kernel_attrs
+    print('through 4')
     keys = list(params.keys())
+    print('through 5')
     for key in keys:
         msg = None
         if key not in valids:
@@ -239,8 +247,11 @@ def SetKernelStatus(params):
                 warnings.warn(msg + f' \n`{key}` has been ignored')
                 del params[key]
 
+    print('through 1')
     sps(params)
+    print('through 2')
     sr('SetKernelStatus')
+    print('through 3')
 
 
 @check_stack
