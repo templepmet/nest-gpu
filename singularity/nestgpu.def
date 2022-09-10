@@ -21,6 +21,7 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	# NVHPC
 	. /etc/profile.d/lmod.sh
 	module load nvhpc
+	export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
 	# Standard compiler
 	export CC=gcc
