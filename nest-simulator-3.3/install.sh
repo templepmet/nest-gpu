@@ -17,4 +17,5 @@ else
 fi
 
 make -j8
+rm -rf $NEST
 make install
