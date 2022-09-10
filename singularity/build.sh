@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-sudo singularity build --force nestgpu.sif nestgpu.def
+singularity build -f --force nestgpu.sif nestgpu.def

@@ -1,0 +1,10 @@
+{
+	"cmake.configureOnOpen": false,
+	"files.associations": {
+		"*.ipp": "cpp",
+		"queue": "cpp",
+		"stack": "cpp",
+		"filesystem": "cpp"
+	},
+	"git.ignoreLimitWarning": true
+}

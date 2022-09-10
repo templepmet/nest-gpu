@@ -1,0 +1,8 @@
+matplotlib
+mpi4py
+pynvml
+dicthash
+scipy
+nested_dict
+pandas
+cython

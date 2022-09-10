@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
+From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 
 %files
 	../m4 /opt/nestgpu_install/
@@ -12,148 +12,92 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	../Makefile.am /opt/nestgpu_install/
 	../patch.sh /opt/nestgpu_install/
 	../postinstall.sh /opt/nestgpu_install/
+	
+	../nest-simulator-3.3 /opt/nest_install
+
+	../requirements.txt /opt
 
 %environment
+	# NVHPC
+	. /etc/profile.d/lmod.sh
+	module load nvhpc
+	export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+
 	# Standard compiler
 	export CC=gcc
 	export CXX=g++
-	export CUDA_PATH=/usr/local/cuda
 
 	# OpenMPI
-	export OMPI_DIR=/opt/openmpi
-	export PATH=$OMPI_DIR/bin:$PATH
-	export LD_LIBRARY_PATH=$OMPI_DIR/lib:$LD_LIBRARY_PATH
-	export MANPATH=$OMPI_DIR/share/man:$MANPATH
-	export SINGULARITY_OMPI_DIR=$OMPI_DIR
-	export SINGULARITYENV_APPEND_PATH=$OMPI_DIR/bin
-	export SINGULAIRTYENV_APPEND_LD_LIBRARY_PATH=$OMPI_DIR/lib
+	export OMPI_CC=$CC
+	export OMPI_CXX=$CXX
 
 	# pyenv
 	export PYENV_ROOT=/opt/pyenv
-	export PATH=${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}
+	export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
 	# NEST
-	export PATH=/opt/nest/bin:${PATH}
-	export PYTHONPATH=/opt/nest/lib/python3.9/site-packages:${PYTHONPATH}
+	export NEST=/opt/nest
+	export PATH=$NEST/bin:$PATH
+	export PYTHONPATH=$NEST/lib/python3.10/site-packages:$PYTHONPATH
 
 	# NEST-GPU
 	export NEST_GPU=/opt/nestgpu
-	export PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
+	export PYTHONPATH=$NEST_GPU/lib/python3.10/site-packages:$PYTHONPATH
 	
 	# matplotlib writable
 	export MPLCONFIGDIR=/tmp/matplotlib
 
 %post
 	# Initial settings
+	. /etc/profile.d/lmod.sh
+	module load nvhpc
 	export DEBIAN_FRONTEND=noninteractive
 	export DEBCONF_NOWARNINGS=yes
 	export CC=gcc
 	export CXX=g++
-	export CUDA_PATH=/usr/local/cuda
-	export PATH=${CUDA_PATH}/bin:${PATH}
-	ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
-	chmod -R 777 /opt
+	export OMPI_CC=$CC
+	export OMPI_CXX=$CXX
 	
 	# Install packages
 	apt-get update
 	apt-get install -y --no-install-recommends \
-	sudo \
-	ca-certificates \
-	git \
-	curl \
-	wget \
-	ssh \
-	patch \
-	less \
-	make \
-	cmake \
-	gcc \
-	g++ \
-	libomp-dev \
-	libibverbs-dev \
-	openssl \
-	libssl-dev \
 	libbz2-dev \
-	libreadline-dev \
-	libsqlite3-dev \
+	libncurses-dev \
 	libffi-dev \
-	zlib1g-dev \
-	liblzma-dev \
-	libtool \
-	libtool-bin \
-	autoconf \
-	automake \
-	locales-all
-
-	# Install openmpi 3.1.4
-	export MPI_PATH=/opt/openmpi
-	cd /tmp
-	wget https://download.open-mpi.org/release/open-mpi/v3.1/openmpi-3.1.4.tar.gz
-	tar -xvf openmpi-3.1.4.tar.gz
-	cd openmpi-3.1.4
-	mkdir $MPI_PATH
-	./configure --prefix=$MPI_PATH --with-cuda=$CUDA_PATH --with-verbs --with-pmix=internal --enable-install-pmix
-	make -j8
-	make install
-	export PATH=$MPI_PATH/bin:$PATH
-	export LD_LIBRARY_PATH=$MPI_PATH/lib:$LD_LIBRARY_PATH
-	export MANPATH=$MPI_PATH/share/man:$MANPATH
+	libreadline-dev \
+	libssl-dev \
+	libgsl-dev \
+	libltdl-dev \
+	libboost-dev
 
 	# Install pyenv
-	export PYTHON_VERSION="3.9.12"
-	export PYENV_ROOT="/opt/pyenv"
-	export PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
-	git clone https://github.com/pyenv/pyenv.git ${PYENV_ROOT} \
-		&& CFLAGS="-fPIC" pyenv install -v ${PYTHON_VERSION} \
-		&& pyenv global ${PYTHON_VERSION} \
+	export PYTHON_VERSION=3.10.7
+	export PYENV_ROOT=/opt/pyenv
+	export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+	git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT \
+		&& CFLAGS="-fPIC" pyenv install -v $PYTHON_VERSION \
+		&& pyenv global $PYTHON_VERSION \
 		&& pyenv rehash
-
-	# Install pip package
-	pip install \
-		matplotlib \
-		mpi4py \
-		pynvml \
-		dicthash \
-		scipy \
-		nested_dict \
-		pandas
-
+	
+	pip install -r /opt/requirements.txt
+	
 	# Install nest
-	apt-get install -y --no-install-recommends \
-		cython \
-		libgsl-dev \
-		libltdl-dev \
-		libncurses-dev \
-		libboost-dev
-	cd /opt/
-	wget https://github.com/nest/nest-simulator/archive/refs/tags/v3.3.tar.gz
-	tar -xzvf v3.3.tar.gz
-	rm v3.3.tar.gz
-	cd nest-simulator-3.3/
-	mkdir build
-	cd build
-	cmake -DCMAKE_INSTALL_PREFIX:PATH=/opt/nest \
-  	-Dwith-python=ON \
-  	-Dwith-mpi=ON \
-  	-Dwith-openmp=ON \
-  	-Dwith-boost=ON \
-  	-Dwith-readline=ON \
-  	-Dwith-ltdl=ON \
-  	-Dwith-gsl=ON \
-		..
-	make -j8
-	make install
+	export NEST=/opt/nest
+	cd /opt/nest_install
+	./install.sh
+	chmod -R 777 $NEST
 
 	# Install nestgpu
 	export NEST_GPU=/opt/nestgpu
-	export PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
 	cd /opt/nestgpu_install
 	./install.sh
 	chmod -R 777 $NEST_GPU
 
 %runscript
+	# Install nest from mount directory
+	cd /opt/nest_install
+	./install.sh
+
 	# Install nestgpu from mount directory
-	export NEST_GPU=/opt/nestgpu
-	export PYTHONPATH=${NEST_GPU}/lib/python3.9/site-packages:${PYTHONPATH}
 	cd /opt/nestgpu_install
 	./install.sh
