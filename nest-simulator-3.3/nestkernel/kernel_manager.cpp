@@ -149,7 +149,6 @@ nest::KernelManager::set_status( const DictionaryDatum& dict )
 {
   assert( is_initialized() );
 
-  int i = 0;
   for ( auto& manager : managers )
   {
     manager->set_status( dict );
