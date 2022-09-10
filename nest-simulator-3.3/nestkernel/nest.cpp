@@ -101,13 +101,9 @@ get_vp_specific_rng( thread tid )
 void
 set_kernel_status( const DictionaryDatum& dict )
 {
-  LOG( M_INFO, "set_kernel_status", "through 4" );
   dict->clear_access_flags();
-  LOG( M_INFO, "set_kernel_status", "through 5" );
   kernel().set_status( dict );
-  LOG( M_INFO, "set_kernel_status", "through 6" );
   ALL_ENTRIES_ACCESSED( *dict, "SetKernelStatus", "Unread dictionary entries: " );
-  LOG( M_INFO, "set_kernel_status", "through 7" );
 }
 
 DictionaryDatum

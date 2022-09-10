@@ -152,8 +152,6 @@ nest::KernelManager::set_status( const DictionaryDatum& dict )
   int i = 0;
   for ( auto& manager : managers )
   {
-    LOG( M_INFO, "kernel_manager set_status", std::to_string( i ) );
-    i++;
     manager->set_status( dict );
   }
 }
