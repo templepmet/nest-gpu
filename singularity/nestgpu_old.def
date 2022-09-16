@@ -135,10 +135,10 @@ From: nvcr.io/nvidia/cuda:11.6.2-devel-ubuntu20.04
 	chmod -R 777 $NEST
 
 	# Install nestgpu
-	export NEST_GPU=/opt/nestgpu
-	cd /opt/nestgpu_install
-	./install.sh
-	chmod -R 777 $NEST_GPU
+	# export NEST_GPU=/opt/nestgpu
+	# cd /opt/nestgpu_install
+	# ./install.sh
+	# chmod -R 777 $NEST_GPU
 
 %runscript
 	# Install nest from mount directory

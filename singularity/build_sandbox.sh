@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-sudo singularity build --force --sandbox nestgpu_sandbox nestgpu.def
+singularity build -f --force --sandbox nestgpu_sandbox nestgpu.def

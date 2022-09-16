@@ -20,14 +20,21 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 %environment
 	# NVHPC
 	. /etc/profile.d/lmod.sh
-	module load nvhpc
+	module load nvhpc-byo-compiler
 	export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+	export LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/lib64:$LIBRARY_PATH
+	export LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/math_libs/lib64:$LIBRARY_PATH
 
 	# Standard compiler
 	export CC=gcc
 	export CXX=g++
+	export CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda
 
 	# OpenMPI
+	export OMPI_DIR=/opt/openmpi
+	export PATH=$OMPI_DIR/bin:$PATH
+	export LD_LIBRARY_PATH=$OMPI_DIR/lib:$LD_LIBRARY_PATH
+	export MANPATH=$OMPI_DIR/share/man:$MANPATH
 	export OMPI_CC=$CC
 	export OMPI_CXX=$CXX
 
@@ -50,13 +57,17 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 %post
 	# Initial settings
 	. /etc/profile.d/lmod.sh
-	module load nvhpc
+	module load nvhpc-byo-compiler
+	export LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/lib64:$LIBRARY_PATH
+	export LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/math_libs/lib64:$LIBRARY_PATH
+
 	export DEBIAN_FRONTEND=noninteractive
 	export DEBCONF_NOWARNINGS=yes
 	export CC=gcc
 	export CXX=g++
 	export OMPI_CC=$CC
 	export OMPI_CXX=$CXX
+	export CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda
 	
 	# Install packages
 	apt-get update
@@ -68,30 +79,44 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	libssl-dev \
 	libgsl-dev \
 	libltdl-dev \
-	libboost-dev
+	libboost-dev \
+	libiberty-dev \
+	libibverbs-dev
 
-	# Install pyenv
-	export PYTHON_VERSION=3.10.7
-	export PYENV_ROOT=/opt/pyenv
-	export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
-	git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT \
-		&& CFLAGS="-fPIC" pyenv install -v $PYTHON_VERSION \
-		&& pyenv global $PYTHON_VERSION \
-		&& pyenv rehash
-	
-	pip install -r /opt/requirements.txt
-	
-	# Install nest
-	export NEST=/opt/nest
-	cd /opt/nest_install
-	./install.sh
-	chmod -R 777 $NEST
+	# # Install openmpi 3.1.4
+	# export MPI_PATH=/opt/openmpi
+	# cd /tmp
+	# wget https://download.open-mpi.org/release/open-mpi/v3.1/openmpi-3.1.4.tar.gz
+	# tar -xvf openmpi-3.1.4.tar.gz
+	# cd openmpi-3.1.4
+	# mkdir $MPI_PATH
+	# ./configure --prefix=$MPI_PATH --with-cuda=$CUDA_HOME --with-verbs
+	# make -j24
+	# make install
+	# export PATH=$MPI_PATH/bin:$PATH
+	# export LD_LIBRARY_PATH=$MPI_PATH/lib:$LD_LIBRARY_PATH
 
-	# Install nestgpu
-	export NEST_GPU=/opt/nestgpu
-	cd /opt/nestgpu_install
-	./install.sh
-	chmod -R 777 $NEST_GPU
+	# # Install pyenv
+	# export PYTHON_VERSION=3.10.7
+	# export PYENV_ROOT=/opt/pyenv
+	# export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+	# git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT \
+	# 	&& CFLAGS="-fPIC" pyenv install -v $PYTHON_VERSION \
+	# 	&& pyenv global $PYTHON_VERSION \
+	# 	&& pyenv rehash
+	# pip install -r /opt/requirements.txt
+	
+	# # Install nest
+	# export NEST=/opt/nest
+	# cd /opt/nest_install
+	# ./install.sh
+	# chmod -R 777 $NEST
+
+	# # Install nestgpu
+	# export NEST_GPU=/opt/nestgpu
+	# cd /opt/nestgpu_install
+	# ./install.sh
+	# chmod -R 777 $NEST_GPU
 
 %runscript
 	# Install nest from mount directory
