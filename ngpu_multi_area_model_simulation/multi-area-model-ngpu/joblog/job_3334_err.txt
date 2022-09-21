@@ -1,0 +1,2 @@
+[c15:05749] PMIX ERROR: BAD-PARAM in file base/pnet_base_fns.c at line 112
+[c15:05749] PMIX ERROR: BAD-PARAM in file base/pnet_base_fns.c at line 112

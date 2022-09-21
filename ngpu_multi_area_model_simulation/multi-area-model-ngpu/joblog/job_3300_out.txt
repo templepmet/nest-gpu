@@ -1,0 +1,11 @@
+Runnning on host c13
+Starting at Tue Sep 20 03:49:25 JST 2022
+Running on hosts: c13
+Running on 1 nodes.
+Running 1 tasks.
+Current working directory is /home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu
+              total        used        free      shared  buff/cache   available
+Mem:           125G        1.7G        123G        283M        338M        122G
+Swap:           15G        4.0M         15G
+ending
+Time is Tue Sep 20 03:49:25 JST 2022

@@ -3,10 +3,11 @@
 #SBATCH -J nestgpu              # Job name
 #SBATCH -o ./joblog/job_%j_out.txt # Name of stdout output file (%j expands to %jobId)
 #SBATCH -e ./joblog/job_%j_err.txt # Name of stderr output file (%j expands to %jobId)
-#SBATCH -N 16                    # Total number of nodes requested
+#SBATCH -N 8                    # Total number of nodes requested
 #SBATCH -n 32                    # Total number of mpi tasks requested
-#SBATCH -c 6                     # Each process, number of core
-#SBATCH -t 00:30:00             # Run time (hh:mm:ss) - 1.5 hours
+#SBATCH -c 2                     # Each process, number of core
+#SBATCH -t 01:00:00             # Run time (hh:mm:ss) - 1.5 hours
+#SBATCH --exclude=c6
 
 echo Runnning on host `hostname`
 echo "Starting at `date`"
@@ -25,7 +26,7 @@ echo "Current working directory is `pwd`"
 
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 # for Infiniband
-mpirun --mca btl openib,self,vader singularity exec --nv --no-home ../../singularity/nestgpu.sif python run_simulation.py
+mpirun --mca btl openib,self,vader singularity exec --nv --no-home ../../singularity/nestgpu.sif python run_simulation_sim.py
 # setting CUDA_VISIBLE_DEVICES=
 
 echo ending

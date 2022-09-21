@@ -1,0 +1,286 @@
+Runnning on host c13
+Starting at Wed Sep 21 07:21:57 JST 2022
+Running on hosts: c13
+Running on 1 nodes.
+Running 2 tasks.
+Current working directory is /home/y-terans/workspace/nest-gpu/develop
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+mpi_np: 2
+Rank 1: Before Buildng: {'VmPeak': 13750136, 'VmSize': 13750136, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 222576, 'VmRSS': 222576, 'VmData': 13470160, 'VmStk': 144, 'VmExe': 2556, 'VmLib': 97588, 'VmPTE': 668, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8283226112 B, used: 306708480 B)
+Building on host  1  ...
+mpi_np: 2
+Rank 0: Before Buildng: {'VmPeak': 13750136, 'VmSize': 13750136, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 222576, 'VmRSS': 222576, 'VmData': 13470160, 'VmStk': 144, 'VmExe': 2556, 'VmLib': 97588, 'VmPTE': 664, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8283226112 B, used: 306708480 B)
+Building on host  0  ...
+Rank 1: After Create: {'VmPeak': 13916876, 'VmSize': 13884112, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 264652, 'VmRSS': 264652, 'VmData': 13602088, 'VmStk': 144, 'VmExe': 2556, 'VmLib': 97588, 'VmPTE': 748, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8243380224 B, used: 346554368 B)
+Rank 0: After Create: {'VmPeak': 13916876, 'VmSize': 13884112, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 264724, 'VmRSS': 264724, 'VmData': 13602088, 'VmStk': 144, 'VmExe': 2556, 'VmLib': 97588, 'VmPTE': 748, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8211922944 B, used: 378011648 B)
+Rank 1: After Connect: {'VmPeak': 15039592, 'VmSize': 15039592, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 1282636, 'VmRSS': 1282636, 'VmData': 14757568, 'VmStk': 144, 'VmExe': 2556, 'VmLib': 97588, 'VmPTE': 3008, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 8211922944 B, used: 378011648 B)
+MPI rank 1 : Calibrating ...
+Rank 0: After Connect: {'VmPeak': 15038580, 'VmSize': 15038580, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 1281916, 'VmRSS': 1281916, 'VmData': 14756556, 'VmStk': 144, 'VmExe': 2556, 'VmLib': 97588, 'VmPTE': 3000, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 7496794112 B, used: 1093140480 B)
+MPI rank 0 : Calibrating ...
+MPI rank 1 : Simulating ...
+Neural activity simulation time: 1000.000
+MPI rank 0 : Simulating ...
+Neural activity simulation time: 1000.000
+0.000
+0.000
+10.000
+10.000
+20.000
+20.000
+30.000
+30.000
+40.000
+40.000
+50.000
+50.000
+60.000
+60.000
+70.000
+70.000
+80.000
+80.000
+90.000
+90.000
+100.000
+100.000
+110.000
+110.000
+120.000
+120.000
+130.000
+130.000
+140.000
+140.000
+150.000
+150.000
+160.000
+160.000
+170.000
+170.000
+180.000
+180.000
+190.000
+190.000
+200.000
+200.000
+210.000
+210.000
+220.000
+220.000
+230.000
+230.000
+240.000
+240.000
+250.000
+250.000
+260.000
+260.000
+270.000
+270.000
+280.000
+280.000
+290.000
+290.000
+300.000
+300.000
+310.000
+310.000
+320.000
+320.000
+330.000
+330.000
+340.000
+340.000
+350.000
+350.000
+360.000
+360.000
+370.000
+370.000
+380.000
+380.000
+390.000
+390.000
+400.000
+400.000
+410.000
+410.000
+420.000
+420.000
+430.000
+430.000
+440.000
+440.000
+450.000
+450.000
+460.000
+460.000
+470.000
+470.000
+480.000
+480.000
+490.000
+490.000
+500.000
+500.000
+510.000
+510.000
+520.000
+520.000
+530.000
+530.000
+540.000
+540.000
+550.000
+550.000
+560.000
+560.000
+570.000
+570.000
+580.000
+580.000
+590.000
+590.000
+600.000
+600.000
+610.000
+610.000
+620.000
+620.000
+630.000
+630.000
+640.000
+640.000
+650.000
+650.000
+660.000
+660.000
+670.000
+670.000
+680.000
+680.000
+690.000
+690.000
+700.000
+700.000
+710.000
+710.000
+720.000
+720.000
+730.000
+730.000
+740.000
+740.000
+750.000
+750.000
+760.000
+760.000
+770.000
+770.000
+780.000
+780.000
+790.000
+790.000
+800.000
+800.000
+810.000
+810.000
+820.000
+820.000
+830.000
+830.000
+840.000
+840.000
+850.000
+850.000
+860.000
+860.000
+870.000
+870.000
+880.000
+880.000
+890.000
+890.000
+900.000
+900.000
+910.000
+910.000
+920.000
+920.000
+930.000
+930.000
+940.000
+940.000
+950.000
+950.000
+960.000
+960.000
+970.000
+970.000
+980.000
+980.000
+990.000
+990.000
+1000.000
+1000.000
+
+
+MPI rank 0 :   SpikeBufferUpdate_time: 0.990164
+MPI rank 0 :   poisson_generator_time: 3.13962
+MPI rank 0 :   neuron_Update_time: 16.9314
+MPI rank 0 :   copy_ext_spike_time: 0.0701514
+MPI rank 0 :   SendExternalSpike_time: 15.7233
+MPI rank 0 :   SendSpikeToRemote_time: 0.103983
+MPI rank 0 :   RecvSpikeFromRemote_time: 0.399079
+MPI rank 0 :   NestedLoop_time: 0.0181002
+MPI rank 0 :   GetSpike_time: 4.18799
+MPI rank 0 :   SpikeReset_time: 1.66126
+MPI rank 0 :   ExternalSpikeReset_time: 0.704104
+MPI rank 0 :   SendSpikeToRemote_MPI_time: 0.00342808
+MPI rank 0 :   RecvSpikeFromRemote_MPI_time: 0.396331
+MPI rank 1 :   SpikeBufferUpdate_time: 1.25739
+MPI rank 1 :   poisson_generator_time: 5.66913
+MPI rank 1 :   neuron_Update_time: 31.7926
+MPI rank 1 :   copy_ext_spike_time: 0.0681532
+MPI rank 1 :   SendExternalSpike_time: 0.638262
+MPI rank 1 :   SendSpikeToRemote_time: 0.100659
+MPI rank 1 :   RecvSpikeFromRemote_time: 0.0148568
+MPI rank 1 :   NestedLoop_time: 0.0176378
+MPI rank 1 :   GetSpike_time: 2.61907
+MPI rank 1 :   SpikeReset_time: 0.695993
+MPI rank 1 :   ExternalSpikeReset_time: 0.704743
+MPI rank 1 :   SendSpikeToRemote_MPI_time: 0.00374586
+MPI rank 1 :   RecvSpikeFromRemote_MPI_time: 0.0118803
+MPI rank 1 :   SendSpikeToRemote_CUDAcp_time: 0.068863
+MPI rank 1 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 1 :   JoinSpike_time: 0.0218619
+MPI rank 1 : Building time: 4.36578
+MPI rank 1 : Simulation time: 44.2686
+MPI rank 0 :   SendSpikeToRemote_CUDAcp_time: 0.072433
+MPI rank 0 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 0 :   JoinSpike_time: 0.0220524
+MPI rank 0 : Building time: 4.34014
+MPI rank 0 : Simulation time: 44.2686
+Rank 1: After Simulate: {'VmPeak': 16324800, 'VmSize': 15664744, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 1944780, 'VmRSS': 1285292, 'VmData': 15382720, 'VmStk': 144, 'VmExe': 2556, 'VmLib': 97588, 'VmPTE': 3020, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 6752305152 B, used: 1837629440 B)
+Rank 0: After Simulate: {'VmPeak': 16323788, 'VmSize': 15663732, 'VmLck': 0, 'VmPin': 50460, 'VmHWM': 1944076, 'VmRSS': 1284320, 'VmData': 15381708, 'VmStk': 144, 'VmExe': 2556, 'VmLib': 97588, 'VmPTE': 3016, 'VmSwap': 0} c_nvmlMemory_t(total: 8589934592 B, free: 6752305152 B, used: 1837629440 B)
+ending
+Time is Wed Sep 21 07:22:50 JST 2022
