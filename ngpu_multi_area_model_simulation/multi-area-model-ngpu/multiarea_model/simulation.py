@@ -348,7 +348,7 @@ class Simulation:
                     print('   Extracting spikes for area:', a.name, ' population:', pop, ' neuron idx range:', i0, ' ', i1)
                     data = []
                     for i_neur in range(i0,i1+1):
-                        spike_times = ngpu.GetRecSpikeTimes(i_neur)
+                        spike_times = ngpu.GetRecSpikeTimes(ngpu.NodeSeq(i_neur))
                         for t in spike_times:
                             data.append([i_neur, t])
                     spike_times_dict[pop] = data

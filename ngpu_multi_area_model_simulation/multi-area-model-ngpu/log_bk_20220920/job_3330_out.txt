@@ -1,0 +1,10 @@
+Runnning on host c13
+Starting at Wed Sep 21 06:47:10 JST 2022
+Running on hosts: c[13-14]
+Running on 2 nodes.
+Running 2 tasks.
+Current working directory is /home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu
+hello
+hello
+ending
+Time is Wed Sep 21 06:47:10 JST 2022

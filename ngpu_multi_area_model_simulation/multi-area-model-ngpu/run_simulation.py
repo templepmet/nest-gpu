@@ -1,126 +1,39 @@
-"""
-This script is used to run a simulation
-
-It initializes the network class and then runs the simulate method of
-the simulation class instance.
-
-"""
-
-import json
 import os
-import sys
+import json
+
 import numpy as np
+from mpi4py import MPI
+
 from config import base_path, data_path
 from multiarea_model import MultiAreaModel
-from mpi4py import MPI
-import shutil
-from multiarea_model.default_params import nested_update, sim_params
-
+from multiarea_model.default_params import nested_update
 import nestgpu as ngpu
 
-ngpu.ConnectMpiInit()
 
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
 name = MPI.Get_processor_name()
-print(f'Hello World! I am process {rank} of {size} on {name}.\n')
+print(f'I am process {rank} of {size} on {name}.\n')
 
 num_processes = size
 local_num_threads = int(os.environ['OMP_NUM_THREADS'])
-if rank == 0:
-    print(f'Simulation: {num_processes} process, {local_num_threads} thread')
 
-d = {}
-conn_params = {'g': -11.,
-               'K_stable': os.path.join(base_path, 'K_stable.npy'),
-               'fac_nu_ext_TH': 1.2,
-               'fac_nu_ext_5E': 1.125,
-               'fac_nu_ext_6E': 1.41666667,
-               'av_indegree_V1': 3950.,
-	           'cc_weights_factor': 1.9,
-	           'cc_weights_I_factor': 2.0}
-input_params = {'rate_ext': 10.}
+with open('label_info.json') as f:
+    label_info = json.load(f)
+simulation_label = label_info['simulation_label']
 
-neuron_params = {'V0_mean': -150.,
-                 'V0_sd': 50.}
-
-network_params = {'N_scaling': 1.,
-                  'K_scaling': 1.,
-                  'connection_params': conn_params,
-                  'input_params': input_params,
-                  'neuron_params': neuron_params}
-
-# sim_params = {'t_sim': 10000.,
-#               't_presim': 500.0,
-#               'num_processes': 32,
-#               'local_num_threads': 256,
-#               'recording_dict': {'record_vm': False}}
-
-sim_params = {'t_sim': 10000.,
-              't_presim': 500.0,
-              'num_processes': num_processes,
-              'local_num_threads': local_num_threads,
-              'recording_dict': {'record_vm': False}}
-
-theory_params = {'dt': 0.1}
-
-if rank==0:
-    M = MultiAreaModel(network_params, simulation=True,
-                       sim_spec=sim_params,
-                       theory=True,
-                       theory_spec=theory_params)
-    p, r = M.theory.integrate_siegert()
-    print("Mean-field theory predicts an average "
-          "rate of {0:.3f} spikes/s across all populations.".format(np.mean(r[:, -1])))
-
-    sim_params['master_seed'] = 1012345
-    M = MultiAreaModel(network_params, simulation=True,
-                       sim_spec=sim_params)
-    label = M.simulation.label
-    # Copy run_simulation script to simulation folder
-    shutil.copy2(os.path.join(base_path, 'run_simulation.py'),
-                 os.path.join(data_path, label))
-
-    # Load simulation parameters
-    fn = os.path.join(data_path,
-                      label,
-                      '_'.join(('custom_params',
-                                label)))
-    with open(fn, 'r') as f:
-        custom_params = json.load(f)
-    nested_update(sim_params, custom_params['sim_params'])
-
-    # Copy custom param file for each MPI process
-    for i in range(sim_params['num_processes']):
-        shutil.copy(fn, '_'.join((fn, str(i))))
-    # Collect relevant arguments for job script
-    num_vp = sim_params['num_processes'] * sim_params[
-        'local_num_threads']
-    d = {'label': label,
-         'network_label': custom_params['network_label'],
-         'base_path': base_path,
-         'sim_dir': os.path.join(data_path, label),
-         'local_num_threads': sim_params['local_num_threads'],
-         'num_processes': sim_params['num_processes'],
-         'num_vp': num_vp}
-
-else:
-    label = None
-
-label = comm.bcast(label, root=0)
-
-fn = os.path.join(data_path,
-                  label,
-                  '_'.join(('custom_params',
-                            label,
-                           str(rank))))
+fn = os.path.join(data_path, simulation_label, '_'.join(('custom_params', simulation_label)))
 with open(fn, 'r') as f:
     custom_params = json.load(f)
-
-os.remove(fn)
-
 network_label = custom_params['network_label']
+
+sim_params = custom_params['sim_params']
+update_sim_params = {'num_processes': num_processes,
+                  'local_num_threads': local_num_threads}
+nested_update(sim_params, update_sim_params)
+
+ngpu.ConnectMpiInit()
 
 M = MultiAreaModel(network_label,
                    simulation=True,

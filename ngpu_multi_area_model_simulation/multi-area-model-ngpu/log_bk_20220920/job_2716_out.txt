@@ -1,0 +1,402 @@
+Runnning on host c5
+Starting at Fri Sep  2 04:40:46 JST 2022
+Running on hosts: c[5-16]
+Running on 12 nodes.
+Running 12 tasks.
+Current working directory is /home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+ Homepage: https://github.com/nest/nest-gpu
+
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+Error in nest resource file: /BadIO in CopyFile_
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+Hello World! I am process 2 of 12 on c7.
+
+Hello World! I am process 11 of 12 on c16.
+
+Hello World! I am process 9 of 12 on c14.
+
+Hello World! I am process 7 of 12 on c12.
+
+Hello World! I am process 6 of 12 on c11.
+
+Hello World! I am process 3 of 12 on c8.
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+Hello World! I am process 10 of 12 on c15.
+
+Hello World! I am process 5 of 12 on c10.
+
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+Hello World! I am process 4 of 12 on c9.
+
+Hello World! I am process 0 of 12 on c5.
+
+Initializing network from dictionary.
+RAND_DATA_LABEL 5688
+
+Sep 02 04:40:56 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep  1 2022 04:13:42
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+Hello World! I am process 8 of 12 on c13.
+
+Hello World! I am process 1 of 12 on c6.
+
+No R installation, taking hard-coded SLN fit parameters.
+
+
+========================================
+Customized parameters
+--------------------
+{'K_scaling': 1.0,
+ 'N_scaling': 1.0,
+ 'connection_params': {'K_stable': 'K_stable.npy',
+                       'av_indegree_V1': 3950.0,
+                       'cc_weights_I_factor': 2.0,
+                       'cc_weights_factor': 1.9,
+                       'fac_nu_ext_5E': 1.125,
+                       'fac_nu_ext_6E': 1.41666667,
+                       'fac_nu_ext_TH': 1.2,
+                       'g': -11.0},
+ 'input_params': {'rate_ext': 10.0},
+ 'neuron_params': {'V0_mean': -150.0, 'V0_sd': 50.0}}
+========================================
+Simulation label: b37ee3d1e9c7a670c5a61ddb82d2278b
+Copied files.
+Initialized simulation class.

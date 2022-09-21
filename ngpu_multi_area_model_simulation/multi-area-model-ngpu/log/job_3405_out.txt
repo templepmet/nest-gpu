@@ -1,0 +1,3780 @@
+Runnning on host c2
+Starting at Thu Sep 22 00:00:44 JST 2022
+Running on hosts: c[2-9]
+Running on 8 nodes.
+Running 32 tasks.
+Current working directory is /home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+ Homepage: https://github.com/nest/nest-gpu
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Type 'nest.help()' to find out more about NEST.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+I am process 11 of 32 on c4.
+
+I am process 8 of 32 on c4.
+
+I am process 9 of 32 on c4.
+
+Initializing network from label.
+Initializing network from label.
+Initializing network from label.
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+I am process 13 of 32 on c5.
+
+I am process 14 of 32 on c5.
+
+I am process 10 of 32 on c4.
+
+Initializing network from label.
+Initializing network from label.
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+ Type 'nest.help()' to find out more about NEST.
+
+Initializing network from label.
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:52 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+I am process 15 of 32 on c5.
+
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+Initializing network from label.
+I am process 12 of 32 on c5.
+
+I am process 20 of 32 on c7.
+
+I am process 22 of 32 on c7.
+
+Initializing network from label.
+Initializing network from label.
+Initializing network from label.
+I am process 17 of 32 on c6.
+
+I am process 18 of 32 on c6.
+
+I am process 19 of 32 on c6.
+
+Initializing network from label.
+Initializing network from label.
+Initializing network from label.
+I am process 21 of 32 on c7.
+
+Initializing network from label.
+I am process 16 of 32 on c6.
+
+I am process 23 of 32 on c7.
+
+Initializing network from label.
+Initializing network from label.
+I am process 24 of 32 on c8.
+
+Initializing network from label.
+I am process 25 of 32 on c8.
+
+Initializing network from label.
+I am process 26 of 32 on c8.
+
+I am process 27 of 32 on c8.
+
+Initializing network from label.
+Initializing network from label.
+I am process 29 of 32 on c9.
+
+I am process 31 of 32 on c9.
+
+I am process 30 of 32 on c9.
+
+I am process 28 of 32 on c9.
+
+Initializing network from label.
+Initializing network from label.
+Initializing network from label.
+Initializing network from label.
+
+Sep 22 00:00:53 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+Sep 22 00:00:53 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:53 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:53 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Sep 22 00:00:53 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+I am process 4 of 32 on c3.
+
+I am process 5 of 32 on c3.
+
+I am process 7 of 32 on c3.
+
+
+Sep 22 00:00:53 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+Initializing network from label.
+Initializing network from label.
+Initializing network from label.
+
+Sep 22 00:00:53 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+I am process 6 of 32 on c3.
+
+
+Sep 22 00:00:53 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+Initializing network from label.
+I am process 1 of 32 on c2.
+
+I am process 3 of 32 on c2.
+
+I am process 0 of 32 on c2.
+
+Initializing network from label.
+Initializing network from label.
+Initializing network from label.
+I am process 2 of 32 on c2.
+
+Initializing network from label.
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Copied files.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Copied files.
+Initialized simulation class.
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Prepared simulation in 0.01 seconds.
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Copied files.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Copied files.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Copied files.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Simulation label: b0de5c560c17c5d6c29a7d808f1f2de4
+Copied files.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Copied files.
+Copied files.
+Initialized simulation class.
+Copied files.
+Initialized simulation class.
+Copied files.
+Copied files.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Initialized simulation class.
+Copied files.
+Copied files.
+Initialized simulation class.
+Copied files.
+Copied files.
+Copied files.
+Copied files.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Copied files.
+Copied files.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Copied files.
+Copied files.
+Copied files.
+Copied files.
+Copied files.
+Copied files.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Copied files.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Initialized simulation class.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Copied files.
+Copied files.
+Copied files.
+Copied files.
+Copied files.
+Copied files.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Initialized simulation class.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Prepared simulation in 0.01 seconds.
+Activated spike times recording for area: V1  population: 23E
+Activated spike times recording for area: V1  population: 23I
+Activated spike times recording for area: V1  population: 4E
+Activated spike times recording for area: V1  population: 4I
+Activated spike times recording for area: V1  population: 5E
+Activated spike times recording for area: V1  population: 5I
+Activated spike times recording for area: V1  population: 6E
+Activated spike times recording for area: V1  population: 6I
+Rank 0: created area V1 with 19789 local nodes
+Created 1 poisson generator for area n.  0  population: 23E
+Created 1 poisson generator for area n.  0  population: 23I
+Created 1 poisson generator for area n.  0  population: 4E
+Created 1 poisson generator for area n.  0  population: 4I
+Created 1 poisson generator for area n.  0  population: 5E
+Created 1 poisson generator for area n.  0  population: 5I
+Created 1 poisson generator for area n.  0  population: 6E
+Created 1 poisson generator for area n.  0  population: 6I
+Activated spike times recording for area: V2  population: 23E
+Activated spike times recording for area: V2  population: 23I
+Activated spike times recording for area: V2  population: 4E
+Activated spike times recording for area: V2  population: 4I
+Activated spike times recording for area: V2  population: 5E
+Created internal connections of area n.  0  in mpi proc.  0
+Activated spike times recording for area: V2  population: 5I
+Activated spike times recording for area: V2  population: 6E
+Activated spike times recording for area: V2  population: 6I
+Rank 1: created area V2 with 15705 local nodes
+Created 1 poisson generator for area n.  1  population: 23E
+Created 1 poisson generator for area n.  1  population: 23I
+Created 1 poisson generator for area n.  1  population: 4E
+Created 1 poisson generator for area n.  1  population: 4I
+Created 1 poisson generator for area n.  1  population: 5E
+Created 1 poisson generator for area n.  1  population: 5I
+Created 1 poisson generator for area n.  1  population: 6E
+Created 1 poisson generator for area n.  1  population: 6I
+Created internal connections of area n.  1  in mpi proc.  1
+Activated spike times recording for area: VP  population: 23E
+Activated spike times recording for area: VP  population: 23I
+Activated spike times recording for area: VP  population: 4E
+Activated spike times recording for area: VP  population: 4I
+Activated spike times recording for area: VP  population: 5E
+Activated spike times recording for area: VP  population: 5I
+Activated spike times recording for area: VP  population: 6E
+Activated spike times recording for area: VP  population: 6I
+Rank 2: created area VP with 17197 local nodes
+Created 1 poisson generator for area n.  2  population: 23E
+Created 1 poisson generator for area n.  2  population: 23I
+Created 1 poisson generator for area n.  2  population: 4E
+Created 1 poisson generator for area n.  2  population: 4I
+Created 1 poisson generator for area n.  2  population: 5E
+Created 1 poisson generator for area n.  2  population: 5I
+Created 1 poisson generator for area n.  2  population: 6E
+Created 1 poisson generator for area n.  2  population: 6I
+Activated spike times recording for area: V3  population: 23E
+Activated spike times recording for area: V3  population: 23I
+Activated spike times recording for area: V3  population: 4E
+Activated spike times recording for area: V3  population: 4I
+Activated spike times recording for area: V3  population: 5E
+Created internal connections of area n.  2  in mpi proc.  2
+Activated spike times recording for area: V3  population: 5I
+Activated spike times recording for area: V3  population: 6E
+Activated spike times recording for area: V3  population: 6I
+Rank 3: created area V3 with 16641 local nodes
+Created 1 poisson generator for area n.  3  population: 23E
+Created 1 poisson generator for area n.  3  population: 23I
+Created 1 poisson generator for area n.  3  population: 4E
+Created 1 poisson generator for area n.  3  population: 4I
+Created 1 poisson generator for area n.  3  population: 5E
+Created 1 poisson generator for area n.  3  population: 5I
+Created 1 poisson generator for area n.  3  population: 6E
+Created 1 poisson generator for area n.  3  population: 6I
+Created internal connections of area n.  3  in mpi proc.  3
+Activated spike times recording for area: V3A  population: 23E
+Activated spike times recording for area: V3A  population: 23I
+Activated spike times recording for area: V3A  population: 4E
+Activated spike times recording for area: V3A  population: 4I
+Activated spike times recording for area: V3A  population: 5E
+Activated spike times recording for area: V3A  population: 5I
+Activated spike times recording for area: V3A  population: 6E
+Activated spike times recording for area: V3A  population: 6I
+Rank 4: created area V3A with 11590 local nodes
+Created 1 poisson generator for area n.  4  population: 23E
+Created 1 poisson generator for area n.  4  population: 23I
+Created 1 poisson generator for area n.  4  population: 4E
+Created 1 poisson generator for area n.  4  population: 4I
+Created 1 poisson generator for area n.  4  population: 5E
+Created 1 poisson generator for area n.  4  population: 5I
+Created 1 poisson generator for area n.  4  population: 6E
+Created 1 poisson generator for area n.  4  population: 6I
+Activated spike times recording for area: MT  population: 23E
+Activated spike times recording for area: MT  population: 23I
+Activated spike times recording for area: MT  population: 4E
+Activated spike times recording for area: MT  population: 4I
+Activated spike times recording for area: MT  population: 5E
+Created internal connections of area n.  4  in mpi proc.  4
+Activated spike times recording for area: MT  population: 5I
+Activated spike times recording for area: MT  population: 6E
+Activated spike times recording for area: MT  population: 6I
+Rank 5: created area MT with 14929 local nodes
+Created 1 poisson generator for area n.  5  population: 23E
+Created 1 poisson generator for area n.  5  population: 23I
+Created 1 poisson generator for area n.  5  population: 4E
+Created 1 poisson generator for area n.  5  population: 4I
+Created 1 poisson generator for area n.  5  population: 5E
+Created 1 poisson generator for area n.  5  population: 5I
+Created 1 poisson generator for area n.  5  population: 6E
+Created 1 poisson generator for area n.  5  population: 6I
+Created internal connections of area n.  5  in mpi proc.  5
+Activated spike times recording for area: V4t  population: 23E
+Activated spike times recording for area: V4t  population: 23I
+Activated spike times recording for area: V4t  population: 4E
+Activated spike times recording for area: V4t  population: 4I
+Activated spike times recording for area: V4t  population: 5E
+Activated spike times recording for area: V4t  population: 5I
+Activated spike times recording for area: V4t  population: 6E
+Activated spike times recording for area: V4t  population: 6I
+Rank 6: created area V4t with 14476 local nodes
+Created 1 poisson generator for area n.  6  population: 23E
+Created 1 poisson generator for area n.  6  population: 23I
+Created 1 poisson generator for area n.  6  population: 4E
+Created 1 poisson generator for area n.  6  population: 4I
+Created 1 poisson generator for area n.  6  population: 5E
+Created 1 poisson generator for area n.  6  population: 5I
+Created 1 poisson generator for area n.  6  population: 6E
+Created 1 poisson generator for area n.  6  population: 6I
+Activated spike times recording for area: V4  population: 23E
+Activated spike times recording for area: V4  population: 23I
+Activated spike times recording for area: V4  population: 4E
+Activated spike times recording for area: V4  population: 4I
+Activated spike times recording for area: V4  population: 5E
+Activated spike times recording for area: V4  population: 5I
+Activated spike times recording for area: V4  population: 6E
+Activated spike times recording for area: V4  population: 6I
+Rank 7: created area V4 with 15904 local nodes
+Created 1 poisson generator for area n.  7  population: 23E
+Created 1 poisson generator for area n.  7  population: 23I
+Created 1 poisson generator for area n.  7  population: 4E
+Created 1 poisson generator for area n.  7  population: 4I
+Created 1 poisson generator for area n.  7  population: 5E
+Created 1 poisson generator for area n.  7  population: 5I
+Created 1 poisson generator for area n.  7  population: 6E
+Created 1 poisson generator for area n.  7  population: 6I
+Created internal connections of area n.  6  in mpi proc.  6
+Activated spike times recording for area: VOT  population: 23E
+Activated spike times recording for area: VOT  population: 23I
+Activated spike times recording for area: VOT  population: 4E
+Activated spike times recording for area: VOT  population: 4I
+Activated spike times recording for area: VOT  population: 5E
+Activated spike times recording for area: VOT  population: 5I
+Activated spike times recording for area: VOT  population: 6E
+Activated spike times recording for area: VOT  population: 6I
+Rank 8: created area VOT with 14728 local nodes
+Created 1 poisson generator for area n.  8  population: 23E
+Created 1 poisson generator for area n.  8  population: 23I
+Created 1 poisson generator for area n.  8  population: 4E
+Created 1 poisson generator for area n.  8  population: 4I
+Created 1 poisson generator for area n.  8  population: 5E
+Created 1 poisson generator for area n.  8  population: 5I
+Created 1 poisson generator for area n.  8  population: 6E
+Created 1 poisson generator for area n.  8  population: 6I
+Activated spike times recording for area: MSTd  population: 23E
+Created internal connections of area n.  7  in mpi proc.  7
+Activated spike times recording for area: MSTd  population: 23I
+Activated spike times recording for area: MSTd  population: 4E
+Activated spike times recording for area: MSTd  population: 4I
+Activated spike times recording for area: MSTd  population: 5E
+Activated spike times recording for area: MSTd  population: 5I
+Activated spike times recording for area: MSTd  population: 6E
+Activated spike times recording for area: MSTd  population: 6I
+Rank 9: created area MSTd with 12428 local nodes
+Created 1 poisson generator for area n.  9  population: 23E
+Created 1 poisson generator for area n.  9  population: 23I
+Created 1 poisson generator for area n.  9  population: 4E
+Created 1 poisson generator for area n.  9  population: 4I
+Created 1 poisson generator for area n.  9  population: 5E
+Created 1 poisson generator for area n.  9  population: 5I
+Created 1 poisson generator for area n.  9  population: 6E
+Created 1 poisson generator for area n.  9  population: 6I
+Activated spike times recording for area: PIP  population: 23E
+Created internal connections of area n.  8  in mpi proc.  8
+Activated spike times recording for area: PIP  population: 23I
+Activated spike times recording for area: PIP  population: 4E
+Activated spike times recording for area: PIP  population: 4I
+Activated spike times recording for area: PIP  population: 5E
+Activated spike times recording for area: PIP  population: 5I
+Activated spike times recording for area: PIP  population: 6E
+Activated spike times recording for area: PIP  population: 6I
+Rank 10: created area PIP with 12428 local nodes
+Created 1 poisson generator for area n.  10  population: 23E
+Created 1 poisson generator for area n.  10  population: 23I
+Created 1 poisson generator for area n.  10  population: 4E
+Created 1 poisson generator for area n.  10  population: 4I
+Created 1 poisson generator for area n.  10  population: 5E
+Created 1 poisson generator for area n.  10  population: 5I
+Created 1 poisson generator for area n.  10  population: 6E
+Created 1 poisson generator for area n.  10  population: 6I
+Activated spike times recording for area: PO  population: 23E
+Activated spike times recording for area: PO  population: 23I
+Created internal connections of area n.  9  in mpi proc.  9
+Activated spike times recording for area: PO  population: 4E
+Activated spike times recording for area: PO  population: 4I
+Activated spike times recording for area: PO  population: 5E
+Activated spike times recording for area: PO  population: 5I
+Activated spike times recording for area: PO  population: 6E
+Activated spike times recording for area: PO  population: 6I
+Rank 11: created area PO with 12428 local nodes
+Created 1 poisson generator for area n.  11  population: 23E
+Created 1 poisson generator for area n.  11  population: 23I
+Created 1 poisson generator for area n.  11  population: 4E
+Created 1 poisson generator for area n.  11  population: 4I
+Created 1 poisson generator for area n.  11  population: 5E
+Created 1 poisson generator for area n.  11  population: 5I
+Created 1 poisson generator for area n.  11  population: 6E
+Created 1 poisson generator for area n.  11  population: 6I
+Activated spike times recording for area: DP  population: 23E
+Created internal connections of area n.  10  in mpi proc.  10
+Activated spike times recording for area: DP  population: 23I
+Activated spike times recording for area: DP  population: 4E
+Activated spike times recording for area: DP  population: 4I
+Activated spike times recording for area: DP  population: 5E
+Activated spike times recording for area: DP  population: 5I
+Activated spike times recording for area: DP  population: 6E
+Activated spike times recording for area: DP  population: 6I
+Rank 12: created area DP with 11771 local nodes
+Created 1 poisson generator for area n.  12  population: 23E
+Created 1 poisson generator for area n.  12  population: 23I
+Created 1 poisson generator for area n.  12  population: 4E
+Created 1 poisson generator for area n.  12  population: 4I
+Created 1 poisson generator for area n.  12  population: 5E
+Created 1 poisson generator for area n.  12  population: 5I
+Created 1 poisson generator for area n.  12  population: 6E
+Created 1 poisson generator for area n.  12  population: 6I
+Activated spike times recording for area: MIP  population: 23E
+Created internal connections of area n.  11  in mpi proc.  11
+Activated spike times recording for area: MIP  population: 23I
+Activated spike times recording for area: MIP  population: 4E
+Activated spike times recording for area: MIP  population: 4I
+Activated spike times recording for area: MIP  population: 5E
+Activated spike times recording for area: MIP  population: 5I
+Activated spike times recording for area: MIP  population: 6E
+Activated spike times recording for area: MIP  population: 6I
+Rank 13: created area MIP with 12378 local nodes
+Created 1 poisson generator for area n.  13  population: 23E
+Created 1 poisson generator for area n.  13  population: 23I
+Created 1 poisson generator for area n.  13  population: 4E
+Created 1 poisson generator for area n.  13  population: 4I
+Created 1 poisson generator for area n.  13  population: 5E
+Created 1 poisson generator for area n.  13  population: 5I
+Created 1 poisson generator for area n.  13  population: 6E
+Created 1 poisson generator for area n.  13  population: 6I
+Activated spike times recording for area: MDP  population: 23E
+Created internal connections of area n.  12  in mpi proc.  12
+Activated spike times recording for area: MDP  population: 23I
+Activated spike times recording for area: MDP  population: 4E
+Activated spike times recording for area: MDP  population: 4I
+Activated spike times recording for area: MDP  population: 5E
+Activated spike times recording for area: MDP  population: 5I
+Activated spike times recording for area: MDP  population: 6E
+Activated spike times recording for area: MDP  population: 6I
+Rank 14: created area MDP with 12428 local nodes
+Created 1 poisson generator for area n.  14  population: 23E
+Created 1 poisson generator for area n.  14  population: 23I
+Created 1 poisson generator for area n.  14  population: 4E
+Created 1 poisson generator for area n.  14  population: 4I
+Created 1 poisson generator for area n.  14  population: 5E
+Created 1 poisson generator for area n.  14  population: 5I
+Created 1 poisson generator for area n.  14  population: 6E
+Created 1 poisson generator for area n.  14  population: 6I
+Activated spike times recording for area: VIP  population: 23E
+Created internal connections of area n.  13  in mpi proc.  13
+Activated spike times recording for area: VIP  population: 23I
+Activated spike times recording for area: VIP  population: 4E
+Activated spike times recording for area: VIP  population: 4I
+Activated spike times recording for area: VIP  population: 5E
+Activated spike times recording for area: VIP  population: 5I
+Activated spike times recording for area: VIP  population: 6E
+Activated spike times recording for area: VIP  population: 6I
+Rank 15: created area VIP with 12726 local nodes
+Created 1 poisson generator for area n.  15  population: 23E
+Created 1 poisson generator for area n.  15  population: 23I
+Created 1 poisson generator for area n.  15  population: 4E
+Created 1 poisson generator for area n.  15  population: 4I
+Created 1 poisson generator for area n.  15  population: 5E
+Created 1 poisson generator for area n.  15  population: 5I
+Created 1 poisson generator for area n.  15  population: 6E
+Created 1 poisson generator for area n.  15  population: 6I
+Activated spike times recording for area: LIP  population: 23E
+Activated spike times recording for area: LIP  population: 23I
+Activated spike times recording for area: LIP  population: 4E
+Created internal connections of area n.  14  in mpi proc.  14
+Activated spike times recording for area: LIP  population: 4I
+Activated spike times recording for area: LIP  population: 5E
+Activated spike times recording for area: LIP  population: 5I
+Activated spike times recording for area: LIP  population: 6E
+Activated spike times recording for area: LIP  population: 6I
+Rank 16: created area LIP with 13979 local nodes
+Created 1 poisson generator for area n.  16  population: 23E
+Created 1 poisson generator for area n.  16  population: 23I
+Created 1 poisson generator for area n.  16  population: 4E
+Created 1 poisson generator for area n.  16  population: 4I
+Created 1 poisson generator for area n.  16  population: 5E
+Created 1 poisson generator for area n.  16  population: 5I
+Created 1 poisson generator for area n.  16  population: 6E
+Created 1 poisson generator for area n.  16  population: 6I
+Activated spike times recording for area: PITv  population: 23E
+Created internal connections of area n.  15  in mpi proc.  15
+Activated spike times recording for area: PITv  population: 23I
+Activated spike times recording for area: PITv  population: 4E
+Activated spike times recording for area: PITv  population: 4I
+Activated spike times recording for area: PITv  population: 5E
+Activated spike times recording for area: PITv  population: 5I
+Activated spike times recording for area: PITv  population: 6E
+Activated spike times recording for area: PITv  population: 6I
+Rank 17: created area PITv with 14728 local nodes
+Created 1 poisson generator for area n.  17  population: 23E
+Created 1 poisson generator for area n.  17  population: 23I
+Created 1 poisson generator for area n.  17  population: 4E
+Created 1 poisson generator for area n.  17  population: 4I
+Created 1 poisson generator for area n.  17  population: 5E
+Created 1 poisson generator for area n.  17  population: 5I
+Created 1 poisson generator for area n.  17  population: 6E
+Created 1 poisson generator for area n.  17  population: 6I
+Activated spike times recording for area: PITd  population: 23E
+Created internal connections of area n.  16  in mpi proc.  16
+Activated spike times recording for area: PITd  population: 23I
+Activated spike times recording for area: PITd  population: 4E
+Activated spike times recording for area: PITd  population: 4I
+Activated spike times recording for area: PITd  population: 5E
+Activated spike times recording for area: PITd  population: 5I
+Activated spike times recording for area: PITd  population: 6E
+Activated spike times recording for area: PITd  population: 6I
+Rank 18: created area PITd with 14728 local nodes
+Created 1 poisson generator for area n.  18  population: 23E
+Created 1 poisson generator for area n.  18  population: 23I
+Created 1 poisson generator for area n.  18  population: 4E
+Created 1 poisson generator for area n.  18  population: 4I
+Created 1 poisson generator for area n.  18  population: 5E
+Created 1 poisson generator for area n.  18  population: 5I
+Created 1 poisson generator for area n.  18  population: 6E
+Created 1 poisson generator for area n.  18  population: 6I
+Activated spike times recording for area: MSTl  population: 23E
+Created internal connections of area n.  17  in mpi proc.  17
+Activated spike times recording for area: MSTl  population: 23I
+Activated spike times recording for area: MSTl  population: 4E
+Activated spike times recording for area: MSTl  population: 4I
+Activated spike times recording for area: MSTl  population: 5E
+Activated spike times recording for area: MSTl  population: 5I
+Activated spike times recording for area: MSTl  population: 6E
+Activated spike times recording for area: MSTl  population: 6I
+Rank 19: created area MSTl with 12428 local nodes
+Created 1 poisson generator for area n.  19  population: 23E
+Created 1 poisson generator for area n.  19  population: 23I
+Created 1 poisson generator for area n.  19  population: 4E
+Created 1 poisson generator for area n.  19  population: 4I
+Created 1 poisson generator for area n.  19  population: 5E
+Created 1 poisson generator for area n.  19  population: 5I
+Created 1 poisson generator for area n.  19  population: 6E
+Created 1 poisson generator for area n.  19  population: 6I
+Activated spike times recording for area: CITv  population: 23E
+Created internal connections of area n.  18  in mpi proc.  18
+Activated spike times recording for area: CITv  population: 23I
+Activated spike times recording for area: CITv  population: 4E
+Activated spike times recording for area: CITv  population: 4I
+Activated spike times recording for area: CITv  population: 5E
+Activated spike times recording for area: CITv  population: 5I
+Activated spike times recording for area: CITv  population: 6E
+Activated spike times recording for area: CITv  population: 6I
+Rank 20: created area CITv with 11090 local nodes
+Created 1 poisson generator for area n.  20  population: 23E
+Created 1 poisson generator for area n.  20  population: 23I
+Created 1 poisson generator for area n.  20  population: 4E
+Created 1 poisson generator for area n.  20  population: 4I
+Created 1 poisson generator for area n.  20  population: 5E
+Created 1 poisson generator for area n.  20  population: 5I
+Created 1 poisson generator for area n.  20  population: 6E
+Created 1 poisson generator for area n.  20  population: 6I
+Activated spike times recording for area: CITd  population: 23E
+Activated spike times recording for area: CITd  population: 23I
+Created internal connections of area n.  19  in mpi proc.  19
+Activated spike times recording for area: CITd  population: 4E
+Activated spike times recording for area: CITd  population: 4I
+Activated spike times recording for area: CITd  population: 5E
+Activated spike times recording for area: CITd  population: 5I
+Activated spike times recording for area: CITd  population: 6E
+Activated spike times recording for area: CITd  population: 6I
+Rank 21: created area CITd with 11090 local nodes
+Created 1 poisson generator for area n.  21  population: 23E
+Created 1 poisson generator for area n.  21  population: 23I
+Created 1 poisson generator for area n.  21  population: 4E
+Created 1 poisson generator for area n.  21  population: 4I
+Created 1 poisson generator for area n.  21  population: 5E
+Created 1 poisson generator for area n.  21  population: 5I
+Created 1 poisson generator for area n.  21  population: 6E
+Created 1 poisson generator for area n.  21  population: 6I
+Activated spike times recording for area: FEF  population: 23E
+Activated spike times recording for area: FEF  population: 23I
+Created internal connections of area n.  20  in mpi proc.  20
+Activated spike times recording for area: FEF  population: 4E
+Activated spike times recording for area: FEF  population: 4I
+Activated spike times recording for area: FEF  population: 5E
+Activated spike times recording for area: FEF  population: 5I
+Activated spike times recording for area: FEF  population: 6E
+Activated spike times recording for area: FEF  population: 6I
+Rank 22: created area FEF with 12547 local nodes
+Created 1 poisson generator for area n.  22  population: 23E
+Created 1 poisson generator for area n.  22  population: 23I
+Created 1 poisson generator for area n.  22  population: 4E
+Created 1 poisson generator for area n.  22  population: 4I
+Created 1 poisson generator for area n.  22  population: 5E
+Created 1 poisson generator for area n.  22  population: 5I
+Created 1 poisson generator for area n.  22  population: 6E
+Created 1 poisson generator for area n.  22  population: 6I
+Activated spike times recording for area: TF  population: 23E
+Activated spike times recording for area: TF  population: 23I
+Activated spike times recording for area: TF  population: 4E
+Activated spike times recording for area: TF  population: 4I
+Created internal connections of area n.  21  in mpi proc.  21
+Activated spike times recording for area: TF  population: 5E
+Activated spike times recording for area: TF  population: 5I
+Activated spike times recording for area: TF  population: 6E
+Activated spike times recording for area: TF  population: 6I
+Rank 23: created area TF with 9041 local nodes
+Created 1 poisson generator for area n.  23  population: 23E
+Created 1 poisson generator for area n.  23  population: 23I
+Created 1 poisson generator for area n.  23  population: 4E
+Created 1 poisson generator for area n.  23  population: 4I
+Created 1 poisson generator for area n.  23  population: 5E
+Created 1 poisson generator for area n.  23  population: 5I
+Created 1 poisson generator for area n.  23  population: 6E
+Created 1 poisson generator for area n.  23  population: 6I
+Activated spike times recording for area: AITv  population: 23E
+Created internal connections of area n.  22  in mpi proc.  22
+Activated spike times recording for area: AITv  population: 23I
+Activated spike times recording for area: AITv  population: 4E
+Activated spike times recording for area: AITv  population: 4I
+Activated spike times recording for area: AITv  population: 5E
+Activated spike times recording for area: AITv  population: 5I
+Created internal connections of area n.  23  in mpi proc.  23
+Activated spike times recording for area: AITv  population: 6E
+Activated spike times recording for area: AITv  population: 6I
+Rank 24: created area AITv with 13093 local nodes
+Created 1 poisson generator for area n.  24  population: 23E
+Created 1 poisson generator for area n.  24  population: 23I
+Created 1 poisson generator for area n.  24  population: 4E
+Created 1 poisson generator for area n.  24  population: 4I
+Created 1 poisson generator for area n.  24  population: 5E
+Created 1 poisson generator for area n.  24  population: 5I
+Created 1 poisson generator for area n.  24  population: 6E
+Created 1 poisson generator for area n.  24  population: 6I
+Activated spike times recording for area: FST  population: 23E
+Activated spike times recording for area: FST  population: 23I
+Activated spike times recording for area: FST  population: 4E
+Activated spike times recording for area: FST  population: 4I
+Activated spike times recording for area: FST  population: 5E
+Activated spike times recording for area: FST  population: 5I
+Activated spike times recording for area: FST  population: 6E
+Activated spike times recording for area: FST  population: 6I
+Rank 25: created area FST with 9584 local nodes
+Created 1 poisson generator for area n.  25  population: 23E
+Created 1 poisson generator for area n.  25  population: 23I
+Created 1 poisson generator for area n.  25  population: 4E
+Created 1 poisson generator for area n.  25  population: 4I
+Created 1 poisson generator for area n.  25  population: 5E
+Created 1 poisson generator for area n.  25  population: 5I
+Created 1 poisson generator for area n.  25  population: 6E
+Created 1 poisson generator for area n.  25  population: 6I
+Activated spike times recording for area: 7a  population: 23E
+Activated spike times recording for area: 7a  population: 23I
+Activated spike times recording for area: 7a  population: 4E
+Activated spike times recording for area: 7a  population: 4I
+Activated spike times recording for area: 7a  population: 5E
+Activated spike times recording for area: 7a  population: 5I
+Activated spike times recording for area: 7a  population: 6E
+Activated spike times recording for area: 7a  population: 6I
+Created internal connections of area n.  24  in mpi proc.  24
+Rank 26: created area 7a with 12218 local nodes
+Created 1 poisson generator for area n.  26  population: 23E
+Created 1 poisson generator for area n.  26  population: 23I
+Created 1 poisson generator for area n.  26  population: 4E
+Created 1 poisson generator for area n.  26  population: 4I
+Created 1 poisson generator for area n.  26  population: 5E
+Created 1 poisson generator for area n.  26  population: 5I
+Created 1 poisson generator for area n.  26  population: 6E
+Created 1 poisson generator for area n.  26  population: 6I
+Activated spike times recording for area: STPp  population: 23E
+Activated spike times recording for area: STPp  population: 23I
+Activated spike times recording for area: STPp  population: 4E
+Created internal connections of area n.  25  in mpi proc.  25
+Activated spike times recording for area: STPp  population: 4I
+Activated spike times recording for area: STPp  population: 5E
+Activated spike times recording for area: STPp  population: 5I
+Activated spike times recording for area: STPp  population: 6E
+Activated spike times recording for area: STPp  population: 6I
+Rank 27: created area STPp with 10767 local nodes
+Created 1 poisson generator for area n.  27  population: 23E
+Created 1 poisson generator for area n.  27  population: 23I
+Created 1 poisson generator for area n.  27  population: 4E
+Created 1 poisson generator for area n.  27  population: 4I
+Created 1 poisson generator for area n.  27  population: 5E
+Created 1 poisson generator for area n.  27  population: 5I
+Created 1 poisson generator for area n.  27  population: 6E
+Created 1 poisson generator for area n.  27  population: 6I
+Activated spike times recording for area: STPa  population: 23E
+Activated spike times recording for area: STPa  population: 23I
+Activated spike times recording for area: STPa  population: 4E
+Activated spike times recording for area: STPa  population: 4I
+Activated spike times recording for area: STPa  population: 5E
+Activated spike times recording for area: STPa  population: 5I
+Created internal connections of area n.  26  in mpi proc.  26
+Activated spike times recording for area: STPa  population: 6E
+Activated spike times recording for area: STPa  population: 6I
+Rank 28: created area STPa with 10767 local nodes
+Created 1 poisson generator for area n.  28  population: 23E
+Created 1 poisson generator for area n.  28  population: 23I
+Created 1 poisson generator for area n.  28  population: 4E
+Created 1 poisson generator for area n.  28  population: 4I
+Created 1 poisson generator for area n.  28  population: 5E
+Created 1 poisson generator for area n.  28  population: 5I
+Created 1 poisson generator for area n.  28  population: 6E
+Created 1 poisson generator for area n.  28  population: 6I
+Activated spike times recording for area: 46  population: 23E
+Activated spike times recording for area: 46  population: 23I
+Activated spike times recording for area: 46  population: 4E
+Created internal connections of area n.  27  in mpi proc.  27
+Activated spike times recording for area: 46  population: 4I
+Activated spike times recording for area: 46  population: 5E
+Activated spike times recording for area: 46  population: 5I
+Activated spike times recording for area: 46  population: 6E
+Activated spike times recording for area: 46  population: 6I
+Rank 29: created area 46 with 8860 local nodes
+Created 1 poisson generator for area n.  29  population: 23E
+Created 1 poisson generator for area n.  29  population: 23I
+Created 1 poisson generator for area n.  29  population: 4E
+Created 1 poisson generator for area n.  29  population: 4I
+Created 1 poisson generator for area n.  29  population: 5E
+Created 1 poisson generator for area n.  29  population: 5I
+Created 1 poisson generator for area n.  29  population: 6E
+Created 1 poisson generator for area n.  29  population: 6I
+Activated spike times recording for area: AITd  population: 23E
+Activated spike times recording for area: AITd  population: 23I
+Activated spike times recording for area: AITd  population: 4E
+Activated spike times recording for area: AITd  population: 4I
+Activated spike times recording for area: AITd  population: 5E
+Created internal connections of area n.  28  in mpi proc.  28
+Activated spike times recording for area: AITd  population: 5I
+Activated spike times recording for area: AITd  population: 6E
+Activated spike times recording for area: AITd  population: 6I
+Created internal connections of area n.  29  in mpi proc.  29
+Rank 30: created area AITd with 13093 local nodes
+Created 1 poisson generator for area n.  30  population: 23E
+Created 1 poisson generator for area n.  30  population: 23I
+Created 1 poisson generator for area n.  30  population: 4E
+Created 1 poisson generator for area n.  30  population: 4I
+Created 1 poisson generator for area n.  30  population: 5E
+Created 1 poisson generator for area n.  30  population: 5I
+Created 1 poisson generator for area n.  30  population: 6E
+Created 1 poisson generator for area n.  30  population: 6I
+Activated spike times recording for area: TH  population: 23E
+Activated spike times recording for area: TH  population: 23I
+Activated spike times recording for area: TH  population: 5E
+Activated spike times recording for area: TH  population: 5I
+Activated spike times recording for area: TH  population: 6E
+Created areas and internal connections in 245.73 seconds.
+Created areas and internal connections in 245.31 seconds.
+Created areas and internal connections in 245.31 seconds.
+Created areas and internal connections in 245.31 seconds.
+Created areas and internal connections in 245.36 seconds.
+Created areas and internal connections in 244.93 seconds.
+Created areas and internal connections in 246.98 seconds.
+Created areas and internal connections in 244.92 seconds.
+Created areas and internal connections in 245.31 seconds.
+Created areas and internal connections in 246.85 seconds.
+Created areas and internal connections in 244.93 seconds.
+Created areas and internal connections in 245.16 seconds.
+Created areas and internal connections in 246.68 seconds.
+Created areas and internal connections in 245.31 seconds.
+Created areas and internal connections in 245.38 seconds.
+Created areas and internal connections in 245.31 seconds.
+Created areas and internal connections in 245.73 seconds.
+Activated spike times recording for area: TH  population: 6I
+Created areas and internal connections in 245.16 seconds.
+Created areas and internal connections in 245.35 seconds.
+Created areas and internal connections in 244.93 seconds.
+Created areas and internal connections in 246.80 seconds.
+Created areas and internal connections in 245.31 seconds.
+Created areas and internal connections in 245.36 seconds.
+Created areas and internal connections in 244.93 seconds.
+Created areas and internal connections in 245.74 seconds.
+Created areas and internal connections in 245.31 seconds.
+Created areas and internal connections in 245.86 seconds.
+Created areas and internal connections in 245.36 seconds.
+Created areas and internal connections in 244.93 seconds.
+Created areas and internal connections in 245.37 seconds.
+Rank 31: created area TH with 7323 local nodes
+Created 1 poisson generator for area n.  31  population: 23E
+Created 1 poisson generator for area n.  31  population: 23I
+Created 1 poisson generator for area n.  31  population: 5E
+Created 1 poisson generator for area n.  31  population: 5I
+Created 1 poisson generator for area n.  31  population: 6E
+Created 1 poisson generator for area n.  31  population: 6I
+Created internal connections of area n.  31  in mpi proc.  31
+Created areas and internal connections in 245.83 seconds.
+Created internal connections of area n.  30  in mpi proc.  30
+Created areas and internal connections in 248.19 seconds.
+Connected area n.  1  to area n.  0
+Connected area n.  2  to area n.  0
+Connected area n.  3  to area n.  0
+Connected area n.  4  to area n.  0
+Connected area n.  5  to area n.  0
+Connected area n.  6  to area n.  0
+Connected area n.  7  to area n.  0
+Connected area n.  8  to area n.  0
+Connected area n.  9  to area n.  0
+Connected area n.  10  to area n.  0
+Connected area n.  11  to area n.  0
+Connected area n.  12  to area n.  0
+Connected area n.  13  to area n.  0
+Connected area n.  14  to area n.  0
+Connected area n.  15  to area n.  0
+Connected area n.  16  to area n.  0
+Connected area n.  17  to area n.  0
+Connected area n.  18  to area n.  0
+Connected area n.  19  to area n.  0
+Connected area n.  20  to area n.  0
+Connected area n.  21  to area n.  0
+Connected area n.  22  to area n.  0
+Connected area n.  23  to area n.  0
+Connected area n.  24  to area n.  0
+Connected area n.  25  to area n.  0
+Connected area n.  26  to area n.  0
+Connected area n.  27  to area n.  0
+Connected area n.  28  to area n.  0
+Connected area n.  29  to area n.  0
+Connected area n.  30  to area n.  0
+Connected area n.  31  to area n.  0
+Connected area n.  0  to area n.  1
+Connected area n.  2  to area n.  1
+Connected area n.  3  to area n.  1
+Connected area n.  4  to area n.  1
+Connected area n.  5  to area n.  1
+Connected area n.  6  to area n.  1
+Connected area n.  7  to area n.  1
+Connected area n.  8  to area n.  1
+Connected area n.  9  to area n.  1
+Connected area n.  10  to area n.  1
+Connected area n.  11  to area n.  1
+Connected area n.  12  to area n.  1
+Connected area n.  13  to area n.  1
+Connected area n.  14  to area n.  1
+Connected area n.  15  to area n.  1
+Connected area n.  16  to area n.  1
+Connected area n.  17  to area n.  1
+Connected area n.  18  to area n.  1
+Connected area n.  19  to area n.  1
+Connected area n.  20  to area n.  1
+Connected area n.  21  to area n.  1
+Connected area n.  22  to area n.  1
+Connected area n.  23  to area n.  1
+Connected area n.  24  to area n.  1
+Connected area n.  25  to area n.  1
+Connected area n.  26  to area n.  1
+Connected area n.  27  to area n.  1
+Connected area n.  28  to area n.  1
+Connected area n.  29  to area n.  1
+Connected area n.  30  to area n.  1
+Connected area n.  31  to area n.  1
+Connected area n.  0  to area n.  2
+Connected area n.  1  to area n.  2
+Connected area n.  3  to area n.  2
+Connected area n.  4  to area n.  2
+Connected area n.  5  to area n.  2
+Connected area n.  6  to area n.  2
+Connected area n.  7  to area n.  2
+Connected area n.  8  to area n.  2
+Connected area n.  9  to area n.  2
+Connected area n.  10  to area n.  2
+Connected area n.  11  to area n.  2
+Connected area n.  12  to area n.  2
+Connected area n.  13  to area n.  2
+Connected area n.  14  to area n.  2
+Connected area n.  15  to area n.  2
+Connected area n.  16  to area n.  2
+Connected area n.  17  to area n.  2
+Connected area n.  18  to area n.  2
+Connected area n.  19  to area n.  2
+Connected area n.  20  to area n.  2
+Connected area n.  21  to area n.  2
+Connected area n.  22  to area n.  2
+Connected area n.  23  to area n.  2
+Connected area n.  24  to area n.  2
+Connected area n.  25  to area n.  2
+Connected area n.  26  to area n.  2
+Connected area n.  27  to area n.  2
+Connected area n.  28  to area n.  2
+Connected area n.  29  to area n.  2
+Connected area n.  30  to area n.  2
+Connected area n.  31  to area n.  2
+Connected area n.  0  to area n.  3
+Connected area n.  1  to area n.  3
+Connected area n.  2  to area n.  3
+Connected area n.  4  to area n.  3
+Connected area n.  5  to area n.  3
+Connected area n.  6  to area n.  3
+Connected area n.  7  to area n.  3
+Connected area n.  8  to area n.  3
+Connected area n.  9  to area n.  3
+Connected area n.  10  to area n.  3
+Connected area n.  11  to area n.  3
+Connected area n.  12  to area n.  3
+Connected area n.  13  to area n.  3
+Connected area n.  14  to area n.  3
+Connected area n.  15  to area n.  3
+Connected area n.  16  to area n.  3
+Connected area n.  17  to area n.  3
+Connected area n.  18  to area n.  3
+Connected area n.  19  to area n.  3
+Connected area n.  20  to area n.  3
+Connected area n.  21  to area n.  3
+Connected area n.  22  to area n.  3
+Connected area n.  23  to area n.  3
+Connected area n.  24  to area n.  3
+Connected area n.  25  to area n.  3
+Connected area n.  26  to area n.  3
+Connected area n.  27  to area n.  3
+Connected area n.  28  to area n.  3
+Connected area n.  29  to area n.  3
+Connected area n.  30  to area n.  3
+Connected area n.  31  to area n.  3
+Connected area n.  0  to area n.  4
+Connected area n.  1  to area n.  4
+Connected area n.  2  to area n.  4
+Connected area n.  3  to area n.  4
+Connected area n.  5  to area n.  4
+Connected area n.  6  to area n.  4
+Connected area n.  7  to area n.  4
+Connected area n.  8  to area n.  4
+Connected area n.  9  to area n.  4
+Connected area n.  10  to area n.  4
+Connected area n.  11  to area n.  4
+Connected area n.  12  to area n.  4
+Connected area n.  13  to area n.  4
+Connected area n.  14  to area n.  4
+Connected area n.  15  to area n.  4
+Connected area n.  16  to area n.  4
+Connected area n.  17  to area n.  4
+Connected area n.  18  to area n.  4
+Connected area n.  19  to area n.  4
+Connected area n.  20  to area n.  4
+Connected area n.  21  to area n.  4
+Connected area n.  22  to area n.  4
+Connected area n.  23  to area n.  4
+Connected area n.  24  to area n.  4
+Connected area n.  25  to area n.  4
+Connected area n.  26  to area n.  4
+Connected area n.  27  to area n.  4
+Connected area n.  28  to area n.  4
+Connected area n.  29  to area n.  4
+Connected area n.  30  to area n.  4
+Connected area n.  31  to area n.  4
+Connected area n.  0  to area n.  5
+Connected area n.  1  to area n.  5
+Connected area n.  2  to area n.  5
+Connected area n.  3  to area n.  5
+Connected area n.  4  to area n.  5
+Connected area n.  6  to area n.  5
+Connected area n.  7  to area n.  5
+Connected area n.  8  to area n.  5
+Connected area n.  9  to area n.  5
+Connected area n.  10  to area n.  5
+Connected area n.  11  to area n.  5
+Connected area n.  12  to area n.  5
+Connected area n.  13  to area n.  5
+Connected area n.  14  to area n.  5
+Connected area n.  15  to area n.  5
+Connected area n.  16  to area n.  5
+Connected area n.  17  to area n.  5
+Connected area n.  18  to area n.  5
+Connected area n.  19  to area n.  5
+Connected area n.  20  to area n.  5
+Connected area n.  21  to area n.  5
+Connected area n.  22  to area n.  5
+Connected area n.  23  to area n.  5
+Connected area n.  24  to area n.  5
+Connected area n.  25  to area n.  5
+Connected area n.  26  to area n.  5
+Connected area n.  27  to area n.  5
+Connected area n.  28  to area n.  5
+Connected area n.  29  to area n.  5
+Connected area n.  30  to area n.  5
+Connected area n.  31  to area n.  5
+Connected area n.  0  to area n.  6
+Connected area n.  1  to area n.  6
+Connected area n.  2  to area n.  6
+Connected area n.  3  to area n.  6
+Connected area n.  4  to area n.  6
+Connected area n.  5  to area n.  6
+Connected area n.  7  to area n.  6
+Connected area n.  8  to area n.  6
+Connected area n.  9  to area n.  6
+Connected area n.  10  to area n.  6
+Connected area n.  11  to area n.  6
+Connected area n.  12  to area n.  6
+Connected area n.  13  to area n.  6
+Connected area n.  14  to area n.  6
+Connected area n.  15  to area n.  6
+Connected area n.  16  to area n.  6
+Connected area n.  17  to area n.  6
+Connected area n.  18  to area n.  6
+Connected area n.  19  to area n.  6
+Connected area n.  20  to area n.  6
+Connected area n.  21  to area n.  6
+Connected area n.  22  to area n.  6
+Connected area n.  23  to area n.  6
+Connected area n.  24  to area n.  6
+Connected area n.  25  to area n.  6
+Connected area n.  26  to area n.  6
+Connected area n.  27  to area n.  6
+Connected area n.  28  to area n.  6
+Connected area n.  29  to area n.  6
+Connected area n.  30  to area n.  6
+Connected area n.  31  to area n.  6
+Connected area n.  0  to area n.  7
+Connected area n.  1  to area n.  7
+Connected area n.  2  to area n.  7
+Connected area n.  3  to area n.  7
+Connected area n.  4  to area n.  7
+Connected area n.  5  to area n.  7
+Connected area n.  6  to area n.  7
+Connected area n.  8  to area n.  7
+Connected area n.  9  to area n.  7
+Connected area n.  10  to area n.  7
+Connected area n.  11  to area n.  7
+Connected area n.  12  to area n.  7
+Connected area n.  13  to area n.  7
+Connected area n.  14  to area n.  7
+Connected area n.  15  to area n.  7
+Connected area n.  16  to area n.  7
+Connected area n.  17  to area n.  7
+Connected area n.  18  to area n.  7
+Connected area n.  19  to area n.  7
+Connected area n.  20  to area n.  7
+Connected area n.  21  to area n.  7
+Connected area n.  22  to area n.  7
+Connected area n.  23  to area n.  7
+Connected area n.  24  to area n.  7
+Connected area n.  25  to area n.  7
+Connected area n.  26  to area n.  7
+Connected area n.  27  to area n.  7
+Connected area n.  28  to area n.  7
+Connected area n.  29  to area n.  7
+Connected area n.  30  to area n.  7
+Connected area n.  31  to area n.  7
+Connected area n.  0  to area n.  8
+Connected area n.  1  to area n.  8
+Connected area n.  2  to area n.  8
+Connected area n.  3  to area n.  8
+Connected area n.  4  to area n.  8
+Connected area n.  5  to area n.  8
+Connected area n.  6  to area n.  8
+Connected area n.  7  to area n.  8
+Connected area n.  9  to area n.  8
+Connected area n.  10  to area n.  8
+Connected area n.  11  to area n.  8
+Connected area n.  12  to area n.  8
+Connected area n.  13  to area n.  8
+Connected area n.  14  to area n.  8
+Connected area n.  15  to area n.  8
+Connected area n.  16  to area n.  8
+Connected area n.  17  to area n.  8
+Connected area n.  18  to area n.  8
+Connected area n.  19  to area n.  8
+Connected area n.  20  to area n.  8
+Connected area n.  21  to area n.  8
+Connected area n.  22  to area n.  8
+Connected area n.  23  to area n.  8
+Connected area n.  24  to area n.  8
+Connected area n.  25  to area n.  8
+Connected area n.  26  to area n.  8
+Connected area n.  27  to area n.  8
+Connected area n.  28  to area n.  8
+Connected area n.  29  to area n.  8
+Connected area n.  30  to area n.  8
+Connected area n.  31  to area n.  8
+Connected area n.  0  to area n.  9
+Connected area n.  1  to area n.  9
+Connected area n.  2  to area n.  9
+Connected area n.  3  to area n.  9
+Connected area n.  4  to area n.  9
+Connected area n.  5  to area n.  9
+Connected area n.  6  to area n.  9
+Connected area n.  7  to area n.  9
+Connected area n.  8  to area n.  9
+Connected area n.  10  to area n.  9
+Connected area n.  11  to area n.  9
+Connected area n.  12  to area n.  9
+Connected area n.  13  to area n.  9
+Connected area n.  14  to area n.  9
+Connected area n.  15  to area n.  9
+Connected area n.  16  to area n.  9
+Connected area n.  17  to area n.  9
+Connected area n.  18  to area n.  9
+Connected area n.  19  to area n.  9
+Connected area n.  20  to area n.  9
+Connected area n.  21  to area n.  9
+Connected area n.  22  to area n.  9
+Connected area n.  23  to area n.  9
+Connected area n.  24  to area n.  9
+Connected area n.  25  to area n.  9
+Connected area n.  26  to area n.  9
+Connected area n.  27  to area n.  9
+Connected area n.  28  to area n.  9
+Connected area n.  29  to area n.  9
+Connected area n.  30  to area n.  9
+Connected area n.  31  to area n.  9
+Connected area n.  0  to area n.  10
+Connected area n.  1  to area n.  10
+Connected area n.  2  to area n.  10
+Connected area n.  3  to area n.  10
+Connected area n.  4  to area n.  10
+Connected area n.  5  to area n.  10
+Connected area n.  6  to area n.  10
+Connected area n.  7  to area n.  10
+Connected area n.  8  to area n.  10
+Connected area n.  9  to area n.  10
+Connected area n.  11  to area n.  10
+Connected area n.  12  to area n.  10
+Connected area n.  13  to area n.  10
+Connected area n.  14  to area n.  10
+Connected area n.  15  to area n.  10
+Connected area n.  16  to area n.  10
+Connected area n.  17  to area n.  10
+Connected area n.  18  to area n.  10
+Connected area n.  19  to area n.  10
+Connected area n.  20  to area n.  10
+Connected area n.  21  to area n.  10
+Connected area n.  22  to area n.  10
+Connected area n.  23  to area n.  10
+Connected area n.  24  to area n.  10
+Connected area n.  25  to area n.  10
+Connected area n.  26  to area n.  10
+Connected area n.  27  to area n.  10
+Connected area n.  28  to area n.  10
+Connected area n.  29  to area n.  10
+Connected area n.  30  to area n.  10
+Connected area n.  31  to area n.  10
+Connected area n.  0  to area n.  11
+Connected area n.  1  to area n.  11
+Connected area n.  2  to area n.  11
+Connected area n.  3  to area n.  11
+Connected area n.  4  to area n.  11
+Connected area n.  5  to area n.  11
+Connected area n.  6  to area n.  11
+Connected area n.  7  to area n.  11
+Connected area n.  8  to area n.  11
+Connected area n.  9  to area n.  11
+Connected area n.  10  to area n.  11
+Connected area n.  12  to area n.  11
+Connected area n.  13  to area n.  11
+Connected area n.  14  to area n.  11
+Connected area n.  15  to area n.  11
+Connected area n.  16  to area n.  11
+Connected area n.  17  to area n.  11
+Connected area n.  18  to area n.  11
+Connected area n.  19  to area n.  11
+Connected area n.  20  to area n.  11
+Connected area n.  21  to area n.  11
+Connected area n.  22  to area n.  11
+Connected area n.  23  to area n.  11
+Connected area n.  24  to area n.  11
+Connected area n.  25  to area n.  11
+Connected area n.  26  to area n.  11
+Connected area n.  27  to area n.  11
+Connected area n.  28  to area n.  11
+Connected area n.  29  to area n.  11
+Connected area n.  30  to area n.  11
+Connected area n.  31  to area n.  11
+Connected area n.  0  to area n.  12
+Connected area n.  1  to area n.  12
+Connected area n.  2  to area n.  12
+Connected area n.  3  to area n.  12
+Connected area n.  4  to area n.  12
+Connected area n.  5  to area n.  12
+Connected area n.  6  to area n.  12
+Connected area n.  7  to area n.  12
+Connected area n.  8  to area n.  12
+Connected area n.  9  to area n.  12
+Connected area n.  10  to area n.  12
+Connected area n.  11  to area n.  12
+Connected area n.  13  to area n.  12
+Connected area n.  14  to area n.  12
+Connected area n.  15  to area n.  12
+Connected area n.  16  to area n.  12
+Connected area n.  17  to area n.  12
+Connected area n.  18  to area n.  12
+Connected area n.  19  to area n.  12
+Connected area n.  20  to area n.  12
+Connected area n.  21  to area n.  12
+Connected area n.  22  to area n.  12
+Connected area n.  23  to area n.  12
+Connected area n.  24  to area n.  12
+Connected area n.  25  to area n.  12
+Connected area n.  26  to area n.  12
+Connected area n.  27  to area n.  12
+Connected area n.  28  to area n.  12
+Connected area n.  29  to area n.  12
+Connected area n.  30  to area n.  12
+Connected area n.  31  to area n.  12
+Connected area n.  0  to area n.  13
+Connected area n.  1  to area n.  13
+Connected area n.  2  to area n.  13
+Connected area n.  3  to area n.  13
+Connected area n.  4  to area n.  13
+Connected area n.  5  to area n.  13
+Connected area n.  6  to area n.  13
+Connected area n.  7  to area n.  13
+Connected area n.  8  to area n.  13
+Connected area n.  9  to area n.  13
+Connected area n.  10  to area n.  13
+Connected area n.  11  to area n.  13
+Connected area n.  12  to area n.  13
+Connected area n.  14  to area n.  13
+Connected area n.  15  to area n.  13
+Connected area n.  16  to area n.  13
+Connected area n.  17  to area n.  13
+Connected area n.  18  to area n.  13
+Connected area n.  19  to area n.  13
+Connected area n.  20  to area n.  13
+Connected area n.  21  to area n.  13
+Connected area n.  22  to area n.  13
+Connected area n.  23  to area n.  13
+Connected area n.  24  to area n.  13
+Connected area n.  25  to area n.  13
+Connected area n.  26  to area n.  13
+Connected area n.  27  to area n.  13
+Connected area n.  28  to area n.  13
+Connected area n.  29  to area n.  13
+Connected area n.  30  to area n.  13
+Connected area n.  31  to area n.  13
+Connected area n.  0  to area n.  14
+Connected area n.  1  to area n.  14
+Connected area n.  2  to area n.  14
+Connected area n.  3  to area n.  14
+Connected area n.  4  to area n.  14
+Connected area n.  5  to area n.  14
+Connected area n.  6  to area n.  14
+Connected area n.  7  to area n.  14
+Connected area n.  8  to area n.  14
+Connected area n.  9  to area n.  14
+Connected area n.  10  to area n.  14
+Connected area n.  11  to area n.  14
+Connected area n.  12  to area n.  14
+Connected area n.  13  to area n.  14
+Connected area n.  15  to area n.  14
+Connected area n.  16  to area n.  14
+Connected area n.  17  to area n.  14
+Connected area n.  18  to area n.  14
+Connected area n.  19  to area n.  14
+Connected area n.  20  to area n.  14
+Connected area n.  21  to area n.  14
+Connected area n.  22  to area n.  14
+Connected area n.  23  to area n.  14
+Connected area n.  24  to area n.  14
+Connected area n.  25  to area n.  14
+Connected area n.  26  to area n.  14
+Connected area n.  27  to area n.  14
+Connected area n.  28  to area n.  14
+Connected area n.  29  to area n.  14
+Connected area n.  30  to area n.  14
+Connected area n.  31  to area n.  14
+Connected area n.  0  to area n.  15
+Connected area n.  1  to area n.  15
+Connected area n.  2  to area n.  15
+Connected area n.  3  to area n.  15
+Connected area n.  4  to area n.  15
+Connected area n.  5  to area n.  15
+Connected area n.  6  to area n.  15
+Connected area n.  7  to area n.  15
+Connected area n.  8  to area n.  15
+Connected area n.  9  to area n.  15
+Connected area n.  10  to area n.  15
+Connected area n.  11  to area n.  15
+Connected area n.  12  to area n.  15
+Connected area n.  13  to area n.  15
+Connected area n.  14  to area n.  15
+Connected area n.  16  to area n.  15
+Connected area n.  17  to area n.  15
+Connected area n.  18  to area n.  15
+Connected area n.  19  to area n.  15
+Connected area n.  20  to area n.  15
+Connected area n.  21  to area n.  15
+Connected area n.  22  to area n.  15
+Connected area n.  23  to area n.  15
+Connected area n.  24  to area n.  15
+Connected area n.  25  to area n.  15
+Connected area n.  26  to area n.  15
+Connected area n.  27  to area n.  15
+Connected area n.  28  to area n.  15
+Connected area n.  29  to area n.  15
+Connected area n.  30  to area n.  15
+Connected area n.  31  to area n.  15
+Connected area n.  0  to area n.  16
+Connected area n.  1  to area n.  16
+Connected area n.  2  to area n.  16
+Connected area n.  3  to area n.  16
+Connected area n.  4  to area n.  16
+Connected area n.  5  to area n.  16
+Connected area n.  6  to area n.  16
+Connected area n.  7  to area n.  16
+Connected area n.  8  to area n.  16
+Connected area n.  9  to area n.  16
+Connected area n.  10  to area n.  16
+Connected area n.  11  to area n.  16
+Connected area n.  12  to area n.  16
+Connected area n.  13  to area n.  16
+Connected area n.  14  to area n.  16
+Connected area n.  15  to area n.  16
+Connected area n.  17  to area n.  16
+Connected area n.  18  to area n.  16
+Connected area n.  19  to area n.  16
+Connected area n.  20  to area n.  16
+Connected area n.  21  to area n.  16
+Connected area n.  22  to area n.  16
+Connected area n.  23  to area n.  16
+Connected area n.  24  to area n.  16
+Connected area n.  25  to area n.  16
+Connected area n.  26  to area n.  16
+Connected area n.  27  to area n.  16
+Connected area n.  28  to area n.  16
+Connected area n.  29  to area n.  16
+Connected area n.  30  to area n.  16
+Connected area n.  31  to area n.  16
+Connected area n.  0  to area n.  17
+Connected area n.  1  to area n.  17
+Connected area n.  2  to area n.  17
+Connected area n.  3  to area n.  17
+Connected area n.  4  to area n.  17
+Connected area n.  5  to area n.  17
+Connected area n.  6  to area n.  17
+Connected area n.  7  to area n.  17
+Connected area n.  8  to area n.  17
+Connected area n.  9  to area n.  17
+Connected area n.  10  to area n.  17
+Connected area n.  11  to area n.  17
+Connected area n.  12  to area n.  17
+Connected area n.  13  to area n.  17
+Connected area n.  14  to area n.  17
+Connected area n.  15  to area n.  17
+Connected area n.  16  to area n.  17
+Connected area n.  18  to area n.  17
+Connected area n.  19  to area n.  17
+Connected area n.  20  to area n.  17
+Connected area n.  21  to area n.  17
+Connected area n.  22  to area n.  17
+Connected area n.  23  to area n.  17
+Connected area n.  24  to area n.  17
+Connected area n.  25  to area n.  17
+Connected area n.  26  to area n.  17
+Connected area n.  27  to area n.  17
+Connected area n.  28  to area n.  17
+Connected area n.  29  to area n.  17
+Connected area n.  30  to area n.  17
+Connected area n.  31  to area n.  17
+Connected area n.  0  to area n.  18
+Connected area n.  1  to area n.  18
+Connected area n.  2  to area n.  18
+Connected area n.  3  to area n.  18
+Connected area n.  4  to area n.  18
+Connected area n.  5  to area n.  18
+Connected area n.  6  to area n.  18
+Connected area n.  7  to area n.  18
+Connected area n.  8  to area n.  18
+Connected area n.  9  to area n.  18
+Connected area n.  10  to area n.  18
+Connected area n.  11  to area n.  18
+Connected area n.  12  to area n.  18
+Connected area n.  13  to area n.  18
+Connected area n.  14  to area n.  18
+Connected area n.  15  to area n.  18
+Connected area n.  16  to area n.  18
+Connected area n.  17  to area n.  18
+Connected area n.  19  to area n.  18
+Connected area n.  20  to area n.  18
+Connected area n.  21  to area n.  18
+Connected area n.  22  to area n.  18
+Connected area n.  23  to area n.  18
+Connected area n.  24  to area n.  18
+Connected area n.  25  to area n.  18
+Connected area n.  26  to area n.  18
+Connected area n.  27  to area n.  18
+Connected area n.  28  to area n.  18
+Connected area n.  29  to area n.  18
+Connected area n.  30  to area n.  18
+Connected area n.  31  to area n.  18
+Connected area n.  0  to area n.  19
+Connected area n.  1  to area n.  19
+Connected area n.  2  to area n.  19
+Connected area n.  3  to area n.  19
+Connected area n.  4  to area n.  19
+Connected area n.  5  to area n.  19
+Connected area n.  6  to area n.  19
+Connected area n.  7  to area n.  19
+Connected area n.  8  to area n.  19
+Connected area n.  9  to area n.  19
+Connected area n.  10  to area n.  19
+Connected area n.  11  to area n.  19
+Connected area n.  12  to area n.  19
+Connected area n.  13  to area n.  19
+Connected area n.  14  to area n.  19
+Connected area n.  15  to area n.  19
+Connected area n.  16  to area n.  19
+Connected area n.  17  to area n.  19
+Connected area n.  18  to area n.  19
+Connected area n.  20  to area n.  19
+Connected area n.  21  to area n.  19
+Connected area n.  22  to area n.  19
+Connected area n.  23  to area n.  19
+Connected area n.  24  to area n.  19
+Connected area n.  25  to area n.  19
+Connected area n.  26  to area n.  19
+Connected area n.  27  to area n.  19
+Connected area n.  28  to area n.  19
+Connected area n.  29  to area n.  19
+Connected area n.  30  to area n.  19
+Connected area n.  31  to area n.  19
+Connected area n.  0  to area n.  20
+Connected area n.  1  to area n.  20
+Connected area n.  2  to area n.  20
+Connected area n.  3  to area n.  20
+Connected area n.  4  to area n.  20
+Connected area n.  5  to area n.  20
+Connected area n.  6  to area n.  20
+Connected area n.  7  to area n.  20
+Connected area n.  8  to area n.  20
+Connected area n.  9  to area n.  20
+Connected area n.  10  to area n.  20
+Connected area n.  11  to area n.  20
+Connected area n.  12  to area n.  20
+Connected area n.  13  to area n.  20
+Connected area n.  14  to area n.  20
+Connected area n.  15  to area n.  20
+Connected area n.  16  to area n.  20
+Connected area n.  17  to area n.  20
+Connected area n.  18  to area n.  20
+Connected area n.  19  to area n.  20
+Connected area n.  21  to area n.  20
+Connected area n.  22  to area n.  20
+Connected area n.  23  to area n.  20
+Connected area n.  24  to area n.  20
+Connected area n.  25  to area n.  20
+Connected area n.  26  to area n.  20
+Connected area n.  27  to area n.  20
+Connected area n.  28  to area n.  20
+Connected area n.  29  to area n.  20
+Connected area n.  30  to area n.  20
+Connected area n.  31  to area n.  20
+Connected area n.  0  to area n.  21
+Connected area n.  1  to area n.  21
+Connected area n.  2  to area n.  21
+Connected area n.  3  to area n.  21
+Connected area n.  4  to area n.  21
+Connected area n.  5  to area n.  21
+Connected area n.  6  to area n.  21
+Connected area n.  7  to area n.  21
+Connected area n.  8  to area n.  21
+Connected area n.  9  to area n.  21
+Connected area n.  10  to area n.  21
+Connected area n.  11  to area n.  21
+Connected area n.  12  to area n.  21
+Connected area n.  13  to area n.  21
+Connected area n.  14  to area n.  21
+Connected area n.  15  to area n.  21
+Connected area n.  16  to area n.  21
+Connected area n.  17  to area n.  21
+Connected area n.  18  to area n.  21
+Connected area n.  19  to area n.  21
+Connected area n.  20  to area n.  21
+Connected area n.  22  to area n.  21
+Connected area n.  23  to area n.  21
+Connected area n.  24  to area n.  21
+Connected area n.  25  to area n.  21
+Connected area n.  26  to area n.  21
+Connected area n.  27  to area n.  21
+Connected area n.  28  to area n.  21
+Connected area n.  29  to area n.  21
+Connected area n.  30  to area n.  21
+Connected area n.  31  to area n.  21
+Connected area n.  0  to area n.  22
+Connected area n.  1  to area n.  22
+Connected area n.  2  to area n.  22
+Connected area n.  3  to area n.  22
+Connected area n.  4  to area n.  22
+Connected area n.  5  to area n.  22
+Connected area n.  6  to area n.  22
+Connected area n.  7  to area n.  22
+Connected area n.  8  to area n.  22
+Connected area n.  9  to area n.  22
+Connected area n.  10  to area n.  22
+Connected area n.  11  to area n.  22
+Connected area n.  12  to area n.  22
+Connected area n.  13  to area n.  22
+Connected area n.  14  to area n.  22
+Connected area n.  15  to area n.  22
+Connected area n.  16  to area n.  22
+Connected area n.  17  to area n.  22
+Connected area n.  18  to area n.  22
+Connected area n.  19  to area n.  22
+Connected area n.  20  to area n.  22
+Connected area n.  21  to area n.  22
+Connected area n.  23  to area n.  22
+Connected area n.  24  to area n.  22
+Connected area n.  25  to area n.  22
+Connected area n.  26  to area n.  22
+Connected area n.  27  to area n.  22
+Connected area n.  28  to area n.  22
+Connected area n.  29  to area n.  22
+Connected area n.  30  to area n.  22
+Connected area n.  31  to area n.  22
+Connected area n.  0  to area n.  23
+Connected area n.  1  to area n.  23
+Connected area n.  2  to area n.  23
+Connected area n.  3  to area n.  23
+Connected area n.  4  to area n.  23
+Connected area n.  5  to area n.  23
+Connected area n.  6  to area n.  23
+Connected area n.  7  to area n.  23
+Connected area n.  8  to area n.  23
+Connected area n.  9  to area n.  23
+Connected area n.  10  to area n.  23
+Connected area n.  11  to area n.  23
+Connected area n.  12  to area n.  23
+Connected area n.  13  to area n.  23
+Connected area n.  14  to area n.  23
+Connected area n.  15  to area n.  23
+Connected area n.  16  to area n.  23
+Connected area n.  17  to area n.  23
+Connected area n.  18  to area n.  23
+Connected area n.  19  to area n.  23
+Connected area n.  20  to area n.  23
+Connected area n.  21  to area n.  23
+Connected area n.  22  to area n.  23
+Connected area n.  24  to area n.  23
+Connected area n.  25  to area n.  23
+Connected area n.  26  to area n.  23
+Connected area n.  27  to area n.  23
+Connected area n.  28  to area n.  23
+Connected area n.  29  to area n.  23
+Connected area n.  30  to area n.  23
+Connected area n.  31  to area n.  23
+Connected area n.  0  to area n.  24
+Connected area n.  1  to area n.  24
+Connected area n.  2  to area n.  24
+Connected area n.  3  to area n.  24
+Connected area n.  4  to area n.  24
+Connected area n.  5  to area n.  24
+Connected area n.  6  to area n.  24
+Connected area n.  7  to area n.  24
+Connected area n.  8  to area n.  24
+Connected area n.  9  to area n.  24
+Connected area n.  10  to area n.  24
+Connected area n.  11  to area n.  24
+Connected area n.  12  to area n.  24
+Connected area n.  13  to area n.  24
+Connected area n.  14  to area n.  24
+Connected area n.  15  to area n.  24
+Connected area n.  16  to area n.  24
+Connected area n.  17  to area n.  24
+Connected area n.  18  to area n.  24
+Connected area n.  19  to area n.  24
+Connected area n.  20  to area n.  24
+Connected area n.  21  to area n.  24
+Connected area n.  22  to area n.  24
+Connected area n.  23  to area n.  24
+Connected area n.  25  to area n.  24
+Connected area n.  26  to area n.  24
+Connected area n.  27  to area n.  24
+Connected area n.  28  to area n.  24
+Connected area n.  29  to area n.  24
+Connected area n.  30  to area n.  24
+Connected area n.  31  to area n.  24
+Connected area n.  0  to area n.  25
+Connected area n.  1  to area n.  25
+Connected area n.  2  to area n.  25
+Connected area n.  3  to area n.  25
+Connected area n.  4  to area n.  25
+Connected area n.  5  to area n.  25
+Connected area n.  6  to area n.  25
+Connected area n.  7  to area n.  25
+Connected area n.  8  to area n.  25
+Connected area n.  9  to area n.  25
+Connected area n.  10  to area n.  25
+Connected area n.  11  to area n.  25
+Connected area n.  12  to area n.  25
+Connected area n.  13  to area n.  25
+Connected area n.  14  to area n.  25
+Connected area n.  15  to area n.  25
+Connected area n.  16  to area n.  25
+Connected area n.  17  to area n.  25
+Connected area n.  18  to area n.  25
+Connected area n.  19  to area n.  25
+Connected area n.  20  to area n.  25
+Connected area n.  21  to area n.  25
+Connected area n.  22  to area n.  25
+Connected area n.  23  to area n.  25
+Connected area n.  24  to area n.  25
+Connected area n.  26  to area n.  25
+Connected area n.  27  to area n.  25
+Connected area n.  28  to area n.  25
+Connected area n.  29  to area n.  25
+Connected area n.  30  to area n.  25
+Connected area n.  31  to area n.  25
+Connected area n.  0  to area n.  26
+Connected area n.  1  to area n.  26
+Connected area n.  2  to area n.  26
+Connected area n.  3  to area n.  26
+Connected area n.  4  to area n.  26
+Connected area n.  5  to area n.  26
+Connected area n.  6  to area n.  26
+Connected area n.  7  to area n.  26
+Connected area n.  8  to area n.  26
+Connected area n.  9  to area n.  26
+Connected area n.  10  to area n.  26
+Connected area n.  11  to area n.  26
+Connected area n.  12  to area n.  26
+Connected area n.  13  to area n.  26
+Connected area n.  14  to area n.  26
+Connected area n.  15  to area n.  26
+Connected area n.  16  to area n.  26
+Connected area n.  17  to area n.  26
+Connected area n.  18  to area n.  26
+Connected area n.  19  to area n.  26
+Connected area n.  20  to area n.  26
+Connected area n.  21  to area n.  26
+Connected area n.  22  to area n.  26
+Connected area n.  23  to area n.  26
+Connected area n.  24  to area n.  26
+Connected area n.  25  to area n.  26
+Connected area n.  27  to area n.  26
+Connected area n.  28  to area n.  26
+Connected area n.  29  to area n.  26
+Connected area n.  30  to area n.  26
+Connected area n.  31  to area n.  26
+Connected area n.  0  to area n.  27
+Connected area n.  1  to area n.  27
+Connected area n.  2  to area n.  27
+Connected area n.  3  to area n.  27
+Connected area n.  4  to area n.  27
+Connected area n.  5  to area n.  27
+Connected area n.  6  to area n.  27
+Connected area n.  7  to area n.  27
+Connected area n.  8  to area n.  27
+Connected area n.  9  to area n.  27
+Connected area n.  10  to area n.  27
+Connected area n.  11  to area n.  27
+Connected area n.  12  to area n.  27
+Connected area n.  13  to area n.  27
+Connected area n.  14  to area n.  27
+Connected area n.  15  to area n.  27
+Connected area n.  16  to area n.  27
+Connected area n.  17  to area n.  27
+Connected area n.  18  to area n.  27
+Connected area n.  19  to area n.  27
+Connected area n.  20  to area n.  27
+Connected area n.  21  to area n.  27
+Connected area n.  22  to area n.  27
+Connected area n.  23  to area n.  27
+Connected area n.  24  to area n.  27
+Connected area n.  25  to area n.  27
+Connected area n.  26  to area n.  27
+Connected area n.  28  to area n.  27
+Connected area n.  29  to area n.  27
+Connected area n.  30  to area n.  27
+Connected area n.  31  to area n.  27
+Connected area n.  0  to area n.  28
+Connected area n.  1  to area n.  28
+Connected area n.  2  to area n.  28
+Connected area n.  3  to area n.  28
+Connected area n.  4  to area n.  28
+Connected area n.  5  to area n.  28
+Connected area n.  6  to area n.  28
+Connected area n.  7  to area n.  28
+Connected area n.  8  to area n.  28
+Connected area n.  9  to area n.  28
+Connected area n.  10  to area n.  28
+Connected area n.  11  to area n.  28
+Connected area n.  12  to area n.  28
+Connected area n.  13  to area n.  28
+Connected area n.  14  to area n.  28
+Connected area n.  15  to area n.  28
+Connected area n.  16  to area n.  28
+Connected area n.  17  to area n.  28
+Connected area n.  18  to area n.  28
+Connected area n.  19  to area n.  28
+Connected area n.  20  to area n.  28
+Connected area n.  21  to area n.  28
+Connected area n.  22  to area n.  28
+Connected area n.  23  to area n.  28
+Connected area n.  24  to area n.  28
+Connected area n.  25  to area n.  28
+Connected area n.  26  to area n.  28
+Connected area n.  27  to area n.  28
+Connected area n.  29  to area n.  28
+Connected area n.  30  to area n.  28
+Connected area n.  31  to area n.  28
+Connected area n.  0  to area n.  29
+Connected area n.  1  to area n.  29
+Connected area n.  2  to area n.  29
+Connected area n.  3  to area n.  29
+Connected area n.  4  to area n.  29
+Connected area n.  5  to area n.  29
+Connected area n.  6  to area n.  29
+Connected area n.  7  to area n.  29
+Connected area n.  8  to area n.  29
+Connected area n.  9  to area n.  29
+Connected area n.  10  to area n.  29
+Connected area n.  11  to area n.  29
+Connected area n.  12  to area n.  29
+Connected area n.  13  to area n.  29
+Connected area n.  14  to area n.  29
+Connected area n.  15  to area n.  29
+Connected area n.  16  to area n.  29
+Connected area n.  17  to area n.  29
+Connected area n.  18  to area n.  29
+Connected area n.  19  to area n.  29
+Connected area n.  20  to area n.  29
+Connected area n.  21  to area n.  29
+Connected area n.  22  to area n.  29
+Connected area n.  23  to area n.  29
+Connected area n.  24  to area n.  29
+Connected area n.  25  to area n.  29
+Connected area n.  26  to area n.  29
+Connected area n.  27  to area n.  29
+Connected area n.  28  to area n.  29
+Connected area n.  30  to area n.  29
+Connected area n.  31  to area n.  29
+Connected area n.  0  to area n.  30
+Connected area n.  1  to area n.  30
+Connected area n.  2  to area n.  30
+Connected area n.  3  to area n.  30
+Connected area n.  4  to area n.  30
+Connected area n.  5  to area n.  30
+Connected area n.  6  to area n.  30
+Connected area n.  7  to area n.  30
+Connected area n.  8  to area n.  30
+Connected area n.  9  to area n.  30
+Connected area n.  10  to area n.  30
+Connected area n.  11  to area n.  30
+Connected area n.  12  to area n.  30
+Connected area n.  13  to area n.  30
+Connected area n.  14  to area n.  30
+Connected area n.  15  to area n.  30
+Connected area n.  16  to area n.  30
+Connected area n.  17  to area n.  30
+Connected area n.  18  to area n.  30
+Connected area n.  19  to area n.  30
+Connected area n.  20  to area n.  30
+Connected area n.  21  to area n.  30
+Connected area n.  22  to area n.  30
+Connected area n.  23  to area n.  30
+Connected area n.  24  to area n.  30
+Connected area n.  25  to area n.  30
+Connected area n.  26  to area n.  30
+Connected area n.  27  to area n.  30
+Connected area n.  28  to area n.  30
+Connected area n.  29  to area n.  30
+Connected area n.  31  to area n.  30
+Connected area n.  0  to area n.  31
+Connected area n.  1  to area n.  31
+Connected area n.  2  to area n.  31
+Connected area n.  3  to area n.  31
+Connected area n.  4  to area n.  31
+Connected area n.  5  to area n.  31
+Connected area n.  6  to area n.  31
+Connected area n.  7  to area n.  31
+Connected area n.  8  to area n.  31
+Connected area n.  9  to area n.  31
+Connected area n.  10  to area n.  31
+Connected area n.  11  to area n.  31
+Connected area n.  12  to area n.  31
+Connected area n.  13  to area n.  31
+Connected area n.  14  to area n.  31
+Connected area n.  15  to area n.  31
+Connected area n.  16  to area n.  31
+Connected area n.  17  to area n.  31
+Connected area n.  18  to area n.  31
+Connected area n.  19  to area n.  31
+Connected area n.  20  to area n.  31
+Connected area n.  21  to area n.  31
+Connected area n.  22  to area n.  31
+Connected area n.  23  to area n.  31
+Connected area n.  24  to area n.  31
+Connected area n.  25  to area n.  31
+Connected area n.  26  to area n.  31
+Connected area n.  27  to area n.  31
+Connected area n.  28  to area n.  31
+Connected area n.  29  to area n.  31
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.25 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Connected area n.  30  to area n.  31
+Created cortico-cortical connections in 33.17 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+Created cortico-cortical connections in 33.72 seconds.
+MPI rank 14 : Calibrating ...
+MPI rank 4 : Calibrating ...
+MPI rank 3 : Calibrating ...
+MPI rank 5 : Calibrating ...
+MPI rank 2 : Calibrating ...
+MPI rank 29 : Calibrating ...
+MPI rank 16 : Calibrating ...
+MPI rank 22 : Calibrating ...
+Calibrated network in 0.18 seconds.
+MPI rank 23 : Calibrating ...
+MPI rank 13 : Calibrating ...
+MPI rank 11 : Calibrating ...
+MPI rank 12 : Calibrating ...
+MPI rank 20 : Calibrating ...
+MPI rank 24 : Calibrating ...
+MPI rank 6 : Calibrating ...
+MPI rank 26 : Calibrating ...
+MPI rank 31 : Calibrating ...
+MPI rank 19 : Calibrating ...
+MPI rank 1 : Calibrating ...
+MPI rank 25 : Calibrating ...
+MPI rank 9 : Calibrating ...
+Calibrated network in 0.33 seconds.
+Calibrated network in 0.34 seconds.
+MPI rank 18 : Calibrating ...
+MPI rank 28 : Calibrating ...
+Calibrated network in 0.38 seconds.
+Calibrated network in 0.39 seconds.
+Calibrated network in 0.39 seconds.
+MPI rank 8 : Calibrating ...
+Calibrated network in 0.41 seconds.
+Calibrated network in 0.43 seconds.
+Calibrated network in 0.43 seconds.
+Calibrated network in 0.45 seconds.
+Calibrated network in 0.46 seconds.
+Calibrated network in 0.47 seconds.
+Calibrated network in 0.50 seconds.
+Calibrated network in 0.50 seconds.
+Calibrated network in 0.55 seconds.
+Calibrated network in 0.55 seconds.
+Calibrated network in 0.55 seconds.
+Calibrated network in 0.57 seconds.
+Calibrated network in 0.57 seconds.
+MPI rank 15 : Calibrating ...
+Calibrated network in 0.62 seconds.
+MPI rank 17 : Calibrating ...
+Calibrated network in 0.63 seconds.
+Calibrated network in 0.64 seconds.
+MPI rank 7 : Calibrating ...
+MPI rank 0 : Calibrating ...
+MPI rank 30 : Calibrating ...
+MPI rank 10 : Calibrating ...
+MPI rank 27 : Calibrating ...
+Calibrated network in 0.85 seconds.
+Calibrated network in 0.87 seconds.
+MPI rank 21 : Calibrating ...
+Calibrated network in 0.88 seconds.
+Calibrated network in 0.91 seconds.
+Calibrated network in 0.97 seconds.
+Calibrated network in 0.98 seconds.
+Calibrated network in 0.99 seconds.
+Calibrated network in 1.08 seconds.
+Calibrated network in 1.29 seconds.
+MPI rank 1 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 2 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 3 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 0 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+Calibrated network in 1.33 seconds.
+MPI rank 29 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 13 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 19 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 21 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 9 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 6 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 26 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 23 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 11 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 7 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 25 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 30 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 14 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 16 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 18 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 22 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 8 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 5 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 27 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 28 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 15 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 4 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 24 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 31 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 12 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 17 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 20 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+MPI rank 10 : Simulating ...
+Neural activity simulation time: 50.000
+0.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+10.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+20.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+30.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+40.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+50.000
+
+50.000
+50.000
+MPI rank 2 :   SpikeBufferUpdate_time: 0.0789761
+MPI rank 2 :   poisson_generator_time: 0.62231
+MPI rank 2 :   neuron_Update_time: 0.170944
+MPI rank 2 :   copy_ext_spike_time: 0.00307408
+MPI rank 2 :   SendExternalSpike_time: 0.0653295
+MPI rank 2 :   SendSpikeToRemote_time: 0.0585789
+MPI rank 2 :   RecvSpikeFromRemote_time: 0.0263181
+MPI rank 2 :   NestedLoop_time: 0.00107691
+MPI rank 2 :   GetSpike_time: 0.091523
+MPI rank 2 :   SpikeReset_time: 0.0718145
+MPI rank 2 :   ExternalSpikeReset_time: 0.0729814
+MPI rank 2 :   SendSpikeToRemote_MPI_time: 0.00600022
+MPI rank 2 :   RecvSpikeFromRemote_MPI_time: 0.0261637
+MPI rank 2 :   SendSpikeToRemote_CUDAcp_time: 0.050329
+MPI rank 2 :   RecvSpikeFromRemote_CUDAcp_time: 0.00483843
+MPI rank 2 :   JoinSpike_time: 0.00201982
+MPI rank 2 : Building time: 294.301
+MPI rank 2 : Simulation time: 1.42043
+
+MPI rank 0 :   SpikeBufferUpdate_time: 0.0761192
+MPI rank 0 :   poisson_generator_time: 0.589418
+MPI rank 0 :   neuron_Update_time: 0.160911
+MPI rank 0 :   copy_ext_spike_time: 0.00296517
+MPI rank 0 :   SendExternalSpike_time: 0.0689851
+MPI rank 0 :   SendSpikeToRemote_time: 0.0640309
+MPI rank 0 :   RecvSpikeFromRemote_time: 0.0531134
+MPI rank 0 :   NestedLoop_time: 0.00114218
+MPI rank 0 :   GetSpike_time: 0.0836599
+MPI rank 0 :   SpikeReset_time: 0.080917
+MPI rank 0 :   ExternalSpikeReset_time: 0.0720925
+MPI rank 0 :   SendSpikeToRemote_MPI_time: 0.00587884
+MPI rank 0 :   RecvSpikeFromRemote_MPI_time: 0.0529629
+MPI rank 0 :   SendSpikeToRemote_CUDAcp_time: 0.0558334
+MPI rank 0 :   RecvSpikeFromRemote_CUDAcp_time: 0.00234072
+MPI rank 0 :   JoinSpike_time: 0.00205075
+MPI rank 0 : Building time: 294.305
+MPI rank 0 : Simulation time: 1.42044
+
+MPI rank 1 :   SpikeBufferUpdate_time: 0.0468188
+MPI rank 1 :   poisson_generator_time: 0.326789
+MPI rank 1 :   neuron_Update_time: 0.0957256
+MPI rank 1 :   copy_ext_spike_time: 0.00315642
+MPI rank 1 :   SendExternalSpike_time: 0.0465711
+MPI rank 1 :   SendSpikeToRemote_time: 0.0381044
+MPI rank 1 :   RecvSpikeFromRemote_time: 0.572945
+MPI rank 1 :   NestedLoop_time: 0.0011224
+MPI rank 1 :   GetSpike_time: 0.0434589
+MPI rank 1 :   SpikeReset_time: 0.040623
+MPI rank 1 :   ExternalSpikeReset_time: 0.0392011
+MPI rank 1 :   SendSpikeToRemote_MPI_time: 0.00632036
+MPI rank 1 :   RecvSpikeFromRemote_MPI_time: 0.572792
+MPI rank 1 :   SendSpikeToRemote_CUDAcp_time: 0.0296365
+MPI rank 1 :   RecvSpikeFromRemote_CUDAcp_time: 0.00128913
+MPI rank 1 :   JoinSpike_time: 0.0018725
+MPI rank 1 : Building time: 294.305
+MPI rank 1 : Simulation time: 1.42044
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+
+MPI rank 3 :   SpikeBufferUpdate_time: 0.0531364
+MPI rank 3 :   poisson_generator_time: 0.341011
+MPI rank 3 :   neuron_Update_time: 0.0979
+MPI rank 3 :   copy_ext_spike_time: 0.003405
+MPI rank 3 :   SendExternalSpike_time: 0.0340049
+MPI rank 3 :   SendSpikeToRemote_time: 0.0355371
+MPI rank 3 :   RecvSpikeFromRemote_time: 0.563527
+MPI rank 3 :   NestedLoop_time: 0.00113652
+MPI rank 3 :   GetSpike_time: 0.0478148
+MPI rank 3 :   SpikeReset_time: 0.0353485
+MPI rank 3 :   ExternalSpikeReset_time: 0.0422271
+MPI rank 3 :   SendSpikeToRemote_MPI_time: 0.00578054
+MPI rank 3 :   RecvSpikeFromRemote_MPI_time: 0.563365
+MPI rank 3 :   SendSpikeToRemote_CUDAcp_time: 0.0277139
+MPI rank 3 :   RecvSpikeFromRemote_CUDAcp_time: 0.00146731
+MPI rank 3 :   JoinSpike_time: 0.00182297
+MPI rank 3 : Building time: 294.309
+MPI rank 3 : Simulation time: 1.42044
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: V3  population: 23E  neuron idx range: 0   5846
+
+
+
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: VP  population: 23E  neuron idx range: 0   5296
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: V1  population: 23E  neuron idx range: 0   4737
+   Extracting spikes for area: V2  population: 23E  neuron idx range: 0   5051
+
+MPI rank 25 :   SpikeBufferUpdate_time: 0.0581343
+MPI rank 25 :   poisson_generator_time: 0.338509
+MPI rank 25 :   neuron_Update_time: 0.0956123
+MPI rank 25 :   copy_ext_spike_time: 0.00330894
+MPI rank 25 :   SendExternalSpike_time: 0.0381694
+
+
+
+MPI rank 8 :   SpikeBufferUpdate_time: 0.0475362
+MPI rank 8 :   poisson_generator_time: 0.334988
+MPI rank 8 :   neuron_Update_time: 0.0975858
+MPI rank 8 :   copy_ext_spike_time: 0.00315324
+
+MPI rank 4 :   SpikeBufferUpdate_time: 0.0760703
+MPI rank 4 :   poisson_generator_time: 0.580998
+MPI rank 4 :   neuron_Update_time: 0.158105
+
+MPI rank 9 :   SpikeBufferUpdate_time: 0.0579913
+MPI rank 9 :   poisson_generator_time: 0.340874
+MPI rank 9 :   neuron_Update_time: 0.100404
+MPI rank 9 :   copy_ext_spike_time: 0.00330245
+MPI rank 9 :   SendExternalSpike_time: 0.0418799
+MPI rank 9 :   SendSpikeToRemote_time: 0.0391452
+MPI rank 9 :   RecvSpikeFromRemote_time: 0.546702
+
+MPI rank 6 :   SpikeBufferUpdate_time: 0.0780387
+MPI rank 6 :   poisson_generator_time: 0.605816
+MPI rank 6 :   neuron_Update_time: 0.16551
+MPI rank 6 :   copy_ext_spike_time: 0.00302688
+MPI rank 6 :   SendExternalSpike_time: 0.0668605
+MPI rank 6 :   SendSpikeToRemote_time: 0.0568333
+MPI rank 6 :   RecvSpikeFromRemote_time: 0.0468447
+MPI rank 6 :   NestedLoop_time: 0.00109482
+MPI rank 6 :   GetSpike_time: 0.0887028
+MPI rank 6 :   SpikeReset_time: 0.0714235
+MPI rank 6 :   ExternalSpikeReset_time: 0.0715999
+MPI rank 6 :   SendSpikeToRemote_MPI_time: 0.00544309
+MPI rank 6 :   RecvSpikeFromRemote_MPI_time: 0.0466935
+MPI rank 6 :   SendSpikeToRemote_CUDAcp_time: 0.0491851
+MPI rank 6 :   RecvSpikeFromRemote_CUDAcp_time: 0.00309434
+MPI rank 6 :   JoinSpike_time: 0.00194915
+MPI rank 6 : Building time: 294.341
+MPI rank 6 : Simulation time: 1.42044
+
+MPI rank 14 :   SpikeBufferUpdate_time: 0.0417658
+MPI rank 14 :   poisson_generator_time: 0.324473
+MPI rank 14 :   neuron_Update_time: 0.10037
+MPI rank 14 :   copy_ext_spike_time: 0.00340106
+
+
+MPI rank 10 :   SpikeBufferUpdate_time: 0.0541398
+MPI rank 10 :   poisson_generator_time: 0.343413
+MPI rank 10 :   neuron_Update_time: 0.0952774
+MPI rank 10 :   copy_ext_spike_time: 0.00337846
+MPI rank 10 :   SendExternalSpike_time: 0.0376263
+MPI rank 10 :   SendSpikeToRemote_time: 0.0321173
+MPI rank 10 :   RecvSpikeFromRemote_time: 0.564812
+MPI rank 10 :   NestedLoop_time: 0.00107814
+MPI rank 10 :   GetSpike_time: 0.0464335
+MPI rank 10 :   SpikeReset_time: 0.0362663
+MPI rank 10 :   ExternalSpikeReset_time: 0.0415401
+
+MPI rank 7 :   SpikeBufferUpdate_time: 0.054698
+MPI rank 7 :   poisson_generator_time: 0.338885
+MPI rank 7 :   neuron_Update_time: 0.100628
+MPI rank 7 :   copy_ext_spike_time: 0.00338549
+MPI rank 7 :   SendExternalSpike_time: 0.046476
+MPI rank 7 :   SendSpikeToRemote_time: 0.0383276
+MPI rank 7 :   RecvSpikeFromRemote_time: 0.547289
+MPI rank 7 :   NestedLoop_time: 0.00115765
+MPI rank 7 :   GetSpike_time: 0.0449253
+MPI rank 7 :   SpikeReset_time: 0.0394446
+MPI rank 7 :   ExternalSpikeReset_time: 0.0404402
+MPI rank 7 :   SendSpikeToRemote_MPI_time: 0.00723501
+MPI rank 7 :   RecvSpikeFromRemote_MPI_time: 0.547126
+MPI rank 7 :   SendSpikeToRemote_CUDAcp_time: 0.029016
+MPI rank 7 :   RecvSpikeFromRemote_CUDAcp_time: 0.0015191
+MPI rank 7 :   JoinSpike_time: 0.00184114
+MPI rank 7 : Building time: 294.348
+MPI rank 7 : Simulation time: 1.42045
+
+MPI rank 24 :   SpikeBufferUpdate_time: 0.0600608
+MPI rank 24 :   poisson_generator_time: 0.347295
+MPI rank 24 :   neuron_Update_time: 0.100342
+MPI rank 24 :   copy_ext_spike_time: 0.00335638
+MPI rank 24 :   SendExternalSpike_time: 0.0391023
+MPI rank 24 :   SendSpikeToRemote_time: 0.0403179
+MPI rank 24 :   RecvSpikeFromRemote_time: 0.541601
+MPI rank 24 :   NestedLoop_time: 0.00111224
+MPI rank 24 :   GetSpike_time: 0.046606
+MPI rank 24 :   SpikeReset_time: 0.0356062
+MPI rank 24 :   ExternalSpikeReset_time: 0.0417951
+MPI rank 24 :   SendSpikeToRemote_MPI_time: 0.0070473
+MPI rank 24 :   RecvSpikeFromRemote_MPI_time: 0.541452
+
+MPI rank 31 :   SpikeBufferUpdate_time: 0.0515602
+MPI rank 31 :   poisson_generator_time: 0.241449
+MPI rank 31 :   neuron_Update_time: 0.082998
+MPI rank 31 :   copy_ext_spike_time: 0.00333926
+
+MPI rank 15 :   SpikeBufferUpdate_time: 0.0575199
+MPI rank 15 :   poisson_generator_time: 0.334272
+MPI rank 15 :   neuron_Update_time: 0.0989706
+MPI rank 15 :   copy_ext_spike_time: 0.00348117
+MPI rank 15 :   SendExternalSpike_time: 0.043095
+MPI rank 15 :   SendSpikeToRemote_time: 0.0367764
+MPI rank 15 :   RecvSpikeFromRemote_time: 0.5571
+MPI rank 15 :   NestedLoop_time: 0.00115281
+MPI rank 15 :   GetSpike_time: 0.0447472
+
+
+MPI rank 13 :   SpikeBufferUpdate_time: 0.0599711
+MPI rank 13 :   poisson_generator_time: 0.339834
+MPI rank 13 :   neuron_Update_time: 0.100228
+MPI rank 13 :   copy_ext_spike_time: 0.00329206
+MPI rank 13 :   SendExternalSpike_time: 0.0390224
+MPI rank 13 :   SendSpikeToRemote_time: 0.0414808
+MPI rank 13 :   RecvSpikeFromRemote_time: 0.54621
+MPI rank 13 :   NestedLoop_time: 0.00109987
+MPI rank 13 :   GetSpike_time: 0.0459289
+MPI rank 13 :   SpikeReset_time: 0.0369194
+MPI rank 13 :   ExternalSpikeReset_time: 0.0415265
+MPI rank 13 :   SendSpikeToRemote_MPI_time: 0.00733129
+MPI rank 13 :   RecvSpikeFromRemote_MPI_time: 0.546056
+MPI rank 13 :   SendSpikeToRemote_CUDAcp_time: 0.0320333
+MPI rank 13 :   RecvSpikeFromRemote_CUDAcp_time: 0.00138971
+MPI rank 13 :   JoinSpike_time: 0.00192358
+
+MPI rank 16 :   SpikeBufferUpdate_time: 0.0596561
+MPI rank 16 :   poisson_generator_time: 0.351786
+MPI rank 16 :   neuron_Update_time: 0.100681
+MPI rank 16 :   copy_ext_spike_time: 0.00344988
+
+MPI rank 20 :   SpikeBufferUpdate_time: 0.0510085
+MPI rank 20 :   poisson_generator_time: 0.330911
+MPI rank 20 :   neuron_Update_time: 0.0949403
+MPI rank 20 :   copy_ext_spike_time: 0.003146
+MPI rank 11 :   SpikeBufferUpdate_time: 0.0584297
+MPI rank 11 :   poisson_generator_time: 0.340065
+MPI rank 11 :   neuron_Update_time: 0.0987534
+MPI rank 11 :   copy_ext_spike_time: 0.00335026
+MPI rank 11 :   SendExternalSpike_time: 0.0417057
+MPI rank 11 :   SendSpikeToRemote_time: 0.0386688
+MPI rank 11 :   RecvSpikeFromRemote_time: 0.550446
+MPI rank 11 :   NestedLoop_time: 0.00113684
+MPI rank 11 :   GetSpike_time: 0.0450453
+MPI rank 11 :   SpikeReset_time: 0.0382154
+MPI rank 11 :   ExternalSpikeReset_time: 0.0404933
+MPI rank 11 :   SendSpikeToRemote_MPI_time: 0.0052183
+MPI rank 11 :   RecvSpikeFromRemote_MPI_time: 0.550279
+MPI rank 11 :   SendSpikeToRemote_CUDAcp_time: 0.0312921
+MPI rank 11 :   RecvSpikeFromRemote_CUDAcp_time: 0.00141432
+MPI rank 11 :   JoinSpike_time: 0.00193605
+MPI rank 11 : Building time: 294.912
+MPI rank 11 : Simulation time: 1.42045
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+
+MPI rank 27 :   SpikeBufferUpdate_time: 0.0543462
+MPI rank 27 :   poisson_generator_time: 0.335488
+MPI rank 27 :   neuron_Update_time: 0.0974748
+MPI rank 27 :   copy_ext_spike_time: 0.003386
+MPI rank 27 :   SendExternalSpike_time: 0.0408368
+MPI rank 27 :   SendSpikeToRemote_time: 0.0336986
+MPI rank 27 :   RecvSpikeFromRemote_time: 0.569825
+MPI rank 27 :   NestedLoop_time: 0.00111829
+MPI rank 27 :   GetSpike_time: 0.0441996
+MPI rank 27 :   SpikeReset_time: 0.0380278
+MPI rank 27 :   ExternalSpikeReset_time: 0.0402916
+MPI rank 27 :   SendSpikeToRemote_MPI_time: 0.00764712
+MPI rank 27 :   RecvSpikeFromRemote_MPI_time: 0.569672
+MPI rank 27 :   SendSpikeToRemote_CUDAcp_time: 0.0241243
+MPI rank 27 :   RecvSpikeFromRemote_CUDAcp_time: 0.00147869
+MPI rank 27 :   JoinSpike_time: 0.00170647
+MPI rank 27 : Building time: 294.858
+MPI rank 27 : Simulation time: 1.42046
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+
+MPI rank 28 :   SpikeBufferUpdate_time: 0.0481425
+MPI rank 28 :   poisson_generator_time: 0.31987
+MPI rank 28 :   neuron_Update_time: 0.0925509
+MPI rank 28 :   copy_ext_spike_time: 0.00318573
+MPI rank 28 :   SendExternalSpike_time: 0.0435083
+MPI rank 28 :   SendSpikeToRemote_time: 0.0322259
+MPI rank 28 :   RecvSpikeFromRemote_time: 0.595909
+MPI rank 28 :   NestedLoop_time: 0.00115804
+MPI rank 28 :   GetSpike_time: 0.0426779
+
+MPI rank 30 :   SpikeBufferUpdate_time: 0.0538607
+MPI rank 30 :   poisson_generator_time: 0.332807
+MPI rank 30 :   neuron_Update_time: 0.0960188
+MPI rank 30 :   copy_ext_spike_time: 0.00359798
+MPI rank 30 :   SendExternalSpike_time: 0.0340662
+MPI rank 30 :   SendSpikeToRemote_time: 0.0410599
+MPI rank 30 :   RecvSpikeFromRemote_time: 0.573102
+MPI rank 30 :   NestedLoop_time: 0.00120075
+MPI rank 30 :   GetSpike_time: 0.0462326
+MPI rank 30 :   SpikeReset_time: 0.03465
+MPI rank 30 :   ExternalSpikeReset_time: 0.041509
+MPI rank 30 :   SendSpikeToRemote_MPI_time: 0.00713401
+MPI rank 14 :   SendExternalSpike_time: 0.0477977
+MPI rank 14 :   SendSpikeToRemote_time: 0.0409808
+MPI rank 14 :   RecvSpikeFromRemote_time: 0.573198
+MPI rank 14 :   NestedLoop_time: 0.00118717
+MPI rank 14 :   GetSpike_time: 0.0428002
+MPI rank 14 :   SpikeReset_time: 0.0414258
+MPI rank 14 :   ExternalSpikeReset_time: 0.0389967
+MPI rank 14 :   SendSpikeToRemote_MPI_time: 0.00745014
+MPI rank 14 :   RecvSpikeFromRemote_MPI_time: 0.573046
+MPI rank 14 :   SendSpikeToRemote_CUDAcp_time: 0.0314453
+MPI rank 14 :   RecvSpikeFromRemote_CUDAcp_time: 0
+MPI rank 14 :   JoinSpike_time: 0.00177816
+MPI rank 14 : Building time: 294.901
+MPI rank 14 : Simulation time: 1.42045
+
+MPI rank 17 :   SpikeBufferUpdate_time: 0.0562165
+MPI rank 17 :   poisson_generator_time: 0.343214
+MPI rank 17 :   neuron_Update_time: 0.0982058
+MPI rank 17 :   copy_ext_spike_time: 0.00333291
+MPI rank 17 :   SendExternalSpike_time: 0.0373713
+MPI rank 17 :   SendSpikeToRemote_time: 0.0345476
+MPI rank 17 :   RecvSpikeFromRemote_time: 0.558807
+MPI rank 17 :   NestedLoop_time: 0.00108072
+
+MPI rank 21 :   SpikeBufferUpdate_time: 0.0435998
+MPI rank 21 :   poisson_generator_time: 0.315227
+MPI rank 21 :   neuron_Update_time: 0.0938036
+MPI rank 21 :   copy_ext_spike_time: 0.00311854
+MPI rank 21 :   SendExternalSpike_time: 0.0375752
+MPI rank 21 :   SendSpikeToRemote_time: 0.0267031
+MPI rank 21 :   RecvSpikeFromRemote_time: 0.615819
+MPI rank 8 :   SendExternalSpike_time: 0.0418405
+MPI rank 8 :   SendSpikeToRemote_time: 0.0347537
+MPI rank 8 :   RecvSpikeFromRemote_time: 0.571002
+MPI rank 8 :   NestedLoop_time: 0.00107982
+MPI rank 8 :   GetSpike_time: 0.0442112
+MPI rank 8 :   SpikeReset_time: 0.0391416
+MPI rank 8 :   ExternalSpikeReset_time: 0.0398274
+MPI rank 8 :   SendSpikeToRemote_MPI_time: 0.00532513
+MPI rank 8 :   RecvSpikeFromRemote_MPI_time: 0.570841
+MPI rank 8 :   SendSpikeToRemote_CUDAcp_time: 0.027381
+MPI rank 8 :   RecvSpikeFromRemote_CUDAcp_time: 0.00135436
+MPI rank 8 :   JoinSpike_time: 0.00175881
+MPI rank 8 : Building time: 294.909
+MPI rank 8 : Simulation time: 1.42044
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: VOT  population: 23E  neuron idx range: 0   4530
+MPI rank 24 :   SendSpikeToRemote_CUDAcp_time: 0.0311484
+MPI rank 24 :   RecvSpikeFromRemote_CUDAcp_time: 0.00143412
+MPI rank 24 :   JoinSpike_time: 0.00185813
+MPI rank 24 : Building time: 294.869
+MPI rank 24 : Simulation time: 1.42045
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: V4t  population: 23E  neuron idx range: 0   4816
+MPI rank 25 :   SendSpikeToRemote_time: 0.0332251
+MPI rank 25 :   RecvSpikeFromRemote_time: 0.566512
+MPI rank 25 :   NestedLoop_time: 0.00112015
+MPI rank 25 :   GetSpike_time: 0.045228
+MPI rank 25 :   SpikeReset_time: 0.0369581
+MPI rank 25 :   ExternalSpikeReset_time: 0.0410802
+MPI rank 25 :   SendSpikeToRemote_MPI_time: 0.00653796
+MPI rank 25 :   RecvSpikeFromRemote_MPI_time: 0.566351
+MPI rank 25 :   SendSpikeToRemote_CUDAcp_time: 0.0247054
+MPI rank 25 :   RecvSpikeFromRemote_CUDAcp_time: 0.00143604
+MPI rank 25 :   JoinSpike_time: 0.00177129
+MPI rank 25 : Building time: 294.86
+MPI rank 25 : Simulation time: 1.42046
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+MPI rank 29 :   SpikeBufferUpdate_time: 0.0562492
+MPI rank 29 :   poisson_generator_time: 0.335691
+MPI rank 29 :   neuron_Update_time: 0.0855723
+MPI rank 29 :   copy_ext_spike_time: 0.00341524
+MPI rank 29 :   SendExternalSpike_time: 0.0057233
+MPI rank 29 :   SendSpikeToRemote_time: 0.018299
+MPI rank 29 :   RecvSpikeFromRemote_time: 0.623691
+MPI rank 29 :   NestedLoop_time: 0.00114683
+MPI rank 29 :   GetSpike_time: 0.0446624
+MPI rank 29 :   SpikeReset_time: 0.0449266
+MPI rank 29 :   ExternalSpikeReset_time: 0.0379693
+MPI rank 29 :   SendSpikeToRemote_MPI_time: 0.00717254
+MPI rank 29 :   RecvSpikeFromRemote_MPI_time: 0.623534
+MPI rank 29 :   SendSpikeToRemote_CUDAcp_time: 0.0089182
+MPI rank 29 :   RecvSpikeFromRemote_CUDAcp_time: 0.00150195
+MPI rank 29 :   JoinSpike_time: 0.00197123
+MPI rank 29 : Building time: 294.851
+MPI rank 29 : Simulation time: 1.42045
+MPI rank 13 : Building time: 294.907
+MPI rank 13 : Simulation time: 1.42045
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+
+MPI rank 19 :   SpikeBufferUpdate_time: 0.0551702
+MPI rank 19 :   poisson_generator_time: 0.339834
+MPI rank 19 :   neuron_Update_time: 0.0968458
+MPI rank 19 :   copy_ext_spike_time: 0.00341268
+MPI rank 19 :   SendExternalSpike_time: 0.0415109
+MPI rank 19 :   SendSpikeToRemote_time: 0.037163
+MPI rank 19 :   RecvSpikeFromRemote_time: 0.5591
+MPI rank 19 :   NestedLoop_time: 0.00113042
+MPI rank 19 :   GetSpike_time: 0.04486
+MPI rank 19 :   SpikeReset_time: 0.0386307
+MPI rank 19 :   ExternalSpikeReset_time: 0.0403356
+MPI rank 19 :   SendSpikeToRemote_MPI_time: 0.00701482
+
+MPI rank 23 :   SpikeBufferUpdate_time: 0.0519366
+MPI rank 23 :   poisson_generator_time: 0.32672
+MPI rank 23 :   neuron_Update_time: 0.0916273
+MPI rank 23 :   copy_ext_spike_time: 0.00346866
+MPI rank 23 :   SendExternalSpike_time: 0.0337271
+MPI rank 23 :   SendSpikeToRemote_time: 0.0302281
+MPI rank 23 :   RecvSpikeFromRemote_time: 0.597355
+MPI rank 23 :   NestedLoop_time: 0.00115441
+MPI rank 23 :   GetSpike_time: 0.045668
+MPI rank 23 :   SpikeReset_time: 0.0351171
+MPI rank 23 :   ExternalSpikeReset_time: 0.0412253
+MPI rank 10 :   SendSpikeToRemote_MPI_time: 0.00524252
+MPI rank 10 :   RecvSpikeFromRemote_MPI_time: 0.564664
+MPI rank 10 :   SendSpikeToRemote_CUDAcp_time: 0.0249157
+MPI rank 10 :   RecvSpikeFromRemote_CUDAcp_time: 0.00138849
+MPI rank 10 :   JoinSpike_time: 0.00173872
+MPI rank 10 : Building time: 294.901
+MPI rank 10 : Simulation time: 1.42045
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+MPI rank 26 :   SpikeBufferUpdate_time: 0.0583204
+MPI rank 26 :   poisson_generator_time: 0.33775
+MPI rank 26 :   neuron_Update_time: 0.0950523
+MPI rank 26 :   copy_ext_spike_time: 0.00339518
+MPI rank 26 :   SendExternalSpike_time: 0.0475405
+MPI rank 26 :   SendSpikeToRemote_time: 0.0427536
+MPI rank 26 :   RecvSpikeFromRemote_time: 0.549696
+MPI rank 26 :   NestedLoop_time: 0.00116093
+MPI rank 26 :   GetSpike_time: 0.0436242
+MPI rank 26 :   SpikeReset_time: 0.0395245
+MPI rank 26 :   ExternalSpikeReset_time: 0.0394377
+MPI rank 26 :   SendSpikeToRemote_MPI_time: 0.00810244
+MPI rank 26 :   RecvSpikeFromRemote_MPI_time: 0.54954
+MPI rank 26 :   SendSpikeToRemote_CUDAcp_time: 0.0325138
+MPI rank 26 :   RecvSpikeFromRemote_CUDAcp_time: 0.00145896
+MPI rank 26 :   JoinSpike_time: 0.00196595
+MPI rank 26 : Building time: 294.857
+MPI rank 26 : Simulation time: 1.42045
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: 7a  population: 23E  neuron idx range: 0   4947
+MPI rank 31 :   SendExternalSpike_time: 0.0414879
+MPI rank 31 :   SendSpikeToRemote_time: 0.0386454
+MPI rank 31 :   RecvSpikeFromRemote_time: 0.682103
+MPI rank 31 :   NestedLoop_time: 0.00111025
+MPI rank 31 :   GetSpike_time: 0.0399205
+MPI rank 31 :   SpikeReset_time: 0.037032
+MPI rank 31 :   ExternalSpikeReset_time: 0.0398188
+MPI rank 31 :   SendSpikeToRemote_MPI_time: 0.00686596
+MPI rank 31 :   RecvSpikeFromRemote_MPI_time: 0.68195
+MPI rank 31 :   SendSpikeToRemote_CUDAcp_time: 0.0296001
+MPI rank 31 :   RecvSpikeFromRemote_CUDAcp_time: 0.00141142
+MPI rank 31 :   JoinSpike_time: 0.00192269
+MPI rank 31 : Building time: 294.846
+MPI rank 31 : Simulation time: 1.42045
+MPI rank 15 :   SpikeReset_time: 0.0388994
+MPI rank 15 :   ExternalSpikeReset_time: 0.0403634
+MPI rank 15 :   SendSpikeToRemote_MPI_time: 0.0071423
+MPI rank 15 :   RecvSpikeFromRemote_MPI_time: 0.556924
+MPI rank 15 :   SendSpikeToRemote_CUDAcp_time: 0.0275444
+MPI rank 15 :   RecvSpikeFromRemote_CUDAcp_time: 0.00152501
+MPI rank 15 :   JoinSpike_time: 0.00187407
+MPI rank 15 : Building time: 294.892
+MPI rank 15 : Simulation time: 1.42046
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+MPI rank 18 :   SpikeBufferUpdate_time: 0.0512855
+MPI rank 18 :   poisson_generator_time: 0.337598
+MPI rank 18 :   neuron_Update_time: 0.0989919
+MPI rank 18 :   copy_ext_spike_time: 0.00347712
+MPI rank 18 :   SendExternalSpike_time: 0.0474629
+MPI rank 18 :   SendSpikeToRemote_time: 0.0394249
+MPI rank 18 :   RecvSpikeFromRemote_time: 0.554936
+MPI rank 18 :   NestedLoop_time: 0.00116386
+MPI rank 18 :   GetSpike_time: 0.0437703
+MPI rank 18 :   SpikeReset_time: 0.0403803
+MPI rank 18 :   ExternalSpikeReset_time: 0.0392518
+MPI rank 18 :   SendSpikeToRemote_MPI_time: 0.00661305
+MPI rank 18 :   RecvSpikeFromRemote_MPI_time: 0.554774
+MPI rank 18 :   SendSpikeToRemote_CUDAcp_time: 0.0306974
+MPI rank 18 :   RecvSpikeFromRemote_CUDAcp_time: 0.00150191
+MPI rank 18 :   JoinSpike_time: 0.00184944
+MPI rank 18 : Building time: 294.884
+MPI rank 18 : Simulation time: 1.42045
+MPI rank 23 :   SendSpikeToRemote_MPI_time: 0.00698078
+MPI rank 23 :   RecvSpikeFromRemote_MPI_time: 0.597198
+MPI rank 23 :   SendSpikeToRemote_CUDAcp_time: 0.0212745
+MPI rank 23 :   RecvSpikeFromRemote_CUDAcp_time: 0.00150744
+MPI rank 23 :   JoinSpike_time: 0.00173763
+MPI rank 23 : Building time: 294.865
+MPI rank 23 : Simulation time: 1.42045
+MPI rank 9 :   NestedLoop_time: 0.00111658
+MPI rank 9 :   GetSpike_time: 0.0455699
+MPI rank 9 :   SpikeReset_time: 0.0374578
+MPI rank 9 :   ExternalSpikeReset_time: 0.040905
+MPI rank 9 :   SendSpikeToRemote_MPI_time: 0.00605856
+MPI rank 9 :   RecvSpikeFromRemote_MPI_time: 0.546547
+MPI rank 9 :   SendSpikeToRemote_CUDAcp_time: 0.030988
+MPI rank 9 :   RecvSpikeFromRemote_CUDAcp_time: 0.00147565
+MPI rank 9 :   JoinSpike_time: 0.00187293
+MPI rank 9 : Building time: 294.907
+MPI rank 9 : Simulation time: 1.42045
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: MSTd  population: 23E  neuron idx range: 0   4433
+MPI rank 4 :   copy_ext_spike_time: 0.00295575
+MPI rank 4 :   SendExternalSpike_time: 0.0737471
+MPI rank 4 :   SendSpikeToRemote_time: 0.0490338
+MPI rank 4 :   RecvSpikeFromRemote_time: 0.0795684
+MPI rank 4 :   NestedLoop_time: 0.00112166
+MPI rank 4 :   GetSpike_time: 0.0827607
+MPI rank 4 :   SpikeReset_time: 0.0783608
+MPI rank 4 :   ExternalSpikeReset_time: 0.0708878
+MPI rank 4 :   SendSpikeToRemote_MPI_time: 0.00549784
+MPI rank 4 :   RecvSpikeFromRemote_MPI_time: 0.079418
+MPI rank 4 :   SendSpikeToRemote_CUDAcp_time: 0.041436
+MPI rank 4 :   RecvSpikeFromRemote_CUDAcp_time: 0.00265382
+MPI rank 4 :   JoinSpike_time: 0.00187851
+MPI rank 4 : Building time: 294.352
+MPI rank 4 : Simulation time: 1.42044
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: V3A  population: 23E  neuron idx range: 0   4087
+MPI rank 20 :   SendExternalSpike_time: 0.0419875
+MPI rank 20 :   SendSpikeToRemote_time: 0.039317
+MPI rank 20 :   RecvSpikeFromRemote_time: 0.573065
+MPI rank 20 :   NestedLoop_time: 0.00111272
+MPI rank 20 :   GetSpike_time: 0.0438693
+MPI rank 20 :   SpikeReset_time: 0.0380422
+MPI rank 20 :   ExternalSpikeReset_time: 0.0396774
+MPI rank 20 :   SendSpikeToRemote_MPI_time: 0.00682931
+MPI rank 20 :   RecvSpikeFromRemote_MPI_time: 0.572905
+MPI rank 20 :   SendSpikeToRemote_CUDAcp_time: 0.0303985
+MPI rank 20 :   RecvSpikeFromRemote_CUDAcp_time: 0.00146793
+MPI rank 20 :   JoinSpike_time: 0.00183981
+MPI rank 20 : Building time: 294.886
+MPI rank 20 : Simulation time: 1.42044
+   Extracting spikes for area: PIP  population: 23E  neuron idx range: 0   4433
+MPI rank 5 :   SpikeBufferUpdate_time: 0.0598125
+MPI rank 5 :   poisson_generator_time: 0.344241
+MPI rank 5 :   neuron_Update_time: 0.0990362
+MPI rank 5 :   copy_ext_spike_time: 0.00338073
+MPI rank 5 :   SendExternalSpike_time: 0.0427724
+MPI rank 5 :   SendSpikeToRemote_time: 0.0379713
+MPI rank 5 :   RecvSpikeFromRemote_time: 0.540213
+MPI rank 5 :   NestedLoop_time: 0.00113881
+MPI rank 5 :   GetSpike_time: 0.0467256
+MPI rank 5 :   SpikeReset_time: 0.0370379
+MPI rank 5 :   ExternalSpikeReset_time: 0.0418972
+MPI rank 5 :   SendSpikeToRemote_MPI_time: 0.00652989
+MPI rank 5 :   RecvSpikeFromRemote_MPI_time: 0.540056
+MPI rank 5 :   SendSpikeToRemote_CUDAcp_time: 0.0292827
+MPI rank 5 :   RecvSpikeFromRemote_CUDAcp_time: 0.00146381
+MPI rank 5 :   JoinSpike_time: 0.0019632
+MPI rank 5 : Building time: 294.352
+MPI rank 5 : Simulation time: 1.42045
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: MT  population: 23E  neuron idx range: 0   6059
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+MPI rank 30 :   RecvSpikeFromRemote_MPI_time: 0.572935
+MPI rank 30 :   SendSpikeToRemote_CUDAcp_time: 0.0315746
+MPI rank 30 :   RecvSpikeFromRemote_CUDAcp_time: 0.00156429
+MPI rank 30 :   JoinSpike_time: 0.0020818
+MPI rank 30 : Building time: 294.846
+MPI rank 30 : Simulation time: 1.42044
+MPI rank 12 :   SpikeBufferUpdate_time: 0.0517705
+MPI rank 12 :   poisson_generator_time: 0.342956
+MPI rank 12 :   neuron_Update_time: 0.101413
+MPI rank 12 :   copy_ext_spike_time: 0.00343852
+MPI rank 12 :   SendExternalSpike_time: 0.0329961
+MPI rank 12 :   SendSpikeToRemote_time: 0.0367058
+MPI rank 12 :   RecvSpikeFromRemote_time: 0.558754
+MPI rank 12 :   NestedLoop_time: 0.00112625
+MPI rank 12 :   GetSpike_time: 0.0482742
+MPI rank 12 :   SpikeReset_time: 0.0345771
+MPI rank 12 :   ExternalSpikeReset_time: 0.0430523
+MPI rank 12 :   SendSpikeToRemote_MPI_time: 0.00608682
+MPI rank 12 :   RecvSpikeFromRemote_MPI_time: 0.558594
+MPI rank 12 :   SendSpikeToRemote_CUDAcp_time: 0.0285427
+MPI rank 12 :   RecvSpikeFromRemote_CUDAcp_time: 0.00143508
+MPI rank 12 :   JoinSpike_time: 0.00185072
+MPI rank 12 : Building time: 294.882
+MPI rank 12 : Simulation time: 1.42045
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: DP  population: 23E  neuron idx range: 0   4392
+MPI rank 16 :   SendExternalSpike_time: 0.038043
+MPI rank 16 :   SendSpikeToRemote_time: 0.0431516
+MPI rank 16 :   RecvSpikeFromRemote_time: 0.533315
+MPI rank 16 :   NestedLoop_time: 0.00113307
+MPI rank 16 :   GetSpike_time: 0.0476006
+MPI rank 16 :   SpikeReset_time: 0.035163
+MPI rank 16 :   ExternalSpikeReset_time: 0.0423783
+MPI rank 16 :   SendSpikeToRemote_MPI_time: 0.00847892
+MPI rank 16 :   RecvSpikeFromRemote_MPI_time: 0.533159
+MPI rank 16 :   SendSpikeToRemote_CUDAcp_time: 0.0324739
+MPI rank 16 :   RecvSpikeFromRemote_CUDAcp_time: 0.00152679
+MPI rank 16 :   JoinSpike_time: 0.00197662
+MPI rank 16 : Building time: 294.875
+MPI rank 16 : Simulation time: 1.42045
+   Extracting spikes for area: PO  population: 23E  neuron idx range: 0   4433
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: V4  population: 23E  neuron idx range: 0   6443
+   Extracting spikes for area: FST  population: 23E  neuron idx range: 0   3632
+MPI rank 28 :   SpikeReset_time: 0.0394696
+MPI rank 28 :   ExternalSpikeReset_time: 0.0386766
+MPI rank 28 :   SendSpikeToRemote_MPI_time: 0.0065777
+MPI rank 28 :   RecvSpikeFromRemote_MPI_time: 0.595759
+MPI rank 28 :   SendSpikeToRemote_CUDAcp_time: 0.023655
+MPI rank 28 :   RecvSpikeFromRemote_CUDAcp_time: 0.00145065
+MPI rank 28 :   JoinSpike_time: 0.00175805
+MPI rank 28 : Building time: 294.845
+MPI rank 28 : Simulation time: 1.42044
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: MIP  population: 23E  neuron idx range: 0   4126
+MPI rank 17 :   GetSpike_time: 0.0460865
+MPI rank 17 :   SpikeReset_time: 0.0371599
+MPI rank 17 :   ExternalSpikeReset_time: 0.0411442
+MPI rank 17 :   SendSpikeToRemote_MPI_time: 0.00566521
+MPI rank 17 :   RecvSpikeFromRemote_MPI_time: 0.558646
+MPI rank 17 :   SendSpikeToRemote_CUDAcp_time: 0.0268709
+MPI rank 17 :   RecvSpikeFromRemote_CUDAcp_time: 0.00143321
+MPI rank 17 :   JoinSpike_time: 0.00178632
+MPI rank 17 : Building time: 294.886
+MPI rank 17 : Simulation time: 1.42046
+MPI rank 21 :   NestedLoop_time: 0.00113896
+MPI rank 21 :   GetSpike_time: 0.0426481
+MPI rank 21 :   SpikeReset_time: 0.03889
+MPI rank 21 :   ExternalSpikeReset_time: 0.0388239
+MPI rank 21 :   SendSpikeToRemote_MPI_time: 0.00575611
+MPI rank 21 :   RecvSpikeFromRemote_MPI_time: 0.615657
+MPI rank 21 :   SendSpikeToRemote_CUDAcp_time: 0.0191051
+MPI rank 21 :   RecvSpikeFromRemote_CUDAcp_time: 0.00117539
+MPI rank 21 :   JoinSpike_time: 0.00155344
+MPI rank 21 : Building time: 294.877
+MPI rank 21 : Simulation time: 1.42045
+MPI rank 19 :   RecvSpikeFromRemote_MPI_time: 0.558935
+MPI rank 19 :   SendSpikeToRemote_CUDAcp_time: 0.0281218
+MPI rank 19 :   RecvSpikeFromRemote_CUDAcp_time: 0.00142746
+MPI rank 19 :   JoinSpike_time: 0.00178974
+MPI rank 19 : Building time: 294.887
+MPI rank 19 : Simulation time: 1.42046
+MPI rank 22 :   SpikeBufferUpdate_time: 0.0530157
+MPI rank 22 :   poisson_generator_time: 0.336115
+MPI rank 22 :   neuron_Update_time: 0.0969094
+MPI rank 22 :   copy_ext_spike_time: 0.0034101
+MPI rank 22 :   SendExternalSpike_time: 0.0382732
+MPI rank 22 :   SendSpikeToRemote_time: 0.0416224
+MPI rank 22 :   RecvSpikeFromRemote_time: 0.56519
+MPI rank 22 :   NestedLoop_time: 0.00114398
+MPI rank 22 :   GetSpike_time: 0.0452266
+MPI rank 22 :   SpikeReset_time: 0.0363133
+MPI rank 22 :   ExternalSpikeReset_time: 0.0407426
+MPI rank 22 :   SendSpikeToRemote_MPI_time: 0.00728732
+MPI rank 22 :   RecvSpikeFromRemote_MPI_time: 0.565026
+MPI rank 22 :   SendSpikeToRemote_CUDAcp_time: 0.0321385
+MPI rank 22 :   RecvSpikeFromRemote_CUDAcp_time: 0.0014617
+MPI rank 22 :   JoinSpike_time: 0.00195545
+MPI rank 22 : Building time: 294.886
+MPI rank 22 : Simulation time: 1.42043
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: STPp  population: 23E  neuron idx range: 0   4166
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: MDP  population: 23E  neuron idx range: 0   4433
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: AITv  population: 23E  neuron idx range: 0   4921
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: TH  population: 23E  neuron idx range: 0   2470
+   Extracting spikes for area: VIP  population: 23E  neuron idx range: 0   5667
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: 46  population: 23E  neuron idx range: 0   3257
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: STPa  population: 23E  neuron idx range: 0   4166
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: CITd  population: 23E  neuron idx range: 0   4168
+   Extracting spikes for area: AITd  population: 23E  neuron idx range: 0   4921
+Extracting recorded spike times for presimulation time interval n. 0 / 10
+   Extracting spikes for area: PITv  population: 23E  neuron idx range: 0   4530
+   Extracting spikes for area: CITv  population: 23E  neuron idx range: 0   4168
+   Extracting spikes for area: MSTl  population: 23E  neuron idx range: 0   4433
+   Extracting spikes for area: FEF  population: 23E  neuron idx range: 0   4404
+   Extracting spikes for area: LIP  population: 23E  neuron idx range: 0   5197
+   Extracting spikes for area: TF  population: 23E  neuron idx range: 0   3076
+   Extracting spikes for area: PITd  population: 23E  neuron idx range: 0   4530
+ending
+Time is Thu Sep 22 00:05:49 JST 2022

@@ -1,0 +1,64 @@
+Runnning on host c1
+Starting at Wed Sep 21 21:59:39 JST 2022
+Running on hosts: c1
+Running on 1 nodes.
+Running 1 tasks.
+Current working directory is /home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu
+
+Sep 21 21:59:43 CopyFile [Error]: 
+    Could not create destination file.
+Error in nest resource file: /BadIO in CopyFile_
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.3
+ Built: Sep 17 2022 20:13:32
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+              -- NEST GPU --
+
+  Copyright (C) 2004 The NEST Initiative
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Homepage: https://github.com/nest/nest-gpu
+
+Initializing network from dictionary.
+RAND_DATA_LABEL 8496
+No R installation, taking hard-coded SLN fit parameters.
+
+
+========================================
+Customized parameters
+--------------------
+{'K_scaling': 1.0,
+ 'N_scaling': 1.0,
+ 'connection_params': {'K_stable': 'K_stable.npy',
+                       'av_indegree_V1': 3950.0,
+                       'cc_weights_I_factor': 2.0,
+                       'cc_weights_factor': 1.9,
+                       'fac_nu_ext_5E': 1.125,
+                       'fac_nu_ext_6E': 1.41666667,
+                       'fac_nu_ext_TH': 1.2,
+                       'g': -11.0},
+ 'fullscale_rates': 'tests/fullscale_rates.json',
+ 'input_params': {'rate_ext': 10.0},
+ 'neuron_params': {'V0_mean': -150.0, 'V0_sd': 50.0}}
+========================================
+Simulation label: 24ef8fb3d3ae7435ca0587a90c500aba
+Copied files.
+Initialized simulation class.
+Iteration: 0
+Mean-field theory predicts an average rate of 13.257 spikes/s across all populations.
+ending
+Time is Wed Sep 21 21:59:54 JST 2022

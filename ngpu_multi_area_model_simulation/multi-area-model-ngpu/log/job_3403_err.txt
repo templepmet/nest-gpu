@@ -1,0 +1,299 @@
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    for t in spike_times:
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+TypeError: 'int' object is not iterable
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    M.simulation.simulate()
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    new_spikes = self.get_recorded_spikes()
+    for t in spike_times:
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+    for t in spike_times:
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+TypeError: 'int' object is not iterable
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 352, in get_recorded_spikes
+    for t in spike_times:
+TypeError: 'int' object is not iterable
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[48615,1],29]
+  Exit code:    1
+--------------------------------------------------------------------------

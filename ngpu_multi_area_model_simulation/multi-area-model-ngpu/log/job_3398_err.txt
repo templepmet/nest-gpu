@@ -1,0 +1,363 @@
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    M.simulation.simulate()
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+    M.simulation.simulate()
+Traceback (most recent call last):
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 42, in <module>
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    M.simulation.simulate()
+    M.simulation.simulate()
+    M.simulation.simulate()
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    M.simulation.simulate()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    M.simulation.simulate()
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 301, in simulate
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    new_spikes = self.get_recorded_spikes()
+  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 351, in get_recorded_spikes
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+    spike_times = ngpu.GetRecSpikeTimes(i_neur)
+  File "/opt/nestgpu/lib/python3.10/site-packages/nestgpu.py", line 2164, in GetRecSpikeTimes
+    raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
+ValueError: First argument type of GetRecSpikeTimes must be NodeSeq
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[41038,1],22]
+  Exit code:    1
+--------------------------------------------------------------------------

@@ -2166,7 +2166,7 @@ def GetRecSpikeTimes(nodes):
     n_spike_times = (c_int_p * 1)()
     n_spike_times_pt = ctypes.cast(n_spike_times, c_int_pp)    
     spike_times = (c_float_pp * 1)()
-    spike_times_pt = ctypes.cast(spike_times, c_float_ppp)    
+    spike_times_pt = ctypes.cast(spike_times, c_float_ppp)
 
     
     spike_time_list = []
