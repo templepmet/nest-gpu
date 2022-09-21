@@ -2164,7 +2164,7 @@ def GetRecSpikeTimes(nodes):
         raise ValueError("First argument type of GetRecSpikeTimes must be NodeSeq")
 
     n_spike_times = (c_int_p * 1)()
-    n_spike_times_pt = ctypes.cast(n_spike_times, c_int_pp)    
+    n_spike_times_pt = ctypes.cast(n_spike_times, c_int_pp)
     spike_times = (c_float_pp * 1)()
     spike_times_pt = ctypes.cast(spike_times, c_float_ppp)
 
