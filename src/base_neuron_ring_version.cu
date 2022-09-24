@@ -1268,7 +1268,6 @@ int BaseNeuron::GetNRecSpikeTimes(int i_neuron)
 
 std::vector<float> BaseNeuron::GetRecSpikeTimes(int i_neuron)
 {
-  printf(" debug: BaseNeuron::GetRecSpikeTimes in base_neuron_ring_version.cu\n");
   CheckNeuronIdx(i_neuron);
   if(max_n_rec_spike_times_<=0) {
     throw ngpu_exception("Spike times recording was not activated");

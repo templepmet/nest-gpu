@@ -345,12 +345,13 @@ class Simulation:
                 for pop in a.populations:
                     i0 = a.gids[pop][0]
                     i1 = a.gids[pop][1]
+                    n = i1 - i0 + 1
                     print('   Extracting spikes for area:', a.name, ' population:', pop, ' neuron idx range:', i0, ' ', i1)
                     data = []
-                    for i_neur in range(i0,i1+1):
-                        spike_times = ngpu.GetRecSpikeTimes(ngpu.NodeSeq(i_neur))
-                        for t in spike_times:
-                            data.append([i_neur, t])
+                    spike_times = ngpu.GetRecSpikeTimes(ngpu.NodeSeq(i0, n))
+                    for i_neur in range(n):
+                        for t in spike_times[i_neur]:
+                            data.append([i0 + i_neur, t])
                     spike_times_dict[pop] = data
                     ngpu.SetStatus(ngpu.NodeSeq(i0, i1 - i0 + 1), 'n_rec_spike_times', 0)
         return spike_times_dict

@@ -2157,7 +2157,6 @@ def GetNRecSpikeTimes(i_node):
 NESTGPU_GetRecSpikeTimes = _nestgpu.NESTGPU_GetRecSpikeTimes
 NESTGPU_GetRecSpikeTimes.argtypes = (ctypes.c_int, ctypes.c_int, c_int_pp, c_float_ppp)
 NESTGPU_GetRecSpikeTimes.restype = ctypes.c_int
-
 def GetRecSpikeTimes(nodes):
     "Get recorded spike times for node group"
     if type(nodes)!=NodeSeq:

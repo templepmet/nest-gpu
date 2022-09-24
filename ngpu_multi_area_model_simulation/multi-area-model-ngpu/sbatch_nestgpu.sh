@@ -1,6 +1,8 @@
-#!/bin/bash -eu
+#!/bin/bash
 
-if [ -f log/*.txt ]; then
+
+if ls log/*.txt >/dev/null 2>&1
+then
 	mv log/*.txt log/old/
 fi
 

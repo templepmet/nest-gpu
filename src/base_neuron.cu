@@ -1516,7 +1516,6 @@ int BaseNeuron::BufferRecSpikeTimes()
 int BaseNeuron::GetRecSpikeTimes(int **n_spike_times_pt,
 				 float ***spike_times_pt)
 {
-  printf(" debug: BaseNeuron::GetRecSpikeTimes\n");
   if(max_n_rec_spike_times_<=0) {
     throw ngpu_exception("Spike times recording was not activated");
   }
