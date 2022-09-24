@@ -1534,6 +1534,7 @@ int NESTGPU::GetNRecSpikeTimes(int i_node)
 int NESTGPU::GetRecSpikeTimes(int i_node, int n_node, int **n_spike_times_pt,
 			      float ***spike_times_pt)
 {
+  printf(" debug: first NESTGPU::GetRecSpikeTimes i_node=%d, n_node=%d\n", i_node, n_node);
   int i_group;
   int i_node_0 = GetNodeSequenceOffset(i_node, n_node, i_group);
   if (i_node_0!=i_node || node_vect_[i_group]->n_node_!=n_node) {
