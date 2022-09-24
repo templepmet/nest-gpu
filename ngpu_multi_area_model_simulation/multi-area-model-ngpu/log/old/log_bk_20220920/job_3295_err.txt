@@ -1,0 +1,39 @@
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 21 with PID 30955 on node c6 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
