@@ -2170,10 +2170,8 @@ def GetRecSpikeTimes(nodes):
 
     
     spike_time_list = []
-    print(' debug: before call NESTGPU_GetRecSpikeTimes')
     ret1 = NESTGPU_GetRecSpikeTimes(ctypes.c_int(nodes.i0), ctypes.c_int(nodes.n),
                                     n_spike_times_pt, spike_times_pt)
-    print(' debug: after call NESTGPU_GetRecSpikeTimes')
     
     for i_n in range(nodes.n):
         spike_time_list.append([])

@@ -1534,17 +1534,18 @@ int NESTGPU::GetNRecSpikeTimes(int i_node)
 int NESTGPU::GetRecSpikeTimes(int i_node, int n_node, int **n_spike_times_pt,
 			      float ***spike_times_pt)
 {
-  printf(" debug: first NESTGPU::GetRecSpikeTimes i_node=%d, n_node=%d\n", i_node, n_node);
+  printf(" debug: before GetNodeSequenceOffset i_node=%d, n_node=%d, n_spike_times_pt=%x, spike_times_pt=%x\n", i_node, n_node, *n_spike_times_pt, *spike_times_pt);
   int i_group;
   int i_node_0 = GetNodeSequenceOffset(i_node, n_node, i_group);
+  printf(" debug: after GetNodeSequenceOffset i_node=%d, n_node=%d, n_spike_times_pt=%x, spike_times_pt=%x\n", i_node, n_node, *n_spike_times_pt, *spike_times_pt);
   if (i_node_0!=i_node || node_vect_[i_group]->n_node_!=n_node) {
+    printf(" debug: inner if");
     throw ngpu_exception("Spike times must be extracted for all and only "
-			 " the nodes of the same group");
+		  	  " the nodes of the same group");
   }
   printf(" debug: before call node_vect_[i_group]->GetRecSpikeTimes\n");
   return node_vect_[i_group]->GetRecSpikeTimes(n_spike_times_pt,
 					       spike_times_pt);
-					       
 }
 
 int NESTGPU::PushSpikesToNodes(int n_spikes, int *node_id,

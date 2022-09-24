@@ -44,6 +44,6 @@ p, r = M.theory.integrate_siegert()
 print("Mean-field theory predicts an average "
       "rate of {0:.3f} spikes/s across all populations.".format(np.mean(r[:, -1])))
 
-label_info = {'simulation_label': M.simulation.label}
+label_info = {'theory_label': M.simulation.label}
 with open('label_info.json', 'w') as f:
     json.dump(label_info, f)

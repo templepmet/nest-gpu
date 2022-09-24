@@ -21,9 +21,9 @@ local_num_threads = int(os.environ['OMP_NUM_THREADS'])
 
 with open('label_info.json') as f:
     label_info = json.load(f)
-simulation_label = label_info['simulation_label']
+theory_label = label_info['theory_label']
 
-fn = os.path.join(data_path, simulation_label, '_'.join(('custom_params', simulation_label)))
+fn = os.path.join(data_path, theory_label, '_'.join(('custom_params', theory_label)))
 with open(fn, 'r') as f:
     custom_params = json.load(f)
 network_label = custom_params['network_label']
@@ -38,5 +38,9 @@ ngpu.ConnectMpiInit()
 M = MultiAreaModel(network_label,
                    simulation=True,
                    sim_spec=custom_params['sim_params'])
+
+label_info['simulation_label'] = M.simulation.label
+with open('label_info.json', 'w') as f:
+    json.dump(label_info, f)
 
 M.simulation.simulate()

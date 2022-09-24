@@ -1439,7 +1439,6 @@ extern "C"
                                int **n_spike_times_pt,
                                float ***spike_times_pt)
   {
-    printf(" debug: before call NESTGPU_instance->GetRecSpikeTimes\n");
     int ret = 0;
     BEGIN_ERR_PROP
     {
@@ -1447,7 +1446,6 @@ extern "C"
                                                spike_times_pt);
     }
     END_ERR_PROP
-    printf(" debug: after call NESTGPU_instance->GetRecSpikeTimes\n");
     return ret;
   }
 
