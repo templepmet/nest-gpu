@@ -7,7 +7,7 @@
 #SBATCH -n 32                    # Total number of mpi tasks requested
 #SBATCH -c 2                     # Each process, number of core
 #SBATCH -t 01:00:00             # Run time (hh:mm:ss) - 1.5 hours
-#SBATCH --exclude=c1
+#SBATCH --exclude=c[1-3]
 
 echo Runnning on host `hostname`
 echo "Starting at `date`"
