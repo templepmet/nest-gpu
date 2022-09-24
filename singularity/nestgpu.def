@@ -126,8 +126,8 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 
 %runscript
 	# Install nest from mount directory
-	cd /opt/nest_install
-	./install.sh
+	# cd /opt/nest_install
+	# ./install.sh
 
 	# Install nestgpu from mount directory
 	cd /opt/nestgpu_install
