@@ -8,6 +8,12 @@ from neo.core import SpikeTrain
 from quantities import s
 from eval_functions import __load_spike_times, __plot_hist, __smooth_hist
 import os
+import sys
+
+recording_path = sys.argv[1]
+write_path = recording_path + 'correl/'
+if not os.path.isdir(write_path):
+    os.makedirs(write_path)
 
 nrun = 10
 name = 'spike_times_'
@@ -24,10 +30,9 @@ spike_time_bin = 0.002
 for i_run in range(nrun):
     dum = []
     print ('Processing dataset '+ str(i_run+1) + '/' + str(nrun), flush=True)
-    path = 'path_to_data/data' + str(i_run) + '/spikes_pop_idx/'
     
     for i in range(npop):
-        if(os.path.isfile(path+'correl2_'+str(i)+'.dat')==False):
+        if(os.path.isfile(write_path+'correl2_'+str(i)+'.dat')==False):
             dum.append(i)
     
     if(len(dum)==0):
@@ -35,7 +40,7 @@ for i_run in range(nrun):
         continue
     else:
         print("Calculating distributions for populations:", dum, flush=True)
-        spike_times_list = __load_spike_times(path, name, begin, end, npop)
+        spike_times_list = __load_spike_times(recording_path, name, begin, end, npop)
         for ipop in dum:
             print ("run ", i_run, "/", nrun, "  pop ", ipop, "/", npop, flush=True)
             spike_times = spike_times_list[ipop]
@@ -59,4 +64,4 @@ for i_run in range(nrun):
             if len(correl)>0:
                 x, hist1 =  __smooth_hist(correl, xmin, xmax, nx, bw_min=5e-5)
                 arr = np.column_stack((x, hist1))
-                np.savetxt(path+'corr_'+str(ipop)+'.dat', arr)
+                np.savetxt(write_path+'corr_'+str(ipop)+'.dat', arr)

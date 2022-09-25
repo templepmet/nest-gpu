@@ -8,6 +8,12 @@ from neo.core import SpikeTrain
 from quantities import s
 from eval_functions import __load_spike_times, __plot_hist, __smooth_hist
 import os
+import sys
+
+recording_path = sys.argv[1]
+write_path = recording_path + 'cv_isi/'
+if not os.path.isdir(write_path):
+    os.makedirs(write_path)
 
 nrun = 10
 name = 'spike_times_'
@@ -24,10 +30,9 @@ spike_time_bin = 0.002
 for i_run in range(nrun):
     dum = []
     print ('Processing dataset '+ str(i_run+1) + '/' + str(nrun), flush=True)
-    path = 'path_to_data/data' + str(i_run) + '/spikes_pop_idx/'
     
     for i in range(npop):
-        if(os.path.isfile(path+'cv_isi_'+str(i)+'.dat') == False):
+        if(os.path.isfile(write_path+'cv_isi_'+str(i)+'.dat') == False):
             dum.append(i)
     
     if(len(dum)==0):
@@ -35,7 +40,7 @@ for i_run in range(nrun):
         continue
     else:
         print("Calculating distributions for population:", dum, flush=True)
-        spike_times_list = __load_spike_times(path, name, begin, end, npop)
+        spike_times_list = __load_spike_times(recording_path, name, begin, end, npop)
         for ipop in dum:
             print ("run ", i_run, "/", nrun, "  pop ", ipop, "/", npop, flush=True)
             spike_times = spike_times_list[ipop]
@@ -47,4 +52,4 @@ for i_run in range(nrun):
             if len(cv_isi)>0:
                 x, hist1 =  __smooth_hist(cv_isi, xmin, xmax, nx, bw_min=0.01)
                 arr = np.column_stack((x, hist1))
-                np.savetxt(path+'cv_isi_'+str(ipop)+'.dat', arr)
+                np.savetxt(write_path+'cv_isi_'+str(ipop)+'.dat', arr)

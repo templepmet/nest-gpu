@@ -6,14 +6,15 @@ import matplotlib.pyplot as plt
 y1mean = np.zeros((254, 300))
 y2mean = np.zeros((254, 300))                 
 
-path='path_to_data'
+path='../../../multi-area-model-ngpu/b0de5c560c17c5d6c29a7d808f1f2de4/recordings/firing_rate/'
 
+xnew = np.linspace(0, 100, 300)
 for i_run in range(10):
     for i in range(254):
-        fn1 = path+'dist_dataset1/data' + str(i_run) + '/firing_rate_' + \
-              str(i) + '.dat'
-        fn2 = path+'dist_dataset2/data' + str(i_run) + '/firing_rate_' \
-              + str(i) + '.dat'
+        # fn1 = path+'dist_dataset1/data' + str(i_run) + '/firing_rate_' + str(i) + '.dat'
+        # fn2 = path+'dist_dataset2/data' + str(i_run) + '/firing_rate_' + str(i) + '.dat'
+        fn1 = path + 'firing_rate_' + str(i) + '.dat'
+        fn2 = path + 'firing_rate_' + str(i) + '.dat'
 
         data1 = np.loadtxt(fn1)
         data2 = np.loadtxt(fn2)
@@ -26,8 +27,6 @@ for i_run in range(10):
 
         f1 = interpolate.interp1d(x1, y1,fill_value="extrapolate")
         f2 = interpolate.interp1d(x2, y2,fill_value="extrapolate")
-
-        xnew = np.linspace(0, 100, 300)
 
         y1new = f1(xnew)
         y2new = f2(xnew)
@@ -66,7 +65,7 @@ for j in range(32):
             plt.grid()
         figure = plt.gcf()
         figure.set_size_inches(32, 18)
-        plt.savefig("../Areas/firing_rate/"+str(j+1), format='pdf')
+        plt.savefig("../Areas/firing_rate/"+str(j+1)+".pdf", format='pdf')
     else:
         fig=plt.figure(j+1)
         plt.suptitle("Area "+str(j+1)+" ("+area_list[j]+") firing rate distribution", fontsize=titolo)
@@ -84,4 +83,4 @@ for j in range(32):
             plt.grid()
         figure = plt.gcf()
         figure.set_size_inches(32, 18)
-        plt.savefig("../Areas/firing_rate/"+str(j+1), format='pdf')
+        plt.savefig("../Areas/firing_rate/"+str(j+1)+".pdf", format='pdf')

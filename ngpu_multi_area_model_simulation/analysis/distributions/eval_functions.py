@@ -21,11 +21,17 @@ def __gather_metadata(path):
 
     """
     # load node IDs
-    node_idfile = open(path + 'population_nodeids.dat', 'r')
+    # node_idfile = open(path + 'population_nodeids.dat', 'r')
+    node_idfile = open(path + 'network_gids.txt', 'r')
     node_ids = []
     for l in node_idfile:
-        node_ids.append(l.split())
-    node_ids = np.array(node_ids, dtype='i4')
+        row = l.split(',')
+        d = {}
+        d['area'] = row[0]
+        d['pop'] = row[1]
+        d['from'] = int(row[2])
+        d['to'] = int(row[3])
+        node_ids.append(d)
     return node_ids
 
 
@@ -58,7 +64,8 @@ def __load_spike_times(path, name, begin, end, npop):
     sd_names = {}
     
     for i_pop in range(npop):
-        fn = os.path.join(path, 'spike_times_' + str(i_pop) + '.dat')
+        # fn = os.path.join(path, 'spike_times_' + str(i_pop) + '.dat')
+        fn = os.path.join(path, f"spike_times_{node_ids[i_pop]['area']}_{node_ids[i_pop]['pop']}.dat")
         data_i_raw = np.loadtxt(fn, skiprows=1, dtype=dtype)
         #data_i_raw = np.loadtxt(fn, dtype=dtype)
         #data_i_raw = np.sort(data_i_raw, order='time_ms')
@@ -71,7 +78,7 @@ def __load_spike_times(path, name, begin, end, npop):
     spike_times_list = []
     for i_pop, name_pop in enumerate(sd_names):
         spike_times = []
-        for id in np.arange(node_ids[i_pop, 0], node_ids[i_pop, 1] + 1):
+        for id in np.arange(node_ids[i_pop]['from'], node_ids[i_pop]['to'] + 1):
             spike_times.append([])
         if data[i_pop].size>1:
             #data[i_pop].size>0
@@ -80,7 +87,7 @@ def __load_spike_times(path, name, begin, end, npop):
                 if time_ms>=begin and time_ms<end:
                     sender = row[0]
                     time = time_ms/1000.0
-                    i_neur = sender - node_ids[i_pop, 0]
+                    i_neur = sender - node_ids[i_pop]['from']
                     spike_times[i_neur].append(time)
             
         spike_times_list.append(spike_times)

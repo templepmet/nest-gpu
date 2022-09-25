@@ -6,14 +6,14 @@ import os
 y1mean = np.zeros((254, 400))
 y2mean = np.zeros((254, 400))                 
 
-path='path_to_data'
+path='../../../multi-area-model-ngpu/b0de5c560c17c5d6c29a7d808f1f2de4/recordings/correl/'
 
 for i_run in range(10):
     for i in range(254):
-        fn1 = path+'dist_dataset1/data' + str(i_run) + '/corr_' + str(i) \
-              + '.dat'
-        fn2 = path+'dist_dataset2/data' + str(i_run) + '/corr_' + \
-        str(i) + '.dat'
+        # fn1 = path+'dist_dataset1/data' + str(i_run) + '/corr_' + str(i) + '.dat'
+        # fn2 = path+'dist_dataset2/data' + str(i_run) + '/corr_' + str(i) + '.dat'
+        fn1 = path + 'corr_' + str(i) + '.dat'
+        fn2 = path + 'corr_' + str(i) + '.dat'
 
         if(os.path.isfile(fn1)==True and os.path.isfile(fn2)==True):
             data1 = np.loadtxt(fn1)
@@ -66,7 +66,7 @@ for j in range(32):
             plt.grid()
         figure = plt.gcf()
         figure.set_size_inches(32, 18)
-        plt.savefig("../Areas/correlation/"+str(j+1), format='pdf')
+        plt.savefig("../Areas/corr/"+str(j+1)+".pdf", format='pdf')
     else:
         fig=plt.figure(j+1)
         plt.suptitle("Area "+str(j+1)+" ("+area_list[j]+") correlation distribution", fontsize=titolo)
@@ -84,4 +84,4 @@ for j in range(32):
             plt.grid()
         figure = plt.gcf()
         figure.set_size_inches(32, 18)
-        plt.savefig("../Areas/correlation/"+str(j+1), format='pdf')
+        plt.savefig("../Areas/corr/"+str(j+1)+".pdf", format='pdf')
