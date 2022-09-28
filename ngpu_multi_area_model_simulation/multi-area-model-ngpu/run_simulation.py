@@ -1,8 +1,10 @@
 import os
+import re
 import json
 
 import numpy as np
 from mpi4py import MPI
+import pynvml
 
 from config import base_path, data_path
 from multiarea_model import MultiAreaModel
@@ -44,3 +46,23 @@ with open('label_info.json', 'w') as f:
     json.dump(label_info, f)
 
 M.simulation.simulate()
+
+def getMemInfo():
+	pid = os.getpid()
+	memInfo = {}
+	with open(f'/proc/{pid}/status') as f:
+		text = f.read()
+		memData = re.findall('(Vm.+?):\t.*?(\d*)\skB', text)
+		for data in memData:
+			memInfo[data[0]] = int(data[1])
+		return memInfo
+
+print(f'MPI Rank {rank} : Host Memory : ', getMemInfo())
+
+pynvml.nvmlInit()
+handle = pynvml.nvmlDeviceGetHandleByIndex(0)
+nvmlMemInfo = pynvml.nvmlDeviceGetMemoryInfo(handle)
+print(f'MPI Rank {rank} : GPU Memory : ', nvmlMemInfo)
+pynvml.nvmlShutdown()
+
+# free NEST-GPU memory via call deconstructa
