@@ -3,9 +3,9 @@
 #SBATCH -J nestgpu              # Job name
 #SBATCH -o ./log/job_%j_out.txt # Name of stdout output file (%j expands to %jobId)
 #SBATCH -e ./log/job_%j_err.txt # Name of stderr output file (%j expands to %jobId)
-#SBATCH -N 8                    # Total number of nodes requested
+#SBATCH -N 16                    # Total number of nodes requested
 #SBATCH -n 32                    # Total number of mpi tasks requested
-#SBATCH -c 2                     # Each process, number of core
+#SBATCH -c 6                     # Each process, number of core
 #SBATCH -t 01:00:00             # Run time (hh:mm:ss) - 1.5 hours
 # # SBATCH --exclude=c[1-3]
 
