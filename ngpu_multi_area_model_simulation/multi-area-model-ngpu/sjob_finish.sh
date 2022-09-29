@@ -16,7 +16,13 @@ echo "Running $SLURM_NTASKS tasks."
 echo "Current working directory is `pwd`"
 
 SIM_LABEL=$(awk 'match($0, /"simulation_label": "(.*)"\}/, a){print a[1]}' label_info.json)
+if ls $SIM_LABEL/job*.txt >/dev/null 2>&1
+then
+	mkdir -p $SIM_LABEL/old_job
+	mv $SIM_LABEL/job*.txt $SIM_LABEL/old_job
+fi
 cp ./log/*.txt $SIM_LABEL/
+cp ./log/result.txt $SIM_LABEL/
 
 echo ending
 echo Time is `date`
