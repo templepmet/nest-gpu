@@ -34,10 +34,10 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	export CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda
 
 	# OpenMPI
-	export OMPI_DIR=/opt/openmpi
-	export PATH=$OMPI_DIR/bin:$PATH
-	export LD_LIBRARY_PATH=$OMPI_DIR/lib:$LD_LIBRARY_PATH
-	export MANPATH=$OMPI_DIR/share/man:$MANPATH
+	# export OMPI_DIR=/opt/openmpi
+	# export PATH=$OMPI_DIR/bin:$PATH
+	# export LD_LIBRARY_PATH=$OMPI_DIR/lib:$LD_LIBRARY_PATH
+	# export MANPATH=$OMPI_DIR/share/man:$MANPATH
 	export OMPI_CC=$CC
 	export OMPI_CXX=$CXX
 
@@ -88,19 +88,19 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	libibverbs-dev
 
 	# Install openmpi 3.1.4
-	export MPI_PATH=/opt/openmpi
-	export OPAL_PREFIX=""
-	cd /tmp
-	wget https://download.open-mpi.org/release/open-mpi/v3.1/openmpi-3.1.4.tar.gz
-	tar -xvf openmpi-3.1.4.tar.gz
-	cd openmpi-3.1.4
-	mkdir $MPI_PATH
-	# ./configure --prefix=$MPI_PATH --with-cuda=$CUDA_HOME --with-verbs
-	./configure --prefix=$MPI_PATH --with-cuda=$CUDA_HOME --with-verbs --without-ucx --without-hcoll
-	make -j24
-	make install
-	export PATH=$MPI_PATH/bin:$PATH
-	export LD_LIBRARY_PATH=$MPI_PATH/lib:$LD_LIBRARY_PATH
+	# export MPI_PATH=/opt/openmpi
+	# export OPAL_PREFIX=""
+	# cd /tmp
+	# wget https://download.open-mpi.org/release/open-mpi/v3.1/openmpi-3.1.4.tar.gz
+	# tar -xvf openmpi-3.1.4.tar.gz
+	# cd openmpi-3.1.4
+	# mkdir $MPI_PATH
+	# # ./configure --prefix=$MPI_PATH --with-cuda=$CUDA_HOME --with-verbs
+	# ./configure --prefix=$MPI_PATH --with-cuda=$CUDA_HOME --with-verbs --without-ucx --without-hcoll
+	# make -j24
+	# make install
+	# export PATH=$MPI_PATH/bin:$PATH
+	# export LD_LIBRARY_PATH=$MPI_PATH/lib:$LD_LIBRARY_PATH
 
 	# Install pyenv
 	export PYTHON_VERSION=3.10.7

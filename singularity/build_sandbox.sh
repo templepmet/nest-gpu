@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-singularity build -f --force --sandbox ../nestgpu_sandbox ../nestgpu.def
+singularity build -f --force --sandbox $WORK_DIR/nestgpu_sandbox $WORK_DIR/nestgpu.def
