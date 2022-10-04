@@ -17,7 +17,7 @@ echo "Running $SLURM_NTASKS tasks."
 echo "Current working directory is `pwd`"
 
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
-mpirun --mca btl openib,self,vader ./run.sh >> ./log/result.txt
+mpirun --mca btl openib,self,vader -display-devel-map ./run.sh >> ./log/result.txt
 
 echo ending
 echo Time is `date`

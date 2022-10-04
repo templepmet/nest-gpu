@@ -1,0 +1,8 @@
+Runnning on host c4
+Starting at Thu Sep 29 12:31:53 JST 2022
+Running on hosts: c[4-11]
+Running on 8 nodes.
+Running 32 tasks.
+Current working directory is /export/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu
+ending
+Time is Thu Sep 29 12:36:27 JST 2022
