@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-singularity build -f --force nestgpu.sif nestgpu.def
+singularity build -f --force $WORK_DIR/nestgpu.sif nestgpu.def
