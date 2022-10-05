@@ -46,5 +46,4 @@ then
 	mkdir -p $SIM_LABEL/old_job
 	mv $SIM_LABEL/job*.txt $SIM_LABEL/old_job
 fi
-cp ./log/*.txt $SIM_LABEL/
 cp ./log/result.txt $SIM_LABEL/

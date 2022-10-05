@@ -28,7 +28,7 @@ network_params = {'N_scaling': scaling,
                   'input_params': input_params,
                   'neuron_params': neuron_params}
 
-sim_params = {'t_sim': 10000.,
+sim_params = {'t_sim': 10000.0,
               't_presim': 500.0,
               'num_processes': 1,
               'local_num_threads': 1,

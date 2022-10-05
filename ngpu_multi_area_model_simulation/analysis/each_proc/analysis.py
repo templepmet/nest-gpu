@@ -4,8 +4,7 @@ from collections import defaultdict
 import numpy as np
 import matplotlib.pyplot as plt
 
-# sim_label="b0de5c560c17c5d6c29a7d808f1f2de4"
-sim_label="7072fa85fdd0942aeb7534edc799967e"
+sim_label="22eaafdfcde0b0b39edda7713ec6d9f8"
 result_file = f"../../multi-area-model-ngpu/{sim_label}/result.txt"
 
 time_label = [

@@ -2,7 +2,7 @@
 #----- qsub option -----
 #PBS -q SQUID
 #PBS --group=${GROUP_NAME}
-#PBS -l elapstim_req=00:10:00
+#PBS -l elapstim_req=00:30:00
 #PBS -o ./log/job_%s_out.txt
 #PBS -e ./log/job_%s_err.txt
 #PBS -b 4  # ノード数
@@ -46,5 +46,4 @@ then
 	mkdir -p $SIM_LABEL/old_job
 	mv $SIM_LABEL/job*.txt $SIM_LABEL/old_job
 fi
-cp ./log/*.txt $SIM_LABEL/
 cp ./log/result.txt $SIM_LABEL/
