@@ -1,0 +1,13 @@
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+/sqfs2/cmc/1/home/u6b671/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/analysis_helpers.py:90: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  assert((areas2 is None) and (pops2 is 'complete'))
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/sqfs2/cmc/1/home/u6b671/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+
+real	0m18.447s
+user	0m8.146s
+sys	0m6.392s
