@@ -41,6 +41,7 @@ python/test/log.txt
 .env
 *.sif
 nestgpu_sandbox/
+nestgpu_sandbox*/
 # *.def
 # !nest-gpu_base.def
 build-temp-*
@@ -48,3 +49,5 @@ build-temp-*
 *.dat
 
 a.out
+
+scp_squid.sh
