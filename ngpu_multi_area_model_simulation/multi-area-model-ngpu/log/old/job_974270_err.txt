@@ -1,0 +1,194 @@
+
+%NQSV(INFO): ------- Output from job:0000 -------
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/sqfs2/cmc/1/home/u6b671/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/dicthash/dicthash.py:47: UserWarning:Float too small for safe conversion tointeger. Rounding down to zero.
+
+real	0m28.010s
+user	0m14.488s
+sys	0m6.423s
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Error for command "exec": requires at least 2 arg(s), only received 1
+
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+Usage:
+  singularity [global options...] exec [exec options...] <container> <command>
+
+Run 'singularity --help' for more detailed usage information.
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[15065,1],31]
+  Exit code:    1
+--------------------------------------------------------------------------
+
+real	0m3.858s
+user	0m0.037s
+sys	0m0.158s
+cp: 通常ファイル '/result.txt' を作成できません: 許可がありません
+
+%NQSV(INFO): ------- Output from job:0001 -------
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+Currently Loaded Modulefiles:
+ 1) nvhpc/22.2   3) openmpi/4.0.5cu11.6    
+ 2) cuda/11.6    4) BaseGPU/2022(default)  
+
+%NQSV(INFO): ------- Output from job:0002 -------
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+Currently Loaded Modulefiles:
+ 1) nvhpc/22.2   3) openmpi/4.0.5cu11.6    
+ 2) cuda/11.6    4) BaseGPU/2022(default)  
+
+%NQSV(INFO): ------- Output from job:0003 -------
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+Currently Loaded Modulefiles:
+ 1) nvhpc/22.2   3) openmpi/4.0.5cu11.6    
+ 2) cuda/11.6    4) BaseGPU/2022(default)  

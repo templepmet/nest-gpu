@@ -17,9 +17,9 @@ cd $PBS_O_WORKDIR
 
 module load BaseGPU/2022
 
-export SINGULARITY_PWD=`mpirun -np 1 pwd`
-export SINGULARITY_IMAGE=$WORK_DIR/nestgpu.sif
-export RESULT_FILE=./log/result.txt
+SINGULARITY_PWD=`mpirun -np 1 pwd`
+SINGULARITY_IMAGE=$WORK_DIR/nestgpu.sif
+RESULT_FILE=./log/result.txt
 
 if ls log/*.txt >/dev/null 2>&1
 then
@@ -37,7 +37,7 @@ time \
 
 time \
 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
-	./run.sh \
+	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python run_simulation.py \
 	>> $RESULT_FILE
 
 SIM_LABEL=$(awk 'match($0, /"simulation_label": "(.*)"\}/, a){print a[1]}' label_info.json)
