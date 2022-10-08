@@ -29,7 +29,7 @@ fi
 date > $RESULT_FILE
 echo "PBS_JOBID: $PBS_JOBID" >> $RESULT_FILE
 
-SCALING=0.1
+SCALING=0.01
 time \
 	mpirun $NQSV_MPIOPTS -np 1 --display-devel-map \
 	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python run_theory.py $SCALING \

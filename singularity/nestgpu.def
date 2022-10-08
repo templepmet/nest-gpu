@@ -21,7 +21,9 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	# NVHPC
 	. /etc/profile.d/lmod.sh
 	module load nvhpc
-	export MPI_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/comm_libs/mpi
+	export MPI_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/comm_libs/openmpi4/openmpi-4.0.5
+	export PATH=$MPI_HOME/bin:$PATH
+	export LD_LIBRARY_PATH=$MPI_HOME/lib:$LD_LIBRARY_PATH
 	export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
 	# Standard compiler
@@ -53,7 +55,9 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	# Initial settings
 	. /etc/profile.d/lmod.sh
 	module load nvhpc
-	export MPI_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/comm_libs/mpi
+	export MPI_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/comm_libs/openmpi4/openmpi-4.0.5
+	export PATH=$MPI_HOME/bin:$PATH
+	export LD_LIBRARY_PATH=$MPI_HOME/lib:$LD_LIBRARY_PATH
 
 	export DEBIAN_FRONTEND=noninteractive
 	export DEBCONF_NOWARNINGS=yes
