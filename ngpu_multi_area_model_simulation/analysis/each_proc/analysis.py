@@ -4,7 +4,7 @@ from collections import defaultdict
 import numpy as np
 import matplotlib.pyplot as plt
 
-sim_label="3da585141ae2447cd8e0bfff51efc918"
+sim_label="b64ab6b32780d5131c13e8173da41272"
 result_file = f"../../multi-area-model-ngpu/{sim_label}/result.txt"
 
 time_label = [
@@ -47,8 +47,12 @@ for p in range(procs):
 		sim_time[p] = float(re.findall(f"MPI rank {p} : Simulation time: (.*)\n", text)[-1])
 		sum_time[p] += data[p][lab]
 
-		host_mem[p] = int(re.findall(f"MPI Rank {p} : Host Memory :.*'VmPeak': (.+?),.*\n", text)[0])
-		gpu_mem[p] = int(re.findall(f"MPI Rank {p} : GPU Memory :.*used: (.*) B\)\n", text)[0])
+		find = re.findall(f"MPI Rank {p} : Host Memory :.*'VmPeak': (.+?),.*\n", text)
+		if len(find) > 0:
+			host_mem[p] = int(find[0])
+		find = re.findall(f"MPI Rank {p} : GPU Memory :.*used: (.*) B\)\n", text)
+		if len(find) > 0:
+			gpu_mem[p] = int(find[0])
 
 host_mem = np.array(host_mem) / 1e6
 gpu_mem = np.array(gpu_mem) / 1e9

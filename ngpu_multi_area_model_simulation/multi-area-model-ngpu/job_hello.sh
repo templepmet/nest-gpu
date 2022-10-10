@@ -30,7 +30,9 @@ fi
 date > $RESULT_FILE
 echo "PBS_JOBID: $PBS_JOBID" >> $RESULT_FILE
 
-time \
-	mpirun $NQSV_MPIOPTS -np 8 -npernode 8 --map-by core --bind-to core --display-devel-map \
-	singularity exec --nv $SINGULARITY_IMAGE python $PROGRAM_SINGULARITY \
-	>> $RESULT_FILE
+# time \
+# 	mpirun $NQSV_MPIOPTS -np 8 -npernode 8 --map-by core --bind-to core --display-devel-map \
+# 	singularity exec --nv $SINGULARITY_IMAGE python $PROGRAM_SINGULARITY \
+# 	>> $RESULT_FILE
+
+nvidia-smi -a >> $RESULT_FILE
