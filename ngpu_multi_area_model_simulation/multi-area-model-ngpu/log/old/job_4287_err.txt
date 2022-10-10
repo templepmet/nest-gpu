@@ -1,0 +1,25 @@
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+/opt/pyenv/versions/3.10.7/bin/python: can't open file '/sqfs/home/u6b671/../../work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/hellompi.py': [Errno 2] No such file or directory
+/opt/pyenv/versions/3.10.7/bin/python: can't open file '/sqfs/home/u6b671/../../work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/hellompi.py': [Errno 2] No such file or directory
+/opt/pyenv/versions/3.10.7/bin/python: can't open file '/sqfs/home/u6b671/../../work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/hellompi.py': [Errno 2] No such file or directory
+/opt/pyenv/versions/3.10.7/bin/python: can't open file '/sqfs/home/u6b671/../../work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/hellompi.py': [Errno 2] No such file or directory
+/opt/pyenv/versions/3.10.7/bin/python: can't open file '/sqfs/home/u6b671/../../work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/hellompi.py': [Errno 2] No such file or directory
+/opt/pyenv/versions/3.10.7/bin/python: can't open file '/sqfs/home/u6b671/../../work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/hellompi.py': [Errno 2] No such file or directory
+/opt/pyenv/versions/3.10.7/bin/python: can't open file '/sqfs/home/u6b671/../../work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/hellompi.py': [Errno 2] No such file or directory
+/opt/pyenv/versions/3.10.7/bin/python: can't open file '/sqfs/home/u6b671/../../work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/hellompi.py': [Errno 2] No such file or directory
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[21037,1],6]
+  Exit code:    2
+--------------------------------------------------------------------------
+
+real	0m6.470s
+user	0m0.242s
+sys	0m0.535s

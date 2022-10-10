@@ -17,9 +17,8 @@ cd $PBS_O_WORKDIR
 
 module load BaseGPU/2022
 
-SINGULARITY_IMAGE=$WORK_DIR/nestgpu.sif
-PROGRAM=hellompi.py
-PROGRAM_SINGULARITY=`realpath $PROGRAM --relative-to=$HOME`
+SINGULARITY_IMAGE=../../singularity/nestgpu.sif
+SINGULARITY_PWD=`mpirun -np 1 pwd`
 RESULT_FILE=./log/result.txt
 
 if ls log/*.txt >/dev/null 2>&1
@@ -30,9 +29,7 @@ fi
 date > $RESULT_FILE
 echo "PBS_JOBID: $PBS_JOBID" >> $RESULT_FILE
 
-# time \
-# 	mpirun $NQSV_MPIOPTS -np 8 -npernode 8 --map-by core --bind-to core --display-devel-map \
-# 	singularity exec --nv $SINGULARITY_IMAGE python $PROGRAM_SINGULARITY \
-# 	>> $RESULT_FILE
-
-nvidia-smi -a >> $RESULT_FILE
+time \
+	mpirun $NQSV_MPIOPTS -np 8 -npernode 8 --map-by core --bind-to core --display-devel-map \
+	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python hellompi.py \
+	>> $RESULT_FILE

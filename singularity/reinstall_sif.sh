@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
-singularity build -f --force --sandbox $WORK_DIR/nestgpu_sandbox $WORK_DIR/nestgpu.sif
+singularity build -f --force --sandbox nestgpu_sandbox nestgpu.sif
 ./reinstall_sandbox.sh
-singularity build -f --force $WORK_DIR/nestgpu.sif $WORK_DIR/nestgpu_sandbox
+singularity build -f --force nestgpu.sif nestgpu_sandbox
