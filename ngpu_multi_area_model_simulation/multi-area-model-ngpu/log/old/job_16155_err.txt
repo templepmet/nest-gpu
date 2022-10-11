@@ -1,0 +1,729 @@
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:1110: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+
+real	0m21.000s
+user	0m14.002s
+sys	0m6.684s
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 67, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 61, in main
+    simulation(label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 53, in simulation
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 206, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 231, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 71, in __init__
+    self.custom_params = json.load(f)["sim_params"]
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[29059,1],13]
+  Exit code:    1
+--------------------------------------------------------------------------
+
+real	0m39.306s
+user	0m11.719s
+sys	0m3.103s

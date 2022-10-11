@@ -57,6 +57,9 @@ class Simulation:
             custom simulation parameters that overwrite the
             default parameters defined in default_params.py
         """
+        self.mpisize = MPI.COMM_WORLD.Get_size()
+        self.mpirank = MPI.COMM_WORLD.Get_rank()
+
         ngpu.ConnectMpiInit()
         self.params = deepcopy(sim_params)
         if isinstance(sim_spec, dict):
@@ -64,10 +67,13 @@ class Simulation:
             self.custom_params = sim_spec
         else:
             fn = os.path.join(
-                data_path, "simulaion_result", sim_spec, "custom_params.json"
+                data_path, "simulation_result", sim_spec, "custom_params.json"
             )
-            with open(fn, "r") as f:
-                self.custom_params = json.load(f)["sim_params"]
+            for p in range(self.mpisize):
+                if p == self.mpirank:
+                    with open(fn, "r") as f:
+                        self.custom_params = json.load(f)["sim_params"]
+                MPI.COMM_WORLD.barrier()
 
         nested_update(self.params, self.custom_params)
 

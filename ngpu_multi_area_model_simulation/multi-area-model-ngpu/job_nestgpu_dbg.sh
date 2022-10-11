@@ -39,15 +39,9 @@ time \
 	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python run_theory.py \
 	>> $RESULT_FILE
 
-# time \
-# 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
-# 	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python run_simulation.py \
-# 	>> $RESULT_FILE
+time \
+	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
+	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python run_simulation.py \
+	>> $RESULT_FILE
 
-# SIM_LABEL=$(awk 'match($0, /"simulation_label": "(.*)"\}/, a){print a[1]}' label_info.json)
-# if ls $SIM_LABEL/job*.txt >/dev/null 2>&1
-# then
-# 	mkdir -p $SIM_LABEL/old_job
-# 	mv $SIM_LABEL/job*.txt $SIM_LABEL/old_job
-# fi
-# cp ./log/result.txt $SIM_LABEL/
+cp ./log/result.txt simulation_result/$LABEL
