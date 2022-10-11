@@ -18,7 +18,7 @@ cd $PBS_O_WORKDIR
 module load BaseGPU/2022
 
 SINGULARITY_PWD=`mpirun -np 1 pwd`
-SINGULARITY_IMAGE=$WORK_DIR/nestgpu.sif
+SINGULARITY_IMAGE=../../singularity/nestgpu.sif
 RESULT_FILE=./log/result.txt
 
 if ls log/*.txt >/dev/null 2>&1
@@ -29,21 +29,25 @@ fi
 date > $RESULT_FILE
 echo "PBS_JOBID: $PBS_JOBID" >> $RESULT_FILE
 
-SCALING=0.01
-time \
-	mpirun $NQSV_MPIOPTS -np 1 --display-devel-map \
-	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python run_theory.py $SCALING \
-	>> $RESULT_FILE
+SCALE=0.01
+PBS_NNODES=1
+PBS_NGPUS=8
+LABEL=${PBS_NNODES}nodes_${PBS_NGPUS}gpus_${SCALE}scale_${PBS_JOBID}
+echo "{\"label\": \"$LABEL\", \"scale\": $SCALE}" > sim_info.json
 
 time \
-	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
-	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python run_simulation.py \
+	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python run_theory.py \
 	>> $RESULT_FILE
 
-SIM_LABEL=$(awk 'match($0, /"simulation_label": "(.*)"\}/, a){print a[1]}' label_info.json)
-if ls $SIM_LABEL/job*.txt >/dev/null 2>&1
-then
-	mkdir -p $SIM_LABEL/old_job
-	mv $SIM_LABEL/job*.txt $SIM_LABEL/old_job
-fi
-cp ./log/result.txt $SIM_LABEL/
+# time \
+# 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
+# 	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE python run_simulation.py \
+# 	>> $RESULT_FILE
+
+# SIM_LABEL=$(awk 'match($0, /"simulation_label": "(.*)"\}/, a){print a[1]}' label_info.json)
+# if ls $SIM_LABEL/job*.txt >/dev/null 2>&1
+# then
+# 	mkdir -p $SIM_LABEL/old_job
+# 	mv $SIM_LABEL/job*.txt $SIM_LABEL/old_job
+# fi
+# cp ./log/result.txt $SIM_LABEL/

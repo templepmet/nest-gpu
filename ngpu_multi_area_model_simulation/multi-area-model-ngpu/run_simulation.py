@@ -12,57 +12,56 @@ from multiarea_model.default_params import nested_update
 import nestgpu as ngpu
 
 
-comm = MPI.COMM_WORLD
-rank = comm.Get_rank()
-size = comm.Get_size()
-name = MPI.Get_processor_name()
-print(f'I am process {rank} of {size} on {name}.\n')
+size = MPI.COMM_WORLD.Get_size()
+rank = MPI.COMM_WORLD.Get_rank()
 
-num_processes = size
-local_num_threads = int(os.environ['OMP_NUM_THREADS'])
 
-with open('label_info.json') as f:
-    label_info = json.load(f)
-theory_label = label_info['theory_label']
+def print_mpi_info():
+    name = MPI.Get_processor_name()
+    local_comm = MPI.COMM_WORLD.Split_type(MPI.COMM_TYPE_SHARED)
+    local_size = local_comm.Get_size()
+    local_rank = local_comm.Get_rank()
+    compute_nodes = size // local_size
 
-fn = os.path.join(data_path, theory_label, '_'.join(('custom_params', theory_label)))
-with open(fn, 'r') as f:
-    custom_params = json.load(f)
-network_label = custom_params['network_label']
+    print(
+        f"hostname={name}, rank={rank}, size={size}, local_rank={local_rank}, local_size={local_size}, compute_nodes={compute_nodes}"
+    )
 
-sim_params = custom_params['sim_params']
-update_sim_params = {'num_processes': num_processes,
-                  'local_num_threads': local_num_threads}
-nested_update(sim_params, update_sim_params)
 
-ngpu.ConnectMpiInit()
+def print_mem_info():
+    def getMemInfo():
+        pid = os.getpid()
+        memInfo = {}
+        with open(f"/proc/{pid}/status") as f:
+            text = f.read()
+            memData = re.findall("(Vm.+?):\t.*?(\d*)\skB", text)
+            for data in memData:
+                memInfo[data[0]] = int(data[1])
+            return memInfo
 
-M = MultiAreaModel(network_label,
-                   simulation=True,
-                   sim_spec=custom_params['sim_params'])
+    print(f"MPI Rank {rank} : Host Memory : ", getMemInfo())
 
-label_info['simulation_label'] = M.simulation.label
-with open('label_info.json', 'w') as f:
-    json.dump(label_info, f)
+    pynvml.nvmlInit()
+    handle = pynvml.nvmlDeviceGetHandleByIndex(0)
+    nvmlMemInfo = pynvml.nvmlDeviceGetMemoryInfo(handle)
+    print(f"MPI Rank {rank} : GPU Memory : ", nvmlMemInfo)
+    pynvml.nvmlShutdown()
 
-M.simulation.simulate()
 
-def getMemInfo():
-	pid = os.getpid()
-	memInfo = {}
-	with open(f'/proc/{pid}/status') as f:
-		text = f.read()
-		memData = re.findall('(Vm.+?):\t.*?(\d*)\skB', text)
-		for data in memData:
-			memInfo[data[0]] = int(data[1])
-		return memInfo
+def simulation(label):
+    ngpu.ConnectMpiInit()
+    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+    M.simulation.simulate()
 
-print(f'MPI Rank {rank} : Host Memory : ', getMemInfo())
 
-pynvml.nvmlInit()
-handle = pynvml.nvmlDeviceGetHandleByIndex(0)
-nvmlMemInfo = pynvml.nvmlDeviceGetMemoryInfo(handle)
-print(f'MPI Rank {rank} : GPU Memory : ', nvmlMemInfo)
-pynvml.nvmlShutdown()
+def main():
+    print_mpi_info()
+    with open("sim_info.json") as f:
+        label = json.load(f)["label"]
+    simulation(label)
+    print_mem_info()
+    # free NEST-GPU memory via call deconstructa
 
-# free NEST-GPU memory via call deconstructa
+
+if __name__ == "__main__":
+    main()

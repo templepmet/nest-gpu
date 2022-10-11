@@ -1,0 +1,764 @@
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+/var/opt/nec/nqsv/jsv/jobfile/0.15343.10/user_script: 行 35: =1nodes_8gpus_0.01scale_0:15343.sqd: コマンドが見つかりません
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 114, in __init__
+    compute_Model_params(out_label=str(rand_data_label), mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 69, in compute_Model_params
+    processed_data = json.load(f)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:878: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 105, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 99, in main
+    simulation(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_simulation.py", line 90, in simulation
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 218, in __init__
+    self.init_simulation(self.label, sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 243, in init_simulation
+    self.simulation = Simulation(label=label, network=self, sim_spec=sim_spec)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 86, in __init__
+    self.copy_files()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/simulation.py", line 149, in copy_files
+    shutil.copy2(os.path.join(base_path, f), self.data_dir)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[15099,1],24]
+  Exit code:    1
+--------------------------------------------------------------------------
+
+real	0m43.001s
+user	0m3.893s
+sys	0m3.111s

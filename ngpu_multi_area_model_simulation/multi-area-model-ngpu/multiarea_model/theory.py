@@ -30,7 +30,7 @@ from .theory_helpers import d_nu_d_mu_fb_numeric, d_nu_d_sigma_fb_numeric
 
 
 class Theory:
-    def __init__(self, network, theory_spec):
+    def __init__(self, label, network, theory_spec):
         self.params = copy(theory_params)
         check_custom_params(theory_spec, self.params)
         self.custom_params = theory_spec
@@ -45,8 +45,9 @@ class Theory:
                    'tau_syn': self.params['neuron_params']['single_neuron_dict']['tau_syn'],
                    't_ref': self.params['neuron_params']['single_neuron_dict']['t_ref'],
                    'tau': 1.}
-        self.label = dicthash.generate_hash_from_dict({'params': self.params,
-                                                       'network_label': self.network.label})
+        # self.label = dicthash.generate_hash_from_dict({'params': self.params,
+        #                                                'network_label': self.network.label})
+        self.label = label
 
     def __eq__(self, other):
         return self.label == other.label

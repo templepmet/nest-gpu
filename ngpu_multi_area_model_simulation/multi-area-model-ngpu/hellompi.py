@@ -4,13 +4,14 @@
 from mpi4py import MPI
 import sys
 
-def print_hello(rank, size, name):
-  msg = "Hello World! I am process {0} of {1} on {2}.\n"
-  sys.stdout.write(msg.format(rank, size, name))
-
 if __name__ == "__main__":
   size = MPI.COMM_WORLD.Get_size()
   rank = MPI.COMM_WORLD.Get_rank()
   name = MPI.Get_processor_name()
 
-  print_hello(rank, size, name)
+  local_comm = MPI.COMM_WORLD.Split_type(MPI.COMM_TYPE_SHARED)
+  local_size = local_comm.Get_size()
+  local_rank = local_comm.Get_rank()
+  compute_nodes = size // local_size
+
+  print(f"hostname={name}, rank={rank}, size={size}, local_rank={local_rank}, local_size={local_size}, compute_nodes={compute_nodes}")

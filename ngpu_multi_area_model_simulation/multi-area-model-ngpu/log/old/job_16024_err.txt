@@ -1,0 +1,33 @@
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py:1110: FutureWarning:`rcond` parameter will change to the default of machine precision times ``max(M, N)`` where M and N are the input matrix dimensions.
+To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
+Traceback (most recent call last):
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 815, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '1nodes_8gpus_0.01scale_0:16024.sqd/custom_parameter_dict.json' -> 'config_files/1nodes_8gpus_0.01scale_0:16024.sqd_config.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_theory.py", line 69, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_theory.py", line 65, in main
+    theory(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_theory.py", line 48, in theory
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 200, in __init__
+    shutil.move(tmp_parameter_fn, parameter_fn)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 835, in move
+    copy_function(src, real_dst)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/opt/pyenv/versions/3.10.7/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'config_files/1nodes_8gpus_0.01scale_0:16024.sqd_config.json'
+
+real	0m19.888s
+user	0m12.991s
+sys	0m6.670s

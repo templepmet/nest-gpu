@@ -1,0 +1,20 @@
+Loading BaseGPU/2022
+  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3432: RuntimeWarning:Mean of empty slice.
+/opt/pyenv/versions/3.10.7/lib/python3.10/site-packages/numpy/core/_methods.py:190: RuntimeWarning:invalid value encountered in double_scalars
+Traceback (most recent call last):
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_theory.py", line 69, in <module>
+    main()
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_theory.py", line 65, in main
+    theory(*params)
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_theory.py", line 48, in theory
+    M = MultiAreaModel(
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/multiarea_model.py", line 115, in __init__
+    compute_Model_params(label=label, mode="custom")
+  File "/sqfs2/cmc/1/work/G15417/u6b671/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/data_multiarea/Model.py", line 171, in compute_Model_params
+    with open(
+FileNotFoundError: [Errno 2] No such file or directory: '1nodes_8gpus_0.01scale_0:16003.sqd/parameter_dict.json'
+
+real	0m9.742s
+user	0m2.987s
+sys	0m6.463s
