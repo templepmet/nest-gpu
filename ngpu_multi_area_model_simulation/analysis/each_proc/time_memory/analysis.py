@@ -6,7 +6,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 sim_label="simulated_8nodes_4gpus_1.00scale"
-result_file = f"../../multi-area-model-ngpu/simulation_result/{sim_label}/result.txt"
+result_file = f"../../../multi-area-model-ngpu/simulation_result/{sim_label}/result.txt"
 
 time_label = [
 	'SpikeBufferUpdate_time',

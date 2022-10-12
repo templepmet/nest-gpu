@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 sim_label = "simulated_8nodes_4gpus_1.00scale"
-result_file = f"../../multi-area-model-ngpu/simulation_result/{sim_label}/result.txt"
+result_file = f"../../../multi-area-model-ngpu/simulation_result/{sim_label}/result.txt"
 synapse_json = "synapse_full.json"
 
 with open(synapse_json) as f:
