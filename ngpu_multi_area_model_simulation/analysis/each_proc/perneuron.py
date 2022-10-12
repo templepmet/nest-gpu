@@ -18,6 +18,8 @@ for p in range(procs):
     )
 
 print(neurons)
+sum_neuron = np.sum(neurons)
+print("sum_neuron:", sum_neuron)
 
 plt.rcParams["axes.axisbelow"] = True
 plt.rcParams["font.size"] = 12
