@@ -5,7 +5,8 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 
-sim_label="simulated_8nodes_4gpus_1.00scale"
+# sim_label="simulated_8nodes_4gpus_1.00scale"
+sim_label="1nodes_8gpus_0.01scale_0:22963.sqd"
 result_file = f"../../../multi-area-model-ngpu/simulation_result/{sim_label}/result.txt"
 
 time_label = [

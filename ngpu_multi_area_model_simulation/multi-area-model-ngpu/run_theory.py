@@ -34,11 +34,14 @@ def make_params():
         "neuron_params": neuron_params,
     }
 
+    
+    num_threads = int(os.environ.get("OMP_NUM_THREADS", "1"))
+
     sim_params = {
         "t_sim": 10000.0 * scale,
         "t_presim": 500.0 * scale,
         "num_processes": 32,
-        "local_num_threads": int(os.environ["OMP_NUM_THREADS"]),
+        "local_num_threads": num_threads,
         "recording_dict": {"record_vm": False},
     }
     return label, network_params, sim_params
