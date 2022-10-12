@@ -1,9 +1,12 @@
+import re
 import json
 from collections import defaultdict
 
 import numpy as np
 import matplotlib.pyplot as plt
 
+sim_label = "simulated_8nodes_4gpus_1.00scale"
+result_file = f"../../multi-area-model-ngpu/simulation_result/{sim_label}/result.txt"
 synapse_json = "synapse_full.json"
 
 with open(synapse_json) as f:
@@ -23,8 +26,19 @@ for target in synapse:
 print(num_target_synapse)
 print(num_source_synapse)
 
+procs = 32
+areas_name = [""] * procs
+with open(result_file) as f:
+    text = f.read()
+for p in range(procs):
+    areas_name[p] = re.findall(f"Rank {p}: created area (.*) with", text)[0]
+
+print(areas_name)
+print(list(num_target_synapse.keys()))
+print(list(num_source_synapse.keys()))
+
 sum_synapse = np.sum(list(num_source_synapse.values()))
-print("sum_synapse:", sum_synapse) # 37 x 10^9
+print("sum_synapse:", sum_synapse) # 24.1 x 10^9
 
 plt.rcParams["axes.axisbelow"] = True
 plt.rcParams["font.size"] = 12
