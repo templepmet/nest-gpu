@@ -162,6 +162,10 @@ class MultiAreaModel:
             )
             self.synapses = indegree_to_synapse_numbers(self.K, self.N)
 
+            if theory:
+                with open("syanapse_full.json", "w") as f:
+                    json.dump(self.synapses, f)
+
         self.vectorize()
         if self.params["K_scaling"] != 1.0 or self.params["N_scaling"] != 1.0:
             if self.params["fullscale_rates"] is None:
@@ -170,6 +174,9 @@ class MultiAreaModel:
                     " with fullscale rates."
                 )
             self.scale_network()
+            if theory:
+                with open("syanapse_scaledown.json", "w") as f:
+                    json.dump(self.synapses, f)
 
         self.K_areas = area_level_dict(self.K, self.N)
         # self.label = dicthash.generate_hash_from_dict(
