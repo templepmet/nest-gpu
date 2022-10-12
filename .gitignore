@@ -52,4 +52,6 @@ a.out
 
 scp_squid.sh
 
-**/simulation_result/*nodes*
+**/simulation_result/?nodes*
+**/simulation_result/??nodes*
+
