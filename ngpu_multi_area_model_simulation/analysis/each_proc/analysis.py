@@ -2,10 +2,11 @@ import re
 from collections import defaultdict
 
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 
-sim_label="b64ab6b32780d5131c13e8173da41272"
-result_file = f"../../multi-area-model-ngpu/{sim_label}/result.txt"
+sim_label="simulated_8nodes_4gpus_1.00scale"
+result_file = f"../../multi-area-model-ngpu/simulation_result/{sim_label}/result.txt"
 
 time_label = [
 	'SpikeBufferUpdate_time',
@@ -90,9 +91,11 @@ plt.xlabel('MPI Process')
 plt.ylabel('Processing Time [s]')
 bottom = np.array([0.0] * procs)
 x = [i for i in range(procs)]
+idx = 0
 for lab in time_label:
-	plt.bar(x, y[lab], bottom=bottom, align='center', label=lab)
+	plt.bar(x, y[lab], bottom=bottom, align='center', label=lab, color=matplotlib.cm.tab20(idx))
 	bottom += np.array(y[lab])
+	idx += 1
 
 ax=plt.gca()
 handles, labels = ax.get_legend_handles_labels()

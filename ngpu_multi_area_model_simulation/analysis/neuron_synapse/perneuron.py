@@ -4,7 +4,7 @@ from collections import defaultdict
 import numpy as np
 import matplotlib.pyplot as plt
 
-sim_label = "8nodes_4gpus_1.00scale"
+sim_label = "simulated_8nodes_4gpus_1.00scale"
 result_file = f"../../multi-area-model-ngpu/simulation_result/{sim_label}/result.txt"
 
 procs = 32

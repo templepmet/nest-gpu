@@ -4,7 +4,7 @@ from collections import defaultdict
 import numpy as np
 import matplotlib.pyplot as plt
 
-synapse_json = "../../multi-area-model-ngpu/synapse_full.json"
+synapse_json = "synapse_full.json"
 
 with open(synapse_json) as f:
     synapse = json.load(f)
@@ -17,10 +17,14 @@ for target in synapse:
             for spop in synapse[target][tpop][source]:
                 num = synapse[target][tpop][source][spop]
                 num_target_synapse[target] += num
-                num_source_synapse[source] += num
+                if source != "external":
+                    num_source_synapse[source] += num
 
-# sum_synapse = np.sum(y)
-# print("sum_synapse:", sum_synapse) # 37 x 10^9
+print(num_target_synapse)
+print(num_source_synapse)
+
+sum_synapse = np.sum(list(num_source_synapse.values()))
+print("sum_synapse:", sum_synapse) # 37 x 10^9
 
 plt.rcParams["axes.axisbelow"] = True
 plt.rcParams["font.size"] = 12
