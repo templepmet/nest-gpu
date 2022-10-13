@@ -13,5 +13,6 @@ elif [ -z "$OMPI_COMM_WORLD_RANK" ]; then
 	nsys profile --trace cuda,nvtx,mpi --output=report --force-overwrite true \
 	$@
 else
+	sleep 5
 	$@
 fi

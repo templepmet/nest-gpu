@@ -35,10 +35,10 @@ PBS_NGPUS=8
 LABEL=${PBS_NNODES}nodes_${PBS_NGPUS}gpus_${SCALE}scale_${PBS_JOBID}
 echo "{\"label\": \"$LABEL\", \"scale\": $SCALE}" > sim_info.json
 
-# time \
-# 	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-# 	python run_theory.py \
-# 	>> $RESULT_FILE
+time \
+	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
+	python run_theory.py \
+	>> $RESULT_FILE
 
 # time \
 # 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
@@ -46,15 +46,16 @@ echo "{\"label\": \"$LABEL\", \"scale\": $SCALE}" > sim_info.json
 #	 python run_simulation.py \
 # 	>> $RESULT_FILE
 
-# time \
-# 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
-# 	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-# 	./wrap_nsys.sh python run_simulation.py \
-# 	>> $RESULT_FILE
 time \
-	mpirun $NQSV_MPIOPTS -np 8 -npernode 8 --map-by core --bind-to core --display-devel-map \
-	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-	./wrap_nsys.sh python hellompi.py \
+	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
+	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
+	./wrap_nsys.sh python run_simulation.py \
 	>> $RESULT_FILE
 
-# cp ./log/result.txt simulation_result/$LABEL
+# time \
+# 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
+# 	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
+# 	./wrap_nsys.sh python hellompi.py \
+# 	>> $RESULT_FILE
+
+cp ./log/result.txt simulation_result/$LABEL
