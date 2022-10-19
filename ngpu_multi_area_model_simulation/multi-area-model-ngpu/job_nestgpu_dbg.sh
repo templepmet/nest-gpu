@@ -40,22 +40,16 @@ time \
 	python run_theory.py \
 	>> $RESULT_FILE
 
-# time \
-# 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
-# 	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-#	 python run_simulation.py \
-# 	>> $RESULT_FILE
-
 time \
 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
 	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-	./wrap_nsys.sh python run_simulation.py \
+	 python run_simulation.py \
 	>> $RESULT_FILE
 
 # time \
 # 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
-# 	singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-# 	./wrap_nsys.sh python hellompi.py \
+# 	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
+# 	./wrap_nsys.sh python run_simulation.py \
 # 	>> $RESULT_FILE
 
 cp ./log/result.txt simulation_result/$LABEL

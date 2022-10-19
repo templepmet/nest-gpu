@@ -543,7 +543,7 @@ int NESTGPU::SimulationStep()
   time_mark = getRealTime();
   for (unsigned int i=0; i<node_vect_.size(); i++) {
     if (node_vect_[i]->has_dir_conn_) {
-      node_vect_[i]->SendDirectSpikes(neural_time_, time_resolution_/1000.0);
+      node_vect_[i]->SendDirectSpikes(neural_time_, time_resolution_/1000.0); // this is bottoneck because cudaDeviceSynchronize
     }
   }
   poisson_generator_time_ += (getRealTime() - time_mark);
