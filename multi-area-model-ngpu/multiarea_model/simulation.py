@@ -487,16 +487,19 @@ class Simulation:
             )
 
     def dump_connection(self):
+        if self.mpirank == 0:
+            os.mkdir(os.path.join(self.data_dir, "connection"))
+        MPI.COMM_WORLD.barrier()
+
         source_area = self.areas[self.mpirank]
         for source_pop in source_area.populations:
-            with open(
-                os.path.join(
-                    self.data_dir,
-                    "syndelay",
-                    f"syndelay_{source_area.name}_{source_pop}.txt",
-                ),
-                "w",
-            ) as f:
+            connection_file = os.path.join(
+                self.data_dir,
+                "connection",
+                f"connection_{source_area.name}_{source_pop}.txt",
+            )
+            with open(connection_file, "w") as f:
+                print(f"File: {connection_file}")
                 source_i0 = source_area.gids[source_pop][0]
                 source_i1 = source_area.gids[source_pop][1]
                 source_nodeseq = ngpu.NodeSeq(source_i0, source_i1 - source_i0 + 1)

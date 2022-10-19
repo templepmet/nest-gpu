@@ -18,7 +18,7 @@ cd $PBS_O_WORKDIR
 module load BaseGPU/2022
 
 SINGULARITY_PWD=`mpirun -np 1 pwd`
-SINGULARITY_IMAGE=../../singularity/nestgpu.sif
+SINGULARITY_IMAGE=../singularity/nestgpu.sif
 RESULT_FILE=./log/result.txt
 
 if ls log/*.txt >/dev/null 2>&1
@@ -55,4 +55,11 @@ time \
 REF_LABEL="1nodes_8gpus_0.01scale_0:67750.sqd"
 diff -sq simulation_result/$REF_LABEL/recordings simulation_result/$LABEL/recordings >> $RESULT_FILE
 
-cp ./log/result.txt simulation_result/$LABEL
+cp ./log/result.txt simulation_result/$LABEL/
+
+# below "cp result.txt"
+python analysis/each_proc/time_memory.py simulation_result/$LABEL
+python analysis/each_proc/neuron.py simulation_result/$LABEL
+python analysis/each_proc/synapse.py simulation_result/$LABEL
+python analysis/each_proc/spike.py simulation_result/$LABEL
+python analysis/distributions/delay.py simulation_result/$LABEL

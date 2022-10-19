@@ -6,12 +6,15 @@ from collections import defaultdict
 import numpy as np
 import matplotlib.pyplot as plt
 
-sim_label = "1nodes_8gpus_0.01scale_0:67750.sqd"
-sim_dir = f"../../multi-area-model-ngpu/simulation_result/{sim_label}"
-result_file = f"{sim_dir}/result.txt"
-recording_dir = f"{sim_dir}/recordings"
-syndelay_dir = f"{sim_dir}/syndelay"
-gid_file = os.path.join(recording_dir, "network_gids.txt")
+argv = sys.argv
+if len(argv) < 2:
+    print(f"usage: python {argv[0]} simulation_directory")
+    sys.exit(1)
+sim_dir = argv[1]
+result_file = os.path.join(sim_dir, "result.txt")
+gid_file = os.path.join(sim_dir, "recordings", "network_gids.txt")
+connection_dir = os.path.join(sim_dir, "connection")
+
 
 procs = 32
 areas_rank = [""] * procs
@@ -28,14 +31,14 @@ with open(gid_file) as f:
         pop = row[1]
         network[area].append(pop)
 
-delay_hist = [0] * 100 # max delay = 0.1 * 100 = 10 ms
+delay_hist = [0] * 100  # max delay = 0.1 * 100 = 10 ms
 # areas_rank = ["V1"]
 # network["V1"] = ["23E"]
 for area in areas_rank:
     for pop in network[area]:
         print("processsing:", area, pop)
-        syndelay_txt = os.path.join(syndelay_dir, f"syndelay_{area}_{pop}.txt")
-        with open(syndelay_txt) as f:
+        connection_txt = os.path.join(connection_dir, f"connection_{area}_{pop}.txt")
+        with open(connection_txt) as f:
             delays = re.findall(f".*'delay': (.*), .*\n", f.read())
         for delay_str in delays:
             delay_raw = float(delay_str)
@@ -59,9 +62,9 @@ for i in range(len(delay_hist)):
         max_delay = len(delay_hist) - i
         break
 x = np.arange(max_delay + 1)
-y = delay_hist[0:len(x)]
+y = delay_hist[0 : len(x)]
 
 xtmp = np.arange(0, max_delay + 1, 5)
 plt.xticks(xtmp, xtmp / 10)
 plt.plot(x, y)
-plt.savefig(f"delay_{sim_label}.png", bbox_inches="tight", pad_inches=0.2)
+plt.savefig(os.path.join(sim_dir, "delay.png"), bbox_inches="tight", pad_inches=0.2)

@@ -1,13 +1,18 @@
 import re
+import os
+import sys
 from collections import defaultdict
 
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 
-sim_label = "simulated_8nodes_4gpus_1.00scale"
-# sim_label="1nodes_8gpus_0.01scale_0:29390.sqd"
-result_file = f"../../../multi-area-model-ngpu/simulation_result/{sim_label}/result.txt"
+argv = sys.argv
+if len(argv) < 2:
+    print(f"usage: python {argv[0]} simulation_directory")
+    sys.exit(1)
+sim_dir = argv[1]
+result_file = os.path.join(sim_dir, "result.txt")
 
 time_label = [
     "SpikeBufferUpdate_time",
@@ -28,8 +33,8 @@ time_label = [
     # 'JoinSpike_time'
 ]
 
-# only last time = sum time
 
+# only last time = sum time
 procs = 32
 data = [None] * procs
 for i in range(procs):
@@ -112,7 +117,7 @@ for lab in time_label:
 ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
 plt.legend(handles[::-1], labels[::-1], bbox_to_anchor=(1, 1), loc="upper left")
-plt.savefig(f"time_{sim_label}.png", bbox_inches="tight", pad_inches=0.2)
+plt.savefig(os.path.join(sim_dir, "time.png"), bbox_inches="tight", pad_inches=0.2)
 
 # memory
 plt.figure()
@@ -125,4 +130,4 @@ width = 0.4
 plt.bar(x - width / 2, host_mem, width=width, label="Host VmPeak")
 plt.bar(x + width / 2, gpu_mem, width=width, label="GPU Used")
 plt.legend(ncol=2)
-plt.savefig(f"memory_{sim_label}.png", bbox_inches="tight", pad_inches=0.2)
+plt.savefig(os.path.join(sim_dir, "memory.png"), bbox_inches="tight", pad_inches=0.2)
