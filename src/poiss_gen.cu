@@ -161,8 +161,8 @@ int poiss_gen::SendDirectSpikes(double t, float time_step)
 					       param_arr_, n_param_,
 					       d_dir_conn_array_, n_dir_conn_);
   
-  gpuErrchk( cudaPeekAtLastError() );
-  gpuErrchk( cudaDeviceSynchronize() );
+  // gpuErrchk( cudaPeekAtLastError() );
+  // gpuErrchk( cudaDeviceSynchronize() ); // unnecessary
 
   return 0;
 }
