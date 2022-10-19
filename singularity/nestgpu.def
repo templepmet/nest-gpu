@@ -25,6 +25,7 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	export PATH=$MPI_HOME/bin:$PATH
 	export LD_LIBRARY_PATH=$MPI_HOME/lib:$LD_LIBRARY_PATH
 	export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+	export LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/math_libs/lib64:$LIBRARY_PATH
 
 	# Standard compiler
 	export CC=gcc
@@ -58,6 +59,7 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	export MPI_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/comm_libs/openmpi4/openmpi-4.0.5
 	export PATH=$MPI_HOME/bin:$PATH
 	export LD_LIBRARY_PATH=$MPI_HOME/lib:$LD_LIBRARY_PATH
+	export LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/math_libs/lib64:$LIBRARY_PATH
 
 	export DEBIAN_FRONTEND=noninteractive
 	export DEBCONF_NOWARNINGS=yes
@@ -79,7 +81,8 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	libltdl-dev \
 	libboost-dev \
 	libiberty-dev \
-	libibverbs-dev
+	libibverbs-dev \
+	locales-all
 
 	# Install pyenv
 	export PYTHON_VERSION=3.10.7
