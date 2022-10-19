@@ -1,9 +1,0 @@
-[c1:14568] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
-Traceback (most recent call last):
-  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/analysis/distributions/cv_isi.py", line 41, in <module>
-    spike_times_list = __load_spike_times(recording_path, name, begin, end, npop)
-  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/analysis/distributions/eval_functions.py", line 59, in __load_spike_times
-    node_ids = __gather_metadata(path)
-  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/analysis/distributions/eval_functions.py", line 25, in __gather_metadata
-    node_idfile = open(path + 'network_gids.txt', 'r')
-FileNotFoundError: [Errno 2] No such file or directory: '../../multi-area-model-ngpu/b0de5c560c17c5d6c29a7d808f1f2de4/recordings/network_gids.txt'

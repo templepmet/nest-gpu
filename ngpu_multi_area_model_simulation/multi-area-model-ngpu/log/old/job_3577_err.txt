@@ -1,6 +1,0 @@
-cp: cannot create regular file '/job_3575_err.txt': Permission denied
-cp: cannot create regular file '/job_3575_out.txt': Permission denied
-cp: cannot create regular file '/job_3576_err.txt': Permission denied
-cp: cannot create regular file '/job_3576_out.txt': Permission denied
-cp: cannot create regular file '/job_3577_err.txt': Permission denied
-cp: cannot create regular file '/job_3577_out.txt': Permission denied

@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/run_theory.py", line 13, in <module>
-    from multiarea_model import MultiAreaModel
-  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/__init__.py", line 1, in <module>
-    from . import default_params
-  File "/home/y-terans/workspace/nest-gpu/ngpu_multi_area_model_simulation/multi-area-model-ngpu/multiarea_model/default_params.py", line 14, in <module>
-    from config import base_path
-ModuleNotFoundError: No module named 'config'

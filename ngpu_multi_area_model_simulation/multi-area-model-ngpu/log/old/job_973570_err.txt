@@ -1,6 +1,0 @@
-Loading BaseGPU/2022
-  Loading requirement: nvhpc/22.2 cuda/11.6 openmpi/4.0.5cu11.6
-
-real	0m3.898s
-user	0m2.297s
-sys	0m4.937s
