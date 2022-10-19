@@ -486,6 +486,32 @@ class Simulation:
                 "Sumatra is not installed, the " "runtime cannot be registered."
             )
 
+    def distribution_syndelay(self):
+        source_area = self.areas[self.mpirank]
+        for source_pop in source_area.populations:
+            with open(
+                os.path.join(
+                    self.data_dir,
+                    "syndelay",
+                    f"syndelay_{source_area.name}_{source_pop}.txt",
+                ),
+                "w",
+            ) as f:
+                source_i0 = source_area.gids[source_pop][0]
+                source_i1 = source_area.gids[source_pop][1]
+                source_nodeseq = ngpu.NodeSeq(source_i0, source_i1 - source_i0 + 1)
+                for target_area in self.areas:
+                    for target_pop in target_area.populations:
+                        target_i0 = target_area.gids[target_pop][0]
+                        target_i1 = target_area.gids[target_pop][1]
+                        target_nodeseq = ngpu.NodeSeq(
+                            target_i0, target_i1 - target_i0 + 1
+                        )
+                        conn_list = ngpu.GetConnections(source_nodeseq, target_nodeseq)
+                        for conn_id in conn_list:
+                            conn_status_dict = ngpu.GetConnectionStatus(conn_id)
+                            f.write(f"{conn_status_dict}\n")
+
 
 class Area:
     def __init__(self, simulation, network, name, rank):

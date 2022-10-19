@@ -94,6 +94,7 @@ class MultiAreaModel:
         try:
             os.mkdir(os.path.join("simulation_result", label))
             os.mkdir(os.path.join("simulation_result", label, "recordings"))
+            os.mkdir(os.path.join("simulation_result", label, "syndelay"))
         except OSError:
             pass
 
