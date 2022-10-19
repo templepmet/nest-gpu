@@ -52,4 +52,7 @@ time \
 # 	./wrap_nsys.sh python run_simulation.py \
 # 	>> $RESULT_FILE
 
+REF_LABEL="1nodes_8gpus_0.01scale_0:67750.sqd"
+diff -sq simulation_result/$REF_LABEL/recordings simulation_result/$LABEL/recordings >> $RESULT_FILE
+
 cp ./log/result.txt simulation_result/$LABEL

@@ -486,7 +486,7 @@ class Simulation:
                 "Sumatra is not installed, the " "runtime cannot be registered."
             )
 
-    def distribution_syndelay(self):
+    def dump_connection(self):
         source_area = self.areas[self.mpirank]
         for source_pop in source_area.populations:
             with open(
