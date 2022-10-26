@@ -51,6 +51,7 @@ time \
 	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
 	./wrap_nsys.sh python run_simulation.py \
 	>> $RESULT_FILE
+mv *.nsys-rep simulation_result/$LABEL/
 
 REF_LABEL="1nodes_8gpus_0.01scale_ref"
 diff -sq simulation_result/$REF_LABEL/recordings simulation_result/$LABEL/recordings >> $RESULT_FILE

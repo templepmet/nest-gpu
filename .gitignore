@@ -56,3 +56,5 @@ scp_squid.sh
 **/simulation_result/??nodes*
 log
 *.nsys-rep
+sim_info.json
+viscortex_processed_data.json
