@@ -101,10 +101,10 @@ could not find MPI library. You should either install it,
 or use the option --with-mpi=no
 to build without MPI-related functions]))])
 AC_DEFINE(HAVE_MPI)
-MPICC="mpicc"
-MPICXX="mpicxx"
-MPI_CXXLIBS=`mpicxx --showme:link`
-MPI_CXXFLAGS=`mpicxx --showme:compile`
+MPICC="$MPICC"
+MPICXX="$MPICXX"
+MPI_CXXLIBS=`$MPICXX --showme:link`
+MPI_CXXFLAGS=`$MPICXX --showme:compile`
 AC_SUBST(MPI_CXXLIBS)
 AC_SUBST(MPI_CXXFLAGS)
 else
