@@ -430,13 +430,9 @@ int ConnectMpi::CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
     // by adding the index of the first node of the node group  
     AddOffset<<<(n_spike_tot+1023)/1024, 1024>>>
       (n_spike_tot, d_ExternalSourceSpikeNodeId, i_remote_node_0);
-    gpuErrchk( cudaPeekAtLastError() );
-    cudaDeviceSynchronize();
     // push remote spikes in local spike buffers
     PushSpikeFromRemote<<<(n_spike_tot+1023)/1024, 1024>>>
       (n_spike_tot, d_ExternalSourceSpikeNodeId);
-    gpuErrchk( cudaPeekAtLastError() );
-    cudaDeviceSynchronize();
   }
   
   return n_spike_tot;

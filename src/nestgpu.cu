@@ -657,7 +657,6 @@ int NESTGPU::SimulationStep()
     RevSpikeBufferUpdate_timer->stopRecord();
   }
 
-  // is not measured ?
   BufferRecSpikeTimes_timer->startRecord();
   for (unsigned int i=0; i<node_vect_.size(); i++) {
     // if spike times recording is activated for node group...

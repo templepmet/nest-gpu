@@ -44,15 +44,9 @@ time \
 time \
 	mpirun $NQSV_MPIOPTS -np 32 -npernode 4 --map-by core --bind-to core --display-devel-map \
 	./wrap_cuda_4g.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-	 python run_simulation.py \
+	./wrap_nsys.sh python run_simulation.py \
 	>> $RESULT_FILE
-
-# time \
-# 	mpirun $NQSV_MPIOPTS -np 32 -npernode 4 --map-by core --bind-to core --display-devel-map \
-# 	./wrap_cuda_4g.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-# 	./wrap_nsys.sh python run_simulation.py \
-# 	>> $RESULT_FILE
-# mv *.nsys-rep simulation_result/$LABEL/
+mv *.nsys-rep simulation_result/$LABEL/
 
 # REF_LABEL="1nodes_8gpus_0.01scale_ref"
 # diff -sq simulation_result/$REF_LABEL/recordings simulation_result/$LABEL/recordings >> $RESULT_FILE

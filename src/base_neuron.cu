@@ -397,7 +397,7 @@ int BaseNeuron::SetIntVar(int *i_neuron, int n_neuron,
     (var_pt, d_i_neuron, n_neuron, 1, val);
   gpuErrchk( cudaPeekAtLastError() );
   gpuErrchk( cudaDeviceSynchronize() );
-  gpuErrchk(cudaFree(d_i_neuron));
+  gpuErrchk(cudaFree(d_i_neuron)); // to cudaFreeAsync?
   
   return 0;
 }
