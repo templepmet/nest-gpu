@@ -46,6 +46,7 @@ neuron_models.h \
 nestgpu.h \
 ngpu_exception.h \
 node_group.h \
+non_blocking_timer.h \
 parrot_neuron.h \
 poiss_gen.h \
 poiss_gen_variables.h \
@@ -100,6 +101,7 @@ multimeter.cu \
 neuron_models.cu \
 nestgpu.cu \
 node_group.cu \
+non_blocking_timer.cu \
 parrot_neuron.cu \
 poiss_gen.cu \
 poisson.cu \

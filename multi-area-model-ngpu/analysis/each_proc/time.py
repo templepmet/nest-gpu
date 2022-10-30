@@ -4,7 +4,7 @@ import sys
 from collections import defaultdict
 
 import numpy as np
-import matplotlib
+import matplotlib; matplotlib.use('agg')
 import matplotlib.pyplot as plt
 
 argv = sys.argv
@@ -22,55 +22,52 @@ time_label = [
     "SendExternalSpike_time",
     "SendSpikeToRemote_time",
     "RecvSpikeFromRemote_time",
+    "CopySpikeFromRemote_time",
+    "MpiBarrier_time",
+    "copy_spike_time",
+    "ClearGetSpikeArrays_time",
     "NestedLoop_time",
     "GetSpike_time",
     "SpikeReset_time",
     "ExternalSpikeReset_time",
-    # 'SendSpikeToRemote_MPI_time',
-    # 'RecvSpikeFromRemote_MPI_time',
-    # 'SendSpikeToRemote_CUDAcp_time',
-    "RecvSpikeFromRemote_CUDAcp_time",  # not include, it is true.
-    # 'JoinSpike_time'
+    "RevSpikeBufferUpdate_time",
+    "BufferRecSpikeTimes_time"
 ]
+
+# definition dependeny of host/device include time
+# definition else
 
 
 # only last time = sum time
 procs = 32
-data = [None] * procs
+host_time = [None] * procs
+device_time = [None] * procs
+sum_time = [0] * procs
 for i in range(procs):
-    data[i] = {}
+    host_time[i] = {}
+    device_time[i] = {}
 build_time = [0] * procs
 sim_time = [0] * procs
-sum_time = [0] * procs
-host_mem = [0] * procs
-gpu_mem = [0] * procs
 
 with open(result_file) as f:
     text = f.read()
 for p in range(procs):
     for lab in time_label:
-        data[p][lab] = float(re.findall(f"MPI rank {p} :   {lab}: (.*)\n", text)[-1])
+        ret = re.findall(f"MPI rank {p} :   {lab}: (.*), (.*)\n", text)[-1]
+        host_time[p][lab] = float(ret[0])
+        device_time[p][lab] = float(ret[1])
+
         build_time[p] = float(
             re.findall(f"MPI rank {p} : Building time: (.*)\n", text)[-1]
         )
         sim_time[p] = float(
             re.findall(f"MPI rank {p} : Simulation time: (.*)\n", text)[-1]
         )
-        sum_time[p] += data[p][lab]
+        sum_time[p] += host_time[p][lab]
 
-        find = re.findall(f"MPI Rank {p} : Host Memory :.*'VmPeak': (.+?),.*\n", text)
-        if len(find) > 0:
-            host_mem[p] = int(find[0])
-        find = re.findall(f"MPI Rank {p} : GPU Memory :.*used: (.*) B\)\n", text)
-        if len(find) > 0:
-            gpu_mem[p] = int(find[0])
-
-host_mem = np.array(host_mem) / 1e6
-gpu_mem = np.array(gpu_mem) / 1e9
-
-# print(sim_time)
-# print(sum_time)
-# print(np.array(sim_time) - np.array(sum_time))
+print(sim_time)
+print(sum_time)
+print((np.array(sim_time) - np.array(sum_time)) / np.array(sim_time))
 # reason for differ
 # building time is constant: build_real_time_ - start_real_time_
 # simulation time is variable: end_real_time_ - build_real_time_
@@ -81,16 +78,13 @@ gpu_mem = np.array(gpu_mem) / 1e9
 #   ex.) transfer GPU->CPU spike record data, python overhead...
 # not ignore transfer GPU->CPU GPU->CPU spike record data time !!!!!!!!!
 
-# print(host_mem)
-# print(gpu_mem)
-
 # time
 # convert for plot
 y = {}
 for lab in time_label:
     yt = [0.0] * procs
     for p in range(procs):
-        yt[p] = data[p][lab]
+        yt[p] = host_time[p][lab]
     y[lab] = yt
 
 plt.rcParams["axes.axisbelow"] = True
@@ -118,16 +112,3 @@ ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
 plt.legend(handles[::-1], labels[::-1], bbox_to_anchor=(1, 1), loc="upper left")
 plt.savefig(os.path.join(sim_dir, "time.png"), bbox_inches="tight", pad_inches=0.2)
-
-# memory
-plt.figure()
-plt.grid()
-plt.xlabel("MPI Process")
-plt.ylabel("Memory Size [GB]")
-plt.ylim(0, np.max(host_mem) * 1.2)
-x = np.arange(32)
-width = 0.4
-plt.bar(x - width / 2, host_mem, width=width, label="Host VmPeak")
-plt.bar(x + width / 2, gpu_mem, width=width, label="GPU Used")
-plt.legend(ncol=2)
-plt.savefig(os.path.join(sim_dir, "memory.png"), bbox_inches="tight", pad_inches=0.2)

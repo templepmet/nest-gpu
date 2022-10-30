@@ -33,7 +33,6 @@
 #include "connect_spec.h"
 #include "connect.h"
 #include "syn_model.h"
-#include "non_blocking_timer.h"
 
 #ifdef HAVE_MPI
 class ConnectMpi;
@@ -46,6 +45,7 @@ struct curandGenerator_st;
 typedef struct curandGenerator_st *curandGenerator_t;
 class ConnSpec;
 class SynSpec;
+class NonBlockingTimer;
 
 class Sequence
 {

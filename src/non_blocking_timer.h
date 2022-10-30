@@ -1,11 +1,7 @@
-#ifndef TIMER_ASYNC_H
-#define TIMER_ASYNC_H
+#ifndef NON_BLOCKING_TIMER_H
+#define NON_BLOCKING_TIMER_H
 
-#include <cassert>
-#include <iostream>
 #include <cuda.h>
-
-#include "getRealTime.h"
 
 class NonBlockingTimer
 {
@@ -23,106 +19,30 @@ private:
   bool is_start_d;
   bool is_async; // is running gpu
 
-  void _addElapsedTime()
-  {
-    float milliseconds;
-    if (cudaEventQuery(stop_d) != cudaSuccess)
-    {
-      cudaEventSynchronize(stop_d);
-    }
-    cudaEventElapsedTime(&milliseconds, start_d, stop_d);
-    time_d += milliseconds / 1e3;
-  }
+  void startRecordHost();
+
+  void stopRecordHost();
+
+  void startRecordDevice();
+
+  void stopRecordDevice();
+  
+  void _addElapsedTime();
 
 public:
-  NonBlockingTimer()
-  {
-    time_h = 0;
-    start_h = 0;
-    is_start_h = false;
+  NonBlockingTimer();
 
-    time_d = 0;
-    cudaEventCreate(&start_d);
-    cudaEventCreate(&stop_d);
-    is_start_d = false;
-    is_async = false;
-  }
+  ~NonBlockingTimer();
 
-  ~NonBlockingTimer()
-  {
-    cudaEventDestroy(start_d);
-    cudaEventDestroy(stop_d);
-  }
+  void startRecord();
 
-  void startRecordDevice()
-  {
-    assert(!is_start_d);
-    is_start_d = true;
+  void stopRecord();
 
-    if (is_async)
-    {
-      _addElapsedTime();
-      is_async = false;
-    }
-    cudaEventRecord(start_d);
-  }
+  double getTimeHost();
 
-  void stopRecordDevice()
-  {
-    assert(is_start_d);
-    is_start_d = false;
+  double getTimeDevice();
 
-    cudaEventRecord(stop_d);
-    is_async = true;
-  }
-
-  void startRecordHost()
-  {
-    assert(!is_start_h);
-    is_start_h = true;
-    start_h = getRealTime();
-  }
-
-  void stopRecordHost()
-  {
-    assert(is_start_h);
-    is_start_h = false;
-    time_h += (getRealTime() - start_h);
-  }
-
-  void startRecord()
-  {
-    startRecordDevice();
-    startRecordHost();
-  }
-
-  void stopRecord()
-  {
-    stopRecordDevice();
-    stopRecordHost();
-  }
-
-  double getTimeHost()
-  {
-    assert(!is_start_h);
-    return time_h;
-  }
-
-  double getTimeDevice()
-  {
-    assert(!is_start_d);
-    if (is_async)
-    {
-      _addElapsedTime();
-      is_async = false;
-    }
-    return time_d;
-  }
-
-  double getTime()
-  {
-    return getTimeHost();
-  }
+  double getTime();
 };
 
-#endif // TIMER_ASYNC_H;
+#endif // NON_BLOCKING_TIMER_H;

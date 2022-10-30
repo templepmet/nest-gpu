@@ -64,6 +64,7 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	export MPI_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/comm_libs/openmpi4/openmpi-4.0.5
 	export PATH=$MPI_HOME/bin:$PATH
 	export LD_LIBRARY_PATH=$MPI_HOME/lib:$LD_LIBRARY_PATH
+	export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 	export LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/math_libs/lib64:$LIBRARY_PATH
 
 	export CC=gcc
@@ -71,6 +72,7 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	export FC=gfortran
 	export F77=gfortran
 	export F90=gfortran
+	export CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda
 	export OMPI_CC=$CC
 	export OMPI_CXX=$CXX
 	export OMPI_FC=$FC
@@ -121,18 +123,18 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	pip install -r /opt/requirements.txt
 
 	# Install Score-P
-	# cd /tmp
-	# export SCOREP="scorep-7.1"
-	# wget https://zenodo.org/record/5266442/files/${SCOREP}.tar.gz
-	# tar -xvf ${SCOREP}.tar.gz
-	# rm ${SCOREP}.tar.gz
-	# cd ${SCOREP}
-	# mkdir build
-	# cd build
-	# ../configure && make -j24 && make install
-	# export PATH=/opt/scorep/bin:$PATH
-	# cd
-	# rm -rf /tmp/${SCOREP}
+	cd /opt
+	export SCOREP="scorep-7.1"
+	wget https://zenodo.org/record/5266442/files/${SCOREP}.tar.gz
+	tar -xvf ${SCOREP}.tar.gz
+	rm ${SCOREP}.tar.gz
+	cd ${SCOREP}
+	mkdir build
+	cd build
+	../configure && make -j24 && make install
+	export PATH=/opt/scorep/bin:$PATH
+	cd
+	rm -rf /opt/${SCOREP}
 
 	# Install nest
 	export NEST=/opt/nest
