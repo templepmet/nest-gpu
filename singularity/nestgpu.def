@@ -121,18 +121,18 @@ From: nvcr.io/nvidia/nvhpc:22.7-devel-cuda11.7-ubuntu22.04
 	pip install -r /opt/requirements.txt
 
 	# Install Score-P
-	cd /tmp
-	export SCOREP="scorep-7.1"
-	wget https://zenodo.org/record/5266442/files/${SCOREP}.tar.gz
-	tar -xvf ${SCOREP}.tar.gz
-	rm ${SCOREP}.tar.gz
-	cd ${SCOREP}
-	mkdir build
-	cd build
-	../configure && make -j24 && make install
-	export PATH=/opt/scorep/bin:$PATH
-	cd
-	rm -rf /tmp/${SCOREP}
+	# cd /tmp
+	# export SCOREP="scorep-7.1"
+	# wget https://zenodo.org/record/5266442/files/${SCOREP}.tar.gz
+	# tar -xvf ${SCOREP}.tar.gz
+	# rm ${SCOREP}.tar.gz
+	# cd ${SCOREP}
+	# mkdir build
+	# cd build
+	# ../configure && make -j24 && make install
+	# export PATH=/opt/scorep/bin:$PATH
+	# cd
+	# rm -rf /tmp/${SCOREP}
 
 	# Install nest
 	export NEST=/opt/nest

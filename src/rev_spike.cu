@@ -143,7 +143,7 @@ __global__ void RevSpikeReset()
 {
   *RevSpikeNum = 0;
 }
-  
+
 
 int ResetConnectionSpikeTimeUp(NetConnection *net_connection)
 {  
