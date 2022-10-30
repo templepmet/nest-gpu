@@ -98,5 +98,5 @@ double NonBlockingTimer::getTimeDevice()
 
 double NonBlockingTimer::getTime()
 {
-  return getTimeHost();
+  return getTimeHost() + getTimeDevice();
 }

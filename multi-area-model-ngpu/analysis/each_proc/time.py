@@ -31,7 +31,8 @@ time_label = [
     "SpikeReset_time",
     "ExternalSpikeReset_time",
     "RevSpikeBufferUpdate_time",
-    "BufferRecSpikeTimes_time"
+    "BufferRecSpikeTimes_time",
+    "Else_time"
 ]
 
 # definition dependeny of host/device include time
@@ -40,12 +41,10 @@ time_label = [
 
 # only last time = sum time
 procs = 32
-host_time = [None] * procs
-device_time = [None] * procs
+each_time = [None] * procs
 sum_time = [0] * procs
 for i in range(procs):
-    host_time[i] = {}
-    device_time[i] = {}
+    each_time[i] = {}
 build_time = [0] * procs
 sim_time = [0] * procs
 
@@ -53,17 +52,15 @@ with open(result_file) as f:
     text = f.read()
 for p in range(procs):
     for lab in time_label:
-        ret = re.findall(f"MPI rank {p} :   {lab}: (.*), (.*)\n", text)[-1]
-        host_time[p][lab] = float(ret[0])
-        device_time[p][lab] = float(ret[1])
-
+        each_time[p][lab] = float(re.findall(f"MPI rank {p} :   {lab}: (.*)\n", text)[-1])
         build_time[p] = float(
             re.findall(f"MPI rank {p} : Building time: (.*)\n", text)[-1]
         )
         sim_time[p] = float(
             re.findall(f"MPI rank {p} : Simulation time: (.*)\n", text)[-1]
         )
-        sum_time[p] += host_time[p][lab]
+        sum_time[p] += each_time[p][lab]
+max_time = max(sim_time)
 
 print(sim_time)
 print(sum_time)
@@ -80,12 +77,22 @@ print((np.array(sim_time) - np.array(sum_time)) / np.array(sim_time))
 
 # time
 # convert for plot
+plot_label = []
 y = {}
+else_y = [0.0] * procs
 for lab in time_label:
     yt = [0.0] * procs
+    is_plot = False
     for p in range(procs):
-        yt[p] = host_time[p][lab]
-    y[lab] = yt
+        yt[p] = each_time[p][lab]
+        if yt[p] > max_time / 1e2:
+            is_plot = True
+    if is_plot:
+        y[lab] = yt
+        plot_label.append(lab)
+    else:
+        else_y += np.array(yt)
+y["Else_time"] += else_y
 
 plt.rcParams["axes.axisbelow"] = True
 plt.rcParams["font.size"] = 12
@@ -96,7 +103,7 @@ plt.ylabel("Processing Time [s]")
 bottom = np.array([0.0] * procs)
 x = [i for i in range(procs)]
 idx = 0
-for lab in time_label:
+for lab in plot_label:
     plt.bar(
         x,
         y[lab],
@@ -110,5 +117,5 @@ for lab in time_label:
 
 ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
-plt.legend(handles[::-1], labels[::-1], bbox_to_anchor=(1, 1), loc="upper left")
+plt.legend(handles[::-1], labels[::-1], bbox_to_anchor=(1, 0), loc="lower left")
 plt.savefig(os.path.join(sim_dir, "time.png"), bbox_inches="tight", pad_inches=0.2)
