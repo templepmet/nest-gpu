@@ -11,7 +11,9 @@ def make_params():
     with open("sim_info.json") as f:
         sim_info = json.load(f)
     label = sim_info["label"]
-    scale = float(sim_info["scale"])
+    N_scale = float(sim_info["N_scale"])
+    K_scale = float(sim_info["K_scale"])
+    T_scale = float(sim_info["T_scale"])
 
     conn_params = {
         "g": -11.0,
@@ -26,20 +28,19 @@ def make_params():
     input_params = {"rate_ext": 10.0}
     neuron_params = {"V0_mean": -150.0, "V0_sd": 50.0}
     network_params = {
-        "N_scaling": scale,
-        "K_scaling": scale,
+        "N_scaling": N_scale,
+        "K_scaling": K_scale,
         "fullscale_rates": "tests/fullscale_rates.json",
         "connection_params": conn_params,
         "input_params": input_params,
         "neuron_params": neuron_params,
     }
 
-    
     num_threads = int(os.environ.get("OMP_NUM_THREADS", "1"))
 
     sim_params = {
-        "t_sim": 10000.0 * scale,
-        "t_presim": 500.0 * scale,
+        "t_sim": 10000.0 * T_scale,
+        "t_presim": 500.0 * T_scale,
         "num_processes": 32,
         "local_num_threads": num_threads,
         "recording_dict": {"record_vm": False},

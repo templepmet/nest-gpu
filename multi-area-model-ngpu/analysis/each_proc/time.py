@@ -79,10 +79,12 @@ print((np.array(sim_time) - np.array(sum_time)) / np.array(sim_time))
 # convert for plot
 plot_label = []
 y = {}
-else_y = [0.0] * procs
+# else_y = [0.0] * procs
+# y["Else_time"] = 0
 for lab in time_label:
     yt = [0.0] * procs
-    is_plot = False
+    # is_plot = False
+    is_plot = True
     for p in range(procs):
         yt[p] = each_time[p][lab]
         if yt[p] > max_time / 1e2:
@@ -90,9 +92,9 @@ for lab in time_label:
     if is_plot:
         y[lab] = yt
         plot_label.append(lab)
-    else:
-        else_y += np.array(yt)
-y["Else_time"] += else_y
+    # else:
+        # else_y += np.array(yt)
+# y["Else_time"] += else_y
 
 plt.rcParams["axes.axisbelow"] = True
 plt.rcParams["font.size"] = 12

@@ -163,7 +163,10 @@ class MultiAreaModel:
             self.synapses = indegree_to_synapse_numbers(self.K, self.N)
 
             if theory:
-                with open("synapse_full.json", "w") as f:
+                with open(
+                    os.path.join("simulation_result", label, "synapse_full.json"),
+                    "w",
+                ) as f:
                     json.dump(self.synapses, f)
 
         self.vectorize()
@@ -175,7 +178,10 @@ class MultiAreaModel:
                 )
             self.scale_network()
             if theory:
-                with open("synapse_scaledown.json", "w") as f:
+                with open(
+                    os.path.join("simulation_result", label, "synapse_scaledown.json"),
+                    "w",
+                ) as f:
                     json.dump(self.synapses, f)
 
         self.K_areas = area_level_dict(self.K, self.N)
