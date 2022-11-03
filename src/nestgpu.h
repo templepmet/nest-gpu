@@ -257,6 +257,7 @@ class NESTGPU
   NonBlockingTimer *ExternalSpikeReset_timer;
   NonBlockingTimer *RevSpikeBufferUpdate_timer;
   NonBlockingTimer *BufferRecSpikeTimes_timer;
+  NonBlockingTimer *Blocking_timer;
 
   bool first_simulation_flag_;
 

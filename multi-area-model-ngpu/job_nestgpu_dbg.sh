@@ -18,8 +18,8 @@ cd $PBS_O_WORKDIR
 module load BaseGPU/2022
 
 SINGULARITY_PWD=`mpirun -np 1 pwd`
-SINGULARITY_IMAGE=../singularity/nestgpu.sif
-# SINGULARITY_IMAGE=../singularity/nestgpu_sandbox
+# SINGULARITY_IMAGE=../singularity/nestgpu.sif
+SINGULARITY_IMAGE=../singularity/nestgpu_sandbox
 RESULT_FILE=./log/result.txt
 
 if ls log/*.txt >/dev/null 2>&1
@@ -30,9 +30,9 @@ fi
 date > $RESULT_FILE
 echo "PBS_JOBID: $PBS_JOBID" >> $RESULT_FILE
 
-N_SCALE=0.1
-K_SCALE=0.1
-T_SCALE=0.1
+N_SCALE=0.01
+K_SCALE=0.01
+T_SCALE=0.01
 PBS_NNODES=1
 PBS_NGPUS=8
 LABEL=${PBS_NNODES}nodes_${PBS_NGPUS}gpus_N${N_SCALE}_K${K_SCALE}_T${T_SCALE}_${PBS_JOBID}
@@ -51,8 +51,8 @@ time \
 
 time \
 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
-	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-	./wrap_nsys.sh python run_simulation.py \
+	./wrap_cuda.sh 8 singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
+	./wrap_nsys.sh 14 python run_simulation.py \
 	>> $RESULT_FILE
 mv *.nsys-rep simulation_result/$LABEL/
 
@@ -60,11 +60,13 @@ REF_LABEL="1nodes_8gpus_0.01scale_ref"
 diff -sq simulation_result/$REF_LABEL/recordings simulation_result/$LABEL/recordings >> $RESULT_FILE
 
 cp ./log/result.txt simulation_result/$LABEL/
+cp ./sim_info.json simulation_result/$LABEL/
 
 # below "cp result.txt"
-python analysis/each_proc/time.py simulation_result/$LABEL
-python analysis/each_proc/memory.py simulation_result/$LABEL
-python analysis/each_proc/neuron.py simulation_result/$LABEL
-python analysis/each_proc/synapse.py simulation_result/$LABEL
-python analysis/each_proc/spike.py simulation_result/$LABEL
-python analysis/distributions/delay.py simulation_result/$LABEL
+RESULT_FILE=./simulation_result/$LABEL/result.txt
+python analysis/each_proc/time.py simulation_result/$LABEL >> $RESULT_FILE
+python analysis/each_proc/memory.py simulation_result/$LABEL >> $RESULT_FILE
+python analysis/each_proc/neuron.py simulation_result/$LABEL >> $RESULT_FILE
+python analysis/each_proc/synapse.py simulation_result/$LABEL >> $RESULT_FILE
+python analysis/each_proc/spike.py simulation_result/$LABEL >> $RESULT_FILE
+python analysis/distributions/delay.py simulation_result/$LABEL >> $RESULT_FILE

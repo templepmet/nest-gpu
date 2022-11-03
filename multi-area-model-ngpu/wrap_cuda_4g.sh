@@ -1,5 +1,0 @@
-#!/bin/bash -e
-
-GPUS_PER_NODE=4
-export CUDA_VISIBLE_DEVICES=$(( OMPI_COMM_WORLD_RANK % GPUS_PER_NODE ))
-$@

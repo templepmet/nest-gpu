@@ -54,6 +54,8 @@ scp_squid.sh
 
 **/simulation_result/?nodes*
 **/simulation_result/??nodes*
+**/simulation_result/_bk/?nodes*
+**/simulation_result/_bk/??nodes*
 log
 *.nsys-rep
 sim_info.json

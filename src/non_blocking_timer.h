@@ -2,11 +2,14 @@
 #define NON_BLOCKING_TIMER_H
 
 #include <cuda.h>
+#include <string>
 
 class NonBlockingTimer
 {
 
 private:
+  char *label;
+  
   // host
   double time_h;
   double start_h;
@@ -26,11 +29,11 @@ private:
   void startRecordDevice();
 
   void stopRecordDevice();
-  
+
   void _addElapsedTime();
 
 public:
-  NonBlockingTimer();
+  NonBlockingTimer(const char *label);
 
   ~NonBlockingTimer();
 

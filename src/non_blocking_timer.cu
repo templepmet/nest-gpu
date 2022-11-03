@@ -1,11 +1,15 @@
 #include "non_blocking_timer.h"
 
+#include <string>
 #include <cassert>
-#include <cuda.h>
 #include "getRealTime.h"
 
-NonBlockingTimer::NonBlockingTimer()
+#include <cuda.h>
+#include <nvtx3/nvToolsExt.h>
+
+NonBlockingTimer::NonBlockingTimer(const char *label)
 {
+  this->label = (char*)label;
   time_h = 0;
   start_h = 0;
   is_start_h = false;
@@ -69,14 +73,16 @@ void NonBlockingTimer::_addElapsedTime()
 
 void NonBlockingTimer::startRecord()
 {
+  nvtxRangePush(label);
   startRecordHost();
   startRecordDevice();
 }
 
 void NonBlockingTimer::stopRecord()
 {
-  stopRecordHost();
   stopRecordDevice();
+  stopRecordHost();
+  nvtxRangePop();
 }
 
 double NonBlockingTimer::getTimeHost()

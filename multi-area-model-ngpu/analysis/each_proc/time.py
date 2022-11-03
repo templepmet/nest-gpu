@@ -32,7 +32,7 @@ time_label = [
     "ExternalSpikeReset_time",
     "RevSpikeBufferUpdate_time",
     "BufferRecSpikeTimes_time",
-    "Else_time"
+    "Blocking_time"
 ]
 
 # definition dependeny of host/device include time
@@ -42,9 +42,13 @@ time_label = [
 # only last time = sum time
 procs = 32
 each_time = [None] * procs
+host_time = [None] * procs
+dev_time = [None] * procs
 sum_time = [0] * procs
 for i in range(procs):
     each_time[i] = {}
+    host_time[i] = {}
+    dev_time[i] = {}
 build_time = [0] * procs
 sim_time = [0] * procs
 
@@ -52,7 +56,10 @@ with open(result_file) as f:
     text = f.read()
 for p in range(procs):
     for lab in time_label:
-        each_time[p][lab] = float(re.findall(f"MPI rank {p} :   {lab}: (.*)\n", text)[-1])
+        times = re.findall(f"MPI rank {p} :   {lab}: (.*)\(def\), (.*)\(host\), (.*)\(device\)\n", text)[-1]
+        each_time[p][lab] = float(times[0])
+        host_time[p][lab] = float(times[1])
+        dev_time[p][lab] = float(times[2])
         build_time[p] = float(
             re.findall(f"MPI rank {p} : Building time: (.*)\n", text)[-1]
         )
@@ -60,11 +67,16 @@ for p in range(procs):
             re.findall(f"MPI rank {p} : Simulation time: (.*)\n", text)[-1]
         )
         sum_time[p] += each_time[p][lab]
+    print(f"Rank={p}: {each_time[p]}")
 max_time = max(sim_time)
 
-print(sim_time)
-print(sum_time)
-print((np.array(sim_time) - np.array(sum_time)) / np.array(sim_time))
+print(f"{each_time[14]=}")
+print(f"{host_time[14]=}")
+print(f"{dev_time[14]=}")
+
+# print(sim_time)
+# print(sum_time)
+# print((np.array(sim_time) - np.array(sum_time)) / np.array(sim_time))
 # reason for differ
 # building time is constant: build_real_time_ - start_real_time_
 # simulation time is variable: end_real_time_ - build_real_time_
