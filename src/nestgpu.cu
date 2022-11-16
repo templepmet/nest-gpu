@@ -469,18 +469,17 @@ int NESTGPU::EndSimulation()
     float copy_spike_time = copy_spike_timer->getTimeDevice();
     Blocking_time += copy_spike_timer->getTimeHost() - copy_spike_timer->getTimeDevice();
 
-    float ClearGetSpikeArrays_time = ClearGetSpikeArrays_timer->getTimeHost() + ClearGetSpikeArrays_timer->getTimeDevice();
+    float ClearGetSpikeArrays_time = ClearGetSpikeArrays_timer->getTimeHost();
     float NestedLoop_time = NestedLoop_timer->getTimeHost() + NestedLoop_timer->getTimeDevice();
     float GetSpike_time = GetSpike_timer->getTimeHost() + GetSpike_timer->getTimeDevice();
     float SpikeReset_time = SpikeReset_timer->getTimeHost() + SpikeReset_timer->getTimeDevice();
     float ExternalSpikeReset_time = ExternalSpikeReset_timer->getTimeHost() + ExternalSpikeReset_timer->getTimeDevice();
     float RevSpikeBufferUpdate_time = RevSpikeBufferUpdate_timer->getTimeHost(); // warning! this is blocking time
     float BufferRecSpikeTimes_time = BufferRecSpikeTimes_timer->getTimeHost();
-    Blocking_time += -ClearGetSpikeArrays_timer->getTimeDevice() -
-                  NestedLoop_timer->getTimeDevice() -
-                  GetSpike_timer->getTimeDevice() -
-                  SpikeReset_timer->getTimeDevice() -
-                  ExternalSpikeReset_timer->getTimeDevice();
+    Blocking_time += -NestedLoop_timer->getTimeDevice() -
+                      GetSpike_timer->getTimeDevice() -
+                      SpikeReset_timer->getTimeDevice() -
+                      ExternalSpikeReset_timer->getTimeDevice();
 
     printf("\n");
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "SpikeBufferUpdate_time", SpikeBufferUpdate_time, SpikeBufferUpdate_timer->getTimeHost(), SpikeBufferUpdate_timer->getTimeDevice());
@@ -502,13 +501,13 @@ int NESTGPU::EndSimulation()
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "BufferRecSpikeTimes_time", BufferRecSpikeTimes_time, BufferRecSpikeTimes_timer->getTimeHost(), BufferRecSpikeTimes_timer->getTimeDevice());
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "Blocking_time", Blocking_time, Blocking_timer->getTimeHost(), Blocking_timer->getTimeDevice());
   }
-  if (mpi_flag_ && verbosity_level_>=4) {
-    printf("%s  %s: %f\n", mpirank_str, "SendSpikeToRemote_MPI_time", connect_mpi_->SendSpikeToRemote_MPI_time_);
-    printf("%s  %s: %f\n", mpirank_str, "RecvSpikeFromRemote_MPI_time", connect_mpi_->RecvSpikeFromRemote_MPI_time_);
-    printf("%s  %s: %f\n", mpirank_str, "SendSpikeToRemote_CUDAcp_time", connect_mpi_->SendSpikeToRemote_CUDAcp_time_);
-    printf("%s  %s: %f\n", mpirank_str, "RecvSpikeFromRemote_CUDAcp_time", connect_mpi_->RecvSpikeFromRemote_CUDAcp_time_);
-    printf("%s  %s: %f\n", mpirank_str, "JoinSpike_time", connect_mpi_->JoinSpike_time_);
-  }
+  // if (mpi_flag_ && verbosity_level_>=4) {
+  //   printf("%s  %s: %f\n", mpirank_str, "SendSpikeToRemote_MPI_time", connect_mpi_->SendSpikeToRemote_MPI_time_);
+  //   printf("%s  %s: %f\n", mpirank_str, "RecvSpikeFromRemote_MPI_time", connect_mpi_->RecvSpikeFromRemote_MPI_time_);
+  //   printf("%s  %s: %f\n", mpirank_str, "SendSpikeToRemote_CUDAcp_time", connect_mpi_->SendSpikeToRemote_CUDAcp_time_);
+  //   printf("%s  %s: %f\n", mpirank_str, "RecvSpikeFromRemote_CUDAcp_time", connect_mpi_->RecvSpikeFromRemote_CUDAcp_time_);
+  //   printf("%s  %s: %f\n", mpirank_str, "JoinSpike_time", connect_mpi_->JoinSpike_time_);
+  // }
   
   if (verbosity_level_>=1) {
     printf("%s%s: %f\n", mpirank_str, "Building time", build_real_time_ - start_real_time_);
@@ -598,7 +597,7 @@ int NESTGPU::SimulationStep()
   copy_spike_timer->stopRecord();
   
   ClearGetSpikeArrays_timer->startRecord();
-  ClearGetSpikeArrays(); // cudaMemset is very slow
+  ClearGetSpikeArrays();
   ClearGetSpikeArrays_timer->stopRecord();
 
   if (n_spikes > 0) {
