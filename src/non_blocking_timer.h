@@ -3,13 +3,24 @@
 
 #include <cuda.h>
 #include <string>
+#include <queue>
+
+class CudaEventPair
+{
+public:
+  cudaEvent_t start;
+  cudaEvent_t stop;
+
+  CudaEventPair();
+  ~CudaEventPair();
+};
 
 class NonBlockingTimer
 {
 
 private:
   char *label;
-  
+
   // host
   double time_h;
   double start_h;
@@ -17,10 +28,9 @@ private:
 
   // device
   double time_d;
-  cudaEvent_t start_d;
-  cudaEvent_t stop_d;
   bool is_start_d;
-  bool is_async; // is running gpu
+  std::queue<CudaEventPair *> used_queue;
+  std::queue<CudaEventPair *> available_queue;
 
   void startRecordHost();
 
@@ -30,7 +40,7 @@ private:
 
   void stopRecordDevice();
 
-  void _addElapsedTime();
+  void _consumeRecord(bool is_sync);
 
 public:
   NonBlockingTimer(const char *label);

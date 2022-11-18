@@ -7,6 +7,20 @@
 #include <cuda.h>
 #include <nvtx3/nvToolsExt.h>
 
+
+CudaEventPair::CudaEventPair()
+{
+  cudaEventCreate(&start);
+  cudaEventCreate(&stop);
+}
+
+CudaEventPair::~CudaEventPair()
+{
+  cudaEventDestroy(start);
+  cudaEventDestroy(stop);
+}
+
+
 NonBlockingTimer::NonBlockingTimer(const char *label)
 {
   this->label = (char*)label;
@@ -14,16 +28,22 @@ NonBlockingTimer::NonBlockingTimer(const char *label)
   start_h = 0;
   is_start_h = false;
   time_d = 0;
-  cudaEventCreate(&start_d);
-  cudaEventCreate(&stop_d);
   is_start_d = false;
-  is_async = false;
+  available_queue.push(new CudaEventPair());
 }
 
 NonBlockingTimer::~NonBlockingTimer()
 {
-  cudaEventDestroy(start_d);
-  cudaEventDestroy(stop_d);
+  while (!available_queue.empty()) {
+    CudaEventPair *cep = available_queue.front();
+    available_queue.pop();
+    delete cep;
+  }
+  while (!used_queue.empty()) {
+    CudaEventPair *cep = used_queue.front();
+    used_queue.pop();
+    delete cep;
+  }
 }
 
 void NonBlockingTimer::startRecordHost()
@@ -44,31 +64,49 @@ void NonBlockingTimer::startRecordDevice()
 {
   assert(!is_start_d);
   is_start_d = true;
-  if (is_async)
-  {
-    _addElapsedTime();
-    is_async = false;
+
+  // consume
+  _consumeRecord(false);
+
+  // produce
+  if (available_queue.empty()) {
+    available_queue.push(new CudaEventPair());
   }
-  cudaEventRecord(start_d);
+
+  CudaEventPair *cep = available_queue.front();
+  cudaEventRecord(cep->start);
 }
 
 void NonBlockingTimer::stopRecordDevice()
 {
   assert(is_start_d);
   is_start_d = false;
-  cudaEventRecord(stop_d);
-  is_async = true;
+
+  assert(!available_queue.empty());
+  CudaEventPair *cep = available_queue.front();
+  available_queue.pop();
+  used_queue.push(cep);
+  cudaEventRecord(cep->stop);
 }
 
-void NonBlockingTimer::_addElapsedTime()
+void NonBlockingTimer::_consumeRecord(bool is_sync)
 {
   float milliseconds;
-  if (cudaEventQuery(stop_d) != cudaSuccess)
-  {
-    cudaEventSynchronize(stop_d);
+  while (!used_queue.empty()) {
+    CudaEventPair *cep = used_queue.front();
+    if (cudaEventQuery(cep->stop) != cudaSuccess) {
+      if (is_sync) {
+        cudaEventSynchronize(cep->stop);
+      }
+      else {
+        break;
+      }
+    }
+    cudaEventElapsedTime(&milliseconds, cep->start, cep->stop);
+    time_d += milliseconds / 1e3;
+    used_queue.pop();
+    available_queue.push(cep);
   }
-  cudaEventElapsedTime(&milliseconds, start_d, stop_d);
-  time_d += milliseconds / 1e3;
 }
 
 void NonBlockingTimer::startRecord()
@@ -94,11 +132,7 @@ double NonBlockingTimer::getTimeHost()
 double NonBlockingTimer::getTimeDevice()
 {
   assert(!is_start_d);
-  if (is_async)
-  {
-    _addElapsedTime();
-    is_async = false;
-  }
+  _consumeRecord(true);
   return time_d;
 }
 

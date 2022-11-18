@@ -30,8 +30,8 @@ fi
 date > $RESULT_FILE
 echo "PBS_JOBID: $PBS_JOBID" >> $RESULT_FILE
 
-N_SCALE=0.1
-K_SCALE=0.1
+N_SCALE=0.01
+K_SCALE=0.01
 T_SCALE=0.01
 PBS_NNODES=1
 PBS_NGPUS=8
@@ -43,18 +43,18 @@ time \
 	python run_theory.py \
 	>> $RESULT_FILE
 
-# time \
-# 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
-# 	./wrap_cuda.sh singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-# 	 python run_simulation.py \
-# 	>> $RESULT_FILE
-
 time \
 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
 	./wrap_cuda.sh 8 singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-	./wrap_nsys.sh 14 python run_simulation.py \
+	 python run_simulation.py \
 	>> $RESULT_FILE
-mv *.nsys-rep simulation_result/$LABEL/
+
+# time \
+# 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
+# 	./wrap_cuda.sh 8 singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
+# 	./wrap_nsys.sh 14 python run_simulation.py \
+# 	>> $RESULT_FILE
+# mv *.nsys-rep simulation_result/$LABEL/
 
 REF_LABEL="1nodes_8gpus_0.01scale_ref"
 diff -sq simulation_result/$REF_LABEL/recordings simulation_result/$LABEL/recordings >> $RESULT_FILE
