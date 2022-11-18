@@ -514,7 +514,24 @@ class Simulation:
                         for conn_id in conn_list:
                             conn_status_dict = ngpu.GetConnectionStatus(conn_id)
                             f.write(f"{conn_status_dict}\n")
-
+    
+    def dump_syndelay(self):
+        if self.mpirank == 0:
+            os.mkdir(os.path.join(self.data_dir, "syndelay"))
+            for source_area in self.areas:
+                for source_pop in source_area.populations:
+                    source_i0 = source_area.gids[source_pop][0]
+                    source_i1 = source_area.gids[source_pop][1]
+                    source_nodeseq = ngpu.NodeSeq(source_i0, source_i1 - source_i0 + 1)
+                    for target_area in self.areas:
+                        for target_pop in target_area.populations:
+                            target_i0 = target_area.gids[target_pop][0]
+                            target_i1 = target_area.gids[target_pop][1]
+                            target_nodeseq = ngpu.NodeSeq(target_i0, target_i1 - target_i0 + 1)
+                            syndelay_dist = ngpu.GetSyndelayDist(source_nodeseq, target_nodeseq) # impl
+                            # All Sum: Global Syndelay
+                            # distribution rank sum: possiblity of spike communication
+                            #  - get shared/distribution rank
 
 class Area:
     def __init__(self, simulation, network, name, rank):
