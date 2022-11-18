@@ -1,0 +1,3 @@
+[submodule "benchmark/osu-micro-benchmarks"]
+	path = benchmark/osu-micro-benchmarks
+	url = https://github.com/forresti/osu-micro-benchmarks.git
