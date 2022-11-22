@@ -103,6 +103,25 @@ const std::string kernel_bool_param_name[N_KERNEL_BOOL_PARAM] = {
   "print_time"
 };
 
+NonBlockingTimer *SpikeBufferUpdate_timer;
+NonBlockingTimer *poisson_generator_timer;
+NonBlockingTimer *neuron_Update_timer;
+NonBlockingTimer *copy_ext_spike_timer;
+NonBlockingTimer *SendExternalSpike_timer;
+NonBlockingTimer *SendSpikeToRemote_timer;
+NonBlockingTimer *RecvSpikeFromRemote_timer;
+NonBlockingTimer *CopySpikeFromRemote_timer;
+NonBlockingTimer *MpiBarrier_timer;
+NonBlockingTimer *copy_spike_timer;
+NonBlockingTimer *ClearGetSpikeArrays_timer;
+NonBlockingTimer *NestedLoop_timer;
+NonBlockingTimer *GetSpike_timer;
+NonBlockingTimer *SpikeReset_timer;
+NonBlockingTimer *ExternalSpikeReset_timer;
+NonBlockingTimer *RevSpikeBufferUpdate_timer;
+NonBlockingTimer *BufferRecSpikeTimes_timer;
+NonBlockingTimer *Blocking_timer;
+
 NESTGPU::NESTGPU()
 {
   random_generator_ = new curandGenerator_t;
@@ -614,7 +633,7 @@ int NESTGPU::SimulationStep()
   }
   poisson_generator_timer->stopRecord();
 
-  GetSpike_timer->startRecord();
+  GetSpike_timer->startRecordHost();
   for (unsigned int i=0; i<node_vect_.size(); i++) {
     if (node_vect_[i]->n_port_>0) {
 
@@ -622,7 +641,8 @@ int NESTGPU::SimulationStep()
       int grid_dim_y = node_vect_[i]->n_port_;
       dim3 grid_dim(grid_dim_x, grid_dim_y);
       //dim3 block_dim(1024,1);
-					    
+			
+      GetSpike_timer->startRecordDevice();
       GetSpikes<<<grid_dim, 1024>>> //block_dim>>>
 	      (node_vect_[i]->get_spike_array_, node_vect_[i]->n_node_,
 	       node_vect_[i]->n_port_,
@@ -633,9 +653,10 @@ int NESTGPU::SimulationStep()
 	       node_vect_[i]->port_input_arr_,
 	       node_vect_[i]->port_input_arr_step_,
 	       node_vect_[i]->port_input_port_step_);
+      GetSpike_timer->stopRecordDevice();
     }
   }
-  GetSpike_timer->stopRecord();
+  GetSpike_timer->stopRecordHost();
 
   SpikeReset_timer->startRecord();
   SpikeReset<<<1, 1>>>();

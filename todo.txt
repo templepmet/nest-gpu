@@ -1,5 +1,45 @@
+
 0．タイマ謎い
+cudaMemcpy以外に隠蔽部分が隠れていない可能性がある．ホスト部分にも隠れるところがある
+
 1．シナプス遅延時間分布の取得関数
 2．ノードを跨ぐシナプス遅延時間分布を調査
 3．スパイク通信中のシナプス遅延時間分布を調査
 4．Send, Recv実装変更
+
+
++copy_ext_spike_time: 0.182918(host)
+-NestedLoop_time: 0.064324(device)
+-poisson_generator_time: 0.042246(device)
+-GetSpike_time: 0.016458(device)
+-SpikeReset_time: 0.003101(device)
+-ExternalSpikeReset_time: 0.004810(device)
+-SpikeBufferUpdate_time: 0.051033(device)
+-neuron_Update_time: 0.074990(device)
+-copy_ext_spike_time: 0.009156(device)
+
++copy_spike_time: 0.013153(host)
+-copy_spike_time: 0.009835(device)
+
+
++copy_ext_spike_time: 64.216743(host) -> ok? only host
+-NestedLoop_time: 32.748167(device) -> ok? only device
+
+-poisson_generator_time: 10.024157(device) -> maybe ng
+
+-GetSpike_time: 4.591509(device) -> 0
+-SpikeReset_time: 0.805513(device) -> ok
+-ExternalSpikeReset_time: 1.210957(device) -> ok
+-SpikeBufferUpdate_time: 8.833797(device) -> ok
+
+-neuron_Update_time: 11.522988(device) -> maybe ng
+
+-copy_ext_spike_time: 1.827541(device) -> ok
+
++copy_spike_time: 2.880941(host)
+-copy_spike_time: 2.143533(device)
+
+GetSpikeのdeviceの測り方がまずい：Done
+
+timer をグローバルヘッダに定義，カーネル関数の両端とホストの計測を分ける
+ClearGetSpikeArrays_time もこれすれば治るのでは？

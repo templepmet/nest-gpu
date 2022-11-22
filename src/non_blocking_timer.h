@@ -32,6 +32,13 @@ private:
   std::queue<CudaEventPair *> used_queue;
   std::queue<CudaEventPair *> available_queue;
 
+  void _consumeRecord(bool is_sync);
+
+public:
+  NonBlockingTimer(const char *label);
+
+  ~NonBlockingTimer();
+
   void startRecordHost();
 
   void stopRecordHost();
@@ -39,13 +46,6 @@ private:
   void startRecordDevice();
 
   void stopRecordDevice();
-
-  void _consumeRecord(bool is_sync);
-
-public:
-  NonBlockingTimer(const char *label);
-
-  ~NonBlockingTimer();
 
   void startRecord();
 
@@ -57,5 +57,24 @@ public:
 
   double getTime();
 };
+
+extern NonBlockingTimer *SpikeBufferUpdate_timer;
+extern NonBlockingTimer *poisson_generator_timer;
+extern NonBlockingTimer *neuron_Update_timer;
+extern NonBlockingTimer *copy_ext_spike_timer;
+extern NonBlockingTimer *SendExternalSpike_timer;
+extern NonBlockingTimer *SendSpikeToRemote_timer;
+extern NonBlockingTimer *RecvSpikeFromRemote_timer;
+extern NonBlockingTimer *CopySpikeFromRemote_timer;
+extern NonBlockingTimer *MpiBarrier_timer;
+extern NonBlockingTimer *copy_spike_timer;
+extern NonBlockingTimer *ClearGetSpikeArrays_timer;
+extern NonBlockingTimer *NestedLoop_timer;
+extern NonBlockingTimer *GetSpike_timer;
+extern NonBlockingTimer *SpikeReset_timer;
+extern NonBlockingTimer *ExternalSpikeReset_timer;
+extern NonBlockingTimer *RevSpikeBufferUpdate_timer;
+extern NonBlockingTimer *BufferRecSpikeTimes_timer;
+extern NonBlockingTimer *Blocking_timer;
 
 #endif // NON_BLOCKING_TIMER_H;

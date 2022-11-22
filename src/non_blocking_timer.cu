@@ -48,6 +48,7 @@ NonBlockingTimer::~NonBlockingTimer()
 
 void NonBlockingTimer::startRecordHost()
 {
+  nvtxRangePush(label);
   assert(!is_start_h);
   is_start_h = true;
   start_h = getRealTime();
@@ -58,6 +59,7 @@ void NonBlockingTimer::stopRecordHost()
   assert(is_start_h);
   is_start_h = false;
   time_h += (getRealTime() - start_h);
+  nvtxRangePop();
 }
 
 void NonBlockingTimer::startRecordDevice()
@@ -111,7 +113,6 @@ void NonBlockingTimer::_consumeRecord(bool is_sync)
 
 void NonBlockingTimer::startRecord()
 {
-  nvtxRangePush(label);
   startRecordHost();
   startRecordDevice();
 }
@@ -120,7 +121,6 @@ void NonBlockingTimer::stopRecord()
 {
   stopRecordDevice();
   stopRecordHost();
-  nvtxRangePop();
 }
 
 double NonBlockingTimer::getTimeHost()
