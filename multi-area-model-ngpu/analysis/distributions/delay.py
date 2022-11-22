@@ -68,3 +68,7 @@ xtmp = np.arange(0, max_delay + 1, 5)
 plt.xticks(xtmp, xtmp / 10)
 plt.plot(x, y)
 plt.savefig(os.path.join(sim_dir, "delay.png"), bbox_inches="tight", pad_inches=0.2)
+
+print(y[1])
+print(sum(y))
+print(y[1] / sum(y))
