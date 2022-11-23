@@ -254,6 +254,9 @@ extern "C" {
   int *NESTGPU_GetSeqSeqConnections(int i_source, int n_source, int i_target,
 				      int n_target, int syn_group, int *n_conn);
 
+  int *NESTGPU_GetSyndelayHist(int i_source, int n_source, int i_target,
+                               int n_target, int syn_group, int *n_hist);
+
   int *NESTGPU_GetSeqGroupConnections(int i_source, int n_source,
 					int *i_target, int n_target,
 					int syn_group, int *n_conn);

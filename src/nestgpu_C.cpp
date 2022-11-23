@@ -1204,6 +1204,23 @@ extern "C"
     END_ERR_PROP return ret;
   }
 
+  int *NESTGPU_GetSyndelayHist(int i_source, int n_source, int i_target,
+                                    int n_target, int syn_group, int *n_hist)
+  {
+    int *ret = NULL;
+    BEGIN_ERR_PROP
+    {
+      std::vector<int> syndelay_hist =
+        NESTGPU_instance->GetSyndelayHist(i_source, n_source, i_target,
+                                          n_target, syn_group);
+      *n_hist = syndelay_hist.size();
+      int *tmp_hist = (int *)malloc((*n_hist) * sizeof(int));
+      memcpy(tmp_hist, syndelay_hist.data(), (*n_hist) * sizeof(int));
+      ret = tmp_hist;
+    }
+    END_ERR_PROP return ret;
+  }
+
   int *NESTGPU_GetSeqGroupConnections(int i_source, int n_source,
                                       int *i_target, int n_target,
                                       int syn_group, int *n_conn)

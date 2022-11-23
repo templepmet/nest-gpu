@@ -1536,6 +1536,12 @@ std::vector<ConnectionId> NESTGPU::GetConnections(std::vector<int> source,
 					       syn_group);
 }
 
+std::vector<int> NESTGPU::GetSyndelayHist(int i_source, int n_source,
+                                          int i_target, int n_target,
+                                          int syn_group) {
+  return net_connection_->GetSyndelayHist<int>(i_source, n_source, i_target, n_target, syn_group);    
+}
+
 int NESTGPU::ActivateSpikeCount(int i_node, int n_node)
 {
   CheckUncalibrated("Spike count must be activated before calibration");

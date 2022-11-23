@@ -651,6 +651,10 @@ public:
   std::vector<ConnectionId> GetConnections(std::vector<int> source,
                                            std::vector<int> target,
                                            int syn_group = -1);
+  
+  std::vector<int> GetSyndelayHist(int i_source, int n_source,
+                                   int i_target, int n_target,
+                                   int syn_group = -1);
 
   int CreateSynGroup(std::string model_name);
 

@@ -1851,6 +1851,29 @@ def GetConnections(source=None, target=None, syn_group=-1):
         raise ValueError(GetErrorMessage())
     return ret
 
+
+NESTGPU_GetSyndelayHist = _nestgpu.NESTGPU_GetSyndelayHist
+NESTGPU_GetSyndelayHist.argtypes = (ctypes.c_int, ctypes.c_int,
+                                    ctypes.c_int, ctypes.c_int,
+                                    ctypes.c_int, c_int_p)
+NESTGPU_GetSyndelayHist.restype = c_int_p
+def GetSyndelayHist(source=None, target=None, syn_group=-1):
+    if type(source) != NodeSeq or type(target) != NodeSeq:
+        raise ValueError("Unknown source & target type")
+    
+    n_hist = ctypes.c_int(0)
+    hist_arr = NESTGPU_GetSyndelayHist(source.i0, source.n,
+                                       target.i0, target.n,
+                                       syn_group, ctypes.byref(n_hist))
+    hist_list = []
+    for i in range(n_hist.value):
+        hist_list.append(hist_arr[i])
+    ret = hist_list
+
+    if GetErrorCode() != 0:
+        raise ValueError(GetErrorMessage())
+    return ret
+
  
 NESTGPU_GetConnectionStatus = _nestgpu.NESTGPU_GetConnectionStatus
 NESTGPU_GetConnectionStatus.argtypes = (ctypes.c_int, ctypes.c_int,

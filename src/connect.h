@@ -129,6 +129,10 @@ class NetConnection
 					     int *i_target, int n_target,
 					     int syn_group=-1);
 
+  template<class T>
+  std::vector<int> GetSyndelayHist(T source, int n_source,
+					     int i_target, int n_target,
+					     int syn_group=-1);
 };
 
 template<class T>
@@ -145,14 +149,14 @@ std::vector<ConnectionId> NetConnection::GetConnections(T source,
     for (unsigned int id=0; id<conn.size(); id++) {
       std::vector<TargetSyn> tv = conn[id].target_vect;
       for (unsigned int i=0; i<tv.size(); i++) {
-	int itg = tv[i].node;
-	if ((itg>=i_target) && (itg<i_target+n_target)) {
-	  ConnectionId conn_id;
-	  conn_id.i_source_ = i_source;
-	  conn_id.i_group_ = id;
-	  conn_id.i_conn_ = i;
-	  conn_id_vect.push_back(conn_id);
-	}
+	      int itg = tv[i].node;
+	      if ((itg>=i_target) && (itg<i_target+n_target)) {
+	        ConnectionId conn_id;
+	        conn_id.i_source_ = i_source;
+	        conn_id.i_group_ = id;
+	        conn_id.i_conn_ = i;
+	        conn_id_vect.push_back(conn_id);
+	      }
       }
     }
   }
@@ -177,19 +181,19 @@ std::vector<ConnectionId> NetConnection::GetConnections(T source,
     for (unsigned int id=0; id<conn.size(); id++) {
       std::vector<TargetSyn> tv = conn[id].target_vect;
       for (unsigned int i=0; i<tv.size(); i++) {
-	int itg = tv[i].node;
-	// https://riptutorial.com/cplusplus/example/7270/using-a-sorted-vector-for-fast-element-lookup
-	// check if itg is in target_vect
-	std::vector<int>::iterator it = std::lower_bound(target_vect.begin(),
-							 target_vect.end(),
-							 itg);
-	if (it != target_vect.end() && *it == itg) { // we found the element
-	  ConnectionId conn_id;
-	  conn_id.i_source_ = i_source;
-	  conn_id.i_group_ = id;
-	  conn_id.i_conn_ = i;
-	  conn_id_vect.push_back(conn_id);
-	}
+	      int itg = tv[i].node;
+	      // https://riptutorial.com/cplusplus/example/7270/using-a-sorted-vector-for-fast-element-lookup
+	      // check if itg is in target_vect
+	      std::vector<int>::iterator it = std::lower_bound(target_vect.begin(),
+	      						 target_vect.end(),
+	      						 itg);
+	      if (it != target_vect.end() && *it == itg) { // we found the element
+	        ConnectionId conn_id;
+	        conn_id.i_source_ = i_source;
+	        conn_id.i_group_ = id;
+	        conn_id.i_conn_ = i;
+	        conn_id_vect.push_back(conn_id);
+	      }
       }
     }
   }
@@ -197,5 +201,33 @@ std::vector<ConnectionId> NetConnection::GetConnections(T source,
   return conn_id_vect;
 }
 
+template<class T>
+std::vector<int> NetConnection::GetSyndelayHist(T source,
+							int n_source,
+							int i_target,
+							int n_target,
+							int /*syn_group*/)
+{
+  std::vector<int> syndelay_hist;
+  for (int is=0; is<n_source; is++) {
+    int i_source = GetINode<T>(source, is);
+    std::vector<ConnGroup> &conn = connection_[i_source];
+    for (unsigned int id=0; id<conn.size(); id++) {
+      std::vector<TargetSyn> tv = conn[id].target_vect;
+      int delay = conn[id].delay;
+      for (unsigned int i=0; i<tv.size(); i++) {
+	      int itg = tv[i].node;
+	      if ((itg>=i_target) && (itg<i_target+n_target)) {
+          if (syndelay_hist.size() < delay + 1) {
+            syndelay_hist.resize(delay + 1, 0);
+          }
+          syndelay_hist[delay]++;
+	      }
+      }
+    }
+  }
+  
+  return syndelay_hist;
+}
 
 #endif
