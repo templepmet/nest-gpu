@@ -21,7 +21,6 @@
 
 
 
-
 #include <config.h>
 #include <stdio.h>
 #include <stdint.h>
@@ -66,6 +65,7 @@ __constant__ double NESTGPUTime;
 __constant__ long long NESTGPUTimeIdx;
 __constant__ float NESTGPUTimeResolution;
 
+
 enum KernelFloatParamIndexes {
   i_time_resolution = 0,
   i_max_spike_num_fact,
@@ -102,25 +102,6 @@ const std::string kernel_int_param_name[N_KERNEL_INT_PARAM] = {
 const std::string kernel_bool_param_name[N_KERNEL_BOOL_PARAM] = {
   "print_time"
 };
-
-NonBlockingTimer *SpikeBufferUpdate_timer;
-NonBlockingTimer *poisson_generator_timer;
-NonBlockingTimer *neuron_Update_timer;
-NonBlockingTimer *copy_ext_spike_timer;
-NonBlockingTimer *SendExternalSpike_timer;
-NonBlockingTimer *SendSpikeToRemote_timer;
-NonBlockingTimer *RecvSpikeFromRemote_timer;
-NonBlockingTimer *CopySpikeFromRemote_timer;
-NonBlockingTimer *MpiBarrier_timer;
-NonBlockingTimer *copy_spike_timer;
-NonBlockingTimer *ClearGetSpikeArrays_timer;
-NonBlockingTimer *NestedLoop_timer;
-NonBlockingTimer *GetSpike_timer;
-NonBlockingTimer *SpikeReset_timer;
-NonBlockingTimer *ExternalSpikeReset_timer;
-NonBlockingTimer *RevSpikeBufferUpdate_timer;
-NonBlockingTimer *BufferRecSpikeTimes_timer;
-NonBlockingTimer *Blocking_timer;
 
 NESTGPU::NESTGPU()
 {
@@ -488,14 +469,15 @@ int NESTGPU::EndSimulation()
     float copy_spike_time = copy_spike_timer->getTimeDevice();
     Blocking_time += copy_spike_timer->getTimeHost() - copy_spike_timer->getTimeDevice();
 
-    float ClearGetSpikeArrays_time = ClearGetSpikeArrays_timer->getTimeHost();
+    float ClearGetSpikeArrays_time = ClearGetSpikeArrays_timer->getTimeHost() + ClearGetSpikeArrays_timer->getTimeDevice();
     float NestedLoop_time = NestedLoop_timer->getTimeHost() + NestedLoop_timer->getTimeDevice();
     float GetSpike_time = GetSpike_timer->getTimeHost() + GetSpike_timer->getTimeDevice();
     float SpikeReset_time = SpikeReset_timer->getTimeHost() + SpikeReset_timer->getTimeDevice();
     float ExternalSpikeReset_time = ExternalSpikeReset_timer->getTimeHost() + ExternalSpikeReset_timer->getTimeDevice();
     float RevSpikeBufferUpdate_time = RevSpikeBufferUpdate_timer->getTimeHost(); // warning! this is blocking time
     float BufferRecSpikeTimes_time = BufferRecSpikeTimes_timer->getTimeHost();
-    Blocking_time += -NestedLoop_timer->getTimeDevice() -
+    Blocking_time += -ClearGetSpikeArrays_timer->getTimeDevice() -
+                      NestedLoop_timer->getTimeDevice() -
                       GetSpike_timer->getTimeDevice() -
                       SpikeReset_timer->getTimeDevice() -
                       ExternalSpikeReset_timer->getTimeDevice();
@@ -547,13 +529,13 @@ int NESTGPU::SimulationStep()
   SpikeBufferUpdate<<<(net_connection_->connection_.size()+1023)/1024, 1024>>>();
   SpikeBufferUpdate_timer->stopRecord();
 
-  if (n_poiss_node_>0) {
+  if (n_poiss_node_>0) { // not through
     poisson_generator_timer->startRecord();
     poiss_generator_->Update(Nt_-it_);
     poisson_generator_timer->stopRecord();
   }
 
-  neuron_Update_timer->startRecord();
+  neuron_Update_timer->startRecordHost();
   neural_time_ = neur_t0_ + (double)time_resolution_*(it_+1);
   gpuErrchk(cudaMemcpyToSymbolAsync(NESTGPUTime, &neural_time_, sizeof(double)));
   long long time_idx = (int)round(neur_t0_/time_resolution_) + it_ + 1;
@@ -566,11 +548,13 @@ int NESTGPU::SimulationStep()
       ResetConnectionSpikeTimeDown(net_connection_); // unnecessary cudaDeviceSynchronize
     }
   }
+  neuron_Update_timer->startRecordDevice();
   for (unsigned int i=0; i<node_vect_.size(); i++) {
     node_vect_[i]->Update(it_, neural_time_);
   }
+  neuron_Update_timer->stopRecordDevice();
   multimeter_->WriteRecords(neural_time_);
-  neuron_Update_timer->stopRecord();
+  neuron_Update_timer->stopRecordHost();
 
 #ifdef HAVE_MPI
   if (mpi_flag_) {
@@ -615,9 +599,9 @@ int NESTGPU::SimulationStep()
 		       cudaMemcpyDeviceToHost));
   copy_spike_timer->stopRecord();
   
-  ClearGetSpikeArrays_timer->startRecord();
+  ClearGetSpikeArrays_timer->startRecordHost();
   ClearGetSpikeArrays();
-  ClearGetSpikeArrays_timer->stopRecord();
+  ClearGetSpikeArrays_timer->stopRecordHost();
 
   if (n_spikes > 0) {
     NestedLoop_timer->startRecord();
@@ -625,13 +609,13 @@ int NESTGPU::SimulationStep()
     NestedLoop_timer->stopRecord();
   }
 
-  poisson_generator_timer->startRecord();
+  poisson_generator_timer->startRecordHost();
   for (unsigned int i=0; i<node_vect_.size(); i++) {
     if (node_vect_[i]->has_dir_conn_) {
-      node_vect_[i]->SendDirectSpikes(neural_time_, time_resolution_/1000.0);
+      node_vect_[i]->SendDirectSpikes(neural_time_, time_resolution_/1000.0); // recordDevice
     }
   }
-  poisson_generator_timer->stopRecord();
+  poisson_generator_timer->stopRecordHost();
 
   GetSpike_timer->startRecordHost();
   for (unsigned int i=0; i<node_vect_.size(); i++) {

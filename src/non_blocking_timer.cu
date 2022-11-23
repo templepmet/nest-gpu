@@ -8,16 +8,35 @@
 #include <nvtx3/nvToolsExt.h>
 
 
+NonBlockingTimer *SpikeBufferUpdate_timer;
+NonBlockingTimer *poisson_generator_timer;
+NonBlockingTimer *neuron_Update_timer;
+NonBlockingTimer *copy_ext_spike_timer;
+NonBlockingTimer *SendExternalSpike_timer;
+NonBlockingTimer *SendSpikeToRemote_timer;
+NonBlockingTimer *RecvSpikeFromRemote_timer;
+NonBlockingTimer *CopySpikeFromRemote_timer;
+NonBlockingTimer *MpiBarrier_timer;
+NonBlockingTimer *copy_spike_timer;
+NonBlockingTimer *ClearGetSpikeArrays_timer;
+NonBlockingTimer *NestedLoop_timer;
+NonBlockingTimer *GetSpike_timer;
+NonBlockingTimer *SpikeReset_timer;
+NonBlockingTimer *ExternalSpikeReset_timer;
+NonBlockingTimer *RevSpikeBufferUpdate_timer;
+NonBlockingTimer *BufferRecSpikeTimes_timer;
+NonBlockingTimer *Blocking_timer;
+
 CudaEventPair::CudaEventPair()
 {
-  cudaEventCreate(&start);
-  cudaEventCreate(&stop);
+  cudaEventCreate(&start_e);
+  cudaEventCreate(&stop_e);
 }
 
 CudaEventPair::~CudaEventPair()
 {
-  cudaEventDestroy(start);
-  cudaEventDestroy(stop);
+  cudaEventDestroy(start_e);
+  cudaEventDestroy(stop_e);
 }
 
 
@@ -76,7 +95,7 @@ void NonBlockingTimer::startRecordDevice()
   }
 
   CudaEventPair *cep = available_queue.front();
-  cudaEventRecord(cep->start);
+  cudaEventRecord(cep->start_e);
 }
 
 void NonBlockingTimer::stopRecordDevice()
@@ -88,7 +107,7 @@ void NonBlockingTimer::stopRecordDevice()
   CudaEventPair *cep = available_queue.front();
   available_queue.pop();
   used_queue.push(cep);
-  cudaEventRecord(cep->stop);
+  cudaEventRecord(cep->stop_e);
 }
 
 void NonBlockingTimer::_consumeRecord(bool is_sync)
@@ -96,15 +115,15 @@ void NonBlockingTimer::_consumeRecord(bool is_sync)
   float milliseconds;
   while (!used_queue.empty()) {
     CudaEventPair *cep = used_queue.front();
-    if (cudaEventQuery(cep->stop) != cudaSuccess) {
+    if (cudaEventQuery(cep->stop_e) != cudaSuccess) {
       if (is_sync) {
-        cudaEventSynchronize(cep->stop);
+        cudaEventSynchronize(cep->stop_e);
       }
       else {
         break;
       }
     }
-    cudaEventElapsedTime(&milliseconds, cep->start, cep->stop);
+    cudaEventElapsedTime(&milliseconds, cep->start_e, cep->stop_e);
     time_d += milliseconds / 1e3;
     used_queue.pop();
     available_queue.push(cep);

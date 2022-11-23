@@ -5,11 +5,12 @@
 #include <string>
 #include <queue>
 
+
 class CudaEventPair
 {
 public:
-  cudaEvent_t start;
-  cudaEvent_t stop;
+  cudaEvent_t start_e;
+  cudaEvent_t stop_e;
 
   CudaEventPair();
   ~CudaEventPair();
@@ -17,7 +18,6 @@ public:
 
 class NonBlockingTimer
 {
-
 private:
   char *label;
 

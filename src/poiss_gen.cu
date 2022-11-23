@@ -34,6 +34,7 @@
 #include "neuron_models.h"
 #include "poiss_gen.h"
 #include "poiss_gen_variables.h"
+#include "non_blocking_timer.h"
 
 extern __constant__ NodeGroupStruct NodeGroupArray[];
 extern __device__ signed char *NodeGroupMap;
@@ -157,9 +158,12 @@ int poiss_gen::SendDirectSpikes(double t, float time_step)
     grid_dim_y = (n_dir_conn_ + grid_dim_x*1024 -1) / (grid_dim_x*1024);
   }
   dim3 numBlocks(grid_dim_x, grid_dim_y);
+
+  poisson_generator_timer->startRecordDevice();
   PoissGenSendSpikeKernel<<<numBlocks, 1024>>>(d_curand_state_, t, time_step,
 					       param_arr_, n_param_,
 					       d_dir_conn_array_, n_dir_conn_);
+  poisson_generator_timer->stopRecordDevice();
   
   // gpuErrchk( cudaPeekAtLastError() );
   // gpuErrchk( cudaDeviceSynchronize() ); // unnecessary

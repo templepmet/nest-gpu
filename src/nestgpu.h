@@ -45,7 +45,6 @@ struct curandGenerator_st;
 typedef struct curandGenerator_st *curandGenerator_t;
 class ConnSpec;
 class SynSpec;
-class NonBlockingTimer;
 
 class Sequence
 {
@@ -239,25 +238,6 @@ class NESTGPU
                                    int outdegree, SynSpec &syn_spec);
 #endif
   int ConnectRemoteNodes();
-
-  NonBlockingTimer *SpikeBufferUpdate_timer;
-  NonBlockingTimer *poisson_generator_timer;
-  NonBlockingTimer *neuron_Update_timer;
-  NonBlockingTimer *copy_ext_spike_timer;
-  NonBlockingTimer *SendExternalSpike_timer;
-  NonBlockingTimer *SendSpikeToRemote_timer;
-  NonBlockingTimer *RecvSpikeFromRemote_timer;
-  NonBlockingTimer *CopySpikeFromRemote_timer;
-  NonBlockingTimer *MpiBarrier_timer;
-  NonBlockingTimer *copy_spike_timer;
-  NonBlockingTimer *ClearGetSpikeArrays_timer;
-  NonBlockingTimer *NestedLoop_timer;
-  NonBlockingTimer *GetSpike_timer;
-  NonBlockingTimer *SpikeReset_timer;
-  NonBlockingTimer *ExternalSpikeReset_timer;
-  NonBlockingTimer *RevSpikeBufferUpdate_timer;
-  NonBlockingTimer *BufferRecSpikeTimes_timer;
-  NonBlockingTimer *Blocking_timer;
 
   bool first_simulation_flag_;
 
