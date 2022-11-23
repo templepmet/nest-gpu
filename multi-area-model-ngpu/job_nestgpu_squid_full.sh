@@ -45,7 +45,7 @@ time \
 
 time \
 	mpirun $NQSV_MPIOPTS -np 32 -npernode 4 --map-by core --bind-to core --display-devel-map \
-	./wrap_cuda.sh 8 singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
+	./wrap_cuda.sh 4 singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
 	 python run_simulation.py \
 	>> $RESULT_FILE
 

@@ -14,13 +14,12 @@ import nestgpu as ngpu
 
 size = MPI.COMM_WORLD.Get_size()
 rank = MPI.COMM_WORLD.Get_rank()
-
+local_comm = MPI.COMM_WORLD.Split_type(MPI.COMM_TYPE_SHARED)
+local_size = local_comm.Get_size()
+local_rank = local_comm.Get_rank()
 
 def print_mpi_info():
     name = MPI.Get_processor_name()
-    local_comm = MPI.COMM_WORLD.Split_type(MPI.COMM_TYPE_SHARED)
-    local_size = local_comm.Get_size()
-    local_rank = local_comm.Get_rank()
     compute_nodes = size // local_size
 
     print(
@@ -42,7 +41,8 @@ def print_mem_info():
     print(f"MPI Rank {rank} : Host Memory : ", getMemInfo())
 
     pynvml.nvmlInit()
-    handle = pynvml.nvmlDeviceGetHandleByIndex(0) # wrong
+    numGpus = pynvml.nvmlDeviceGetCount()
+    handle = pynvml.nvmlDeviceGetHandleByIndex(local_rank % numGpus)
     nvmlMemInfo = pynvml.nvmlDeviceGetMemoryInfo(handle)
     print(f"MPI Rank {rank} : GPU Memory : ", nvmlMemInfo)
     pynvml.nvmlShutdown()
