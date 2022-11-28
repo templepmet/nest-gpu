@@ -516,34 +516,40 @@ class Simulation:
                             f.write(f"{conn_status_dict}\n")
     
     def dump_syndelay(self):
+        def add_hist(h1, h2):
+            if len(h1) < len(h2):
+                h1 += [0] * (len(h2) - len(h1))
+            for i in range(len(h2)):
+                h1[i] += h2[i]
+
+        if self.mpirank == 0:
+            os.mkdir(os.path.join(self.data_dir, "syndelay"))
         MPI.COMM_WORLD.barrier()
 
-        total_syndelay = []
+        json_data={}
         source_area = self.areas[self.mpirank]
-        for source_pop in source_area.populations:
-            source_i0 = source_area.gids[source_pop][0]
-            source_i1 = source_area.gids[source_pop][1]
-            source_nodeseq = ngpu.NodeSeq(source_i0, source_i1 - source_i0 + 1)
-            for target_area in self.areas:
+        for target_area in self.areas:
+            sum_hist = []
+            for source_pop in source_area.populations:
+                source_i0 = source_area.gids[source_pop][0]
+                source_i1 = source_area.gids[source_pop][1]
+                source_nodeseq = ngpu.NodeSeq(source_i0, source_i1 - source_i0 + 1)
                 for target_pop in target_area.populations:
                     target_i0 = target_area.gids[target_pop][0]
                     target_i1 = target_area.gids[target_pop][1]
                     target_nodeseq = ngpu.NodeSeq(target_i0, target_i1 - target_i0 + 1)
-                    syndelay_hist = ngpu.GetSyndelayHist(source_nodeseq, target_nodeseq)
-                    if len(total_syndelay) < len(syndelay_hist):
-                        total_syndelay += [0] * (len(syndelay_hist) - len(total_syndelay))
-                    for i in range(len(syndelay_hist)):
-                        total_syndelay[i] += syndelay_hist[i]
+                    hist = ngpu.GetSyndelayHist(source_nodeseq, target_nodeseq)
+                    if self.mpirank == 0:
+                        print(f"{target_area.name=}, {source_pop=}, {target_pop=}: {source_i0=}, {source_i1=}, {target_i0=}, {target_i1=}: {hist=}")
+                    add_hist(sum_hist, hist)
+            json_data[target_area.name] = sum_hist
 
-                    # distribution rank sum: possiblity of spike communication
-                    #  - get shared/distribution rank
-        
-        # reduce rank 0 -> total syndelay? or write each file
-
-        if self.mpirank == 0:
-            with open(os.path.join(self.data_dir, "syndelay.json"), "w") as f:
-                data = {"total": total_syndelay}
-                json.dump(data, f)
+        with open(os.path.join(
+                self.data_dir,
+                "syndelay",
+                f"syndelay_from_{source_area.name}.json",
+            ), "w") as f:
+            json.dump(json_data, f)
 
 class Area:
     def __init__(self, simulation, network, name, rank):

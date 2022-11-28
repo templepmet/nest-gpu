@@ -99,5 +99,6 @@
 		"sstream": "cpp"
 	},
 	"git.ignoreLimitWarning": true,
-	"cmake.sourceDirectory": "${workspaceFolder}/nest-simulator-3.3"
+	"cmake.sourceDirectory": "${workspaceFolder}/nest-simulator-3.3",
+	"C_Cpp.dimInactiveRegions": false
 }

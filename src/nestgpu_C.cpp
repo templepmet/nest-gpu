@@ -1205,14 +1205,14 @@ extern "C"
   }
 
   int *NESTGPU_GetSyndelayHist(int i_source, int n_source, int i_target,
-                                    int n_target, int syn_group, int *n_hist)
+                               int n_target, int syn_group, int *n_hist)
   {
     int *ret = NULL;
     BEGIN_ERR_PROP
     {
       std::vector<int> syndelay_hist =
-        NESTGPU_instance->GetSyndelayHist(i_source, n_source, i_target,
-                                          n_target, syn_group);
+          NESTGPU_instance->GetSyndelayHist(i_source, n_source, i_target,
+                                            n_target, syn_group);
       *n_hist = syndelay_hist.size();
       int *tmp_hist = (int *)malloc((*n_hist) * sizeof(int));
       memcpy(tmp_hist, syndelay_hist.data(), (*n_hist) * sizeof(int));
@@ -1531,60 +1531,82 @@ extern "C"
   }
 
   int NESTGPU_GetNBoolParam()
-  { int ret = 0; BEGIN_ERR_PROP {
-    ret = NESTGPU_instance->GetNBoolParam();
-  } END_ERR_PROP return ret; }
-
-  
-  char **NESTGPU_GetBoolParamNames()
-  { char **ret = NULL; BEGIN_ERR_PROP {
-    std::vector<std::string> name_vect =
-      NESTGPU_instance->GetBoolParamNames();
-    char **name_array = (char**)malloc(name_vect.size()
-				       *sizeof(char*));
-    for (unsigned int i=0; i<name_vect.size(); i++) {
-      char *param_name = (char*)malloc((name_vect[i].length() + 1)
-				       *sizeof(char));
-      
-      strcpy(param_name, name_vect[i].c_str());
-      name_array[i] = param_name;
+  {
+    int ret = 0;
+    BEGIN_ERR_PROP
+    {
+      ret = NESTGPU_instance->GetNBoolParam();
     }
-    ret = name_array;
-    
-  } END_ERR_PROP return ret; }
+    END_ERR_PROP return ret;
+  }
 
-  
+  char **NESTGPU_GetBoolParamNames()
+  {
+    char **ret = NULL;
+    BEGIN_ERR_PROP
+    {
+      std::vector<std::string> name_vect =
+          NESTGPU_instance->GetBoolParamNames();
+      char **name_array = (char **)malloc(name_vect.size() * sizeof(char *));
+      for (unsigned int i = 0; i < name_vect.size(); i++)
+      {
+        char *param_name = (char *)malloc((name_vect[i].length() + 1) * sizeof(char));
+
+        strcpy(param_name, name_vect[i].c_str());
+        name_array[i] = param_name;
+      }
+      ret = name_array;
+    }
+    END_ERR_PROP return ret;
+  }
+
   int NESTGPU_IsBoolParam(char *param_name)
-  { int ret = 0; BEGIN_ERR_PROP {
-    std::string param_name_str = std::string(param_name);
-    
-    ret = NESTGPU_instance->IsBoolParam(param_name_str);
-  } END_ERR_PROP return ret; }
+  {
+    int ret = 0;
+    BEGIN_ERR_PROP
+    {
+      std::string param_name_str = std::string(param_name);
 
-  
+      ret = NESTGPU_instance->IsBoolParam(param_name_str);
+    }
+    END_ERR_PROP return ret;
+  }
+
   int NESTGPU_GetBoolParamIdx(char *param_name)
-  { int ret = 0; BEGIN_ERR_PROP {
-    std::string param_name_str = std::string(param_name);
-    
-    ret = NESTGPU_instance->GetBoolParamIdx(param_name_str);
-  } END_ERR_PROP return ret; }
+  {
+    int ret = 0;
+    BEGIN_ERR_PROP
+    {
+      std::string param_name_str = std::string(param_name);
 
-  
+      ret = NESTGPU_instance->GetBoolParamIdx(param_name_str);
+    }
+    END_ERR_PROP return ret;
+  }
+
   bool NESTGPU_GetBoolParam(char *param_name)
-  { bool ret = true; BEGIN_ERR_PROP {
-    std::string param_name_str = std::string(param_name);
-    
-    ret = NESTGPU_instance->GetBoolParam(param_name_str);
-  } END_ERR_PROP return ret; }
+  {
+    bool ret = true;
+    BEGIN_ERR_PROP
+    {
+      std::string param_name_str = std::string(param_name);
 
-  
+      ret = NESTGPU_instance->GetBoolParam(param_name_str);
+    }
+    END_ERR_PROP return ret;
+  }
+
   int NESTGPU_SetBoolParam(char *param_name, bool val)
-  { int ret = 0; BEGIN_ERR_PROP {
-    std::string param_name_str = std::string(param_name);
-    
-    ret = NESTGPU_instance->SetBoolParam(param_name_str, val);
-  } END_ERR_PROP return ret; }
+  {
+    int ret = 0;
+    BEGIN_ERR_PROP
+    {
+      std::string param_name_str = std::string(param_name);
 
+      ret = NESTGPU_instance->SetBoolParam(param_name_str, val);
+    }
+    END_ERR_PROP return ret;
+  }
 
   int NESTGPU_GetNFloatParam()
   {
