@@ -23,6 +23,7 @@
 
 #include <iostream>
 #include <vector>
+#include <set>
 #include <string>
 #include <algorithm>
 #include <numeric>
@@ -157,6 +158,7 @@ class NESTGPU
 
   int verbosity_level_;
   bool print_time_;
+  std::set<std::string> debug_mode_set_;
 
   std::vector<RemoteConnection> remote_connection_vect_;
   std::vector<int> ext_neuron_input_spike_node_;
@@ -276,6 +278,17 @@ public:
   {
     print_time_ = print_time;
     return 0;
+  }
+
+  inline int AddDebugMode(char *debug_mode)
+  {
+    debug_mode_set_.insert(std::string(debug_mode));
+    return 0;
+  }
+
+  inline bool isDebugMode(std::string debug_mode)
+  {
+    return debug_mode_set_.find(debug_mode) != debug_mode_set_.end();
   }
 
   int SetMaxSpikeBufferSize(int max_size);
@@ -476,6 +489,8 @@ public:
 
   int Calibrate();
 
+  int Debug();
+
   int Simulate();
 
   int Simulate(float sim_time);
@@ -651,10 +666,6 @@ public:
   std::vector<ConnectionId> GetConnections(std::vector<int> source,
                                            std::vector<int> target,
                                            int syn_group = -1);
-  
-  std::vector<int> GetSyndelayHist(int i_source, int n_source,
-                                   int i_target, int n_target,
-                                   int syn_group = -1);
 
   int CreateSynGroup(std::string model_name);
 

@@ -28,6 +28,8 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <fstream>
+#include <filesystem>
 #include <curand.h>
 #include "spike_buffer.h"
 #include "cuda_error.h"
@@ -372,6 +374,54 @@ int NESTGPU::Calibrate()
   gpuErrchk(cudaMemcpyToSymbolAsync(NESTGPUTimeResolution, &time_resolution_,
 			       sizeof(float)));
 ///////////////////////////////////
+
+  Debug(); // only after calibrate
+
+  return 0;
+}
+
+int NESTGPU::Debug() {
+  if (isDebugMode("dump_syndelay")) {
+    std::filesystem::create_directory("syndelay");
+    // local
+    {
+      std::vector<long long> delay_hist;
+      for (std::vector<ConnGroup> &conn : net_connection_->connection_) { // change syngroup?
+        for (ConnGroup &cg : conn) {
+          int delay = cg.delay;
+          if (delay_hist.size() < delay + 1) {
+            delay_hist.resize(delay + 1, 0);
+          }
+          delay_hist[delay] += cg.target_vect.size();
+        }
+      }
+      std::string filename = "syndelay/local_" + std::to_string(MpiId()) + ".txt";
+      std::ofstream ofs(filename);
+      for (int i = 0; i < delay_hist.size(); ++i) {
+        if (i > 0) ofs << ", ";
+        ofs << delay_hist[i];
+      }
+      ofs.close();
+    }
+    // remote
+    {
+      std::vector<long long> delay_hist;
+      for (RemoteConnection &rc : remote_connection_vect_) {
+        int delay = int(std::round(rc.delay / time_resolution_)) - 1;
+        if (delay_hist.size() < delay + 1) {
+          delay_hist.resize(delay + 1, 0);
+        }
+        delay_hist[delay]++;
+      }
+      std::string filename = "syndelay/remote_" + std::to_string(MpiId()) + ".txt";
+      std::ofstream ofs(filename);
+      for (int i = 0; i < delay_hist.size(); ++i) {
+        if (i > 0) ofs << ", ";
+        ofs << delay_hist[i];
+      }
+      ofs.close();
+    }
+  }
 
   return 0;
 }
@@ -1534,12 +1584,6 @@ std::vector<ConnectionId> NESTGPU::GetConnections(std::vector<int> source,
   return net_connection_->GetConnections<int*>(source.data(), source.size(),
 					       target.data(), target.size(),
 					       syn_group);
-}
-
-std::vector<int> NESTGPU::GetSyndelayHist(int i_source, int n_source,
-                                          int i_target, int n_target,
-                                          int syn_group) {
-  return net_connection_->GetSyndelayHist<int>(i_source, n_source, i_target, n_target, syn_group);    
 }
 
 int NESTGPU::ActivateSpikeCount(int i_node, int n_node)

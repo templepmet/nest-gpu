@@ -194,6 +194,16 @@ def SetVerbosityLevel(verbosity_level):
     return ret
 
 
+NESTGPU_AddDebugMode = _nestgpu.NESTGPU_AddDebugMode
+NESTGPU_AddDebugMode.argtypes = (c_char_p,)
+NESTGPU_AddDebugMode.restype = ctypes.c_int
+def AddDebugMode(debug_mode):
+    "Add debug mode"
+    ret = NESTGPU_AddDebugMode(ctypes.create_string_buffer(to_byte_str(debug_mode), len(debug_mode)+1))
+    if GetErrorCode() != 0:
+        raise ValueError(GetErrorMessage())
+    return ret
+
 NESTGPU_Create = _nestgpu.NESTGPU_Create
 NESTGPU_Create.argtypes = (c_char_p, ctypes.c_int, ctypes.c_int)
 NESTGPU_Create.restype = ctypes.c_int
@@ -1846,29 +1856,6 @@ def GetConnections(source=None, target=None, syn_group=-1):
         conn_list.append(conn_id)
         
     ret = conn_list
-
-    if GetErrorCode() != 0:
-        raise ValueError(GetErrorMessage())
-    return ret
-
-
-NESTGPU_GetSyndelayHist = _nestgpu.NESTGPU_GetSyndelayHist
-NESTGPU_GetSyndelayHist.argtypes = (ctypes.c_int, ctypes.c_int,
-                                    ctypes.c_int, ctypes.c_int,
-                                    ctypes.c_int, c_int_p)
-NESTGPU_GetSyndelayHist.restype = c_int_p
-def GetSyndelayHist(source=None, target=None, syn_group=-1):
-    if type(source) != NodeSeq or type(target) != NodeSeq:
-        raise ValueError("Unknown source & target type")
-    
-    n_hist = ctypes.c_int(0)
-    hist_arr = NESTGPU_GetSyndelayHist(source.i0, source.n,
-                                       target.i0, target.n,
-                                       syn_group, ctypes.byref(n_hist))
-    hist_list = []
-    for i in range(n_hist.value):
-        hist_list.append(hist_arr[i])
-    ret = hist_list
 
     if GetErrorCode() != 0:
         raise ValueError(GetErrorMessage())

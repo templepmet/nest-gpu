@@ -50,9 +50,9 @@ def print_mem_info():
 
 def simulation(label):
     ngpu.ConnectMpiInit()
+    ngpu.AddDebugMode("dump_syndelay")
     M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
     M.simulation.simulate()
-    M.simulation.dump_syndelay()
 
 
 def main():
