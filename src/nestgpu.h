@@ -34,6 +34,7 @@
 #include "connect_spec.h"
 #include "connect.h"
 #include "syn_model.h"
+#include "debug.h"
 
 #ifdef HAVE_MPI
 class ConnectMpi;
@@ -158,7 +159,6 @@ class NESTGPU
 
   int verbosity_level_;
   bool print_time_;
-  std::set<std::string> debug_mode_set_;
 
   std::vector<RemoteConnection> remote_connection_vect_;
   std::vector<int> ext_neuron_input_spike_node_;
@@ -280,15 +280,10 @@ public:
     return 0;
   }
 
-  inline int AddDebugMode(char *debug_mode)
+  int AddDebugMode(char *debug_mode)
   {
     debug_mode_set_.insert(std::string(debug_mode));
     return 0;
-  }
-
-  inline bool isDebugMode(std::string debug_mode)
-  {
-    return debug_mode_set_.find(debug_mode) != debug_mode_set_.end();
   }
 
   int SetMaxSpikeBufferSize(int max_size);

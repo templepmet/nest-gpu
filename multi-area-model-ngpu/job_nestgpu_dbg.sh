@@ -72,3 +72,4 @@ python analysis/each_proc/synapse.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/spike.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/distributions/delay_local.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/distributions/delay_remote.py simulation_result/$LABEL >> $RESULT_FILE
+python analysis/distributions/delay_spike.py simulation_result/$LABEL >> $RESULT_FILE

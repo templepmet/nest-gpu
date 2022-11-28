@@ -47,6 +47,7 @@
 #include "rev_spike.h"
 #include "spike_mpi.h"
 #include "non_blocking_timer.h"
+#include "debug.h"
 
 #ifdef HAVE_MPI
 #include <mpi.h>
@@ -381,7 +382,7 @@ int NESTGPU::Calibrate()
 }
 
 int NESTGPU::Debug() {
-  if (isDebugMode("dump_syndelay")) {
+  if (isDebugMode("syndelay_static")) {
     std::filesystem::create_directory("syndelay");
     // local
     {
@@ -567,7 +568,6 @@ int NESTGPU::EndSimulation()
   
   return 0;
 }
-
 
 int NESTGPU::SimulationStep()
 {

@@ -24,6 +24,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <list>
+#include <fstream>
 
 #include "cuda_error.h"
 #include "spike_buffer.h"
@@ -32,6 +33,7 @@
 #include "spike_mpi.h"
 #include "connect_mpi.h"
 #include "scan.h"
+#include "debug.h"
 
 __device__ int locate(int val, int *data, int n);
 
@@ -433,6 +435,37 @@ int ConnectMpi::CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
     // push remote spikes in local spike buffers
     PushSpikeFromRemote<<<(n_spike_tot+1023)/1024, 1024>>>
       (n_spike_tot, d_ExternalSourceSpikeNodeId);
+  }
+
+  if (isDebugMode("syndelay_spike")) {
+    int mpi_id;
+    MPI_Comm_rank(MPI_COMM_WORLD, &mpi_id);
+
+    std::vector<long long> delay_hist;
+    for (int i = 0; i < n_spike_tot; ++i) {
+      int i_node = h_ExternalSourceSpikeNodeId[i];
+      int i_source = i_node + i_remote_node_0;
+      for (ConnGroup &cg : net_connection_->connection_[i_source]) {
+        int delay = cg.delay;
+        if (delay_hist.size() < delay + 1) {
+          delay_hist.resize(delay + 1, 0);
+        }
+        delay_hist[delay] += cg.target_vect.size();
+      }
+    }
+    std::string filename = "syndelay/spike_" + std::to_string(mpi_id) + ".txt";
+    std::ofstream ofs(filename, std::ios::app);
+    if (delay_hist.size() > 0) {
+      for (int i = 0; i < delay_hist.size(); ++i) {
+        if (i > 0) ofs << ", ";
+        ofs << delay_hist[i];
+      }
+    }
+    else {
+      ofs << 0;
+    }
+    ofs << std::endl;
+    ofs.close();
   }
   
   return n_spike_tot;
