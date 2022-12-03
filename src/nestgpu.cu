@@ -399,7 +399,7 @@ int NESTGPU::Debug() {
       std::string filename = "syndelay/local_" + std::to_string(MpiId()) + ".txt";
       std::ofstream ofs(filename);
       for (int i = 0; i < delay_hist.size(); ++i) {
-        if (i > 0) ofs << ", ";
+        if (i > 0) ofs << ",";
         ofs << delay_hist[i];
       }
       ofs.close();
@@ -417,11 +417,14 @@ int NESTGPU::Debug() {
       std::string filename = "syndelay/remote_" + std::to_string(MpiId()) + ".txt";
       std::ofstream ofs(filename);
       for (int i = 0; i < delay_hist.size(); ++i) {
-        if (i > 0) ofs << ", ";
+        if (i > 0) ofs << ",";
         ofs << delay_hist[i];
       }
       ofs.close();
     }
+  }
+  if (isDebugMode("comm_distribution")) {
+    std::filesystem::create_directory("comm");
   }
 
   return 0;

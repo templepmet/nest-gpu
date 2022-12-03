@@ -76,3 +76,6 @@ if [ -d ./simulation_result/$LABEL/syndelay ]; then
 	python analysis/distributions/delay_remote.py simulation_result/$LABEL >> $RESULT_FILE
 	python analysis/distributions/delay_spike.py simulation_result/$LABEL >> $RESULT_FILE
 fi
+if [ -d ./simulation_result/$LABEL/comm ]; then
+	python analysis/distributions/comm_spike.py simulation_result/$LABEL >> $RESULT_FILE
+fi

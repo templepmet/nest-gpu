@@ -348,6 +348,18 @@ int ConnectMpi::SendSpikeToRemote(int n_hosts, int max_spike_per_host)
     //	   h_ExternalTargetSpikeNodeId[array_idx]);
   }
   SendSpikeToRemote_MPI_time_ += (getRealTime() - time_mark);
+
+  if (isDebugMode("comm_distribution")) {
+    std::string filename = "comm/send_" + std::to_string(mpi_id) + ".txt";
+    std::ofstream ofs(filename, std::ios::app);
+    for (int i = 0; i < n_hosts; ++i) {
+      if (i > 0) ofs << ",";
+      int spikes = h_ExternalTargetSpikeCumul[i+1] - h_ExternalTargetSpikeCumul[i];
+      ofs << spikes;
+    }
+    ofs << std::endl;
+    ofs.close();
+  }
   
   return 0;
 }
@@ -457,7 +469,7 @@ int ConnectMpi::CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
     std::ofstream ofs(filename, std::ios::app);
     if (delay_hist.size() > 0) {
       for (int i = 0; i < delay_hist.size(); ++i) {
-        if (i > 0) ofs << ", ";
+        if (i > 0) ofs << ",";
         ofs << delay_hist[i];
       }
     }

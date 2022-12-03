@@ -19,12 +19,6 @@ for p in range(procs):
         raw = f.readline()
         delay_hist = [int(d) for d in raw.split(",")]
         synapse[p] += sum(delay_hist)
-    with open(os.path.join(syndelay_dir, f"remote_{p}.txt")) as f:
-        raw = f.readline()
-        if raw == "":
-            continue
-        delay_hist = [int(d) for d in raw.split(",")]
-        synapse[p] -= sum(delay_hist)
 
 print("sum_synapse:", sum(synapse))
 

@@ -22,7 +22,7 @@ if ls log/*.txt >/dev/null 2>&1; then
 fi
 
 # below "cp result.txt"
-LABEL=1nodes_8gpus_N0.01_K0.01_T0.01_0:242371.sqd
+LABEL=1nodes_8gpus_N0.01_K0.01_T0.01_0:242405.sqd
 RESULT_FILE=./simulation_result/$LABEL/result.txt
 python analysis/each_proc/time.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/memory.py simulation_result/$LABEL >> $RESULT_FILE
@@ -33,4 +33,7 @@ if [ -d ./simulation_result/$LABEL/syndelay ]; then
 	python analysis/distributions/delay_local.py simulation_result/$LABEL >> $RESULT_FILE
 	python analysis/distributions/delay_remote.py simulation_result/$LABEL >> $RESULT_FILE
 	python analysis/distributions/delay_spike.py simulation_result/$LABEL >> $RESULT_FILE
+fi
+if [ -d ./simulation_result/$LABEL/comm ]; then
+	python analysis/distributions/comm_spike.py simulation_result/$LABEL >> $RESULT_FILE
 fi
