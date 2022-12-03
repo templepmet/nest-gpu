@@ -1,0 +1,193 @@
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 4718592
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... no
+checking for mawk... mawk
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of gcc... gcc3
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking dependency style of g++... gcc3
+checking for nvcc... /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc
+checking for gcc option to support OpenMP... -fopenmp
+checking for a Python interpreter with version >= 2.4... python
+checking for python... /opt/pyenv/shims/python
+checking for python version... 3.10
+checking for python platform... linux
+checking for GNU default python prefix... ${prefix}
+checking for GNU default python exec_prefix... ${exec_prefix}
+checking for python script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.10/site-packages
+checking for python extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.10/site-packages
+checking for pow in -lm... yes
+checking for limits.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+configure: GPU architecture: sm_80
+checking for mpicc... mpicc
+checking for MPI_Init... yes
+checking for mpi.h... yes
+checking for size_t... yes
+checking for pow... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing libtool commands
+config.status: executing depfiles commands
+Makefile patch for renaming libnestgpu.la to libnestgpu.so
+(CDPATH="${ZSH_VERSION+.}:" && cd . && /bin/bash '/opt/nestgpu_install/m4/missing' autoheader)
+rm -f stamp-h1
+touch config.h.in
+make  all-am
+make[1]: Entering directory '/opt/nestgpu_install'
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/iaf_psc_exp_hc.cu -c -o obj/iaf_psc_exp_hc.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/iaf_psc_exp.cu -c -o obj/iaf_psc_exp.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/iaf_psc_exp_g.cu -c -o obj/iaf_psc_exp_g.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/ext_neuron.cu -c -o obj/ext_neuron.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_cond_alpha.cu -c -o obj/aeif_cond_alpha.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_cond_beta.cu -c -o obj/aeif_cond_beta.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_psc_alpha.cu -c -o obj/aeif_psc_alpha.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_psc_delta.cu -c -o obj/aeif_psc_delta.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_psc_exp.cu -c -o obj/aeif_psc_exp.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/base_neuron.cu -c -o obj/base_neuron.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/connect.cu -c -o obj/connect.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/connect_mpi.cu -c -o obj/connect_mpi.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/get_spike.cu -c -o obj/get_spike.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/locate.cu -c -o obj/locate.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/getRealTime.cu -c -o obj/getRealTime.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/neuron_models.cu -c -o obj/neuron_models.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/multimeter.cu -c -o obj/multimeter.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/non_blocking_timer.cu -c -o obj/non_blocking_timer.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/nestgpu.cu -c -o obj/nestgpu.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/node_group.cu -c -o obj/node_group.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/poiss_gen.cu -c -o obj/poiss_gen.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/poisson.cu -c -o obj/poisson.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/prefix_scan.cu -c -o obj/prefix_scan.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/parrot_neuron.cu -c -o obj/parrot_neuron.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/random.cu -c -o obj/random.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/rev_spike.cu -c -o obj/rev_spike.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/rk5.cu -c -o obj/rk5.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/scan.cu -c -o obj/scan.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/send_spike.cu -c -o obj/send_spike.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/spike_buffer.cu -c -o obj/spike_buffer.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/spike_detector.cu -c -o obj/spike_detector.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/spike_generator.cu -c -o obj/spike_generator.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/spike_mpi.cu -c -o obj/spike_mpi.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/stdp.cu -c -o obj/stdp.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/syn_model.cu -c -o obj/syn_model.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/test_syn_model.cu -c -o obj/test_syn_model.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich_cond_beta.cu -c -o obj/izhikevich_cond_beta.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich.cu -c -o obj/izhikevich.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich_psc_exp_2s.cu -c -o obj/izhikevich_psc_exp_2s.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich_psc_exp_5s.cu -c -o obj/izhikevich_psc_exp_5s.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich_psc_exp.cu -c -o obj/izhikevich_psc_exp.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/user_m1.cu -c -o obj/user_m1.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/user_m2.cu -c -o obj/user_m2.cu.o
+mpicxx -O3 -Wall -fPIC -I . src/connect_rules.cpp -c -o obj/connect_rules.cpp.o
+mpicxx -O3 -Wall -fPIC -I . src/debug.cpp -c -o obj/debug.cpp.o
+mpicxx -O3 -Wall -fPIC -I . src/nestgpu_C.cpp -c -o obj/nestgpu_C.cpp.o
+cd . && /bin/bash ./config.status config.h
+config.status: creating config.h
+config.status: config.h is unchanged
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true --shared -o libnestgpu.so obj/iaf_psc_exp_g.cu.o obj/iaf_psc_exp_hc.cu.o obj/iaf_psc_exp.cu.o obj/ext_neuron.cu.o obj/aeif_cond_alpha.cu.o obj/aeif_cond_beta.cu.o obj/aeif_psc_alpha.cu.o obj/aeif_psc_delta.cu.o obj/aeif_psc_exp.cu.o obj/base_neuron.cu.o obj/connect.cu.o obj/connect_mpi.cu.o obj/getRealTime.cu.o obj/get_spike.cu.o obj/locate.cu.o obj/multimeter.cu.o obj/neuron_models.cu.o obj/nestgpu.cu.o obj/node_group.cu.o obj/non_blocking_timer.cu.o obj/parrot_neuron.cu.o obj/poiss_gen.cu.o obj/poisson.cu.o obj/prefix_scan.cu.o obj/random.cu.o obj/rev_spike.cu.o obj/rk5.cu.o obj/scan.cu.o obj/send_spike.cu.o obj/spike_buffer.cu.o obj/spike_detector.cu.o obj/spike_generator.cu.o obj/spike_mpi.cu.o obj/stdp.cu.o obj/syn_model.cu.o obj/test_syn_model.cu.o obj/izhikevich_cond_beta.cu.o obj/izhikevich.cu.o obj/izhikevich_psc_exp_5s.cu.o obj/izhikevich_psc_exp_2s.cu.o obj/izhikevich_psc_exp.cu.o obj/user_m1.cu.o obj/user_m2.cu.o obj/connect_rules.cpp.o obj/debug.cpp.o obj/nestgpu_C.cpp.o -lm -lcurand -lcuda -lcudart
+make[1]: Leaving directory '/opt/nestgpu_install'
+make[1]: Entering directory '/opt/nestgpu_install'
+ /usr/bin/mkdir -p '/opt/nestgpu/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libnestgpu.so '/opt/nestgpu/lib'
+libtool: install: /usr/bin/install -c libnestgpu.so /opt/nestgpu/lib/libnestgpu.so
+make  install-exec-hook
+make[2]: Entering directory '/opt/nestgpu_install'
+make[2]: Nothing to be done for 'install-exec-hook'.
+make[2]: Leaving directory '/opt/nestgpu_install'
+ /usr/bin/mkdir -p '/opt/nestgpu/lib/python3.10/site-packages'
+ /usr/bin/install -c -m 644 ./pythonlib/nestgpu.py '/opt/nestgpu/lib/python3.10/site-packages'
+Byte-compiling python modules...
+nestgpu.py
+Byte-compiling python modules (optimized versions) ...
+nestgpu.py
+make[1]: Leaving directory '/opt/nestgpu_install'
