@@ -3,7 +3,9 @@ import sys
 from collections import defaultdict
 
 import numpy as np
-import matplotlib; matplotlib.use('agg')
+import matplotlib
+
+matplotlib.use("agg")
 import matplotlib.pyplot as plt
 
 argv = sys.argv
@@ -12,7 +14,7 @@ if len(argv) < 2:
     sys.exit(1)
 sim_dir = argv[1]
 syndelay_dir = os.path.join(sim_dir, "syndelay")
-procs=32
+procs = 32
 
 sum_hist = []
 for p in range(procs):
@@ -27,10 +29,12 @@ for p in range(procs):
     for i in range(len(delay_remote)):
         sum_hist[i] += delay_remote[i]
 
+print("---delay_remote---")
 print("dmin:", sum_hist[0])
 print("sum:", sum(sum_hist))
 print("dmin_per:", sum_hist[0] / sum(sum_hist))
 
+sum_hist = [0] + sum_hist
 y = sum_hist
 x = np.arange(len(y))
 
@@ -45,4 +49,6 @@ plt.ylabel("Count")
 # xtmp = np.arange(0, max_delay + 1, 5)
 # plt.xticks(xtmp, xtmp / 10)
 plt.plot(x, y)
-plt.savefig(os.path.join(sim_dir, "delay_remote.png"), bbox_inches="tight", pad_inches=0.2)
+plt.savefig(
+    os.path.join(sim_dir, "delay_remote.png"), bbox_inches="tight", pad_inches=0.2
+)

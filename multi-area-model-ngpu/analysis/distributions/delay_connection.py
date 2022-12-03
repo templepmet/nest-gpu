@@ -16,34 +16,34 @@ sim_dir = argv[1]
 syndelay_dir = os.path.join(sim_dir, "syndelay")
 procs = 32
 
-sum_hist = []
+
+def add_hist(h1, h2):
+    if len(h1) < len(h2):
+        h1 += [0] * (len(h2) - len(h1))
+    for i in range(len(h2)):
+        h1[i] += h2[i]
+
+
+delay_all = []
+delay_remote = []
+delay_spike = []
+iterations = 0
 for p in range(procs):
+    print(p)
     with open(os.path.join(syndelay_dir, f"local_{p}.txt")) as f:
         raw = f.readline()
-        delay_local = [int(d) for d in raw.split(",")]
+        d_all = [int(d) for d in raw.split(",")]
     with open(os.path.join(syndelay_dir, f"remote_{p}.txt")) as f:
         raw = f.readline()
         if raw != "":
-            delay_remote = [int(d) for d in raw.split(",")]
+            d_remote = [int(d) for d in raw.split(",")]
         else:
-            delay_remote = []
-    assert len(delay_local) >= len(delay_remote)
-    if len(sum_hist) < len(delay_local):
-        sum_hist += [0] * (len(delay_local) - len(sum_hist))
-    for i in range(len(delay_local)):
-        sum_hist[i] += delay_local[i]
-    for i in range(len(delay_remote)):
-        assert delay_local[i] >= delay_remote[i]
-        # sum_hist[i] -= delay_remote[i]
+            d_remote = []
+    add_hist(delay_all, d_all)
+    add_hist(delay_remote, d_remote)
 
-print("---delay_local---")
-print("dmin:", sum_hist[0])
-print("sum:", sum(sum_hist))
-print("dmin_per:", sum_hist[0] / sum(sum_hist))
-
-sum_hist = [0] + sum_hist
-y = sum_hist
-x = np.arange(len(y))
+delay_spike = np.array(delay_spike) / iterations
+x = np.arange(len(delay_all))
 
 plt.rcParams["axes.axisbelow"] = True
 plt.rcParams["font.size"] = 12
@@ -55,7 +55,13 @@ plt.ylabel("Count")
 
 # xtmp = np.arange(0, max_delay + 1, 5)
 # plt.xticks(xtmp, xtmp / 10)
-plt.plot(x, y)
+plt.bar(x, delay_all, label="All")
+plt.bar(x, delay_remote, label="Remote")
+
+# plt.plot(x, delay_all, label="All")
+# plt.plot(x, delay_remote, label="Remote")
+# plt.plot(x, delay_spike, label="Spike")
+plt.legend()
 plt.savefig(
-    os.path.join(sim_dir, "delay_local.png"), bbox_inches="tight", pad_inches=0.2
+    os.path.join(sim_dir, "delay_connection.png"), bbox_inches="tight", pad_inches=0.2
 )
