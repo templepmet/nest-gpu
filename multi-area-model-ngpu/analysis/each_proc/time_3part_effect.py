@@ -41,15 +41,15 @@ part = {
     "SpikeBufferUpdate_time": "calc",
     "poisson_generator_time": "calc",
     "neuron_Update_time": "calc",
-    "copy_ext_spike_time": "deliv",
-    "SendExternalSpike_time": "deliv",
+    "copy_ext_spike_time": "deliver",
+    "SendExternalSpike_time": "deliver",
     "SendSpikeToRemote_time": "comm",
     "RecvSpikeFromRemote_time": "comm",
     "CopySpikeFromRemote_time": "comm",
     "MpiBarrier_time": "comm",
-    "copy_spike_time": "deliv",
-    "ClearGetSpikeArrays_time": "deliv",
-    "NestedLoop_time": "deliv",
+    "copy_spike_time": "deliver",
+    "ClearGetSpikeArrays_time": "deliver",
+    "NestedLoop_time": "deliver",
     "GetSpike_time": "calc",
     "SpikeReset_time": "calc",
     "ExternalSpikeReset_time": "calc",
@@ -110,7 +110,8 @@ max_time = max(sim_time)
 
 # time
 # convert for plot
-plot_label = ["calc", "comm", "deliv"]
+plot_label = ["calc", "deliver", "comm"]
+plot_color = {"calc":"tab:orange", "deliver":"tab:blue", "comm":"tab:green"}
 y = {}
 for l in plot_label:
     y[l] = [0.0] * procs
@@ -131,16 +132,16 @@ max_t = 0
 max_ylim = 0
 for p in range(procs):
     sum_t = (1 - prob) * y["comm"][p] + max(
-        prob * y["comm"][p], y["calc"][p] + y["deliv"][p]
+        prob * y["comm"][p], y["calc"][p] + y["deliver"][p]
     )
-    tmp_ylim = y["comm"][p] + y["calc"][p] + y["deliv"][p]
+    tmp_ylim = y["comm"][p] + y["calc"][p] + y["deliver"][p]
     max_ylim = max(max_ylim, tmp_ylim)
     if max_t < sum_t:
         max_t = sum_t
         max_p = p
 
 max_calc = y["calc"][max_p]
-max_deliv = y["deliv"][max_p]
+max_deliv = y["deliver"][max_p]
 for p in range(procs):
     y["comm"][p] = max(
         (1 - prob) * y["comm"][p], prob * y["comm"][p] - max_calc - max_deliv
@@ -160,6 +161,7 @@ for lab in plot_label:
         x,
         y[lab],
         bottom=bottom,
+        color=plot_color[lab],
         align="center",
         label=lab,
     )

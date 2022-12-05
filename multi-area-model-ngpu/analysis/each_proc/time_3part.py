@@ -39,15 +39,15 @@ part = {
     "SpikeBufferUpdate_time": "calc",
     "poisson_generator_time": "calc",
     "neuron_Update_time": "calc",
-    "copy_ext_spike_time": "deliv",
-    "SendExternalSpike_time": "deliv",
+    "copy_ext_spike_time": "deliver",
+    "SendExternalSpike_time": "deliver",
     "SendSpikeToRemote_time": "comm",
     "RecvSpikeFromRemote_time": "comm",
     "CopySpikeFromRemote_time": "comm",
     "MpiBarrier_time": "comm",
-    "copy_spike_time": "deliv",
-    "ClearGetSpikeArrays_time": "deliv",
-    "NestedLoop_time": "deliv",
+    "copy_spike_time": "deliver",
+    "ClearGetSpikeArrays_time": "deliver",
+    "NestedLoop_time": "deliver",
     "GetSpike_time": "calc",
     "SpikeReset_time": "calc",
     "ExternalSpikeReset_time": "calc",
@@ -110,7 +110,8 @@ print(f"{dev_time[14]=}")
 
 # time
 # convert for plot
-plot_label = ["calc", "comm", "deliv"]
+plot_label = ["calc", "deliver", "comm"]
+plot_color = {"calc":"tab:orange", "deliver":"tab:blue", "comm":"tab:green"}
 y = {}
 for l in plot_label:
     y[l] = [0.0] * procs
@@ -139,6 +140,7 @@ for lab in plot_label:
         x,
         y[lab],
         bottom=bottom,
+        color=plot_color[lab],
         align="center",
         label=lab,
     )
@@ -151,7 +153,7 @@ handles, labels = ax.get_legend_handles_labels()
 plt.legend(handles[::-1], labels[::-1], bbox_to_anchor=(1, 0), loc="lower left")
 plt.savefig(os.path.join(sim_dir, "time_3p.png"), bbox_inches="tight", pad_inches=0.2)
 
-print(y["calc"][14])
-print(y["comm"][14])
-print(y["deliv"][14])
-print(max(bottom))
+# print(y["calc"][14])
+# print(y["comm"][14])
+# print(y["deliver"][14])
+# print(max(bottom))
