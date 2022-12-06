@@ -29,6 +29,9 @@ for p in range(procs):
 host_mem = np.array(host_mem) / 1e6
 gpu_mem = np.array(gpu_mem) / 1e9
 
+print("host_mem sum:", sum(host_mem))
+print("gpu_mem sum:", sum(gpu_mem))
+
 plt.rcParams["axes.axisbelow"] = True
 plt.rcParams["font.size"] = 12
 

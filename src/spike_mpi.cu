@@ -34,6 +34,7 @@
 #include "connect_mpi.h"
 #include "scan.h"
 #include "debug.h"
+#include "non_blocking_timer.h"
 
 __device__ int locate(int val, int *data, int n);
 
@@ -181,6 +182,8 @@ int ConnectMpi::ExternalSpikeInit(int n_node, int n_hosts, int max_spike_per_hos
   SendSpikeToRemote_CUDAcp_time_ = 0;
   RecvSpikeFromRemote_CUDAcp_time_ = 0;
   JoinSpike_time_ = 0;
+
+  RecvWait_time = 0; // comm_wait
 
   int *h_NExternalNodeTargetHost = new int[n_node];
   int **h_ExternalNodeTargetHostId = new int*[n_node];
@@ -387,6 +390,8 @@ int ConnectMpi::RecvSpikeFromRemote(int n_hosts, int max_spike_per_host)
 	      &recv_mpi_request[i_host]);
   }
 
+  double t1 = getRealTime(), t2 = 0; // comm_wait
+
   // loop until list is empty, i.e. until receive is complete
   // from all MPI proc
   while (recv_list.size()>0) {
@@ -397,19 +402,26 @@ int ConnectMpi::RecvSpikeFromRemote(int n_hosts, int max_spike_per_host)
       // check if receive is complete
       MPI_Test(&recv_mpi_request[i_host], &flag, &Stat);
       if (flag) {
-	int count;
-	// get spike count
-	MPI_Get_count(&Stat, MPI_INT, &count);
-	h_ExternalSourceSpikeNum[i_host] = count;
-	// when receive is complete remove MPI proc from list
-	recv_list.erase(list_it);
-	break;
+	      int count;
+	      // get spike count
+	      MPI_Get_count(&Stat, MPI_INT, &count);
+	      h_ExternalSourceSpikeNum[i_host] = count;
+	      // when receive is complete remove MPI proc from list
+	      recv_list.erase(list_it);
+        
+        RecvWait_time += std::max(0.0, t2 - t1);
+        t1 = getRealTime(); // comm_wait
+	      
+        break;
+      }
+      else {
+        t2 = getRealTime(); // comm_wait
       }
     }
   }  
   h_ExternalSourceSpikeNum[mpi_id] = 0;
   RecvSpikeFromRemote_MPI_time_ += (getRealTime() - time_mark);
-  
+
   return 0;
 }
 

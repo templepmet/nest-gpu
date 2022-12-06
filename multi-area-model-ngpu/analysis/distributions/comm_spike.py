@@ -13,6 +13,7 @@ sim_dir = argv[1]
 comm_dir = os.path.join(sim_dir, "comm")
 procs=32
 
+iterations = 0
 dist = [np.zeros(procs) for _ in range(procs)]
 for p in range(procs):
 	with open(os.path.join(comm_dir, f"send_{p}.txt")) as f:
@@ -20,6 +21,8 @@ for p in range(procs):
 			row = line.split(",")
 			cnt = [int(c) for c in row]
 			dist[p] += np.array(cnt)
+			if p == 0:
+				iterations += 1
 
 x = []
 y = []
@@ -28,7 +31,7 @@ for i in range(procs):
 	for j in range(procs):
 		x.append(i)
 		y.append(j)
-		w.append(dist[i][j])
+		w.append(dist[i][j] / iterations)
 
 r = np.arange(32)
 

@@ -61,12 +61,22 @@ diff -sq simulation_result/$REF_LABEL/recordings simulation_result/$LABEL/record
 
 cp ./log/result.txt simulation_result/$LABEL/
 cp ./sim_info.json simulation_result/$LABEL/
+mv ./syndelay simulation_result/$LABEL/
+mv ./comm simulation_result/$LABEL/
 
 # below "cp result.txt"
 RESULT_FILE=./simulation_result/$LABEL/result.txt
 python analysis/each_proc/time.py simulation_result/$LABEL >> $RESULT_FILE
+python analysis/each_proc/time_comm_wait.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/memory.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/neuron.py simulation_result/$LABEL >> $RESULT_FILE
-python analysis/each_proc/synapse.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/spike.py simulation_result/$LABEL >> $RESULT_FILE
-python analysis/distributions/delay.py simulation_result/$LABEL >> $RESULT_FILE
+if [ -d ./simulation_result/$LABEL/syndelay ]; then
+	python analysis/each_proc/synapse.py simulation_result/$LABEL >> $RESULT_FILE
+	python analysis/distributions/delay_local.py simulation_result/$LABEL >> $RESULT_FILE
+	python analysis/distributions/delay_remote.py simulation_result/$LABEL >> $RESULT_FILE
+	python analysis/distributions/delay_spike.py simulation_result/$LABEL >> $RESULT_FILE
+fi
+if [ -d ./simulation_result/$LABEL/comm ]; then
+	python analysis/distributions/comm_spike.py simulation_result/$LABEL >> $RESULT_FILE
+fi

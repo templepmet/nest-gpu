@@ -5,7 +5,6 @@
 #include <string>
 #include <queue>
 
-
 class CudaEventPair
 {
 public:
@@ -76,5 +75,7 @@ extern NonBlockingTimer *ExternalSpikeReset_timer;
 extern NonBlockingTimer *RevSpikeBufferUpdate_timer;
 extern NonBlockingTimer *BufferRecSpikeTimes_timer;
 extern NonBlockingTimer *Blocking_timer;
+
+extern double RecvWait_time; // comm_wait
 
 #endif // NON_BLOCKING_TIMER_H;

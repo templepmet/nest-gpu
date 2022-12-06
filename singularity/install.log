@@ -1,3 +1,22 @@
+configure.ac:9: warning: The macro `AC_CONFIG_HEADER' is obsolete.
+configure.ac:9: You should run autoupdate.
+./lib/autoconf/status.m4:719: AC_CONFIG_HEADER is expanded from...
+configure.ac:9: the top level
+configure.ac:81: warning: The macro `AC_HELP_STRING' is obsolete.
+configure.ac:81: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+./lib/autoconf/general.m4:1553: AC_ARG_WITH is expanded from...
+configure.ac:81: the top level
+configure.ac:90: warning: The macro `AC_HELP_STRING' is obsolete.
+configure.ac:90: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+./lib/autoconf/general.m4:1553: AC_ARG_WITH is expanded from...
+configure.ac:90: the top level
+configure.ac:99: warning: The macro `AC_TRY_COMPILE' is obsolete.
+configure.ac:99: You should run autoupdate.
+./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
+m4/acx_mpi.m4:39: ACX_MPI is expanded from...
+configure.ac:99: the top level
 checking build system type... x86_64-pc-linux-gnu
 checking host system type... x86_64-pc-linux-gnu
 checking how to print strings... printf
@@ -125,35 +144,212 @@ rm -f stamp-h1
 touch config.h.in
 make  all-am
 make[1]: Entering directory '/opt/nestgpu_install'
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/ext_neuron.cu -c -o obj/ext_neuron.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/iaf_psc_exp_g.cu -c -o obj/iaf_psc_exp_g.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/iaf_psc_exp_hc.cu -c -o obj/iaf_psc_exp_hc.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/iaf_psc_exp.cu -c -o obj/iaf_psc_exp.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/iaf_psc_exp_g.cu -c -o obj/iaf_psc_exp_g.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/ext_neuron.cu -c -o obj/ext_neuron.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_cond_alpha.cu -c -o obj/aeif_cond_alpha.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_cond_beta.cu -c -o obj/aeif_cond_beta.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_psc_alpha.cu -c -o obj/aeif_psc_alpha.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_psc_delta.cu -c -o obj/aeif_psc_delta.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_cond_beta.cu -c -o obj/aeif_cond_beta.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/aeif_psc_exp.cu -c -o obj/aeif_psc_exp.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/base_neuron.cu -c -o obj/base_neuron.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/connect.cu -c -o obj/connect.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/connect_mpi.cu -c -o obj/connect_mpi.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/get_spike.cu -c -o obj/get_spike.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/connect_mpi.cu -c -o obj/connect_mpi.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/locate.cu -c -o obj/locate.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/getRealTime.cu -c -o obj/getRealTime.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/neuron_models.cu -c -o obj/neuron_models.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/multimeter.cu -c -o obj/multimeter.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/non_blocking_timer.cu -c -o obj/non_blocking_timer.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/nestgpu.cu -c -o obj/nestgpu.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/node_group.cu -c -o obj/node_group.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/poiss_gen.cu -c -o obj/poiss_gen.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/poisson.cu -c -o obj/poisson.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/prefix_scan.cu -c -o obj/prefix_scan.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/non_blocking_timer.cu -c -o obj/non_blocking_timer.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/neuron_models.cu -c -o obj/neuron_models.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/parrot_neuron.cu -c -o obj/parrot_neuron.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/prefix_scan.cu -c -o obj/prefix_scan.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/poisson.cu -c -o obj/poisson.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/poiss_gen.cu -c -o obj/poiss_gen.cu.o
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : Function properties for _Z6locateiPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 0 bytes gmem
+ptxas info    : 0 bytes gmem
+ptxas info    : 1424 bytes gmem
+ptxas info    : Compiling entry function '_Z15UpdateExtNeuronPfS_iiii' for 'sm_80'
+ptxas info    : Function properties for _Z15UpdateExtNeuronPfS_iiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 384 bytes cmem[0]
+ptxas info    : 80 bytes gmem
+ptxas info    : 88 bytes gmem
+ptxas info    : Compiling entry function '_Z19FixPoissonGeneratorPjif' for 'sm_80'
+ptxas info    : Function properties for _Z19FixPoissonGeneratorPjif
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 368 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z17PoissonSendSpikesii' for 'sm_80'
+ptxas info    : Function properties for _Z17PoissonSendSpikesii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 360 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z13PoissonUpdatePj' for 'sm_80'
+ptxas info    : Function properties for _Z13PoissonUpdatePj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 360 bytes cmem[0]
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z21iaf_psc_exp_hc_UpdateiiPfS_ii' for 'sm_80'
+ptxas info    : Function properties for _Z21iaf_psc_exp_hc_UpdateiiPfS_ii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 384 bytes cmem[0], 32 bytes cmem[2]
+ptxas info    : 80 bytes gmem
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z20iaf_psc_exp_g_UpdateiiPfS_iiffiffff' for 'sm_80'
+ptxas info    : Function properties for _Z20iaf_psc_exp_g_UpdateiiPfS_iiffiffff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 412 bytes cmem[0]
+ptxas info    : 0 bytes gmem
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z18iaf_psc_exp_UpdateiiPfS_ii' for 'sm_80'
+ptxas info    : Function properties for _Z18iaf_psc_exp_UpdateiiPfS_ii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 384 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21iaf_psc_exp_CalibrateiPfif' for 'sm_80'
+ptxas info    : Function properties for _Z21iaf_psc_exp_CalibrateiPfif
+    8 bytes stack frame, 4 bytes spill stores, 4 bytes spill loads
+ptxas info    : Used 55 registers, 376 bytes cmem[0], 168 bytes cmem[2]
+ptxas info    : Function properties for _Z13propagator_32dddd
+    56 bytes stack frame, 56 bytes spill stores, 56 bytes spill loads
+ptxas info    : 88 bytes gmem, 9216 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z16NodeGroupMapInitPa' for 'sm_80'
+ptxas info    : Function properties for _Z16NodeGroupMapInitPa
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 360 bytes cmem[0]
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z26parrot_neuron_UpdateKerneliiPfS_ii' for 'sm_80'
+ptxas info    : Function properties for _Z26parrot_neuron_UpdateKerneliiPfS_ii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 384 bytes cmem[0]
+ptxas info    : 120 bytes gmem
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi2ELi14E18aeif_psc_delta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi2ELi14E18aeif_psc_delta_rk5EviPdPfS2_S2_dfT1_
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z14ArrayCalibrateI18aeif_psc_delta_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z14ArrayCalibrateI18aeif_psc_delta_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, 416 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z9ArrayInitI18aeif_psc_delta_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z9ArrayInitI18aeif_psc_delta_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 416 bytes cmem[0]
+ptxas info    : Function properties for _ZN17aeif_psc_delta_ns13NodeCalibrateEiidPfS0_18aeif_psc_delta_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z13NodeCalibrateiidPfS_18aeif_psc_delta_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _ZN17aeif_psc_delta_ns8NodeInitEiidPfS0_18aeif_psc_delta_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z8NodeInitiidPfS_18aeif_psc_delta_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 80 bytes gmem
+ptxas info    : Compiling entry function '_Z20PackSpikeTimesKerneliPiPfS0_ii' for 'sm_80'
+ptxas info    : Function properties for _Z20PackSpikeTimesKerneliPiPfS0_ii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 392 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25BaseNeuronGetFloatPtArrayPfS_Piiii' for 'sm_80'
+ptxas info    : Function properties for _Z25BaseNeuronGetFloatPtArrayPfS_Piiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 388 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z23BaseNeuronGetFloatArrayPfS_iii' for 'sm_80'
+ptxas info    : Function properties for _Z23BaseNeuronGetFloatArrayPfS_iii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 380 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25BaseNeuronSetFloatPtArrayPfPiiif' for 'sm_80'
+ptxas info    : Function properties for _Z25BaseNeuronSetFloatPtArrayPfPiiif
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 380 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z23BaseNeuronSetFloatArrayPfiif' for 'sm_80'
+ptxas info    : Function properties for _Z23BaseNeuronSetFloatArrayPfiif
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 372 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z23BaseNeuronGetIntPtArrayPiS_S_iii' for 'sm_80'
+ptxas info    : Function properties for _Z23BaseNeuronGetIntPtArrayPiS_S_iii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 388 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21BaseNeuronGetIntArrayPiS_iii' for 'sm_80'
+ptxas info    : Function properties for _Z21BaseNeuronGetIntArrayPiS_iii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 380 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z23BaseNeuronSetIntPtArrayPiS_iii' for 'sm_80'
+ptxas info    : Function properties for _Z23BaseNeuronSetIntPtArrayPiS_iii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 380 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z21BaseNeuronSetIntArrayPiiii' for 'sm_80'
+ptxas info    : Function properties for _Z21BaseNeuronSetIntArrayPiiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 372 bytes cmem[0]
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/random.cu -c -o obj/random.cu.o
+ptxas info    : 80 bytes gmem
+ptxas info    : Compiling entry function '_Z9GetSpikesPdiiiPfiiS0_ii' for 'sm_80'
+ptxas info    : Function properties for _Z9GetSpikesPdiiiPfiiS0_ii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 15 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z18CollectSpikeKerneliPi' for 'sm_80'
+ptxas info    : Function properties for _Z18CollectSpikeKerneliPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 368 bytes cmem[0]
+ptxas info    : Function properties for _Z20CollectSpikeFunctionii
+    24 bytes stack frame, 20 bytes spill stores, 20 bytes spill loads
+ptxas info    : Function properties for _Z15atomicAddDoublePdd
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/rev_spike.cu -c -o obj/rev_spike.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/rk5.cu -c -o obj/rk5.cu.o
+ptxas info    : 233080 bytes gmem, 72 bytes cmem[3]
+ptxas info    : 792 bytes gmem, 20 bytes cmem[3]
+ptxas info    : 218128 bytes gmem, 72 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z23PoissGenSendSpikeKernelP17curandStateXORWOWdfPfiP16DirectConnectionm' for 'sm_80'
+ptxas info    : Function properties for _Z23PoissGenSendSpikeKernelP17curandStateXORWOWdfPfiP16DirectConnectionm
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 50 registers, 408 bytes cmem[0], 240 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z16SetupPoissKernelP17curandStateXORWOWmy' for 'sm_80'
+ptxas info    : Function properties for _Z16SetupPoissKernelP17curandStateXORWOWmy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 55 registers, 376 bytes cmem[0]
+ptxas info    : 80 bytes gmem
+ptxas info    : 104 bytes gmem
+ptxas info    : Compiling entry function '_Z13RevSpikeResetv' for 'sm_80'
+ptxas info    : Function properties for _Z13RevSpikeResetv
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 6 registers, 352 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z18DeviceRevSpikeInitPjS_Pi' for 'sm_80'
+ptxas info    : Function properties for _Z18DeviceRevSpikeInitPjS_Pi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, 376 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z34ResetConnectionSpikeTimeDownKernelj' for 'sm_80'
+ptxas info    : Function properties for _Z34ResetConnectionSpikeTimeDownKernelj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 356 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z32ResetConnectionSpikeTimeUpKernelj' for 'sm_80'
+ptxas info    : Function properties for _Z32ResetConnectionSpikeTimeUpKernelj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 356 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z22SetConnectionSpikeTimejt' for 'sm_80'
+ptxas info    : Function properties for _Z22SetConnectionSpikeTimejt
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 358 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z20RevSpikeBufferUpdatej' for 'sm_80'
+ptxas info    : Function properties for _Z20RevSpikeBufferUpdatej
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, 356 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z19SynapseUpdateKerneliPi' for 'sm_80'
+ptxas info    : Function properties for _Z19SynapseUpdateKerneliPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 368 bytes cmem[0]
+ptxas info    : Function properties for _Z21SynapseUpdateFunctionii
+    16 bytes stack frame, 12 bytes spill stores, 12 bytes spill loads
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/scan.cu -c -o obj/scan.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/send_spike.cu -c -o obj/send_spike.cu.o
+ptxas info    : 218048 bytes gmem, 212 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z13SetFloatArrayPfiif' for 'sm_80'
+ptxas info    : Function properties for _Z13SetFloatArrayPfiif
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 372 bytes cmem[0]
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/spike_buffer.cu -c -o obj/spike_buffer.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/spike_detector.cu -c -o obj/spike_detector.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/spike_generator.cu -c -o obj/spike_generator.cu.o
@@ -162,18 +358,831 @@ make[1]: Entering directory '/opt/nestgpu_install'
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/syn_model.cu -c -o obj/syn_model.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/test_syn_model.cu -c -o obj/test_syn_model.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich_cond_beta.cu -c -o obj/izhikevich_cond_beta.cu.o
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z3addPiiS_S_' for 'sm_80'
+ptxas info    : Function properties for _Z3addPiiS_S_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, 384 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z3addPiiS_' for 'sm_80'
+ptxas info    : Function properties for _Z3addPiiS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 376 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z25prescan_large_unoptimizedPiS_iS_' for 'sm_80'
+ptxas info    : Function properties for _Z25prescan_large_unoptimizedPiS_iS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, 384 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z13prescan_largePiS_iS_' for 'sm_80'
+ptxas info    : Function properties for _Z13prescan_largePiS_iS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, 384 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z29prescan_arbitrary_unoptimizedPiS_ii' for 'sm_80'
+ptxas info    : Function properties for _Z29prescan_arbitrary_unoptimizedPiS_ii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 15 registers, 376 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z17prescan_arbitraryPiS_ii' for 'sm_80'
+ptxas info    : Function properties for _Z17prescan_arbitraryPiS_ii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 15 registers, 376 bytes cmem[0]
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich.cu -c -o obj/izhikevich.cu.o
-/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich_psc_exp_2s.cu -c -o obj/izhikevich_psc_exp_2s.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich_psc_exp_5s.cu -c -o obj/izhikevich_psc_exp_5s.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich_psc_exp_2s.cu -c -o obj/izhikevich_psc_exp_2s.cu.o
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/izhikevich_psc_exp.cu -c -o obj/izhikevich_psc_exp.cu.o
+ptxas info    : 170 bytes gmem
+ptxas info    : Compiling entry function '_Z10SpikeResetv' for 'sm_80'
+ptxas info    : Function properties for _Z10SpikeResetv
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 6 registers, 352 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z15DeviceSpikeInitPiS_S_PfS_i' for 'sm_80'
+ptxas info    : Function properties for _Z15DeviceSpikeInitPiS_S_PfS_i
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 396 bytes cmem[0]
+ptxas info    : Function properties for _Z9SendSpikeiifi
+    40 bytes stack frame, 28 bytes spill stores, 28 bytes spill loads
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/user_m1.cu -c -o obj/user_m1.cu.o
+ptxas info    : 80 bytes gmem
+ptxas info    : Function properties for _Z18TestSynModelUpdatePffS_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 80 bytes gmem
+ptxas info    : Function properties for __internal_accurate_pow
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z10STDPUpdatePffS_
+    64 bytes stack frame, 60 bytes spill stores, 60 bytes spill loads
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true src/user_m2.cu -c -o obj/user_m2.cu.o
+ptxas info    : 400 bytes gmem
+ptxas info    : Compiling entry function '_Z21DeviceSpikeBufferInitiiiPxPfS0_PhPtPiS3_S3_PPjPS1_PS0_PS2_S3_S3_S3_S3_S0_S4_S3_S5_S_' for 'sm_80'
+ptxas info    : Function properties for _Z21DeviceSpikeBufferInitiiiPxPfS0_PhPtPiS3_S3_PPjPS1_PS0_PS2_S3_S3_S3_S3_S0_S4_S3_S5_S_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, 536 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z20InitLastSpikeTimeIdxji' for 'sm_80'
+ptxas info    : Function properties for _Z20InitLastSpikeTimeIdxji
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, 360 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z17SpikeBufferUpdatev' for 'sm_80'
+ptxas info    : Function properties for _Z17SpikeBufferUpdatev
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, 352 bytes cmem[0]
+ptxas info    : Function properties for _Z9PushSpikeif
+    56 bytes stack frame, 48 bytes spill stores, 48 bytes spill loads
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z27spike_detector_UpdateKerneliiPfS_ii' for 'sm_80'
+ptxas info    : Function properties for _Z27spike_detector_UpdateKerneliiPfS_ii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 384 bytes cmem[0]
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z21spike_generatorUpdateiixPiS_PS_PPf' for 'sm_80'
+ptxas info    : Function properties for _Z21spike_generatorUpdateiixPiS_PS_PPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 400 bytes cmem[0]
+ptxas info    : 216 bytes gmem
+ptxas info    : Compiling entry function '_Z12SynGroupInitPiPPf' for 'sm_80'
+ptxas info    : Function properties for _Z12SynGroupInitPiPPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, 368 bytes cmem[0]
+ptxas info    : Function properties for _Z13SynapseUpdateiPff
+    16 bytes stack frame, 12 bytes spill stores, 12 bytes spill loads
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z17izhikevich_UpdateiiPfS_iifffffif' for 'sm_80'
+ptxas info    : Function properties for _Z17izhikevich_UpdateiiPfS_iifffffif
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 412 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z28izhikevich_psc_exp_5s_UpdateiiPfS_iifffffiff' for 'sm_80'
+ptxas info    : Function properties for _Z28izhikevich_psc_exp_5s_UpdateiiPfS_iifffffiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, 416 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z25izhikevich_psc_exp_UpdateiiPfS_iifffffiff' for 'sm_80'
+ptxas info    : Function properties for _Z25izhikevich_psc_exp_UpdateiiPfS_iifffffiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 1504 bytes gmem
+ptxas info    : Compiling entry function '_Z28izhikevich_psc_exp_2s_UpdateiiPfS_iifffffiff' for 'sm_80'
+ptxas info    : Used 24 registers, 416 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Function properties for _Z28izhikevich_psc_exp_2s_UpdateiiPfS_iifffffiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, 416 bytes cmem[0], 8 bytes cmem[2]
 mpicxx -O3 -Wall -fPIC -I . src/connect_rules.cpp -c -o obj/connect_rules.cpp.o
+ptxas info    : 226 bytes gmem, 1 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z15JoinSpikeKerneliPiS_S_ii' for 'sm_80'
+ptxas info    : Function properties for _Z15JoinSpikeKerneliPiS_S_ii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 392 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z23DeviceExternalSpikeInitiiPiS_PfS_S_S0_S_PS_S1_' for 'sm_80'
+ptxas info    : Function properties for _Z23DeviceExternalSpikeInitiiPiS_PfS_S_S0_S_PS_S1_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 432 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z18ExternalSpikeResetv' for 'sm_80'
+ptxas info    : Function properties for _Z18ExternalSpikeResetv
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, 352 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z17SendExternalSpikev' for 'sm_80'
+ptxas info    : Function properties for _Z17SendExternalSpikev
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 352 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z9AddOffsetiPii' for 'sm_80'
+ptxas info    : Function properties for _Z9AddOffsetiPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, 372 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z19PushSpikeFromRemoteiPi' for 'sm_80'
+ptxas info    : Function properties for _Z19PushSpikeFromRemoteiPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 368 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z19PushSpikeFromRemoteiPiPf' for 'sm_80'
+ptxas info    : Function properties for _Z19PushSpikeFromRemoteiPiPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 376 bytes cmem[0]
+ptxas info    : Function properties for _Z17PushExternalSpikeif
+    40 bytes stack frame, 28 bytes spill stores, 28 bytes spill loads
 mpicxx -O3 -Wall -fPIC -I . src/debug.cpp -c -o obj/debug.cpp.o
 mpicxx -O3 -Wall -fPIC -I . src/nestgpu_C.cpp -c -o obj/nestgpu_C.cpp.o
 cd . && /bin/bash ./config.status config.h
 config.status: creating config.h
 config.status: config.h is unchanged
+src/spike_mpi.cu: In member function ‘int ConnectMpi::CopySpikeFromRemote(int, int, int)’:
+src/spike_mpi.cu:474:23: warning: comparison of integer expressions of different signedness: ‘std::vector<long long int>::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+  474 |         if (delay_hist.size() < delay + 1) {
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~
+src/spike_mpi.cu:483:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<long long int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  483 |       for (int i = 0; i < delay_hist.size(); ++i) {
+      |                 ~~^~~~~~~~~~~~~~~~~~~
+ptxas info    : 120 bytes gmem
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi3ELi15E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi3ELi15E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    48 bytes stack frame, 60 bytes spill stores, 56 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi4ELi16E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi4ELi16E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    80 bytes stack frame, 164 bytes spill stores, 172 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi5ELi17E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi5ELi17E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    120 bytes stack frame, 216 bytes spill stores, 344 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi6ELi18E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi6ELi18E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    160 bytes stack frame, 316 bytes spill stores, 552 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi7ELi19E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi7ELi19E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    192 bytes stack frame, 440 bytes spill stores, 764 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi8ELi20E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi8ELi20E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    256 bytes stack frame, 576 bytes spill stores, 1012 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi9ELi21E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi9ELi21E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    304 bytes stack frame, 708 bytes spill stores, 1224 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi10ELi22E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi10ELi22E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    360 bytes stack frame, 824 bytes spill stores, 1476 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi11ELi23E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi11ELi23E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    408 bytes stack frame, 948 bytes spill stores, 1720 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi12ELi24E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi12ELi24E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    440 bytes stack frame, 1072 bytes spill stores, 1960 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi13ELi25E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi13ELi25E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    472 bytes stack frame, 1224 bytes spill stores, 2228 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi14ELi26E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi14ELi26E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    512 bytes stack frame, 1416 bytes spill stores, 2520 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi15ELi27E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi15ELi27E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    544 bytes stack frame, 1596 bytes spill stores, 2812 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi16ELi28E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi16ELi28E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    592 bytes stack frame, 1800 bytes spill stores, 3128 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi17ELi29E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi17ELi29E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    632 bytes stack frame, 1924 bytes spill stores, 3400 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi18ELi30E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi18ELi30E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    688 bytes stack frame, 2164 bytes spill stores, 3736 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi19ELi31E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi19ELi31E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    736 bytes stack frame, 2368 bytes spill stores, 4064 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi20ELi32E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi20ELi32E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    792 bytes stack frame, 2552 bytes spill stores, 4380 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi21ELi33E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi21ELi33E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    840 bytes stack frame, 2704 bytes spill stores, 4672 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi22ELi34E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi22ELi34E16aeif_psc_exp_rk5EviPdPfS2_S2_dfT1_
+    896 bytes stack frame, 2860 bytes spill stores, 4976 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z14ArrayCalibrateI16aeif_psc_exp_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z14ArrayCalibrateI16aeif_psc_exp_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, 416 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z9ArrayInitI16aeif_psc_exp_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z9ArrayInitI16aeif_psc_exp_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 416 bytes cmem[0]
+ptxas info    : Function properties for _ZN15aeif_psc_exp_ns13NodeCalibrateEiidPfS0_16aeif_psc_exp_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z13NodeCalibrateiidPfS_16aeif_psc_exp_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _ZN15aeif_psc_exp_ns8NodeInitEiidPfS0_16aeif_psc_exp_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z8NodeInitiidPfS_16aeif_psc_exp_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 120 bytes gmem
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi4ELi16E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi4ELi16E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    80 bytes stack frame, 152 bytes spill stores, 152 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi6ELi18E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi6ELi18E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    160 bytes stack frame, 288 bytes spill stores, 508 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi8ELi20E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi8ELi20E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    240 bytes stack frame, 464 bytes spill stores, 844 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi10ELi22E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi10ELi22E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    344 bytes stack frame, 720 bytes spill stores, 1284 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi12ELi24E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi12ELi24E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    424 bytes stack frame, 920 bytes spill stores, 1676 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi14ELi26E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi14ELi26E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    496 bytes stack frame, 1128 bytes spill stores, 2144 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi16ELi28E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi16ELi28E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    576 bytes stack frame, 1412 bytes spill stores, 2660 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi18ELi30E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi18ELi30E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    656 bytes stack frame, 1612 bytes spill stores, 3064 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi20ELi32E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi20ELi32E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    736 bytes stack frame, 1920 bytes spill stores, 3676 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi22ELi34E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi22ELi34E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    832 bytes stack frame, 2200 bytes spill stores, 4316 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi24ELi36E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi24ELi36E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    928 bytes stack frame, 2492 bytes spill stores, 4820 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi26ELi38E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi26ELi38E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    1032 bytes stack frame, 2808 bytes spill stores, 5380 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi28ELi40E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi28ELi40E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    1128 bytes stack frame, 3112 bytes spill stores, 5944 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi30ELi42E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi30ELi42E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    1224 bytes stack frame, 3424 bytes spill stores, 6516 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi32ELi44E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi32ELi44E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    1320 bytes stack frame, 3756 bytes spill stores, 7136 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi34ELi46E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi34ELi46E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    1416 bytes stack frame, 4144 bytes spill stores, 7796 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi36ELi48E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi36ELi48E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    1512 bytes stack frame, 4552 bytes spill stores, 8460 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi38ELi50E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi38ELi50E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    1600 bytes stack frame, 4972 bytes spill stores, 9096 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi40ELi52E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi40ELi52E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    1680 bytes stack frame, 5408 bytes spill stores, 9840 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi42ELi54E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi42ELi54E18aeif_psc_alpha_rk5EviPdPfS2_S2_dfT1_
+    1776 bytes stack frame, 6016 bytes spill stores, 10728 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z14ArrayCalibrateI18aeif_psc_alpha_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z14ArrayCalibrateI18aeif_psc_alpha_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 416 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z9ArrayInitI18aeif_psc_alpha_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z9ArrayInitI18aeif_psc_alpha_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 416 bytes cmem[0]
+ptxas info    : Function properties for _ZN17aeif_psc_alpha_ns13NodeCalibrateEiidPfS0_18aeif_psc_alpha_rk5
+    24 bytes stack frame, 24 bytes spill stores, 24 bytes spill loads
+ptxas info    : Function properties for _Z13NodeCalibrateiidPfS_18aeif_psc_alpha_rk5
+    24 bytes stack frame, 24 bytes spill stores, 24 bytes spill loads
+ptxas info    : Function properties for _ZN17aeif_psc_alpha_ns8NodeInitEiidPfS0_18aeif_psc_alpha_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z8NodeInitiidPfS_18aeif_psc_alpha_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 120 bytes gmem
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi4ELi17E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi4ELi17E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    80 bytes stack frame, 160 bytes spill stores, 188 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi6ELi20E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi6ELi20E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    160 bytes stack frame, 316 bytes spill stores, 580 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi8ELi23E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi8ELi23E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    264 bytes stack frame, 508 bytes spill stores, 952 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi10ELi26E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi10ELi26E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    344 bytes stack frame, 736 bytes spill stores, 1400 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi12ELi29E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi12ELi29E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    416 bytes stack frame, 896 bytes spill stores, 1784 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi14ELi32E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi14ELi32E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    504 bytes stack frame, 1100 bytes spill stores, 2272 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi16ELi35E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi16ELi35E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    592 bytes stack frame, 1412 bytes spill stores, 2784 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi18ELi38E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi18ELi38E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    696 bytes stack frame, 1652 bytes spill stores, 3244 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi20ELi41E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi20ELi41E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    776 bytes stack frame, 1952 bytes spill stores, 3840 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi22ELi44E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi22ELi44E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    880 bytes stack frame, 2276 bytes spill stores, 4560 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi24ELi47E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi24ELi47E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    968 bytes stack frame, 2488 bytes spill stores, 5016 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi26ELi50E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi26ELi50E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    1080 bytes stack frame, 2796 bytes spill stores, 5600 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi28ELi53E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi28ELi53E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    1176 bytes stack frame, 3096 bytes spill stores, 6168 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi30ELi56E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi30ELi56E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    1296 bytes stack frame, 3416 bytes spill stores, 6780 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi32ELi59E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi32ELi59E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    1384 bytes stack frame, 3732 bytes spill stores, 7432 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi34ELi62E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi34ELi62E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    1480 bytes stack frame, 4040 bytes spill stores, 7992 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi36ELi65E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi36ELi65E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    1576 bytes stack frame, 4380 bytes spill stores, 8580 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi38ELi68E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi38ELi68E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    1672 bytes stack frame, 4752 bytes spill stores, 9212 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi40ELi71E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi40ELi71E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    1768 bytes stack frame, 5096 bytes spill stores, 9800 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi42ELi74E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi42ELi74E19aeif_cond_alpha_rk5EviPdPfS2_S2_dfT1_
+    1872 bytes stack frame, 5484 bytes spill stores, 10468 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z14ArrayCalibrateI19aeif_cond_alpha_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z14ArrayCalibrateI19aeif_cond_alpha_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 416 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z9ArrayInitI19aeif_cond_alpha_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z9ArrayInitI19aeif_cond_alpha_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, 416 bytes cmem[0]
+ptxas info    : Function properties for _ZN18aeif_cond_alpha_ns13NodeCalibrateEiidPfS0_19aeif_cond_alpha_rk5
+    24 bytes stack frame, 24 bytes spill stores, 24 bytes spill loads
+ptxas info    : Function properties for _Z13NodeCalibrateiidPfS_19aeif_cond_alpha_rk5
+    24 bytes stack frame, 24 bytes spill stores, 24 bytes spill loads
+ptxas info    : Function properties for _ZN18aeif_cond_alpha_ns8NodeInitEiidPfS0_19aeif_cond_alpha_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z8NodeInitiidPfS_19aeif_cond_alpha_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 120 bytes gmem
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi4ELi18E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi4ELi18E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    88 bytes stack frame, 164 bytes spill stores, 208 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi6ELi22E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi6ELi22E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    168 bytes stack frame, 332 bytes spill stores, 628 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi8ELi26E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi8ELi26E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    280 bytes stack frame, 560 bytes spill stores, 1048 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi10ELi30E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi10ELi30E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    360 bytes stack frame, 796 bytes spill stores, 1532 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi12ELi34E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi12ELi34E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    440 bytes stack frame, 960 bytes spill stores, 1976 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi14ELi38E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi14ELi38E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    552 bytes stack frame, 1348 bytes spill stores, 2628 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi16ELi42E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi16ELi42E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    640 bytes stack frame, 1596 bytes spill stores, 3160 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi18ELi46E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi18ELi46E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    736 bytes stack frame, 1940 bytes spill stores, 3864 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi20ELi50E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi20ELi50E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    840 bytes stack frame, 2316 bytes spill stores, 4544 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi22ELi54E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi22ELi54E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    968 bytes stack frame, 2672 bytes spill stores, 5204 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi24ELi58E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi24ELi58E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1088 bytes stack frame, 2912 bytes spill stores, 5740 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi26ELi62E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi26ELi62E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1168 bytes stack frame, 3156 bytes spill stores, 6292 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi28ELi66E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi28ELi66E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1280 bytes stack frame, 3436 bytes spill stores, 6868 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi30ELi70E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi30ELi70E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1376 bytes stack frame, 3736 bytes spill stores, 7464 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi32ELi74E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi32ELi74E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1464 bytes stack frame, 4040 bytes spill stores, 8056 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi34ELi78E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi34ELi78E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1560 bytes stack frame, 4360 bytes spill stores, 8648 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi36ELi82E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi36ELi82E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1656 bytes stack frame, 4632 bytes spill stores, 9208 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi38ELi86E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi38ELi86E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1752 bytes stack frame, 4924 bytes spill stores, 9796 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi40ELi90E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi40ELi90E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1840 bytes stack frame, 5232 bytes spill stores, 10424 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi42ELi94E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi42ELi94E18aeif_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1952 bytes stack frame, 5556 bytes spill stores, 11044 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z14ArrayCalibrateI18aeif_cond_beta_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z14ArrayCalibrateI18aeif_cond_beta_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 416 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z9ArrayInitI18aeif_cond_beta_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z9ArrayInitI18aeif_cond_beta_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, 416 bytes cmem[0]
+ptxas info    : Function properties for _ZN17aeif_cond_beta_ns13NodeCalibrateEiidPfS0_18aeif_cond_beta_rk5
+    40 bytes stack frame, 36 bytes spill stores, 36 bytes spill loads
+ptxas info    : Function properties for _Z13NodeCalibrateiidPfS_18aeif_cond_beta_rk5
+    40 bytes stack frame, 36 bytes spill stores, 36 bytes spill loads
+ptxas info    : Function properties for _ZN17aeif_cond_beta_ns8NodeInitEiidPfS0_18aeif_cond_beta_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z8NodeInitiidPfS_18aeif_cond_beta_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 120 bytes gmem
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi4ELi13E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi4ELi13E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    80 bytes stack frame, 112 bytes spill stores, 132 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi6ELi17E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi6ELi17E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    160 bytes stack frame, 236 bytes spill stores, 404 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi8ELi21E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi8ELi21E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    256 bytes stack frame, 388 bytes spill stores, 808 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi10ELi25E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi10ELi25E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    360 bytes stack frame, 612 bytes spill stores, 1240 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi12ELi29E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi12ELi29E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    440 bytes stack frame, 788 bytes spill stores, 1668 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi14ELi33E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi14ELi33E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    536 bytes stack frame, 1064 bytes spill stores, 2156 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi16ELi37E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi16ELi37E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    640 bytes stack frame, 1380 bytes spill stores, 2664 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi18ELi41E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi18ELi41E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    736 bytes stack frame, 1616 bytes spill stores, 3164 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi20ELi45E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi20ELi45E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    832 bytes stack frame, 1944 bytes spill stores, 3764 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi22ELi49E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi22ELi49E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    944 bytes stack frame, 2328 bytes spill stores, 4444 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi24ELi53E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi24ELi53E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1080 bytes stack frame, 2772 bytes spill stores, 5164 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi26ELi57E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi26ELi57E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1184 bytes stack frame, 3144 bytes spill stores, 5828 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi28ELi61E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi28ELi61E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1304 bytes stack frame, 3396 bytes spill stores, 6360 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi30ELi65E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi30ELi65E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1416 bytes stack frame, 3716 bytes spill stores, 6936 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi32ELi69E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi32ELi69E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1536 bytes stack frame, 4044 bytes spill stores, 7536 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi34ELi73E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi34ELi73E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1656 bytes stack frame, 4428 bytes spill stores, 8164 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi36ELi77E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi36ELi77E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1784 bytes stack frame, 4780 bytes spill stores, 8800 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi38ELi81E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi38ELi81E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    1888 bytes stack frame, 5136 bytes spill stores, 9428 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi40ELi85E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi40ELi85E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    2016 bytes stack frame, 5460 bytes spill stores, 10036 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi42ELi89E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi42ELi89E24izhikevich_cond_beta_rk5EviPdPfS2_S2_dfT1_
+    2144 bytes stack frame, 5848 bytes spill stores, 10700 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 24 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z14ArrayCalibrateI24izhikevich_cond_beta_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z14ArrayCalibrateI24izhikevich_cond_beta_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 416 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z9ArrayInitI24izhikevich_cond_beta_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z9ArrayInitI24izhikevich_cond_beta_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 416 bytes cmem[0]
+ptxas info    : Function properties for _ZN23izhikevich_cond_beta_ns13NodeCalibrateEiidPfS0_24izhikevich_cond_beta_rk5
+    40 bytes stack frame, 36 bytes spill stores, 36 bytes spill loads
+ptxas info    : Function properties for _Z13NodeCalibrateiidPfS_24izhikevich_cond_beta_rk5
+    40 bytes stack frame, 36 bytes spill stores, 36 bytes spill loads
+ptxas info    : Function properties for _ZN23izhikevich_cond_beta_ns8NodeInitEiidPfS0_24izhikevich_cond_beta_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z8NodeInitiidPfS_24izhikevich_cond_beta_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 120 bytes gmem
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi4ELi18E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi4ELi18E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    88 bytes stack frame, 164 bytes spill stores, 208 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi6ELi22E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi6ELi22E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    168 bytes stack frame, 332 bytes spill stores, 628 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi8ELi26E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi8ELi26E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    280 bytes stack frame, 560 bytes spill stores, 1048 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi10ELi30E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi10ELi30E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    360 bytes stack frame, 796 bytes spill stores, 1532 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi12ELi34E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi12ELi34E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    440 bytes stack frame, 960 bytes spill stores, 1976 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi14ELi38E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi14ELi38E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    552 bytes stack frame, 1348 bytes spill stores, 2628 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi16ELi42E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi16ELi42E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    640 bytes stack frame, 1596 bytes spill stores, 3160 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi18ELi46E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi18ELi46E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    736 bytes stack frame, 1940 bytes spill stores, 3864 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi20ELi50E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi20ELi50E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    840 bytes stack frame, 2316 bytes spill stores, 4544 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi22ELi54E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi22ELi54E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    968 bytes stack frame, 2672 bytes spill stores, 5204 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi24ELi58E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi24ELi58E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1088 bytes stack frame, 2912 bytes spill stores, 5740 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi26ELi62E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi26ELi62E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1168 bytes stack frame, 3156 bytes spill stores, 6292 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi28ELi66E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi28ELi66E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1280 bytes stack frame, 3436 bytes spill stores, 6868 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi30ELi70E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi30ELi70E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1376 bytes stack frame, 3736 bytes spill stores, 7464 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi32ELi74E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi32ELi74E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1464 bytes stack frame, 4040 bytes spill stores, 8056 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi34ELi78E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi34ELi78E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1560 bytes stack frame, 4360 bytes spill stores, 8648 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi36ELi82E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi36ELi82E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1656 bytes stack frame, 4632 bytes spill stores, 9208 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi38ELi86E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi38ELi86E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1752 bytes stack frame, 4924 bytes spill stores, 9796 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi40ELi90E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi40ELi90E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1840 bytes stack frame, 5232 bytes spill stores, 10424 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi42ELi94E11user_m1_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi42ELi94E11user_m1_rk5EviPdPfS2_S2_dfT1_
+    1952 bytes stack frame, 5556 bytes spill stores, 11044 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z14ArrayCalibrateI11user_m1_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z14ArrayCalibrateI11user_m1_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 416 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z9ArrayInitI11user_m1_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z9ArrayInitI11user_m1_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, 416 bytes cmem[0]
+ptxas info    : Function properties for _ZN10user_m1_ns13NodeCalibrateEiidPfS0_11user_m1_rk5
+    40 bytes stack frame, 36 bytes spill stores, 36 bytes spill loads
+ptxas info    : Function properties for _Z13NodeCalibrateiidPfS_11user_m1_rk5
+    40 bytes stack frame, 36 bytes spill stores, 36 bytes spill loads
+ptxas info    : Function properties for _ZN10user_m1_ns8NodeInitEiidPfS0_11user_m1_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z8NodeInitiidPfS_11user_m1_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : 120 bytes gmem
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi4ELi18E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi4ELi18E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    88 bytes stack frame, 164 bytes spill stores, 208 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi6ELi22E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi6ELi22E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    168 bytes stack frame, 332 bytes spill stores, 628 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi8ELi26E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi8ELi26E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    280 bytes stack frame, 560 bytes spill stores, 1048 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi10ELi30E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi10ELi30E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    360 bytes stack frame, 796 bytes spill stores, 1532 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi12ELi34E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi12ELi34E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    440 bytes stack frame, 960 bytes spill stores, 1976 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi14ELi38E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi14ELi38E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    552 bytes stack frame, 1348 bytes spill stores, 2628 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi16ELi42E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi16ELi42E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    640 bytes stack frame, 1596 bytes spill stores, 3160 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi18ELi46E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi18ELi46E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    736 bytes stack frame, 1940 bytes spill stores, 3864 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi20ELi50E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi20ELi50E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    840 bytes stack frame, 2316 bytes spill stores, 4544 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi22ELi54E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi22ELi54E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    968 bytes stack frame, 2672 bytes spill stores, 5204 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi24ELi58E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi24ELi58E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1088 bytes stack frame, 2912 bytes spill stores, 5740 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi26ELi62E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi26ELi62E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1168 bytes stack frame, 3156 bytes spill stores, 6292 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi28ELi66E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi28ELi66E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1280 bytes stack frame, 3436 bytes spill stores, 6868 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi30ELi70E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi30ELi70E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1376 bytes stack frame, 3736 bytes spill stores, 7464 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi32ELi74E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi32ELi74E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1464 bytes stack frame, 4040 bytes spill stores, 8056 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi34ELi78E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi34ELi78E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1560 bytes stack frame, 4360 bytes spill stores, 8648 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi36ELi82E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi36ELi82E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1656 bytes stack frame, 4632 bytes spill stores, 9208 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi38ELi86E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi38ELi86E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1752 bytes stack frame, 4924 bytes spill stores, 9796 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi40ELi90E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi40ELi90E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1840 bytes stack frame, 5232 bytes spill stores, 10424 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z11ArrayUpdateILi42ELi94E11user_m2_rk5EviPdPfS2_S2_dfT1_' for 'sm_80'
+ptxas info    : Function properties for _Z11ArrayUpdateILi42ELi94E11user_m2_rk5EviPdPfS2_S2_dfT1_
+    1952 bytes stack frame, 5556 bytes spill stores, 11044 bytes spill loads
+ptxas info    : Used 55 registers, 408 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z14ArrayCalibrateI11user_m2_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z14ArrayCalibrateI11user_m2_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 416 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z9ArrayInitI11user_m2_rk5EviiiPdPfS2_S2_dfT_' for 'sm_80'
+ptxas info    : Function properties for _Z9ArrayInitI11user_m2_rk5EviiiPdPfS2_S2_dfT_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, 416 bytes cmem[0]
+ptxas info    : Function properties for _ZN10user_m2_ns13NodeCalibrateEiidPfS0_11user_m2_rk5
+    40 bytes stack frame, 36 bytes spill stores, 36 bytes spill loads
+ptxas info    : Function properties for _Z13NodeCalibrateiidPfS_11user_m2_rk5
+    40 bytes stack frame, 36 bytes spill stores, 36 bytes spill loads
+ptxas info    : Function properties for _ZN10user_m2_ns8NodeInitEiidPfS0_11user_m2_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Function properties for _Z8NodeInitiidPfS_11user_m2_rk5
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
 /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/compilers/bin/nvcc -ccbin=mpicxx --compiler-options  "-O3 -Wall -fPIC" -I . -arch sm_80 --ptxas-options=-v --maxrregcount=55 --relocatable-device-code true --shared -o libnestgpu.so obj/iaf_psc_exp_g.cu.o obj/iaf_psc_exp_hc.cu.o obj/iaf_psc_exp.cu.o obj/ext_neuron.cu.o obj/aeif_cond_alpha.cu.o obj/aeif_cond_beta.cu.o obj/aeif_psc_alpha.cu.o obj/aeif_psc_delta.cu.o obj/aeif_psc_exp.cu.o obj/base_neuron.cu.o obj/connect.cu.o obj/connect_mpi.cu.o obj/getRealTime.cu.o obj/get_spike.cu.o obj/locate.cu.o obj/multimeter.cu.o obj/neuron_models.cu.o obj/nestgpu.cu.o obj/node_group.cu.o obj/non_blocking_timer.cu.o obj/parrot_neuron.cu.o obj/poiss_gen.cu.o obj/poisson.cu.o obj/prefix_scan.cu.o obj/random.cu.o obj/rev_spike.cu.o obj/rk5.cu.o obj/scan.cu.o obj/send_spike.cu.o obj/spike_buffer.cu.o obj/spike_detector.cu.o obj/spike_generator.cu.o obj/spike_mpi.cu.o obj/stdp.cu.o obj/syn_model.cu.o obj/test_syn_model.cu.o obj/izhikevich_cond_beta.cu.o obj/izhikevich.cu.o obj/izhikevich_psc_exp_5s.cu.o obj/izhikevich_psc_exp_2s.cu.o obj/izhikevich_psc_exp.cu.o obj/user_m1.cu.o obj/user_m2.cu.o obj/connect_rules.cpp.o obj/debug.cpp.o obj/nestgpu_C.cpp.o -lm -lcurand -lcuda -lcudart
 make[1]: Leaving directory '/opt/nestgpu_install'
 make[1]: Entering directory '/opt/nestgpu_install'
@@ -186,6 +1195,7 @@ make[2]: Nothing to be done for 'install-exec-hook'.
 make[2]: Leaving directory '/opt/nestgpu_install'
  /usr/bin/mkdir -p '/opt/nestgpu/lib/python3.10/site-packages'
  /usr/bin/install -c -m 644 ./pythonlib/nestgpu.py '/opt/nestgpu/lib/python3.10/site-packages'
+<string>:2: DeprecationWarning: the imp module is deprecated in favour of importlib and slated for removal in Python 3.12; see the module's documentation for alternative uses
 Byte-compiling python modules...
 nestgpu.py
 Byte-compiling python modules (optimized versions) ...

@@ -390,7 +390,7 @@ int NESTGPU::Debug() {
       for (std::vector<ConnGroup> &conn : net_connection_->connection_) { // change syngroup?
         for (ConnGroup &cg : conn) {
           int delay = cg.delay;
-          if (delay_hist.size() < delay + 1) {
+          if ((int)delay_hist.size() < delay + 1) {
             delay_hist.resize(delay + 1, 0);
           }
           delay_hist[delay] += cg.target_vect.size();
@@ -398,7 +398,7 @@ int NESTGPU::Debug() {
       }
       std::string filename = "syndelay/local_" + std::to_string(MpiId()) + ".txt";
       std::ofstream ofs(filename);
-      for (int i = 0; i < delay_hist.size(); ++i) {
+      for (int i = 0; i < (int)delay_hist.size(); ++i) {
         if (i > 0) ofs << ",";
         ofs << delay_hist[i];
       }
@@ -409,14 +409,14 @@ int NESTGPU::Debug() {
       std::vector<long long> delay_hist;
       for (RemoteConnection &rc : remote_connection_vect_) {
         int delay = int(std::round(rc.delay / time_resolution_)) - 1;
-        if (delay_hist.size() < delay + 1) {
+        if ((int)delay_hist.size() < delay + 1) {
           delay_hist.resize(delay + 1, 0);
         }
         delay_hist[delay]++;
       }
       std::string filename = "syndelay/remote_" + std::to_string(MpiId()) + ".txt";
       std::ofstream ofs(filename);
-      for (int i = 0; i < delay_hist.size(); ++i) {
+      for (int i = 0; i < (int)delay_hist.size(); ++i) {
         if (i > 0) ofs << ",";
         ofs << delay_hist[i];
       }
@@ -555,6 +555,7 @@ int NESTGPU::EndSimulation()
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "RevSpikeBufferUpdate_time", RevSpikeBufferUpdate_time, RevSpikeBufferUpdate_timer->getTimeHost(), RevSpikeBufferUpdate_timer->getTimeDevice());
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "BufferRecSpikeTimes_time", BufferRecSpikeTimes_time, BufferRecSpikeTimes_timer->getTimeHost(), BufferRecSpikeTimes_timer->getTimeDevice());
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "Blocking_time", Blocking_time, Blocking_timer->getTimeHost(), Blocking_timer->getTimeDevice());
+    printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "RecvWait_time", RecvWait_time, RecvWait_time, 0.0); // comm_wait
   }
   // if (mpi_flag_ && verbosity_level_>=4) {
   //   printf("%s  %s: %f\n", mpirank_str, "SendSpikeToRemote_MPI_time", connect_mpi_->SendSpikeToRemote_MPI_time_);

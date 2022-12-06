@@ -27,6 +27,9 @@ NonBlockingTimer *RevSpikeBufferUpdate_timer;
 NonBlockingTimer *BufferRecSpikeTimes_timer;
 NonBlockingTimer *Blocking_timer;
 
+double RecvWait_time; // comm_wait
+
+
 CudaEventPair::CudaEventPair()
 {
   cudaEventCreate(&start_e);

@@ -52,7 +52,7 @@ def simulation(label):
     ngpu.ConnectMpiInit()
     # ngpu.AddDebugMode("syndelay_static")
     # ngpu.AddDebugMode("syndelay_spike")
-    ngpu.AddDebugMode("comm_distribution")
+    # ngpu.AddDebugMode("comm_distribution")
     M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
     M.simulation.simulate()
 
