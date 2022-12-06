@@ -73,8 +73,7 @@ python analysis/each_proc/neuron.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/spike.py simulation_result/$LABEL >> $RESULT_FILE
 if [ -d ./simulation_result/$LABEL/syndelay ]; then
 	python analysis/each_proc/synapse.py simulation_result/$LABEL >> $RESULT_FILE
-	python analysis/distributions/delay_local.py simulation_result/$LABEL >> $RESULT_FILE
-	python analysis/distributions/delay_remote.py simulation_result/$LABEL >> $RESULT_FILE
+	python analysis/distributions/delay_connection.py simulation_result/$LABEL >> $RESULT_FILE
 	python analysis/distributions/delay_spike.py simulation_result/$LABEL >> $RESULT_FILE
 fi
 if [ -d ./simulation_result/$LABEL/comm ]; then

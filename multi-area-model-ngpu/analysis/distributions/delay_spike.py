@@ -57,5 +57,5 @@ plt.ylabel("Count")
 # plt.xticks(xtmp, xtmp / 10)
 plt.bar(x, y)
 plt.savefig(
-    os.path.join(sim_dir, "delay_spike.png"), bbox_inches="tight", pad_inches=0.2
+    os.path.join(sim_dir, "delay_spike.pdf"), bbox_inches="tight", pad_inches=0.2
 )

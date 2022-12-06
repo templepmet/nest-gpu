@@ -45,6 +45,9 @@ for p in range(procs):
 delay_spike = np.array(delay_spike) / iterations
 x = np.arange(len(delay_all))
 
+print(delay_all[40:50])
+print(delay_remote[40:50])
+
 plt.rcParams["axes.axisbelow"] = True
 plt.rcParams["font.size"] = 12
 
@@ -63,5 +66,5 @@ plt.bar(x, delay_remote, label="Remote")
 # plt.plot(x, delay_spike, label="Spike")
 plt.legend()
 plt.savefig(
-    os.path.join(sim_dir, "delay_connection.png"), bbox_inches="tight", pad_inches=0.2
+    os.path.join(sim_dir, "delay_connection.pdf"), bbox_inches="tight", pad_inches=0.2
 )
