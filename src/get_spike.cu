@@ -30,6 +30,7 @@
 #include "send_spike.h"
 #include "spike_buffer.h"
 #include "cuda_error.h"
+#include "non_blocking_timer.h"
 
 extern __constant__ long long NESTGPUTimeIdx;
 extern __constant__ float NESTGPUTimeResolution;
@@ -169,7 +170,9 @@ int NESTGPU::ClearGetSpikeArrays()
   for (unsigned int i=0; i<node_vect_.size(); i++) {
     BaseNeuron *bn = node_vect_[i];
     if (bn->get_spike_array_ != NULL) {
+      ClearGetSpikeArrays_timer->startRecordDevice();
       gpuErrchk(cudaMemsetAsync(bn->get_spike_array_, 0, bn->n_node_*bn->n_port_*sizeof(double)));
+      ClearGetSpikeArrays_timer->stopRecordDevice();
     }
   }
   
