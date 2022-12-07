@@ -32,7 +32,7 @@ time_label = [
     "ExternalSpikeReset_time",
     "RevSpikeBufferUpdate_time",
     "BufferRecSpikeTimes_time",
-    "Blocking_time"
+    "Other_time"
 ]
 
 # definition dependeny of host/device include time

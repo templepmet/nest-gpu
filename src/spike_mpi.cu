@@ -183,7 +183,7 @@ int ConnectMpi::ExternalSpikeInit(int n_node, int n_hosts, int max_spike_per_hos
   RecvSpikeFromRemote_CUDAcp_time_ = 0;
   JoinSpike_time_ = 0;
 
-  RecvWait_time = 0; // comm_wait
+  RecvSpikeWait_time = 0; // comm_wait
 
   int *h_NExternalNodeTargetHost = new int[n_node];
   int **h_ExternalNodeTargetHostId = new int*[n_node];
@@ -309,6 +309,8 @@ __global__ void DeviceExternalSpikeInit(int n_hosts,
 // Send spikes to remote MPI processes
 int ConnectMpi::SendSpikeToRemote(int n_hosts, int max_spike_per_host)
 {
+  Other_timer->startRecord();
+  
   MPI_Request request;
   int mpi_id, tag = 1;  // id is already in the class, can be removed
   MPI_Comm_rank(MPI_COMM_WORLD, &mpi_id);
@@ -317,6 +319,9 @@ int ConnectMpi::SendSpikeToRemote(int n_hosts, int max_spike_per_host)
   gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNum, d_ExternalTargetSpikeNum,
 		       n_hosts*sizeof(int), cudaMemcpyDeviceToHost));
   SendSpikeToRemote_CUDAcp_time_ += (getRealTime() - time_mark);
+  
+  Other_timer->stopRecord();
+  SendSpikeToRemote_timer->startRecord();
 
   // pack the spikes in GPU memory and copy them to CPU
   int n_spike_tot = JoinSpikes(n_hosts, max_spike_per_host);
@@ -363,6 +368,8 @@ int ConnectMpi::SendSpikeToRemote(int n_hosts, int max_spike_per_host)
     ofs << std::endl;
     ofs.close();
   }
+
+  SendSpikeToRemote_timer->stopRecord();
   
   return 0;
 }
@@ -409,7 +416,7 @@ int ConnectMpi::RecvSpikeFromRemote(int n_hosts, int max_spike_per_host)
 	      // when receive is complete remove MPI proc from list
 	      recv_list.erase(list_it);
         
-        RecvWait_time += std::max(0.0, t2 - t1);
+        RecvSpikeWait_time += std::max(0.0, t2 - t1);
         t1 = getRealTime(); // comm_wait
 	      
         break;

@@ -162,7 +162,7 @@ NESTGPU::NESTGPU()
   ExternalSpikeReset_timer = new NonBlockingTimer("ExternalSpikeReset");
   RevSpikeBufferUpdate_timer = new NonBlockingTimer("RevSpikeBufferUpdate");
   BufferRecSpikeTimes_timer = new NonBlockingTimer("BufferRecSpikeTimes");
-  Blocking_timer = new NonBlockingTimer("Blocking");
+  Other_timer = new NonBlockingTimer("Blocking");
 
   first_simulation_flag_ = true;
 }
@@ -186,7 +186,7 @@ NESTGPU::~NESTGPU()
   delete ExternalSpikeReset_timer;
   delete RevSpikeBufferUpdate_timer;
   delete BufferRecSpikeTimes_timer;
-  delete Blocking_timer;
+  delete Other_timer;
 
   multimeter_->CloseFiles();
   gpuErrchk( cudaPeekAtLastError() );
@@ -484,9 +484,9 @@ int NESTGPU::EndSimulation()
     printf("\r[%.2lf %%] Model time: %.3lf ms", 100.0*(neural_time_-neur_t0_)/sim_time_, neural_time_);
   }
  
-  Blocking_timer->startRecord();
+  Other_timer->startRecord();
   cudaStreamSynchronize(0);
-  Blocking_timer->stopRecord();
+  Other_timer->stopRecord();
 #ifdef HAVE_MPI                                        
   if (mpi_flag_) {
     MpiBarrier_timer->startRecord();
@@ -504,37 +504,57 @@ int NESTGPU::EndSimulation()
 
   if (verbosity_level_>=3) {
     // Sum TimeDevice = 0 because include all HostTime
-    float Blocking_time = Blocking_timer->getTimeHost();
-    float SpikeBufferUpdate_time = SpikeBufferUpdate_timer->getTimeHost() + SpikeBufferUpdate_timer->getTimeDevice();
-    float poisson_generator_time = poisson_generator_timer->getTimeHost() + poisson_generator_timer->getTimeDevice();
-    float neuron_Update_time = neuron_Update_timer->getTimeHost() + neuron_Update_timer->getTimeDevice();
-    float copy_ext_spike_time = copy_ext_spike_timer->getTimeDevice();
-    Blocking_time += copy_ext_spike_timer->getTimeHost() -
-                     SpikeBufferUpdate_timer->getTimeDevice() -
-                     poisson_generator_timer->getTimeDevice() -
-                     neuron_Update_timer->getTimeDevice() -
-                     copy_ext_spike_timer->getTimeDevice();
-    
-    float SendExternalSpike_time = SendExternalSpike_timer->getTimeHost() + SendExternalSpike_timer->getTimeDevice();
-    float SendSpikeToRemote_time = SendSpikeToRemote_timer->getTimeHost() - SendExternalSpike_timer->getTimeDevice();
-    float RecvSpikeFromRemote_time = RecvSpikeFromRemote_timer->getTimeHost();
-    float CopySpikeFromRemote_time = CopySpikeFromRemote_timer->getTimeHost();
-    float MpiBarrier_time = MpiBarrier_timer->getTimeHost();
-    float copy_spike_time = copy_spike_timer->getTimeDevice();
-    Blocking_time += copy_spike_timer->getTimeHost() - copy_spike_timer->getTimeDevice();
+    float SpikeBufferUpdate_time = SpikeBufferUpdate_timer->getTimeDevice();
+    float poisson_generator_time = poisson_generator_timer->getTimeDevice();
+    float neuron_Update_time = neuron_Update_timer->getTimeDevice();
+    float copy_ext_spike_time = copy_ext_spike_timer->getTimeDevice(); // blocking
 
-    float ClearGetSpikeArrays_time = ClearGetSpikeArrays_timer->getTimeHost() + ClearGetSpikeArrays_timer->getTimeDevice();
-    float NestedLoop_time = NestedLoop_timer->getTimeHost() + NestedLoop_timer->getTimeDevice();
-    float GetSpike_time = GetSpike_timer->getTimeHost() + GetSpike_timer->getTimeDevice();
-    float SpikeReset_time = SpikeReset_timer->getTimeHost() + SpikeReset_timer->getTimeDevice();
-    float ExternalSpikeReset_time = ExternalSpikeReset_timer->getTimeHost() + ExternalSpikeReset_timer->getTimeDevice();
-    float RevSpikeBufferUpdate_time = RevSpikeBufferUpdate_timer->getTimeHost(); // warning! this is blocking time
-    float BufferRecSpikeTimes_time = BufferRecSpikeTimes_timer->getTimeHost();
-    Blocking_time += -ClearGetSpikeArrays_timer->getTimeDevice() -
-                      NestedLoop_timer->getTimeDevice() -
-                      GetSpike_timer->getTimeDevice() -
-                      SpikeReset_timer->getTimeDevice() -
-                      ExternalSpikeReset_timer->getTimeDevice();
+    float SendExternalSpike_time = SendExternalSpike_timer->getTimeDevice();
+    float SendSpikeToRemote_time = SendSpikeToRemote_timer->getTimeHost(); // blocking
+    float RecvSpikeFromRemote_time = RecvSpikeFromRemote_timer->getTimeHost();
+    float CopySpikeFromRemote_time = CopySpikeFromRemote_timer->getTimeDevice();
+    float MpiBarrier_time = MpiBarrier_timer->getTimeHost();
+    float copy_spike_time = copy_spike_timer->getTimeDevice(); // blocking
+
+    float ClearGetSpikeArrays_time = ClearGetSpikeArrays_timer->getTimeDevice();
+    float NestedLoop_time = NestedLoop_timer->getTimeDevice();
+    float GetSpike_time = GetSpike_timer->getTimeDevice();
+    float SpikeReset_time = SpikeReset_timer->getTimeDevice();
+    float ExternalSpikeReset_time = ExternalSpikeReset_timer->getTimeDevice();
+    float RevSpikeBufferUpdate_time = RevSpikeBufferUpdate_timer->getTimeDevice(); // blocking? but nothing call
+    float BufferRecSpikeTimes_time = BufferRecSpikeTimes_timer->getTimeDevice();
+    
+    float sum_other_host_time = SpikeBufferUpdate_timer->getTimeHost() +
+                                poisson_generator_timer->getTimeHost() +
+                                neuron_Update_timer->getTimeHost() +
+                                copy_ext_spike_timer->getTimeHost() +
+                                SendExternalSpike_timer->getTimeHost() +
+                                CopySpikeFromRemote_timer->getTimeHost() +
+                                copy_spike_timer->getTimeHost() +
+                                ClearGetSpikeArrays_timer->getTimeHost() +
+                                NestedLoop_timer->getTimeHost() +
+                                GetSpike_timer->getTimeHost() +
+                                SpikeReset_timer->getTimeHost() +
+                                ExternalSpikeReset_timer->getTimeHost() +
+                                RevSpikeBufferUpdate_timer->getTimeHost() +
+                                BufferRecSpikeTimes_timer->getTimeHost();
+
+    float sum_record_device_time = SpikeBufferUpdate_timer->getTimeDevice() +
+                                   poisson_generator_timer->getTimeDevice() +
+                                   neuron_Update_timer->getTimeDevice() +
+                                   copy_ext_spike_timer->getTimeDevice() +
+                                   SendExternalSpike_timer->getTimeDevice() +
+                                   CopySpikeFromRemote_timer->getTimeDevice() +
+                                   copy_spike_timer->getTimeDevice() +
+                                   ClearGetSpikeArrays_timer->getTimeDevice() +
+                                   NestedLoop_timer->getTimeDevice() +
+                                   GetSpike_timer->getTimeDevice() +
+                                   SpikeReset_timer->getTimeDevice() +
+                                   ExternalSpikeReset_timer->getTimeDevice() +
+                                   RevSpikeBufferUpdate_timer->getTimeDevice() +
+                                   BufferRecSpikeTimes_timer->getTimeDevice();
+    
+    float Other_time = Other_timer->getTimeHost() + sum_other_host_time - sum_record_device_time;
 
     printf("\n");
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "SpikeBufferUpdate_time", SpikeBufferUpdate_time, SpikeBufferUpdate_timer->getTimeHost(), SpikeBufferUpdate_timer->getTimeDevice());
@@ -544,6 +564,7 @@ int NESTGPU::EndSimulation()
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "SendExternalSpike_time", SendExternalSpike_time, SendExternalSpike_timer->getTimeHost(), SendExternalSpike_timer->getTimeDevice());
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "SendSpikeToRemote_time", SendSpikeToRemote_time, SendSpikeToRemote_timer->getTimeHost(), SendSpikeToRemote_timer->getTimeDevice());
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "RecvSpikeFromRemote_time", RecvSpikeFromRemote_time, RecvSpikeFromRemote_timer->getTimeHost(), RecvSpikeFromRemote_timer->getTimeDevice());
+    printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, " in RecvSpikeWait_time", RecvSpikeWait_time, RecvSpikeWait_time, 0.0);
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "CopySpikeFromRemote_time", CopySpikeFromRemote_time, CopySpikeFromRemote_timer->getTimeHost(), CopySpikeFromRemote_timer->getTimeDevice());
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "MpiBarrier_time", MpiBarrier_time, MpiBarrier_timer->getTimeHost(), MpiBarrier_timer->getTimeDevice());
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "copy_spike_time", copy_spike_time, copy_spike_timer->getTimeHost(), copy_spike_timer->getTimeDevice());
@@ -554,8 +575,7 @@ int NESTGPU::EndSimulation()
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "ExternalSpikeReset_time", ExternalSpikeReset_time, ExternalSpikeReset_timer->getTimeHost(), ExternalSpikeReset_timer->getTimeDevice());
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "RevSpikeBufferUpdate_time", RevSpikeBufferUpdate_time, RevSpikeBufferUpdate_timer->getTimeHost(), RevSpikeBufferUpdate_timer->getTimeDevice());
     printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "BufferRecSpikeTimes_time", BufferRecSpikeTimes_time, BufferRecSpikeTimes_timer->getTimeHost(), BufferRecSpikeTimes_timer->getTimeDevice());
-    printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "Blocking_time", Blocking_time, Blocking_timer->getTimeHost(), Blocking_timer->getTimeDevice());
-    printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "RecvWait_time", RecvWait_time, RecvWait_time, 0.0); // comm_wait
+    printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str, "Other_time", Other_time, Other_timer->getTimeHost(), Other_timer->getTimeDevice());
   }
   // if (mpi_flag_ && verbosity_level_>=4) {
   //   printf("%s  %s: %f\n", mpirank_str, "SendSpikeToRemote_MPI_time", connect_mpi_->SendSpikeToRemote_MPI_time_);
@@ -589,7 +609,7 @@ int NESTGPU::SimulationStep()
     poisson_generator_timer->stopRecord();
   }
 
-  neuron_Update_timer->startRecordHost();
+  neuron_Update_timer->startRecord();
   neural_time_ = neur_t0_ + (double)time_resolution_*(it_+1);
   gpuErrchk(cudaMemcpyToSymbolAsync(NESTGPUTime, &neural_time_, sizeof(double)));
   long long time_idx = (int)round(neur_t0_/time_resolution_) + it_ + 1;
@@ -602,13 +622,11 @@ int NESTGPU::SimulationStep()
       ResetConnectionSpikeTimeDown(net_connection_); // unnecessary cudaDeviceSynchronize
     }
   }
-  neuron_Update_timer->startRecordDevice();
   for (unsigned int i=0; i<node_vect_.size(); i++) {
     node_vect_[i]->Update(it_, neural_time_);
   }
-  neuron_Update_timer->stopRecordDevice();
   multimeter_->WriteRecords(neural_time_);
-  neuron_Update_timer->stopRecordHost();
+  neuron_Update_timer->stopRecord();
 
 #ifdef HAVE_MPI
   if (mpi_flag_) {
@@ -625,10 +643,10 @@ int NESTGPU::SimulationStep()
     }
     // for (int ih=0; ih<connect_mpi_->mpi_np_; ih++) {
     //if (ih == connect_mpi_->mpi_id_) {
-    SendSpikeToRemote_timer->startRecord();
+    // SendSpikeToRemote_timer->startRecord(); // record in function
     connect_mpi_->SendSpikeToRemote(connect_mpi_->mpi_np_,
 				    max_spike_per_host_); // call JoinSpikes
-    SendSpikeToRemote_timer->stopRecord();
+    // SendSpikeToRemote_timer->stopRecord();
     
     RecvSpikeFromRemote_timer->startRecord();
     connect_mpi_->RecvSpikeFromRemote(connect_mpi_->mpi_np_,

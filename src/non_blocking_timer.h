@@ -74,8 +74,8 @@ extern NonBlockingTimer *SpikeReset_timer;
 extern NonBlockingTimer *ExternalSpikeReset_timer;
 extern NonBlockingTimer *RevSpikeBufferUpdate_timer;
 extern NonBlockingTimer *BufferRecSpikeTimes_timer;
-extern NonBlockingTimer *Blocking_timer;
+extern NonBlockingTimer *Other_timer;
 
-extern double RecvWait_time; // comm_wait
+extern double RecvSpikeWait_time; // comm_wait
 
 #endif // NON_BLOCKING_TIMER_H;
