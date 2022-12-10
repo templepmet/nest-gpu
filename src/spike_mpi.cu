@@ -458,7 +458,6 @@ int ConnectMpi::RecvSpikeFromRemote(int n_hosts, int max_spike_per_host)
 int ConnectMpi::AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host)
 {
   Other_timer->startRecord();
-  memset(h_ExternalSourceSpikeNodeId, -1, sizeof(int) * (n_hosts * (max_spike_per_host + 1))); // slow
   gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNum, d_ExternalTargetSpikeNum,
 		       n_hosts*sizeof(int), cudaMemcpyDeviceToHost));
   Other_timer->stopRecord();
@@ -474,20 +473,11 @@ int ConnectMpi::AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host)
   SendSpikeToRemote_timer->stopRecord();
   
   RecvSpikeFromRemote_timer->startRecordHost();
+  MPI_Alltoall(h_ExternalTargetSpikeNum, 1, MPI_INT,
+              h_ExternalSourceSpikeNum, 1, MPI_INT, MPI_COMM_WORLD);
   MPI_Alltoallv(h_ExternalTargetSpikeNodeId, h_ExternalTargetSpikeNum, h_ExternalTargetSpikeCumul, MPI_INT,
-                h_ExternalSourceSpikeNodeId, h_ExternalSourceSpikeNum_recvcounts, h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
+    h_ExternalSourceSpikeNodeId, h_ExternalSourceSpikeNum, h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
   RecvSpikeFromRemote_timer->stopRecordHost();
-
-  Other_timer->startRecordHost();
-  for (int i = 0; i < n_hosts; ++i) {
-    int j = h_ExternalSourceSpikeCumul_rdispls[i];
-    int count = 0;
-    while (h_ExternalSourceSpikeNodeId[j++] != -1) { // possible improve
-      count++;
-    }
-    h_ExternalSourceSpikeNum[i] = count;
-  }
-  Other_timer->stopRecordHost();
 
   if (isDebugMode("comm_distribution")) {
     {
