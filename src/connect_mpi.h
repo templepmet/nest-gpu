@@ -76,6 +76,8 @@ public:
 
   int RecvSpikeFromRemote(int n_hosts, int max_spike_per_host);
 
+  int AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host);
+
   int CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
                           int i_remote_node_0);
 

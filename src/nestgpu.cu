@@ -648,17 +648,18 @@ int NESTGPU::SimulationStep()
       SendExternalSpike<<<(n_ext_spike+1023)/1024, 1024>>>();
       SendExternalSpike_timer->stopRecord();
     }
-    // for (int ih=0; ih<connect_mpi_->mpi_np_; ih++) {
-    //if (ih == connect_mpi_->mpi_id_) {
-    // SendSpikeToRemote_timer->startRecord(); // record in function
-    connect_mpi_->SendSpikeToRemote(connect_mpi_->mpi_np_,
-				    max_spike_per_host_); // call JoinSpikes
-    // SendSpikeToRemote_timer->stopRecord();
     
-    RecvSpikeFromRemote_timer->startRecord();
-    connect_mpi_->RecvSpikeFromRemote(connect_mpi_->mpi_np_,
-				      max_spike_per_host_); // not call device
-    RecvSpikeFromRemote_timer->stopRecord();
+    // // SendSpikeToRemote_timer->startRecord(); // record in function
+    // connect_mpi_->SendSpikeToRemote(connect_mpi_->mpi_np_,
+		// 		    max_spike_per_host_); // call JoinSpikes
+    // // SendSpikeToRemote_timer->stopRecord();
+    
+    // RecvSpikeFromRemote_timer->startRecord();
+    // connect_mpi_->RecvSpikeFromRemote(connect_mpi_->mpi_np_,
+		// 		      max_spike_per_host_); // not call device
+    // RecvSpikeFromRemote_timer->stopRecord();
+
+    connect_mpi_->AlltoallvSpikeforRemote(connect_mpi_->mpi_np_, max_spike_per_host_);
 
     CopySpikeFromRemote_timer->startRecord();
     connect_mpi_->CopySpikeFromRemote(connect_mpi_->mpi_np_,

@@ -56,7 +56,7 @@ time \
 # 	>> $RESULT_FILE
 # mv *.nsys-rep simulation_result/$LABEL/
 
-REF_LABEL="1nodes_8gpus_0.01scale_ref"
+REF_LABEL="1nodes_8gpus_0.1scale_ref"
 diff -sq simulation_result/$REF_LABEL/recordings simulation_result/$LABEL/recordings >> $RESULT_FILE
 
 cp ./log/result.txt simulation_result/$LABEL/

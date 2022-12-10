@@ -125,6 +125,9 @@ int *h_ExternalSourceSpikeNum;
 int *h_ExternalTargetSpikeNodeId;
 int *h_ExternalSourceSpikeNodeId;
 
+int *h_ExternalSourceSpikeNum_recvcounts;
+int *h_ExternalSourceSpikeCumul_rdispls;
+
 //int *h_ExternalSpikeNodeId;
 
 float *h_ExternalSpikeHeight;
@@ -195,6 +198,14 @@ int ConnectMpi::ExternalSpikeInit(int n_node, int n_hosts, int max_spike_per_hos
   h_ExternalSourceSpikeNum = new int[n_hosts];
   h_ExternalTargetSpikeNodeId = new int[n_hosts*(max_spike_per_host + 1)];
   h_ExternalSourceSpikeNodeId = new int[n_hosts*(max_spike_per_host + 1)];
+  
+  h_ExternalSourceSpikeNum_recvcounts = new int [n_hosts];
+  h_ExternalSourceSpikeCumul_rdispls = new int [n_hosts];
+  for (int i = 0; i < n_hosts; ++i) {
+    h_ExternalSourceSpikeNum_recvcounts[i] = max_spike_per_host;
+    h_ExternalSourceSpikeCumul_rdispls[i] = max_spike_per_host * i;
+  }
+  h_ExternalSourceSpikeNum_recvcounts[mpi_id_] = 0;
 
   h_ExternalSpikeHeight = new float[max_spike_per_host];
 
@@ -356,7 +367,8 @@ int ConnectMpi::SendSpikeToRemote(int n_hosts, int max_spike_per_host)
     //	   h_ExternalTargetSpikeNodeId[array_idx]);
   }
   SendSpikeToRemote_MPI_time_ += (getRealTime() - time_mark);
-
+  SendSpikeToRemote_timer->stopRecord();
+  
   if (isDebugMode("comm_distribution")) {
     std::string filename = "comm/send_" + std::to_string(mpi_id) + ".txt";
     std::ofstream ofs(filename, std::ios::app);
@@ -368,8 +380,6 @@ int ConnectMpi::SendSpikeToRemote(int n_hosts, int max_spike_per_host)
     ofs << std::endl;
     ofs.close();
   }
-
-  SendSpikeToRemote_timer->stopRecord();
   
   return 0;
 }
@@ -429,6 +439,81 @@ int ConnectMpi::RecvSpikeFromRemote(int n_hosts, int max_spike_per_host)
   h_ExternalSourceSpikeNum[mpi_id] = 0;
   RecvSpikeFromRemote_MPI_time_ += (getRealTime() - time_mark);
 
+  if (isDebugMode("comm_distribution")) {
+    std::string filename = "comm/recv_" + std::to_string(mpi_id) + ".txt";
+    std::ofstream ofs(filename, std::ios::app);
+    for (int i = 0; i < n_hosts; ++i) {
+      if (i > 0) ofs << ",";
+      int spikes = h_ExternalSourceSpikeNum[i];
+      ofs << spikes;
+    }
+    ofs << std::endl;
+    ofs.close();
+  }
+
+  return 0;
+}
+
+// AlltoAll spikes for remote MPI processes
+int ConnectMpi::AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host)
+{
+  Other_timer->startRecord();
+  memset(h_ExternalSourceSpikeNodeId, -1, sizeof(int) * (n_hosts * (max_spike_per_host + 1))); // slow
+  gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNum, d_ExternalTargetSpikeNum,
+		       n_hosts*sizeof(int), cudaMemcpyDeviceToHost));
+  Other_timer->stopRecord();
+
+  SendSpikeToRemote_timer->startRecord();
+  // pack the spikes in GPU memory and copy them to CPU
+  int n_spike_tot = JoinSpikes(n_hosts, max_spike_per_host);
+  // copy spikes from GPU to CPU memory
+  gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNodeId,
+		       d_ExternalTargetSpikeNodeIdJoin,
+		       n_spike_tot*sizeof(int),
+		       cudaMemcpyDeviceToHost));
+  SendSpikeToRemote_timer->stopRecord();
+  
+  RecvSpikeFromRemote_timer->startRecordHost();
+  MPI_Alltoallv(h_ExternalTargetSpikeNodeId, h_ExternalTargetSpikeNum, h_ExternalTargetSpikeCumul, MPI_INT,
+                h_ExternalSourceSpikeNodeId, h_ExternalSourceSpikeNum_recvcounts, h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
+  RecvSpikeFromRemote_timer->stopRecordHost();
+
+  Other_timer->startRecordHost();
+  for (int i = 0; i < n_hosts; ++i) {
+    int j = h_ExternalSourceSpikeCumul_rdispls[i];
+    int count = 0;
+    while (h_ExternalSourceSpikeNodeId[j++] != -1) { // possible improve
+      count++;
+    }
+    h_ExternalSourceSpikeNum[i] = count;
+  }
+  Other_timer->stopRecordHost();
+
+  if (isDebugMode("comm_distribution")) {
+    {
+      std::string filename = "comm/send_" + std::to_string(mpi_id_) + ".txt";
+      std::ofstream ofs(filename, std::ios::app);
+      for (int i = 0; i < n_hosts; ++i) {
+        if (i > 0) ofs << ",";
+        int spikes = h_ExternalTargetSpikeNum[i];
+        ofs << spikes;
+      }
+      ofs << std::endl;
+      ofs.close();
+    }
+    {
+      std::string filename = "comm/recv_" + std::to_string(mpi_id_) + ".txt";
+      std::ofstream ofs(filename, std::ios::app);
+      for (int i = 0; i < n_hosts; ++i) {
+        if (i > 0) ofs << ",";
+        int spikes = h_ExternalSourceSpikeNum[i];
+        ofs << spikes;
+      }
+      ofs << std::endl;
+      ofs.close();
+    }
+  }
+  
   return 0;
 }
 
