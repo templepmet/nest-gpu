@@ -478,7 +478,7 @@ int ConnectMpi::CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
       int i_source = i_node + i_remote_node_0;
       for (ConnGroup &cg : net_connection_->connection_[i_source]) {
         int delay = cg.delay;
-        if (delay_hist.size() < delay + 1) {
+        if ((int)delay_hist.size() < delay + 1) {
           delay_hist.resize(delay + 1, 0);
         }
         delay_hist[delay] += cg.target_vect.size();
@@ -486,8 +486,8 @@ int ConnectMpi::CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
     }
     std::string filename = "syndelay/spike_" + std::to_string(mpi_id) + ".txt";
     std::ofstream ofs(filename, std::ios::app);
-    if (delay_hist.size() > 0) {
-      for (int i = 0; i < delay_hist.size(); ++i) {
+    if ((int)delay_hist.size() > 0) {
+      for (int i = 0; i < (int)delay_hist.size(); ++i) {
         if (i > 0) ofs << ",";
         ofs << delay_hist[i];
       }

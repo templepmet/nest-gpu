@@ -383,7 +383,11 @@ int NESTGPU::Calibrate()
 
 int NESTGPU::Debug() {
   if (isDebugMode("syndelay_static")) {
-    std::filesystem::create_directory("syndelay");
+    if (MpiId() == 0) {
+      std::filesystem::create_directory("syndelay");
+    }
+    MPI_Barrier(MPI_COMM_WORLD);
+
     // local
     {
       std::vector<long long> delay_hist;
@@ -424,7 +428,10 @@ int NESTGPU::Debug() {
     }
   }
   if (isDebugMode("comm_distribution")) {
-    std::filesystem::create_directory("comm");
+    if (MpiId() == 0) {
+      std::filesystem::create_directory("comm");
+    }
+    MPI_Barrier(MPI_COMM_WORLD);
   }
 
   return 0;

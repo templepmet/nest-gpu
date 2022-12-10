@@ -45,6 +45,7 @@ nestgpu_sandbox*/
 # *.def
 # !nest-gpu_base.def
 build-temp-*
+install.log
 
 *.dat
 
