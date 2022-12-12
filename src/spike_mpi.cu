@@ -132,7 +132,10 @@ int *h_ExternalSourceSpikeCumul_rdispls;
 
 float *h_ExternalSpikeHeight;
 
+MPI_Request *send_mpi_request;
+MPI_Status *send_mpi_status;
 MPI_Request *recv_mpi_request;
+MPI_Status *recv_mpi_status;
 
 // Push in a dedicated array the spikes that must be sent externally
 __device__ void PushExternalSpike(int i_source, float height)
@@ -208,8 +211,11 @@ int ConnectMpi::ExternalSpikeInit(int n_node, int n_hosts, int max_spike_per_hos
   h_ExternalSourceSpikeNum_recvcounts[mpi_id_] = 0;
 
   h_ExternalSpikeHeight = new float[max_spike_per_host];
-
+  
+  send_mpi_request = new MPI_Request[n_hosts];
+  send_mpi_status = new MPI_Status[n_hosts];
   recv_mpi_request = new MPI_Request[n_hosts];
+  recv_mpi_status = new MPI_Status[n_hosts];
  
   gpuErrchk(cudaMalloc(&d_ExternalSpikeNum, sizeof(int)));
   gpuErrchk(cudaMalloc(&d_ExternalSpikeSourceNode,
@@ -454,6 +460,51 @@ int ConnectMpi::RecvSpikeFromRemote(int n_hosts, int max_spike_per_host)
   return 0;
 }
 
+// Send spikes to remote MPI processes
+int ConnectMpi::SendSpikeToRemoteCuda(int n_hosts, int max_spike_per_host)
+{
+  Other_timer->startRecord();
+  
+  int tag = 1;
+
+  gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNum, d_ExternalTargetSpikeNum,
+		       n_hosts*sizeof(int), cudaMemcpyDeviceToHost)); // necessary for send counts
+  
+  Other_timer->stopRecord();
+  SendSpikeToRemote_timer->startRecord();
+
+  for (int i=0; i<n_hosts; i++) {
+    MPI_Isend(d_ExternalTargetSpikeNodeId + (i*max_spike_per_host),
+      h_ExternalTargetSpikeNum[i], MPI_INT, i, tag, MPI_COMM_WORLD, &send_mpi_request[i]);
+  }
+  MPI_Waitall(n_hosts, send_mpi_request, send_mpi_status);
+
+  SendSpikeToRemote_timer->stopRecord();
+  
+  return 0;
+}
+
+// Receive spikes from remote MPI processes
+int ConnectMpi::RecvSpikeFromRemoteCuda(int n_hosts, int max_spike_per_host)				    
+{
+  int tag = 1, count;
+
+  for (int i=0; i<n_hosts; i++) {
+    MPI_Irecv(d_ExternalSourceSpikeNodeId + (i*max_spike_per_host),
+	      max_spike_per_host, MPI_INT, i, tag, MPI_COMM_WORLD,
+	      &recv_mpi_request[i]);
+  }
+  MPI_Waitall(n_hosts, recv_mpi_request, recv_mpi_status);
+
+  for (int i = 0; i < n_hosts; ++i) {
+    MPI_Get_count(&recv_mpi_status[i], MPI_INT, &count);
+    h_ExternalSourceSpikeNum[i] = count;
+  }
+  h_ExternalSourceSpikeNum[mpi_id_] = 0;
+
+  return 0;
+}
+
 // AlltoAll spikes for remote MPI processes
 int ConnectMpi::AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host)
 {
@@ -594,6 +645,26 @@ int ConnectMpi::CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
     }
     ofs << std::endl;
     ofs.close();
+  }
+  
+  return n_spike_tot;
+}
+
+// pack spikes received from remote MPI processes
+// and copy them to GPU memory
+int ConnectMpi::CopySpikeFromRemoteCuda(int n_hosts, int max_spike_per_host,
+				    int i_remote_node_0)
+{
+  int n_spike_tot = 0;
+  for (int i_host=0; i_host<n_hosts; i_host++) {
+    n_spike_tot += h_ExternalSourceSpikeNum[i_host];
+  }
+
+  if (n_spike_tot>0) {
+    AddOffset<<<(n_spike_tot+1023)/1024, 1024>>>
+      (n_spike_tot, d_ExternalSourceSpikeNodeId, i_remote_node_0);
+    PushSpikeFromRemote<<<(n_spike_tot+1023)/1024, 1024>>>
+      (n_spike_tot, d_ExternalSourceSpikeNodeId);
   }
   
   return n_spike_tot;

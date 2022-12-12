@@ -74,12 +74,19 @@ public:
 
   int SendSpikeToRemote(int n_hosts, int max_spike_per_host);
 
+  int SendSpikeToRemoteCuda(int n_hosts, int max_spike_per_host);
+
   int RecvSpikeFromRemote(int n_hosts, int max_spike_per_host);
+
+  int RecvSpikeFromRemoteCuda(int n_hosts, int max_spike_per_host);
 
   int AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host);
 
   int CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
                           int i_remote_node_0);
+
+  int CopySpikeFromRemoteCuda(int n_hosts, int max_spike_per_host,
+                              int i_remote_node_0);
 
   int JoinSpikes(int n_hosts, int max_spike_per_host);
 };
