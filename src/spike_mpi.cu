@@ -473,10 +473,32 @@ int ConnectMpi::AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host)
   SendSpikeToRemote_timer->stopRecord();
   
   RecvSpikeFromRemote_timer->startRecordHost();
-  MPI_Alltoall(h_ExternalTargetSpikeNum, 1, MPI_INT,
-              h_ExternalSourceSpikeNum, 1, MPI_INT, MPI_COMM_WORLD);
+  for (int i = n_hosts - 1; i >= 0; --i) {
+    for (int j = h_ExternalTargetSpikeCumul[i + 1] - 1; j >= h_ExternalTargetSpikeCumul[i]; --j) {
+      h_ExternalTargetSpikeNodeId[j + i + 1] = h_ExternalTargetSpikeNodeId[j];
+    }
+    h_ExternalTargetSpikeNodeId[h_ExternalTargetSpikeCumul[i] + i] = h_ExternalTargetSpikeNum[i];
+  }
+  for (int i = 0; i < n_hosts; ++i) {
+    h_ExternalTargetSpikeNum[i]++;
+    h_ExternalTargetSpikeCumul[i] += i;
+  }
+  h_ExternalSourceSpikeNum_recvcounts[mpi_id_] = 1;
+  // only alltoallv
   MPI_Alltoallv(h_ExternalTargetSpikeNodeId, h_ExternalTargetSpikeNum, h_ExternalTargetSpikeCumul, MPI_INT,
-    h_ExternalSourceSpikeNodeId, h_ExternalSourceSpikeNum, h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
+    h_ExternalSourceSpikeNodeId, h_ExternalSourceSpikeNum_recvcounts, h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
+  for (int i = 0; i < n_hosts; ++i) {
+    h_ExternalSourceSpikeNum[i] = h_ExternalSourceSpikeNodeId[i * max_spike_per_host];
+    for (int j = 0; j < h_ExternalSourceSpikeNum[i]; ++j) {
+      h_ExternalSourceSpikeNodeId[i * max_spike_per_host + j] = h_ExternalSourceSpikeNodeId[i * max_spike_per_host + j + 1];
+    }
+  }
+
+  // alltoall + alltoallv
+  // MPI_Alltoall(h_ExternalTargetSpikeNum, 1, MPI_INT,
+  //             h_ExternalSourceSpikeNum, 1, MPI_INT, MPI_COMM_WORLD);
+  // MPI_Alltoallv(h_ExternalTargetSpikeNodeId, h_ExternalTargetSpikeNum, h_ExternalTargetSpikeCumul, MPI_INT,
+  //   h_ExternalSourceSpikeNodeId, h_ExternalSourceSpikeNum, h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
   RecvSpikeFromRemote_timer->stopRecordHost();
 
   if (isDebugMode("comm_distribution")) {

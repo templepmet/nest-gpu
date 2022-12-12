@@ -19,12 +19,12 @@ int main(int argc, char **argv)
 
 	if (mpi_id == 0)
 	{
-		sendcount[0] = 0;
+		sendcount[0] = 1;
 		sendcount[1] = 6;
 		sendpls[0] = 0;
-		sendpls[1] = 0;
+		sendpls[1] = 1;
 
-		recvcount[0] = 10;
+		recvcount[0] = 1;
 		recvcount[1] = 10;
 		recvpls[0] = 0;
 		recvpls[1] = 10;
@@ -32,12 +32,12 @@ int main(int argc, char **argv)
 	else
 	{
 		sendcount[0] = 5;
-		sendcount[1] = 0;
+		sendcount[1] = 1;
 		sendpls[0] = 0;
 		sendpls[1] = 5;
 
 		recvcount[0] = 10;
-		recvcount[1] = 0;
+		recvcount[1] = 1;
 		recvpls[0] = 0;
 		recvpls[1] = 10;
 	}
