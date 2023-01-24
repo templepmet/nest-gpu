@@ -83,9 +83,11 @@ __global__ void DeviceExternalSpikeInit(int n_hosts,
 										int *ext_target_spike_num,
 										int *ext_target_spike_node_id,
 										float *ext_target_spike_height,
+										int *ext_target_spike_delay,
 										int *n_ext_node_target_host,
 										int **ext_node_target_host_id,
-										int **ext_node_id);
+										int **ext_node_id,
+										int **ext_node_delay);
 
 #endif
 #endif

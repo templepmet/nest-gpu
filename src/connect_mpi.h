@@ -29,6 +29,7 @@ struct ExternalConnectionNode
 {
   int target_host_id;
   int remote_node_id;
+  int min_delay;
 };
 
 class ConnectMpi
@@ -70,13 +71,19 @@ public:
 
   bool ProcMaster();
 
-  int ExternalSpikeInit(int n_node, int n_hosts, int max_spike_per_host);
+  int ExternalSpikeInit(int n_node, int n_hosts, int max_spike_per_host, int i_remote_node_0);
+
+  int ExchangeExternalMinDelay(int n_node, int n_hosts, int i_remote_node_0);
 
   int SendSpikeToRemote(int n_hosts, int max_spike_per_host);
+
+  int SendSpikeToRemoteOverlap(int n_hosts, int max_spike_per_host);
 
   int SendSpikeToRemoteCuda(int n_hosts, int max_spike_per_host);
 
   int RecvSpikeFromRemote(int n_hosts, int max_spike_per_host);
+
+  int RecvSpikeFromRemoteOverlap(int n_hosts, int max_spike_per_host);
 
   int RecvSpikeFromRemoteCuda(int n_hosts, int max_spike_per_host);
 
@@ -84,6 +91,9 @@ public:
 
   int CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
                           int i_remote_node_0);
+
+  int CopySpikeFromRemoteOverlap(int n_hosts, int max_spike_per_host,
+                                 int i_remote_node_0);
 
   int CopySpikeFromRemoteCuda(int n_hosts, int max_spike_per_host,
                               int i_remote_node_0);

@@ -516,7 +516,7 @@ int NESTGPU::_RemoteConnectOneToOne(RemoteNode<T1> source, RemoteNode<T2> target
              it < connect_mpi_->extern_connection_[i_source_node].end();
              it++)
         {
-          if ((*it).target_host_id == target.i_host_)
+          if ((*it).target_host_id == target.i_host_) // 辺が異なってもhost_idで同一視する？
           {
             i_remote_node = (*it).remote_node_id;
             break;
