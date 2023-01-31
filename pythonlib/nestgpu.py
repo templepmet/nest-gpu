@@ -194,12 +194,12 @@ def SetVerbosityLevel(verbosity_level):
     return ret
 
 
-NESTGPU_AddDebugMode = _nestgpu.NESTGPU_AddDebugMode
-NESTGPU_AddDebugMode.argtypes = (c_char_p,)
-NESTGPU_AddDebugMode.restype = ctypes.c_int
-def AddDebugMode(debug_mode):
-    "Add debug mode"
-    ret = NESTGPU_AddDebugMode(ctypes.create_string_buffer(to_byte_str(debug_mode), len(debug_mode)+1))
+NESTGPU_AddMode = _nestgpu.NESTGPU_AddMode
+NESTGPU_AddMode.argtypes = (c_char_p,)
+NESTGPU_AddMode.restype = ctypes.c_int
+def AddMode(mode):
+    "Add mode"
+    ret = NESTGPU_AddMode(ctypes.create_string_buffer(to_byte_str(mode), len(mode)+1))
     if GetErrorCode() != 0:
         raise ValueError(GetErrorMessage())
     return ret

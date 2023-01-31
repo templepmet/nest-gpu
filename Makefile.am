@@ -128,12 +128,12 @@ user_m2.cu
 
 HCPPSRC=\
 connect_rules.h \
-debug.h \
+mode.h \
 nestgpu_C.h
 
 CPPSRC=\
 connect_rules.cpp \
-debug.cpp \
+mode.cpp \
 nestgpu_C.cpp
 
 COMPILER_FLAGS= -O3 -Wall -fPIC
