@@ -21,84 +21,85 @@
 #ifdef HAVE_MPI
 #ifndef CONNECTMPI_H
 #define CONNECTMPI_H
-#include <vector>
 #include <mpi.h>
+#include <vector>
 #include "connect.h"
 
-struct ExternalConnectionNode
-{
-  int target_host_id;
-  int remote_node_id;
-  int min_delay;
+struct ExternalConnectionNode {
+    int target_host_id;
+    int remote_node_id;
+    int min_delay;
 };
 
-class ConnectMpi
-{
-public:
-  NetConnection *net_connection_;
-  int mpi_id_;
-  int mpi_np_;
-  int mpi_master_;
-  bool remote_spike_height_;
+class ConnectMpi {
+   public:
+    NetConnection *net_connection_;
+    int mpi_id_;
+    int mpi_np_;
+    int mpi_master_;
+    bool remote_spike_height_;
 
-  double SendSpikeToRemote_MPI_time_;
-  double RecvSpikeFromRemote_MPI_time_;
-  double SendSpikeToRemote_CUDAcp_time_;
-  double RecvSpikeFromRemote_CUDAcp_time_;
-  double JoinSpike_time_;
+    double SendSpikeToRemote_MPI_time_;
+    double RecvSpikeFromRemote_MPI_time_;
+    double SendSpikeToRemote_CUDAcp_time_;
+    double RecvSpikeFromRemote_CUDAcp_time_;
+    double JoinSpike_time_;
 
-  std::vector<std::vector<ExternalConnectionNode>> extern_connection_;
+    std::vector<std::vector<ExternalConnectionNode>> extern_connection_;
 
-  int MPI_Recv_int(int *int_val, int n, int sender_id);
+    int MPI_Recv_int(int *int_val, int n, int sender_id);
 
-  int MPI_Recv_float(float *float_val, int n, int sender_id);
+    int MPI_Recv_float(float *float_val, int n, int sender_id);
 
-  int MPI_Recv_uchar(unsigned char *uchar_val, int n, int sender_id);
+    int MPI_Recv_uchar(unsigned char *uchar_val, int n, int sender_id);
 
-  int MPI_Send_int(int *int_val, int n, int target_id);
+    int MPI_Send_int(int *int_val, int n, int target_id);
 
-  int MPI_Send_float(float *float_val, int n, int target_id);
+    int MPI_Send_float(float *float_val, int n, int target_id);
 
-  int MPI_Send_uchar(unsigned char *uchar_val, int n, int target_id);
+    int MPI_Send_uchar(unsigned char *uchar_val, int n, int target_id);
 
-  /*
-  int RemoteConnect(int i_source_host, int i_source_node,
-        int i_target_host, int i_target_node,
-        unsigned char port, unsigned char syn_group,
-        float weight, float delay);
-  */
-  int MpiInit(int argc, char *argv[]);
+    /*
+    int RemoteConnect(int i_source_host, int i_source_node,
+          int i_target_host, int i_target_node,
+          unsigned char port, unsigned char syn_group,
+          float weight, float delay);
+    */
+    int MpiInit(int argc, char *argv[]);
 
-  bool ProcMaster();
+    bool ProcMaster();
 
-  int ExternalSpikeInit(int n_node, int n_hosts, int max_spike_per_host, int i_remote_node_0);
-
-  int ExchangeExternalMinDelay(int n_node, int n_hosts, int i_remote_node_0);
-
-  int SendSpikeToRemote(int n_hosts, int max_spike_per_host);
-
-  int SendSpikeToRemoteOverlap(int n_hosts, int max_spike_per_host);
-
-  int SendSpikeToRemoteCuda(int n_hosts, int max_spike_per_host);
-
-  int RecvSpikeFromRemote(int n_hosts, int max_spike_per_host);
-
-  int RecvSpikeFromRemoteOverlap(int n_hosts, int max_spike_per_host);
-
-  int RecvSpikeFromRemoteCuda(int n_hosts, int max_spike_per_host);
-
-  int AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host);
-
-  int CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
+    int ExternalSpikeInit(int n_node, int n_hosts, int max_spike_per_host,
                           int i_remote_node_0);
 
-  int CopySpikeFromRemoteOverlap(int n_hosts, int max_spike_per_host,
-                                 int i_remote_node_0);
+    int ExchangeExternalMinDelay(int n_node, int n_hosts, int i_remote_node_0);
 
-  int CopySpikeFromRemoteCuda(int n_hosts, int max_spike_per_host,
-                              int i_remote_node_0);
+    int SendSpikeToRemote(int n_hosts, int max_spike_per_host);
 
-  int JoinSpikes(int n_hosts, int max_spike_per_host);
+    int SendSpikeToRemoteOverlap(int n_hosts, int max_spike_per_host,
+                                   long long it_, long long Nt_);
+
+    int SendSpikeToRemoteCuda(int n_hosts, int max_spike_per_host);
+
+    int RecvSpikeFromRemote(int n_hosts, int max_spike_per_host);
+
+    int RecvSpikeFromRemoteOverlap(int n_hosts, int max_spike_per_host,
+                                   long long it_, long long Nt_);
+
+    int RecvSpikeFromRemoteCuda(int n_hosts, int max_spike_per_host);
+
+    int AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host);
+
+    int CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
+                            int i_remote_node_0);
+
+    int CopySpikeFromRemoteOverlap(int n_hosts, int max_spike_per_host,
+                                   int i_remote_node_0);
+
+    int CopySpikeFromRemoteCuda(int n_hosts, int max_spike_per_host,
+                                int i_remote_node_0);
+
+    int JoinSpikes(int n_hosts, int max_spike_per_host);
 };
 
 #endif

@@ -707,9 +707,9 @@ int NESTGPU::SimulationStep() {
 
         // SendSpikeToRemote_timer->startRecord(); // record in function
         if (isMode("comm_overlap")) {
-            connect_mpi_->SendSpikeToRemoteOverlap(
-                connect_mpi_->mpi_np_,
-                max_spike_per_host_);  // call JoinSpikes
+            connect_mpi_->SendSpikeToRemoteOverlap(connect_mpi_->mpi_np_,
+                                                   max_spike_per_host_, it_,
+                                                   Nt_);  // call JoinSpikes
         } else {
             connect_mpi_->SendSpikeToRemote(
                 connect_mpi_->mpi_np_,
@@ -719,9 +719,9 @@ int NESTGPU::SimulationStep() {
 
         RecvSpikeFromRemote_timer->startRecord();
         if (isMode("comm_overlap")) {
-            connect_mpi_->RecvSpikeFromRemoteOverlap(
-                connect_mpi_->mpi_np_,
-                max_spike_per_host_);  // not call device
+            connect_mpi_->RecvSpikeFromRemoteOverlap(connect_mpi_->mpi_np_,
+                                                     max_spike_per_host_, it_,
+                                                     Nt_);  // not call device
         } else {
             connect_mpi_->RecvSpikeFromRemote(
                 connect_mpi_->mpi_np_,

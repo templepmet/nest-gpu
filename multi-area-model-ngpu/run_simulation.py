@@ -1,16 +1,14 @@
+import json
 import os
 import re
-import json
 
+import nestgpu as ngpu
 import numpy as np
-from mpi4py import MPI
 import pynvml
-
 from config import base_path, data_path
+from mpi4py import MPI
 from multiarea_model import MultiAreaModel
 from multiarea_model.default_params import nested_update
-import nestgpu as ngpu
-
 
 size = MPI.COMM_WORLD.Get_size()
 rank = MPI.COMM_WORLD.Get_rank()
@@ -52,7 +50,7 @@ def simulation(label):
     ngpu.ConnectMpiInit()
     # ngpu.AddMode("dump_syndelay")
     # ngpu.AddMode("dump_comm_dist")
-    ngpu.AddMode("comm_overlap")
+    # ngpu.AddMode("comm_overlap")
     M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
     M.simulation.simulate()
 
