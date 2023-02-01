@@ -735,7 +735,12 @@ int NESTGPU::SimulationStep() {
 
         if (n_ext_spike != 0) {
             SendExternalSpike_timer->startRecord();
-            SendExternalSpike<<<(n_ext_spike + 1023) / 1024, 1024>>>();
+            if (isMode("comm_overlap")) {
+                SendExternalSpikeOverlap<<<(n_ext_spike + 1023) / 1024,
+                                           1024>>>();
+            } else {
+                SendExternalSpike<<<(n_ext_spike + 1023) / 1024, 1024>>>();
+            }
             SendExternalSpike_timer->stopRecord();
         }
 
@@ -825,7 +830,11 @@ int NESTGPU::SimulationStep() {
 #ifdef HAVE_MPI
     if (mpi_flag_) {
         ExternalSpikeReset_timer->startRecord();
-        ExternalSpikeReset<<<1, 1>>>();
+        if (isMode("comm_overlap")) {
+            ExternalSpikeResetOverlap<<<1, 1>>>();
+        } else {
+            ExternalSpikeReset<<<1, 1>>>();
+        }
         ExternalSpikeReset_timer->stopRecord();
     }
 #endif

@@ -22,7 +22,7 @@
 #define SPIKEMPI_H
 
 __global__ void PushSpikeFromRemote(int n_spikes, int *spike_buffer_id,
-									float *spike_height);
+                                    float *spike_height);
 
 __global__ void PushSpikeFromRemote(int n_spikes, int *spike_buffer_id);
 
@@ -36,10 +36,10 @@ extern __device__ int MaxSpikePerHost;
 extern int *d_ExternalSpikeNum;
 extern __device__ int *ExternalSpikeNum;
 
-extern int *d_ExternalSpikeSourceNode; // [MaxSpikeNum];
+extern int *d_ExternalSpikeSourceNode;  // [MaxSpikeNum];
 extern __device__ int *ExternalSpikeSourceNode;
 
-extern float *d_ExternalSpikeHeight; // [MaxSpikeNum];
+extern float *d_ExternalSpikeHeight;  // [MaxSpikeNum];
 extern __device__ float *ExternalSpikeHeight;
 
 extern int *d_ExternalTargetSpikeNum;
@@ -73,21 +73,23 @@ __device__ void PushExternalSpike(int i_source, float height);
 
 __global__ void SendExternalSpike();
 
+__global__ void SendExternalSpikeOverlap();
+
 __global__ void ExternalSpikeReset();
 
-__global__ void DeviceExternalSpikeInit(int n_hosts,
-										int max_spike_per_host,
-										int *ext_spike_num,
-										int *ext_spike_source_node,
-										float *ext_spike_height,
-										int *ext_target_spike_num,
-										int *ext_target_spike_node_id,
-										float *ext_target_spike_height,
-										int *ext_target_spike_delay,
-										int *n_ext_node_target_host,
-										int **ext_node_target_host_id,
-										int **ext_node_id,
-										int **ext_node_delay);
+__global__ void ExternalSpikeResetOverlap();
+
+__global__ void DeviceExternalSpikeInit(
+    int n_hosts, int max_spike_per_host, int *ext_spike_num,
+    int *ext_spike_source_node, float *ext_spike_height,
+    int *ext_target_spike_num, int *ext_target_spike_node_id,
+    float *ext_target_spike_height, int *n_ext_node_target_host,
+    int **ext_node_target_host_id, int **ext_node_id);
+
+__global__ void DeviceExternalSpikeInitOverlap(
+    int **ext_node_delay, int *ext_target_spike_num_immed,
+    int *ext_target_spike_num_delay, int *ext_target_spike_node_id_immed,
+    int *ext_target_spike_node_id_delay);
 
 #endif
 #endif

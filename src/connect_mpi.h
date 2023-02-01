@@ -72,6 +72,9 @@ class ConnectMpi {
     int ExternalSpikeInit(int n_node, int n_hosts, int max_spike_per_host,
                           int i_remote_node_0);
 
+    int ExternalSpikeInitOverlap(int n_node, int n_hosts,
+                                 int max_spike_per_host, int i_remote_node_0);
+
     int ExchangeExternalMinDelay(int n_node, int n_hosts, int i_remote_node_0);
 
     int SendSpikeToRemote(int n_hosts, int max_spike_per_host);
@@ -97,6 +100,11 @@ class ConnectMpi {
                                 int i_remote_node_0);
 
     int JoinSpikes(int n_hosts, int max_spike_per_host);
+
+    int JoinSpikesOverlap(int n_hosts, int max_spike_per_host,
+                          int *d_SpikeCumul, int *h_SpikeCumul, int *d_SpikeNum,
+                          int *h_SpikeNum, int *d_SpikeNodeId,
+                          int *d_SpikeNodeIdJoin);
 };
 
 #endif
