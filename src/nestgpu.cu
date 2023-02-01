@@ -134,10 +134,18 @@ NESTGPU::NESTGPU() {
     neuron_Update_timer = new NonBlockingTimer("neuron_Update");
     copy_ext_spike_timer = new NonBlockingTimer("copy_ext_spike");
     SendExternalSpike_timer = new NonBlockingTimer("SendExternalSpike");
+
     SendSpikeToRemote_timer = new NonBlockingTimer("SendSpikeToRemote");
     RecvSpikeFromRemote_timer = new NonBlockingTimer("RecvSpikeFromRemote");
+    PackSendSpike_timer = new NonBlockingTimer("PackSendSpike");
+    SendRecvSpikeRemote_immed_timer =
+        new NonBlockingTimer("SendRecvSpikeRemote_immed");
+    SendRecvSpikeRemote_delay_timer =
+        new NonBlockingTimer("SendRecvSpikeRemote_delay");
+    UnpackRecvSpike_timer = new NonBlockingTimer("UnpackRecvSpike");
     CopySpikeFromRemote_timer = new NonBlockingTimer("CopySpikeFromRemote");
     MpiBarrier_timer = new NonBlockingTimer("MpiBarrier");
+
     copy_spike_timer = new NonBlockingTimer("copy_spike");
     ClearGetSpikeArrays_timer = new NonBlockingTimer("ClearGetSpikeArrays");
     NestedLoop_timer = new NonBlockingTimer("NestedLoop");
@@ -159,6 +167,10 @@ NESTGPU::~NESTGPU() {
     delete SendExternalSpike_timer;
     delete SendSpikeToRemote_timer;
     delete RecvSpikeFromRemote_timer;
+    delete PackSendSpike_timer;
+    delete SendRecvSpikeRemote_immed_timer;
+    delete SendRecvSpikeRemote_delay_timer;
+    delete UnpackRecvSpike_timer;
     delete CopySpikeFromRemote_timer;
     delete MpiBarrier_timer;
     delete copy_spike_timer;
@@ -503,6 +515,12 @@ int NESTGPU::EndSimulation() {
             SendSpikeToRemote_timer->getTimeHost();  // blocking
         float RecvSpikeFromRemote_time =
             RecvSpikeFromRemote_timer->getTimeHost();
+        float SendRecvSpikeRemote_immed_time =
+            SendRecvSpikeRemote_immed_timer->getTimeHost();
+        float SendRecvSpikeRemote_delay_time =
+            SendRecvSpikeRemote_delay_timer->getTimeHost();
+        float PackSendSpike_time = PackSendSpike_timer->getTimeHost();
+        float UnpackRecvSpike_time = UnpackRecvSpike_timer->getTimeHost();
         float CopySpikeFromRemote_time =
             CopySpikeFromRemote_timer->getTimeDevice();
         float MpiBarrier_time = MpiBarrier_timer->getTimeHost();
@@ -584,6 +602,22 @@ int NESTGPU::EndSimulation() {
                "RecvSpikeFromRemote_time", RecvSpikeFromRemote_time,
                RecvSpikeFromRemote_timer->getTimeHost(),
                RecvSpikeFromRemote_timer->getTimeDevice());
+        printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str,
+               "SendRecvSpikeRemote_immed_time", SendRecvSpikeRemote_immed_time,
+               SendRecvSpikeRemote_immed_timer->getTimeHost(),
+               SendRecvSpikeRemote_immed_timer->getTimeDevice());
+        printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str,
+               "SendRecvSpikeRemote_delay_time", SendRecvSpikeRemote_delay_time,
+               SendRecvSpikeRemote_delay_timer->getTimeHost(),
+               SendRecvSpikeRemote_delay_timer->getTimeDevice());
+        printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str,
+               "PackSendSpike_time", PackSendSpike_time,
+               PackSendSpike_timer->getTimeHost(),
+               PackSendSpike_timer->getTimeDevice());
+        printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str,
+               "UnpackRecvSpike_time", UnpackRecvSpike_time,
+               UnpackRecvSpike_timer->getTimeHost(),
+               UnpackRecvSpike_timer->getTimeDevice());
         printf("%s  %s: %f(def), %f(host), %f(device)\n", mpirank_str,
                " in RecvSpikeWait_time", RecvSpikeWait_time, RecvSpikeWait_time,
                0.0);
@@ -705,29 +739,21 @@ int NESTGPU::SimulationStep() {
             SendExternalSpike_timer->stopRecord();
         }
 
-        // SendSpikeToRemote_timer->startRecord(); // record in function
         if (isMode("comm_overlap")) {
-            connect_mpi_->SendSpikeToRemoteOverlap(connect_mpi_->mpi_np_,
-                                                   max_spike_per_host_, it_,
-                                                   Nt_);  // call JoinSpikes
+            connect_mpi_->SendRecvSpikeRemoteOverlap(connect_mpi_->mpi_np_,
+                                                     max_spike_per_host_, it_,
+                                                     Nt_);  // call JoinSpikes
         } else {
             connect_mpi_->SendSpikeToRemote(
                 connect_mpi_->mpi_np_,
                 max_spike_per_host_);  // call JoinSpikes
-        }
-        // SendSpikeToRemote_timer->stopRecord();
 
-        RecvSpikeFromRemote_timer->startRecord();
-        if (isMode("comm_overlap")) {
-            connect_mpi_->RecvSpikeFromRemoteOverlap(connect_mpi_->mpi_np_,
-                                                     max_spike_per_host_, it_,
-                                                     Nt_);  // not call device
-        } else {
+            RecvSpikeFromRemote_timer->startRecord();
             connect_mpi_->RecvSpikeFromRemote(
                 connect_mpi_->mpi_np_,
                 max_spike_per_host_);  // not call device
+            RecvSpikeFromRemote_timer->stopRecord();
         }
-        RecvSpikeFromRemote_timer->stopRecord();
 
         // connect_mpi_->AlltoallvSpikeforRemote(connect_mpi_->mpi_np_,
         // max_spike_per_host_);
