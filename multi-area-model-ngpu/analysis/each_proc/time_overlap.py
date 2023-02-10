@@ -114,6 +114,7 @@ plt.figure()
 plt.grid()
 plt.xlabel("MPI Process")
 plt.ylabel("Processing Time [s]")
+# plt.ylim(0.0,39.9)
 bottom = np.array([0.0] * procs)
 x = [i for i in range(procs)]
 idx = 0

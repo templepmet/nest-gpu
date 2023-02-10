@@ -1,0 +1,46 @@
+defaultdict(<function <lambda> at 0x14df92345990>, {
+    'SpikeBufferUpdate_time': 35.452929999999995,
+     'poisson_generator_time': 150.90130399999998,
+     'neuron_Update_time': 97.72813899999997,
+     'copy_ext_spike_time': 26.480624000000006,
+     'SendExternalSpike_time': 29.289920999999996,
+     'PackSendSpike_time': 70.35924500000002,
+     'SendRecvSpikeRemote_immed_time': 104.43531299999998,
+     'SendRecvSpikeRemote_delay_time': 44.53821000000001,
+     'UnpackRecvSpike_time': 0.5032339999999998,
+     'CopySpikeFromRemote_time': 28.845124,
+     'MpiBarrier_time': 85.934476,
+     'copy_spike_time': 31.689087999999998,
+     'ClearGetSpikeArrays_time': 85.151008,
+     'NestedLoop_time': 50.55460699999999,
+     'GetSpike_time': 88.32908799999998,
+     'SpikeReset_time': 9.588997,
+     'ExternalSpikeReset_time': 16.011129,
+     'RevSpikeBufferUpdate_time': 0.0,
+     'BufferRecSpikeTimes_time': 5.651745999999999,
+     'Other_time': 253.730242
+})
+immedもdelayもbarrierもpackも時間かかってる
+
+defaultdict(<function <lambda> at 0x15552eea9990>, {
+    'SpikeBufferUpdate_time': 35.550268,
+    'poisson_generator_time': 150.99258199999997,
+    'neuron_Update_time': 97.86497700000002,
+    'copy_ext_spike_time': 26.421382999999995,
+    'SendExternalSpike_time': 27.809667000000005,
+    'PackSendSpike_time': 56.573195000000005,
+    'SendRecvSpikeRemote_immed_time': 86.81745099999999,
+    'SendRecvSpikeRemote_delay_time': 0.0,
+    'UnpackRecvSpike_time': 0.0,
+    'CopySpikeFromRemote_time': 28.878664999999998,
+    'MpiBarrier_time': 60.771673,
+    'copy_spike_time': 31.613831,
+    'ClearGetSpikeArrays_time': 85.26259900000002,
+    'NestedLoop_time': 50.636865000000014,
+    'GetSpike_time': 88.48102399999999,
+    'SpikeReset_time': 9.566319,
+    'ExternalSpikeReset_time': 13.930037,
+    'RevSpikeBufferUpdate_time': 0.0,
+    'BufferRecSpikeTimes_time': 5.658273999999999,
+    'Other_time': 238.655859
+})

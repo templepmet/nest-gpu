@@ -52,7 +52,7 @@ time \
 # time \
 # 	mpirun $NQSV_MPIOPTS -np 32 -npernode 32 --map-by core --bind-to core --display-devel-map \
 # 	./wrap_cuda.sh 8 singularity exec --nv --bind $SINGULARITY_PWD $SINGULARITY_IMAGE \
-# 	./wrap_nsys.sh 14 python run_simulation.py \
+# 	./wrap_nsys.sh 0 python run_simulation.py \
 # 	>> $RESULT_FILE
 # mv *.nsys-rep simulation_result/$LABEL/
 
@@ -68,6 +68,7 @@ mv ./comm simulation_result/$LABEL/
 RESULT_FILE=./simulation_result/$LABEL/result.txt
 python analysis/each_proc/time.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/time_overlap.py simulation_result/$LABEL >> $RESULT_FILE
+python analysis/each_proc/time_each_label_sum.py simulation_result/$LABEL >> $RESULT_FILE
 # python analysis/each_proc/time_comm_wait.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/memory.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/neuron.py simulation_result/$LABEL >> $RESULT_FILE

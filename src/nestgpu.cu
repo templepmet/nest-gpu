@@ -489,9 +489,9 @@ int NESTGPU::EndSimulation() {
     Other_timer->stopRecord();
 #ifdef HAVE_MPI
     if (mpi_flag_) {
-        MpiBarrier_timer->startRecord();
+        MpiBarrier_timer->startRecordHost();
         MPI_Barrier(MPI_COMM_WORLD);
-        MpiBarrier_timer->stopRecord();
+        MpiBarrier_timer->stopRecordHost();
     }
 #endif
 
@@ -769,9 +769,9 @@ int NESTGPU::SimulationStep() {
                                           i_remote_node_0_);  // call any kernel
         CopySpikeFromRemote_timer->stopRecord();
 
-        MpiBarrier_timer->startRecord();
-        MPI_Barrier(MPI_COMM_WORLD);
-        MpiBarrier_timer->stopRecord();
+        // MpiBarrier_timer->startRecord();
+        // MPI_Barrier(MPI_COMM_WORLD);
+        // MpiBarrier_timer->stopRecord();
     }
 #endif
 

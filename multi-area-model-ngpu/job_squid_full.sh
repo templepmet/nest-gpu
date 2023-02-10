@@ -61,6 +61,7 @@ mv ./comm simulation_result/$LABEL/
 RESULT_FILE=./simulation_result/$LABEL/result.txt
 python analysis/each_proc/time.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/time_overlap.py simulation_result/$LABEL >> $RESULT_FILE
+python analysis/each_proc/time_each_label_sum.py simulation_result/$LABEL >> $RESULT_FILE
 # python analysis/each_proc/time_comm_wait.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/memory.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/neuron.py simulation_result/$LABEL >> $RESULT_FILE
