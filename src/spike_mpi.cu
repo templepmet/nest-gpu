@@ -91,8 +91,6 @@ __device__ float *ExternalSpikeHeight;
 int *d_ExternalTargetSpikeNum;
 __device__ int *ExternalTargetSpikeNum;
 
-// overlap
-
 int *d_ExternalTargetSpikeNodeId;
 __device__ int *ExternalTargetSpikeNodeId;
 
@@ -140,9 +138,10 @@ MPI_Status *recv_mpi_status;
 // ---Overlap start---
 int tag_immed = 0;
 int tag_delay = 1;
+int *h_ExternalSourceSpikeNodeId_immed;
+int *h_ExternalSourceSpikeNodeId_delay;
 std::vector<int> h_ExternalSourceSpikeNodeId_immed_count;
 std::vector<int> h_ExternalSourceSpikeNodeId_delay_count;
-std::vector<std::vector<int>> h_ExternalSourceSpikeNodeId_delay;
 std::vector<MPI_Request> send_mpi_request_immed;
 std::vector<MPI_Request> send_mpi_request_delay;
 std::vector<MPI_Request> recv_mpi_request_immed;
@@ -151,6 +150,8 @@ std::vector<MPI_Status> send_mpi_status_immed;
 std::vector<MPI_Status> send_mpi_status_delay;
 std::vector<MPI_Status> recv_mpi_status_immed;
 std::vector<MPI_Status> recv_mpi_status_delay;
+MPI_Request alltoall_request_delay;
+MPI_Status alltoall_status_delay;
 
 int *h_ExternalTargetSpikeNum_immed;
 int *d_ExternalTargetSpikeNum_immed;
@@ -278,14 +279,6 @@ int ConnectMpi::ExternalSpikeInit(int n_node, int n_hosts,
     h_ExternalTargetSpikeNodeId = new int[n_hosts * (max_spike_per_host + 1)];
     h_ExternalSourceSpikeNodeId = new int[n_hosts * (max_spike_per_host + 1)];
 
-    // Alltoall
-    h_ExternalSourceSpikeNum_recvcounts = new int[n_hosts];
-    h_ExternalSourceSpikeCumul_rdispls = new int[n_hosts];
-    for (int i = 0; i < n_hosts; ++i) {
-        h_ExternalSourceSpikeNum_recvcounts[i] = max_spike_per_host;
-        h_ExternalSourceSpikeCumul_rdispls[i] = max_spike_per_host * i;
-    }
-    h_ExternalSourceSpikeNum_recvcounts[mpi_id_] = 0;
     send_mpi_request = new MPI_Request[n_hosts];
     send_mpi_status = new MPI_Status[n_hosts];
     recv_mpi_request = new MPI_Request[n_hosts];
@@ -381,8 +374,11 @@ int ConnectMpi::ExternalSpikeInitOverlap(int n_node, int n_hosts,
                                          int i_remote_node_0) {
     h_ExternalSourceSpikeNodeId_immed_count.resize(n_hosts, 0);
     h_ExternalSourceSpikeNodeId_delay_count.resize(n_hosts, 0);
-    h_ExternalSourceSpikeNodeId_delay.resize(
-        n_hosts, std::vector<int>(max_spike_per_host));
+    h_ExternalSourceSpikeNodeId_immed = new int[n_hosts * max_spike_per_host];
+    h_ExternalSourceSpikeNodeId_delay = new int[n_hosts * max_spike_per_host];
+    for (int i = 0; i < n_hosts; ++i) {
+        h_ExternalSourceSpikeNodeId_delay[i * max_spike_per_host] = 0;
+    }
     send_mpi_request_immed.resize(n_hosts);
     send_mpi_request_delay.resize(n_hosts);
     recv_mpi_request_immed.resize(n_hosts);
@@ -391,6 +387,15 @@ int ConnectMpi::ExternalSpikeInitOverlap(int n_node, int n_hosts,
     send_mpi_status_delay.resize(n_hosts);
     recv_mpi_status_immed.resize(n_hosts);
     recv_mpi_status_delay.resize(n_hosts);
+
+    // Alltoall
+    h_ExternalSourceSpikeNum_recvcounts = new int[n_hosts];
+    h_ExternalSourceSpikeCumul_rdispls = new int[n_hosts];
+    for (int i = 0; i < n_hosts; ++i) {
+        h_ExternalSourceSpikeNum_recvcounts[i] = max_spike_per_host;
+        h_ExternalSourceSpikeCumul_rdispls[i] = max_spike_per_host * i;
+    }
+    h_ExternalSourceSpikeNum_recvcounts[mpi_id_] = 1;  // 0
 
     gpuErrchk(cudaMalloc(&d_ExternalNodeMinDelay, n_node * sizeof(int *)));
 
@@ -689,50 +694,52 @@ int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
 
     // immed
     SendRecvSpikeRemote_immed_timer->startRecordHost();
-    for (int i = 0; i < n_hosts; ++i) {
-        int array_idx = h_ExternalTargetSpikeCumul_immed[i];
-        int n_spikes = h_ExternalTargetSpikeCumul_immed[i + 1] - array_idx;
-        MPI_Isend(&h_ExternalTargetSpikeNodeId_immed[array_idx], n_spikes,
-                  MPI_INT, i, tag_immed, MPI_COMM_WORLD,
-                  &send_mpi_request_immed[i]);
-    }
-    for (int i = 0; i < n_hosts; i++) {
-        MPI_Irecv(h_ExternalSourceSpikeNodeId + (i * max_spike_per_host),
-                  max_spike_per_host, MPI_INT, i, tag_immed, MPI_COMM_WORLD,
-                  &recv_mpi_request_immed[i]);
-    }
-    MPI_Waitall(n_hosts, &send_mpi_request_immed[0], &send_mpi_status_immed[0]);
-    MPI_Waitall(n_hosts, &recv_mpi_request_immed[0], &recv_mpi_status_immed[0]);
-    for (int i = 0; i < n_hosts; i++) {
-        MPI_Get_count(&recv_mpi_status_immed[i], MPI_INT,
-                      &h_ExternalSourceSpikeNodeId_immed_count[i]);
-    }
+    MPI_Alltoallv(
+        h_ExternalTargetSpikeNodeId_immed, h_ExternalTargetSpikeNum_immed,
+        h_ExternalTargetSpikeCumul_immed, MPI_INT,
+        h_ExternalSourceSpikeNodeId_immed, h_ExternalSourceSpikeNum_recvcounts,
+        h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
+    // for (int i = 0; i < n_hosts; ++i) {
+    //     int array_idx = h_ExternalTargetSpikeCumul_immed[i];
+    //     int n_spikes = h_ExternalTargetSpikeCumul_immed[i + 1] - array_idx;
+    //     MPI_Isend(&h_ExternalTargetSpikeNodeId_immed[array_idx], n_spikes,
+    //               MPI_INT, i, tag_immed, MPI_COMM_WORLD,
+    //               &send_mpi_request_immed[i]);
+    // }
+    // for (int i = 0; i < n_hosts; i++) {
+    //     MPI_Irecv(&h_ExternalSourceSpikeNodeId_immed[i * max_spike_per_host],
+    //               max_spike_per_host, MPI_INT, i, tag_immed, MPI_COMM_WORLD,
+    //               &recv_mpi_request_immed[i]);
+    // }
+    // MPI_Waitall(n_hosts, &send_mpi_request_immed[0],
+    // &send_mpi_status_immed[0]); MPI_Waitall(n_hosts,
+    // &recv_mpi_request_immed[0], &recv_mpi_status_immed[0]);
     SendRecvSpikeRemote_immed_timer->stopRecordHost();
 
     // delay
     if (it_ > 0) {  // overlap
         SendRecvSpikeRemote_delay_timer->startRecordHost();
-        MPI_Waitall(n_hosts, &send_mpi_request_delay[0],
-                    &send_mpi_status_delay[0]);
-        MPI_Waitall(n_hosts, &recv_mpi_request_delay[0],
-                    &recv_mpi_status_delay[0]);
-        for (int i = 0; i < n_hosts; i++) {
-            MPI_Get_count(&recv_mpi_status_delay[i], MPI_INT,
-                          &h_ExternalSourceSpikeNodeId_delay_count[i]);
-        }
+        // MPI_Waitall(n_hosts, &send_mpi_request_delay[0],
+        //             &send_mpi_status_delay[0]);
+        // MPI_Waitall(n_hosts, &recv_mpi_request_delay[0],
+        //             &recv_mpi_status_delay[0]);
+        MPI_Wait(&alltoall_request_delay, &alltoall_status_delay);
         SendRecvSpikeRemote_delay_timer->stopRecordHost();
     }
 
     UnpackRecvSpike_timer->startRecordHost();
     for (int i = 0; i < n_hosts; i++) {
-        int count_immed = h_ExternalSourceSpikeNodeId_immed_count[i];
-        int count_delay = h_ExternalSourceSpikeNodeId_delay_count[i];
-        // delay側が多いのでimmedをコピーする？
-        // wrong. copyspikeでどうせJoinするのでそのときでよい
-        memcpy(h_ExternalSourceSpikeNodeId + (i * max_spike_per_host) +
-                   count_immed,
-               h_ExternalSourceSpikeNodeId_delay[i].data(),
-               count_delay * sizeof(int));
+        int count_immed =
+            h_ExternalSourceSpikeNodeId_immed[i * max_spike_per_host];
+        int count_delay =
+            h_ExternalSourceSpikeNodeId_delay[i * max_spike_per_host];
+        memcpy(&h_ExternalSourceSpikeNodeId[i * max_spike_per_host],
+               &h_ExternalSourceSpikeNodeId_immed[i * max_spike_per_host + 1],
+               count_immed * sizeof(int));
+        memcpy(
+            &h_ExternalSourceSpikeNodeId[i * max_spike_per_host + count_immed],
+            &h_ExternalSourceSpikeNodeId_delay[i * max_spike_per_host + 1],
+            count_delay * sizeof(int));
         h_ExternalSourceSpikeNum[i] = count_immed + count_delay;
     }
     h_ExternalSourceSpikeNum[mpi_id_] = 0;
@@ -740,27 +747,30 @@ int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
 
     // delay
     SendRecvSpikeRemote_delay_timer->startRecordHost();
-    for (int i = 0; i < n_hosts; ++i) {
-        int array_idx = h_ExternalTargetSpikeCumul_delay[i];
-        int n_spikes = h_ExternalTargetSpikeCumul_delay[i + 1] - array_idx;
-        MPI_Isend(&h_ExternalTargetSpikeNodeId_delay[it_ % 2][array_idx],
-                  n_spikes, MPI_INT, i, tag_delay, MPI_COMM_WORLD,
-                  &send_mpi_request_delay[i]);
-    }
-    for (int i = 0; i < n_hosts; i++) {
-        MPI_Irecv(h_ExternalSourceSpikeNodeId_delay[i].data(),
-                  max_spike_per_host, MPI_INT, i, tag_delay, MPI_COMM_WORLD,
-                  &recv_mpi_request_delay[i]);
-    }
+    MPI_Ialltoallv(
+        h_ExternalTargetSpikeNodeId_delay[it_ % 2],
+        h_ExternalTargetSpikeNum_delay, h_ExternalTargetSpikeCumul_delay,
+        MPI_INT, h_ExternalSourceSpikeNodeId_delay,
+        h_ExternalSourceSpikeNum_recvcounts, h_ExternalSourceSpikeCumul_rdispls,
+        MPI_INT, MPI_COMM_WORLD, &alltoall_request_delay);
+    // for (int i = 0; i < n_hosts; ++i) {
+    //     int array_idx = h_ExternalTargetSpikeCumul_delay[i];
+    //     int n_spikes = h_ExternalTargetSpikeCumul_delay[i + 1] - array_idx;
+    //     MPI_Isend(&h_ExternalTargetSpikeNodeId_delay[it_ % 2][array_idx],
+    //               n_spikes, MPI_INT, i, tag_delay, MPI_COMM_WORLD,
+    //               &send_mpi_request_delay[i]);
+    // }
+    // for (int i = 0; i < n_hosts; i++) {
+    //     MPI_Irecv(&h_ExternalSourceSpikeNodeId_delay[i * max_spike_per_host],
+    //               max_spike_per_host, MPI_INT, i, tag_delay, MPI_COMM_WORLD,
+    //               &recv_mpi_request_delay[i]);
+    // }
     if (it_ == Nt_ - 1) {  // final receive
-        MPI_Waitall(n_hosts, &send_mpi_request_delay[0],
-                    &send_mpi_status_delay[0]);
-        MPI_Waitall(n_hosts, &recv_mpi_request_delay[0],
-                    &recv_mpi_status_delay[0]);
-        for (int i = 0; i < n_hosts; i++) {
-            MPI_Get_count(&recv_mpi_status_delay[i], MPI_INT,
-                          &h_ExternalSourceSpikeNodeId_delay_count[i]);
-        }
+        // MPI_Waitall(n_hosts, &send_mpi_request_delay[0],
+        //             &send_mpi_status_delay[0]);
+        // MPI_Waitall(n_hosts, &recv_mpi_request_delay[0],
+        //             &recv_mpi_status_delay[0]);
+        MPI_Wait(&alltoall_request_delay, &alltoall_status_delay);
     }
     SendRecvSpikeRemote_delay_timer->stopRecordHost();
 
@@ -1045,21 +1055,47 @@ int ConnectMpi::JoinSpikes(int n_hosts, int max_spike_per_host) {
     return n_spike_tot;
 }
 
+__global__ void addOffsetForOverlap(int *d_SpikeNum) {
+    int tid = threadIdx.x;
+    if (tid < NExternalTargetHost) {
+        d_SpikeNum[tid]++;
+    }
+}
+
+__global__ void JoinSpikeKernelForOverlap(
+    int n_hosts, int *ExternalTargetSpikeNum, int *ExternalTargetSpikeCumul,
+    int *ExternalTargetSpikeNodeId, int *ExternalTargetSpikeNodeIdJoin,
+    int n_spike_tot, int max_spike_per_host) {
+    int array_idx = threadIdx.x + blockIdx.x * blockDim.x;
+    if (array_idx < n_spike_tot) {
+        int i_host = locate(array_idx, ExternalTargetSpikeCumul, n_hosts + 1);
+        int i_spike = array_idx - ExternalTargetSpikeCumul[i_host];
+        if (i_spike == 0) {
+            ExternalTargetSpikeNodeIdJoin[array_idx] =
+                ExternalTargetSpikeNum[i_host] - 1;
+        } else {
+            ExternalTargetSpikeNodeIdJoin[array_idx] =
+                ExternalTargetSpikeNodeId[i_host * max_spike_per_host +
+                                          i_spike - 1];
+        }
+    }
+}
+
 int ConnectMpi::JoinSpikesOverlap(int n_hosts, int max_spike_per_host,
                                   int *d_SpikeCumul, int *h_SpikeCumul,
                                   int *d_SpikeNum, int *h_SpikeNum,
                                   int *d_SpikeNodeId, int *d_SpikeNodeIdJoin) {
+    addOffsetForOverlap<<<1, n_hosts>>>(d_SpikeNum);
     prefix_scan(d_SpikeCumul, d_SpikeNum, n_hosts + 1, true);
     h_SpikeCumul[0] = 0;
     for (int ih = 0; ih < n_hosts; ih++) {
+        h_SpikeNum[ih]++;
         h_SpikeCumul[ih + 1] = h_SpikeCumul[ih] + h_SpikeNum[ih];
     }
     int n_spike_tot = h_SpikeCumul[n_hosts];
-    if (n_spike_tot > 0) {
-        JoinSpikeKernel<<<(n_spike_tot + 1023) / 1024, 1024>>>(
-            n_hosts, d_SpikeCumul, d_SpikeNodeId, d_SpikeNodeIdJoin,
-            n_spike_tot, max_spike_per_host);
-    }
+    JoinSpikeKernelForOverlap<<<(n_spike_tot + 1023) / 1024, 1024>>>(
+        n_hosts, d_SpikeNum, d_SpikeCumul, d_SpikeNodeId, d_SpikeNodeIdJoin,
+        n_spike_tot, max_spike_per_host);
     return n_spike_tot;
 }
 
