@@ -60,3 +60,11 @@ Other増加：immed+delayのデータ転送？しようと思えば1回でも可
 　ncclはGPUだからオーバラップできなくないとか思ったけどまぁできるのかな，データサイズ小さい場合は遅い気がする
 waitallは受信が早く終わったものから終わる？
 
+
+
+full isend/irecv
+Sim Time: 319.53424700000005
+defaultdict(<function <lambda> at 0x148fa1361870>, {'SpikeBufferUpdate_time': 337.29953700000004, 'poisson_generator_time': 377.375846, 'neuron_Update_time': 234.222464, 'copy_ext_spike_time': 55.630037, 'SendExternalSpike_time': 75.22658399999999, 'PackSendSpike_time': 134.494971, 'SendRecvSpikeRemote_immed_time': 5028.887473999999, 'SendRecvSpikeRemote_delay_time': 97.24292100000002, 'UnpackRecvSpike_time': 1.7958100000000001, 'CopySpikeFromRemote_time': 93.80053600000004, 'MpiBarrier_time': 9.306761, 'copy_spike_time': 54.639922999999996, 'ClearGetSpikeArrays_time': 189.63464999999997, 'NestedLoop_time': 2688.7339890000003, 'GetSpike_time': 202.73308, 'SpikeReset_time': 21.523097000000003, 'ExternalSpikeReset_time': 37.99399199999999, 'RevSpikeBufferUpdate_time': 0.0, 'BufferRecSpikeTimes_time': 11.928606999999998, 'Other_time': 566.96688})
+
+full alltoall
+defaultdict(<function <lambda> at 0x1489a8f79870>, {'SpikeBufferUpdate_time': 337.77232600000013, 'poisson_generator_time': 378.23458100000005, 'neuron_Update_time': 228.73755300000005, 'copy_ext_spike_time': 55.88139500000001, 'SendExternalSpike_time': 75.71699799999998, 'PackSendSpike_time': 201.81688400000002, 'SendRecvSpikeRemote_immed_time': 5235.877054, 'SendRecvSpikeRemote_delay_time': 117.24520800000002, 'UnpackRecvSpike_time': 2.182437, 'CopySpikeFromRemote_time': 93.29351299999999, 'MpiBarrier_time': 8.570867000000003, 'copy_spike_time': 54.13053000000001, 'ClearGetSpikeArrays_time': 189.02149599999998, 'NestedLoop_time': 2688.522641, 'GetSpike_time': 203.185767, 'SpikeReset_time': 21.592946000000005, 'ExternalSpikeReset_time': 37.835858, 'RevSpikeBufferUpdate_time': 0.0, 'BufferRecSpikeTimes_time': 11.910504000000003, 'Other_time': 567.5352669999999})

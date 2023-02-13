@@ -22,20 +22,20 @@ if ls log/*.txt >/dev/null 2>&1; then
 fi
 
 # below "cp result.txt"
-LABEL=4nodes_8gpus_N0.5_K0.5_T0.5_0:357504.sqd
+LABEL=8nodes_4gpus_N1.00_K1.00_T1.00_0:390725.sqd
 RESULT_FILE=./simulation_result/$LABEL/result.txt
 python analysis/each_proc/time.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/time_overlap.py simulation_result/$LABEL >> $RESULT_FILE
 python analysis/each_proc/time_each_label_sum.py simulation_result/$LABEL >> $RESULT_FILE
-# python analysis/each_proc/time_comm_wait.py simulation_result/$LABEL >> $RESULT_FILE
-python analysis/each_proc/memory.py simulation_result/$LABEL >> $RESULT_FILE
-python analysis/each_proc/neuron.py simulation_result/$LABEL >> $RESULT_FILE
-python analysis/each_proc/spike.py simulation_result/$LABEL >> $RESULT_FILE
-if [ -d ./simulation_result/$LABEL/syndelay ]; then
-	python analysis/each_proc/synapse.py simulation_result/$LABEL >> $RESULT_FILE
-	python analysis/distributions/delay_connection.py simulation_result/$LABEL >> $RESULT_FILE
-	python analysis/distributions/delay_spike.py simulation_result/$LABEL >> $RESULT_FILE
-fi
-if [ -d ./simulation_result/$LABEL/comm ]; then
-	python analysis/distributions/comm_spike.py simulation_result/$LABEL >> $RESULT_FILE
-fi
+# # python analysis/each_proc/time_comm_wait.py simulation_result/$LABEL >> $RESULT_FILE
+# python analysis/each_proc/memory.py simulation_result/$LABEL >> $RESULT_FILE
+# python analysis/each_proc/neuron.py simulation_result/$LABEL >> $RESULT_FILE
+# python analysis/each_proc/spike.py simulation_result/$LABEL >> $RESULT_FILE
+# if [ -d ./simulation_result/$LABEL/syndelay ]; then
+# 	python analysis/each_proc/synapse.py simulation_result/$LABEL >> $RESULT_FILE
+# 	python analysis/distributions/delay_connection.py simulation_result/$LABEL >> $RESULT_FILE
+# 	python analysis/distributions/delay_spike.py simulation_result/$LABEL >> $RESULT_FILE
+# fi
+# if [ -d ./simulation_result/$LABEL/comm ]; then
+# 	python analysis/distributions/comm_spike.py simulation_result/$LABEL >> $RESULT_FILE
+# fi

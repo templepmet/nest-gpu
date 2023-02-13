@@ -1,11 +1,12 @@
-import re
 import os
+import re
 import sys
 from collections import defaultdict
 
-import numpy as np
-import matplotlib; matplotlib.use('agg')
 import matplotlib.pyplot as plt
+import numpy as np
+
+import matplotlib; matplotlib.use('agg')
 
 argv = sys.argv
 if len(argv) < 2:
@@ -133,3 +134,5 @@ ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
 plt.legend(handles[::-1], labels[::-1], bbox_to_anchor=(1, 0), loc="lower left")
 plt.savefig(os.path.join(sim_dir, "time.png"), bbox_inches="tight", pad_inches=0.2)
+
+print("Sim Time:", max(bottom))
