@@ -51,6 +51,7 @@ def simulation(label):
     # ngpu.AddMode("dump_syndelay")
     # ngpu.AddMode("dump_comm_dist")
     ngpu.AddMode("comm_overlap")
+    # ngpu.AddMode("comm_persistent")
     M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
     M.simulation.simulate()
 

@@ -337,6 +337,14 @@ int NESTGPU::Calibrate() {
                                      net_connection_->MaxDelayNum());
     max_spike_per_host_ = (max_spike_per_host_ > 1) ? max_spike_per_host_ : 1;
 
+    // AllReduce Max max_spike_per_host
+    if (isMode("comm_persistent")) {
+        int new_max_spike_per_host;
+        MPI_Allreduce(&max_spike_per_host_, &new_max_spike_per_host, 1, MPI_INT,
+                      MPI_MAX, MPI_COMM_WORLD);
+        max_spike_per_host_ = new_max_spike_per_host;
+    }
+
     SpikeInit(max_spike_num_);
 #ifdef HAVE_MPI
     if (mpi_flag_) {

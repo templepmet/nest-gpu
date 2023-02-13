@@ -84,6 +84,9 @@ class ConnectMpi {
     int SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
                                    long long it_, long long Nt_);
 
+    int SendRecvSpikeRemotePersistent(int n_hosts, int max_spike_per_host,
+                                   long long it_, long long Nt_);
+
     int SendSpikeToRemoteCuda(int n_hosts, int max_spike_per_host);
 
     int RecvSpikeFromRemoteCuda(int n_hosts, int max_spike_per_host);
