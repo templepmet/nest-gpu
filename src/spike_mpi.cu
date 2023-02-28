@@ -152,7 +152,9 @@ std::vector<MPI_Status> send_mpi_status_immed;
 std::vector<MPI_Status> send_mpi_status_delay;
 std::vector<MPI_Status> recv_mpi_status_immed;
 std::vector<MPI_Status> recv_mpi_status_delay;
+MPI_Request alltoall_request_immed;
 MPI_Request alltoall_request_delay;
+MPI_Status alltoall_status_immed;
 MPI_Status alltoall_status_delay;
 
 int *h_ExternalTargetSpikeNum_immed;
@@ -413,17 +415,18 @@ int ConnectMpi::ExternalSpikeInitOverlap(int n_node, int n_hosts,
     h_ExternalTargetSpikeNum_immed = new int[n_hosts];
     gpuErrchk(
         cudaMalloc(&d_ExternalTargetSpikeNum_immed, n_hosts * sizeof(int)));
-    h_ExternalTargetSpikeNum_delay = new int[n_hosts];
+    gpuErrchk(
+        cudaMallocHost(&h_ExternalTargetSpikeNum_delay, n_hosts * sizeof(int)));
     gpuErrchk(
         cudaMalloc(&d_ExternalTargetSpikeNum_delay, n_hosts * sizeof(int)));
 
     h_ExternalTargetSpikeNodeId_immed = new int[n_hosts * max_spike_per_host];
     gpuErrchk(cudaMalloc(&d_ExternalTargetSpikeNodeId_immed,
                          n_hosts * max_spike_per_host * sizeof(int)));
-    h_ExternalTargetSpikeNodeId_delay[0] =
-        new int[n_hosts * max_spike_per_host];
-    h_ExternalTargetSpikeNodeId_delay[1] =
-        new int[n_hosts * max_spike_per_host];
+    gpuErrchk(cudaMallocHost(&h_ExternalTargetSpikeNodeId_delay[0],
+                             n_hosts * max_spike_per_host * sizeof(int)));
+    gpuErrchk(cudaMallocHost(&h_ExternalTargetSpikeNodeId_delay[1],
+                             n_hosts * max_spike_per_host * sizeof(int)));
     gpuErrchk(cudaMalloc(&d_ExternalTargetSpikeNodeId_delay,
                          n_hosts * max_spike_per_host * sizeof(int)));
 
@@ -708,7 +711,7 @@ int ConnectMpi::RecvSpikeFromRemote(int n_hosts, int max_spike_per_host) {
 int JoinSpikesAsync(int n_hosts, int max_spike_per_host, int *d_SpikeCumul,
                     int *h_SpikeCumul, int *d_SpikeNum, int *h_SpikeNum,
                     int *d_SpikeNodeId, int *d_SpikeNodeIdJoin,
-                    cudaStream_t stream);
+                    cudaStream_t stream = 0);
 
 // Send Receive spikes from remote MPI processes
 int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
@@ -719,43 +722,49 @@ int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
     }
 
     Other_timer->startRecord();
-    gpuErrchk(cudaMemcpyAsync(h_ExternalTargetSpikeNum_immed,
-                              d_ExternalTargetSpikeNum_immed,
+    gpuErrchk(cudaMemcpyAsync(h_ExternalTargetSpikeNum_delay,
+                              d_ExternalTargetSpikeNum_delay,
                               n_hosts * sizeof(int), cudaMemcpyDeviceToHost));
-    gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNum_delay,
-                         d_ExternalTargetSpikeNum_delay, n_hosts * sizeof(int),
+    gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNum_immed,
+                         d_ExternalTargetSpikeNum_immed, n_hosts * sizeof(int),
                          cudaMemcpyDeviceToHost));
     Other_timer->stopRecord();
 
     PackSendSpike_timer->startRecord();
-    // JoinSpike immed, delay
+    // pack delay
     int n_spike_delay = JoinSpikesAsync(
         n_hosts, max_spike_per_host, d_ExternalTargetSpikeCumul_delay,
         h_ExternalTargetSpikeCumul_delay, d_ExternalTargetSpikeNum_delay,
         h_ExternalTargetSpikeNum_delay, d_ExternalTargetSpikeNodeId_delay,
         d_ExternalTargetSpikeNodeIdJoin_delay, delay_stream);
-    gpuErrchk(cudaMemcpyAsync(h_ExternalTargetSpikeNodeId_delay[it_ % 2],
-                              d_ExternalTargetSpikeNodeIdJoin_delay,
-                              n_spike_delay * sizeof(int),
-                              cudaMemcpyDeviceToHost, delay_stream));
-    // spikenumをdevice bufferに書き込んでおけば上のmemcpyも不要
-    int n_spike_immed = JoinSpikesOverlap(
+    gpuErrchk(cudaMemcpyAsync(
+        h_ExternalTargetSpikeNodeId_delay[it_ % 2],
+        d_ExternalTargetSpikeNodeIdJoin_delay, n_spike_delay * sizeof(int),
+        cudaMemcpyDeviceToHost,
+        delay_stream));  // ここでn_spike_delayが必要になるのでcudaMemcpyが必要
+
+    // pack immed
+    int n_spike_immed = JoinSpikesAsync(
         n_hosts, max_spike_per_host, d_ExternalTargetSpikeCumul_immed,
         h_ExternalTargetSpikeCumul_immed, d_ExternalTargetSpikeNum_immed,
         h_ExternalTargetSpikeNum_immed, d_ExternalTargetSpikeNodeId_immed,
-        d_ExternalTargetSpikeNodeIdJoin_immed);
+        d_ExternalTargetSpikeNodeIdJoin_immed);  // レイテンシが大きい
     gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNodeId_immed,
                          d_ExternalTargetSpikeNodeIdJoin_immed,
                          n_spike_immed * sizeof(int), cudaMemcpyDeviceToHost));
     PackSendSpike_timer->stopRecord();
 
-    // immed
+    // communicate immed
     SendRecvSpikeRemote_immed_timer->startRecordHost();
-    MPI_Alltoallv(
+    MPI_Ialltoallv(
         h_ExternalTargetSpikeNodeId_immed, h_ExternalTargetSpikeNum_immed,
         h_ExternalTargetSpikeCumul_immed, MPI_INT,
         h_ExternalSourceSpikeNodeId_immed, h_ExternalSourceSpikeNum_recvcounts,
-        h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
+        h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD,
+        &alltoall_request_immed);
+    // SendRecvSpikeRemote_immed_timer->stopRecordHost();
+    // SendRecvSpikeRemote_immed_timer->startRecordHost();
+    MPI_Wait(&alltoall_request_immed, &alltoall_status_immed);
     SendRecvSpikeRemote_immed_timer->stopRecordHost();
 
     // delay
