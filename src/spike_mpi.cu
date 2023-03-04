@@ -715,12 +715,8 @@ int JoinSpikesAsync(int n_hosts, int max_spike_per_host, int *d_SpikeCumul,
 
 // Send Receive spikes from remote MPI processes
 int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
-                                           long long it_, long long Nt_) {
-    if (isMode("comm_persistent")) {
-        return SendRecvSpikeRemotePersistent(n_hosts, max_spike_per_host, it_,
-                                             Nt_);
-    }
-
+                                           int i_remote_node_0, long long it_,
+                                           long long Nt_) {
     Other_timer->startRecord();
     gpuErrchk(cudaMemcpyAsync(h_ExternalTargetSpikeNum_delay,
                               d_ExternalTargetSpikeNum_delay,
@@ -805,6 +801,29 @@ int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
         MPI_Wait(&alltoall_request_delay, &alltoall_status_delay);
     }
     SendRecvSpikeRemote_delay_timer->stopRecordHost();
+
+    CopySpikeFromRemote_timer->startRecord();
+    int n_spike_tot = 0;
+    for (int i_host = 0; i_host < n_hosts; i_host++) {
+        int n_spike = h_ExternalSourceSpikeNum[i_host];
+        for (int i_spike = 0; i_spike < n_spike; i_spike++) {
+            h_ExternalSourceSpikeNodeId[n_spike_tot] =
+                h_ExternalSourceSpikeNodeId[i_host * max_spike_per_host +
+                                            i_spike];
+            n_spike_tot++;
+        }
+    }
+    if (n_spike_tot > 0) {
+        gpuErrchk(cudaMemcpyAsync(
+            d_ExternalSourceSpikeNodeId, h_ExternalSourceSpikeNodeId,
+            n_spike_tot * sizeof(int), cudaMemcpyHostToDevice));
+        AddOffset<<<(n_spike_tot + 1023) / 1024, 1024>>>(
+            n_spike_tot, d_ExternalSourceSpikeNodeId, i_remote_node_0);
+        PushSpikeFromRemote<<<(n_spike_tot + 1023) / 1024, 1024>>>(
+            n_spike_tot, d_ExternalSourceSpikeNodeId);
+        gpuErrchk(cudaPeekAtLastError());
+    }
+    CopySpikeFromRemote_timer->stopRecord();
 
     return 0;
 }
