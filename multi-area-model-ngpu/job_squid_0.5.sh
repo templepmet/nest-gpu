@@ -49,7 +49,7 @@ time \
 	 python run_simulation.py \
 	>> $RESULT_FILE
 
-REF_LABEL="4nodes_8gpus_N0.5_K0.5_T0.5_0:357488.sqd"
+REF_LABEL="4nodes_8gpus_0.5scale_ref"
 diff -sq simulation_result/$REF_LABEL/recordings simulation_result/$LABEL/recordings >> $RESULT_FILE
 
 cp ./log/result.txt simulation_result/$LABEL/

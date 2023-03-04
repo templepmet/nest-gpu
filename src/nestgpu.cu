@@ -757,6 +757,10 @@ int NESTGPU::SimulationStep() {
                                                      max_spike_per_host_,
                                                      i_remote_node_0_, it_,
                                                      Nt_);  // call JoinSpikes
+        } else if (isMode("comm_cuda")) {
+            connect_mpi_->SendRecvSpikeRemoteCuda(connect_mpi_->mpi_np_,
+                                                  max_spike_per_host_,
+                                                  i_remote_node_0_, it_, Nt_);
         } else {
             connect_mpi_->SendSpikeToRemote(
                 connect_mpi_->mpi_np_,
