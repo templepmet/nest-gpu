@@ -23,6 +23,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <algorithm>
+#include <chrono>
 #include <cmath>
 #include <filesystem>
 #include <fstream>
@@ -431,6 +432,50 @@ int NESTGPU::Debug() {
     if (isMode("dump_comm_dist")) {
         if (MpiId() == 0) {
             std::filesystem::create_directory("comm");
+        }
+        MPI_Barrier(MPI_COMM_WORLD);
+    }
+    if (isMode("comm_throughput")) {
+        MPI_Barrier(MPI_COMM_WORLD);
+        int *buf;
+        int rank = connect_mpi_->mpi_id_;
+        int src = 0;
+        int dst = 1;
+        long long n = (1LL << 32);  // 1e9
+        if (rank == src || rank == dst) {
+            cudaMalloc(&buf, n * sizeof(int));
+        }
+        MPI_Status st;
+        std::chrono::system_clock::time_point start, end;
+        for (long long cnt = 1; cnt <= n; cnt <<= 1) {
+            long long datasize = cnt * sizeof(int);
+            start = std::chrono::system_clock::now();
+            if (rank == src) {
+                MPI_Send(buf, cnt, MPI_INT, dst, 0, MPI_COMM_WORLD);
+                // 双方向 1Link: 50GB/s（片25GB/s）
+                // NV12: 200GB/s でるはず？
+                // intの最大値 1<<32-1なのでだめ
+            }
+            if (rank == dst) {
+                MPI_Recv(buf, cnt, MPI_INT, src, 0, MPI_COMM_WORLD, &st);
+                MPI_Send(buf, cnt, MPI_INT, src, 0, MPI_COMM_WORLD);
+            }
+            if (rank == src) {
+                MPI_Recv(buf, cnt, MPI_INT, dst, 0, MPI_COMM_WORLD, &st);
+            }
+            end = std::chrono::system_clock::now();
+            double dt = static_cast<double>(
+                std::chrono::duration_cast<std::chrono::microseconds>(end -
+                                                                      start)
+                    .count() /
+                1e6);
+            if (rank == src) {
+                printf("datasize=%lld[B], time=%lf[s], bw=%lf[GB/s]\n",
+                       datasize, dt / 2, (datasize / 1e9) / (dt / 2));
+            }
+        }
+        if (rank == src || rank == dst) {
+            cudaFree(buf);
         }
         MPI_Barrier(MPI_COMM_WORLD);
     }
