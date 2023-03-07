@@ -742,14 +742,14 @@ int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
         h_ExternalTargetSpikeNodeId_delay[it_ % 2],
         d_ExternalTargetSpikeNodeIdJoin_delay, n_spike_delay * sizeof(int),
         cudaMemcpyDeviceToHost,
-        delay_stream));  // ここでn_spike_delayが必要になるのでcudaMemcpyが必要
+        delay_stream));
 
     // pack immed
     int n_spike_immed = JoinSpikesAsync(
         n_hosts, max_spike_per_host, d_ExternalTargetSpikeCumul_immed,
         h_ExternalTargetSpikeCumul_immed, d_ExternalTargetSpikeNum_immed,
         h_ExternalTargetSpikeNum_immed, d_ExternalTargetSpikeNodeId_immed,
-        d_ExternalTargetSpikeNodeIdJoin_immed);  // レイテンシが大きい
+        d_ExternalTargetSpikeNodeIdJoin_immed);
     gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNodeId_immed,
                          d_ExternalTargetSpikeNodeIdJoin_immed,
                          n_spike_immed * sizeof(int), cudaMemcpyDeviceToHost));
