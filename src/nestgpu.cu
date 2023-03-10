@@ -542,6 +542,9 @@ int NESTGPU::EndSimulation() {
     Other_timer->stopRecord();
 #ifdef HAVE_MPI
     if (mpi_flag_) {
+        if (isMode("comm_overlap")) {
+            connect_mpi_->SendRecvSpikeRemoteOverlapFinal(it_);
+        }
         MpiBarrier_timer->startRecordHost();
         MPI_Barrier(MPI_COMM_WORLD);
         MpiBarrier_timer->stopRecordHost();

@@ -143,7 +143,7 @@ MPI_Status *recv_mpi_status;
 int tag_immed = 0;
 int tag_delay = 1;
 int *h_ExternalSourceSpikeNodeId_immed;
-int *h_ExternalSourceSpikeNodeId_delay;
+int *h_ExternalSourceSpikeNodeId_delay[2];  // double buffering
 std::vector<int> h_ExternalSourceSpikeNodeId_immed_count;
 std::vector<int> h_ExternalSourceSpikeNodeId_delay_count;
 std::vector<MPI_Request> send_mpi_request_immed;
@@ -155,7 +155,7 @@ std::vector<MPI_Status> send_mpi_status_delay;
 std::vector<MPI_Status> recv_mpi_status_immed;
 std::vector<MPI_Status> recv_mpi_status_delay;
 MPI_Request alltoall_request_immed;
-MPI_Request alltoall_request_delay;
+MPI_Request alltoall_request_delay[2];
 MPI_Status alltoall_status_immed;
 MPI_Status alltoall_status_delay;
 
@@ -393,9 +393,13 @@ int ConnectMpi::ExternalSpikeInitOverlap(int n_node, int n_hosts,
     h_ExternalSourceSpikeNodeId_immed_count.resize(n_hosts, 0);
     h_ExternalSourceSpikeNodeId_delay_count.resize(n_hosts, 0);
     h_ExternalSourceSpikeNodeId_immed = new int[n_hosts * max_spike_per_host];
-    h_ExternalSourceSpikeNodeId_delay = new int[n_hosts * max_spike_per_host];
+    h_ExternalSourceSpikeNodeId_delay[0] =
+        new int[n_hosts * max_spike_per_host];
+    h_ExternalSourceSpikeNodeId_delay[1] =
+        new int[n_hosts * max_spike_per_host];
     for (int i = 0; i < n_hosts; ++i) {
-        h_ExternalSourceSpikeNodeId_delay[i * max_spike_per_host] = 0;
+        h_ExternalSourceSpikeNodeId_delay[0][i * max_spike_per_host] = 0;
+        h_ExternalSourceSpikeNodeId_delay[1][i * max_spike_per_host] = 0;
     }
     send_mpi_request_immed.resize(n_hosts);
     send_mpi_request_delay.resize(n_hosts);
@@ -731,31 +735,28 @@ int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
                          cudaMemcpyDeviceToHost));
     Other_timer->stopRecord();
 
-    PackSendSpike_timer->startRecord();
-    // pack delay
-    int n_spike_delay = JoinSpikesAsync(
-        n_hosts, max_spike_per_host, d_ExternalTargetSpikeCumul_delay,
-        h_ExternalTargetSpikeCumul_delay, d_ExternalTargetSpikeNum_delay,
-        h_ExternalTargetSpikeNum_delay, d_ExternalTargetSpikeNodeId_delay,
-        d_ExternalTargetSpikeNodeIdJoin_delay, delay_stream);
-    gpuErrchk(cudaMemcpyAsync(
-        h_ExternalTargetSpikeNodeId_delay[it_ % 2],
-        d_ExternalTargetSpikeNodeIdJoin_delay, n_spike_delay * sizeof(int),
-        cudaMemcpyDeviceToHost,
-        delay_stream));
-
     // pack immed
+    PackSendSpike_timer->startRecordHost();
     int n_spike_immed = JoinSpikesAsync(
         n_hosts, max_spike_per_host, d_ExternalTargetSpikeCumul_immed,
         h_ExternalTargetSpikeCumul_immed, d_ExternalTargetSpikeNum_immed,
         h_ExternalTargetSpikeNum_immed, d_ExternalTargetSpikeNodeId_immed,
         d_ExternalTargetSpikeNodeIdJoin_immed);
+    int n_spike_delay = JoinSpikesAsync(
+        n_hosts, max_spike_per_host, d_ExternalTargetSpikeCumul_delay,
+        h_ExternalTargetSpikeCumul_delay, d_ExternalTargetSpikeNum_delay,
+        h_ExternalTargetSpikeNum_delay, d_ExternalTargetSpikeNodeId_delay,
+        d_ExternalTargetSpikeNodeIdJoin_delay, delay_stream);
+    gpuErrchk(cudaMemcpyAsync(h_ExternalTargetSpikeNodeId_delay[it_ % 2],
+                              d_ExternalTargetSpikeNodeIdJoin_delay,
+                              n_spike_delay * sizeof(int),
+                              cudaMemcpyDeviceToHost, delay_stream));
     gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNodeId_immed,
                          d_ExternalTargetSpikeNodeIdJoin_immed,
                          n_spike_immed * sizeof(int), cudaMemcpyDeviceToHost));
-    PackSendSpike_timer->stopRecord();
+    PackSendSpike_timer->stopRecordHost();
 
-    // communicate immed
+    // comm immed
     SendRecvSpikeRemote_immed_timer->startRecordHost();
     MPI_Ialltoallv(
         h_ExternalTargetSpikeNodeId_immed, h_ExternalTargetSpikeNum_immed,
@@ -763,15 +764,31 @@ int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
         h_ExternalSourceSpikeNodeId_immed, h_ExternalSourceSpikeNum_recvcounts,
         h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD,
         &alltoall_request_immed);
-    // SendRecvSpikeRemote_immed_timer->stopRecordHost();
-    // SendRecvSpikeRemote_immed_timer->startRecordHost();
+    SendRecvSpikeRemote_immed_timer->stopRecordHost();
+
+    // pack delay
+    PackSendSpike_timer->startRecordHost();
+    cudaStreamSynchronize(delay_stream);
+    PackSendSpike_timer->stopRecordHost();
+
+    // comm delay
+    SendRecvSpikeRemote_delay_timer->startRecordHost();
+    MPI_Ialltoallv(
+        h_ExternalTargetSpikeNodeId_delay[it_ % 2],
+        h_ExternalTargetSpikeNum_delay, h_ExternalTargetSpikeCumul_delay,
+        MPI_INT, h_ExternalSourceSpikeNodeId_delay[(it_ + 1) % 2],
+        h_ExternalSourceSpikeNum_recvcounts, h_ExternalSourceSpikeCumul_rdispls,
+        MPI_INT, MPI_COMM_WORLD, &alltoall_request_delay[(it_ + 1) % 2]);
+    SendRecvSpikeRemote_delay_timer->stopRecordHost();
+
+    SendRecvSpikeRemote_immed_timer->startRecordHost();
     MPI_Wait(&alltoall_request_immed, &alltoall_status_immed);
     SendRecvSpikeRemote_immed_timer->stopRecordHost();
 
     // delay
     if (it_ > 0) {  // overlap
         SendRecvSpikeRemote_delay_timer->startRecordHost();
-        MPI_Wait(&alltoall_request_delay, &alltoall_status_delay);
+        MPI_Wait(&alltoall_request_delay[it_ % 2], &alltoall_status_delay);
         SendRecvSpikeRemote_delay_timer->stopRecordHost();
     }
 
@@ -780,43 +797,28 @@ int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
         int count_immed =
             h_ExternalSourceSpikeNodeId_immed[i * max_spike_per_host];
         int count_delay =
-            h_ExternalSourceSpikeNodeId_delay[i * max_spike_per_host];
+            h_ExternalSourceSpikeNodeId_delay[it_ % 2][i * max_spike_per_host];
         memcpy(&h_ExternalSourceSpikeNodeId[i * max_spike_per_host],
                &h_ExternalSourceSpikeNodeId_immed[i * max_spike_per_host + 1],
                count_immed * sizeof(int));
         memcpy(
             &h_ExternalSourceSpikeNodeId[i * max_spike_per_host + count_immed],
-            &h_ExternalSourceSpikeNodeId_delay[i * max_spike_per_host + 1],
+            &h_ExternalSourceSpikeNodeId_delay[it_ % 2]
+                                              [i * max_spike_per_host + 1],
             count_delay * sizeof(int));
         h_ExternalSourceSpikeNum[i] = count_immed + count_delay;
     }
     h_ExternalSourceSpikeNum[mpi_id_] = 0;
     UnpackRecvSpike_timer->stopRecordHost();
 
-    // delay
-    SendRecvSpikeRemote_delay_timer->startRecordHost();
-    cudaStreamSynchronize(delay_stream);
-    MPI_Ialltoallv(
-        h_ExternalTargetSpikeNodeId_delay[it_ % 2],
-        h_ExternalTargetSpikeNum_delay, h_ExternalTargetSpikeCumul_delay,
-        MPI_INT, h_ExternalSourceSpikeNodeId_delay,
-        h_ExternalSourceSpikeNum_recvcounts, h_ExternalSourceSpikeCumul_rdispls,
-        MPI_INT, MPI_COMM_WORLD, &alltoall_request_delay);
-    if (it_ == Nt_ - 1) {  // final receive
-        MPI_Wait(&alltoall_request_delay, &alltoall_status_delay);
-    }
-    SendRecvSpikeRemote_delay_timer->stopRecordHost();
-
     CopySpikeFromRemote_timer->startRecord();
     int n_spike_tot = 0;
-    for (int i_host = 0; i_host < n_hosts; i_host++) {
+    for (int i_host = 0; i_host < n_hosts; i_host++) {  // memcpyに変更予定
         int n_spike = h_ExternalSourceSpikeNum[i_host];
-        for (int i_spike = 0; i_spike < n_spike; i_spike++) {
-            h_ExternalSourceSpikeNodeId[n_spike_tot] =
-                h_ExternalSourceSpikeNodeId[i_host * max_spike_per_host +
-                                            i_spike];
-            n_spike_tot++;
-        }
+        memcpy(&h_ExternalSourceSpikeNodeId[n_spike_tot],
+               &h_ExternalSourceSpikeNodeId[i_host * max_spike_per_host],
+               n_spike * sizeof(int));
+        n_spike_tot += n_spike;
     }
     if (n_spike_tot > 0) {
         gpuErrchk(cudaMemcpyAsync(
@@ -830,6 +832,13 @@ int ConnectMpi::SendRecvSpikeRemoteOverlap(int n_hosts, int max_spike_per_host,
     }
     CopySpikeFromRemote_timer->stopRecord();
 
+    return 0;
+}
+
+int ConnectMpi::SendRecvSpikeRemoteOverlapFinal(long long it_) {
+    SendRecvSpikeRemote_delay_timer->startRecordHost();
+    MPI_Wait(&alltoall_request_delay[it_ % 2], &alltoall_status_delay);
+    SendRecvSpikeRemote_delay_timer->stopRecordHost();
     return 0;
 }
 
@@ -862,10 +871,6 @@ int ConnectMpi::SendRecvSpikeRemoteCuda(int n_hosts, int max_spike_per_host,
     UnpackRecvSpike_timer->stopRecordHost();
     // SendRecvSpikeRemote_immed_timer->stopRecordHost();
 
-    // 2. ncclで実装
-    // 3. overlap
-    // double bufferingして送信オーバヘッドを隠蔽できる？
-
     CopySpikeFromRemote_timer->startRecord();
     if (n_spike_tot > 0) {
         AddOffset<<<(n_spike_tot + 1023) / 1024, 1024>>>(
@@ -875,195 +880,6 @@ int ConnectMpi::SendRecvSpikeRemoteCuda(int n_hosts, int max_spike_per_host,
         gpuErrchk(cudaPeekAtLastError());
     }
     CopySpikeFromRemote_timer->stopRecord();
-
-    return 0;
-}
-
-// Send Receive spikes from remote MPI processes
-int ConnectMpi::SendRecvSpikeRemotePersistent(int n_hosts,
-                                              int max_spike_per_host,
-                                              long long it_, long long Nt_) {
-    Other_timer->startRecord();
-    gpuErrchk(cudaMemcpyAsync(h_ExternalTargetSpikeNum_immed,
-                              d_ExternalTargetSpikeNum_immed,
-                              n_hosts * sizeof(int), cudaMemcpyDeviceToHost));
-    gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNum_delay,
-                         d_ExternalTargetSpikeNum_delay, n_hosts * sizeof(int),
-                         cudaMemcpyDeviceToHost));
-    Other_timer->stopRecord();
-
-    PackSendSpike_timer->startRecord();
-    // JoinSpike immed, delay
-    int n_spike_immed = JoinSpikesOverlap(
-        n_hosts, max_spike_per_host, d_ExternalTargetSpikeCumul_immed,
-        h_ExternalTargetSpikeCumul_immed, d_ExternalTargetSpikeNum_immed,
-        h_ExternalTargetSpikeNum_immed, d_ExternalTargetSpikeNodeId_immed,
-        d_ExternalTargetSpikeNodeIdJoin_immed);
-    gpuErrchk(cudaMemcpyAsync(h_ExternalTargetSpikeNodeId_immed,
-                              d_ExternalTargetSpikeNodeIdJoin_immed,
-                              n_spike_immed * sizeof(int),
-                              cudaMemcpyDeviceToHost));
-    gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNodeId_delay[it_ % 2],
-                         d_ExternalTargetSpikeNodeId_delay,
-                         n_hosts * max_spike_per_host * sizeof(int),
-                         cudaMemcpyDeviceToHost));
-    PackSendSpike_timer->stopRecord();
-
-    // immed
-    SendRecvSpikeRemote_immed_timer->startRecordHost();
-    MPI_Alltoallv(
-        h_ExternalTargetSpikeNodeId_immed, h_ExternalTargetSpikeNum_immed,
-        h_ExternalTargetSpikeCumul_immed, MPI_INT,
-        h_ExternalSourceSpikeNodeId_immed, h_ExternalSourceSpikeNum_recvcounts,
-        h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
-    SendRecvSpikeRemote_immed_timer->stopRecordHost();
-
-    // delay
-    if (it_ > 0) {  // overlap
-        SendRecvSpikeRemote_delay_timer->startRecordHost();
-        // MPI_Waitall(n_hosts, &send_mpi_request_delay[0],
-        //             &send_mpi_status_delay[0]);
-        // MPI_Waitall(n_hosts, &recv_mpi_request_delay[0],
-        //             &recv_mpi_status_delay[0]);
-        MPI_Waitall(n_hosts * 2, persistent_request[(it_ + 1) % 2].data(),
-                    persistent_status[(it_ + 1) % 2].data());
-        SendRecvSpikeRemote_delay_timer->stopRecordHost();
-    }
-
-    UnpackRecvSpike_timer->startRecordHost();
-    for (int i = 0; i < n_hosts; i++) {
-        int count_immed =
-            h_ExternalSourceSpikeNodeId_immed[i * max_spike_per_host];
-        int count_delay =
-            h_ExternalSourceSpikeNodeId_delay[i * max_spike_per_host];
-        memcpy(&h_ExternalSourceSpikeNodeId[i * max_spike_per_host],
-               &h_ExternalSourceSpikeNodeId_immed[i * max_spike_per_host + 1],
-               count_immed * sizeof(int));
-        memcpy(
-            &h_ExternalSourceSpikeNodeId[i * max_spike_per_host + count_immed],
-            &h_ExternalSourceSpikeNodeId_delay[i * max_spike_per_host + 1],
-            count_delay * sizeof(int));
-        h_ExternalSourceSpikeNum[i] = count_immed + count_delay;
-    }
-    h_ExternalSourceSpikeNum[mpi_id_] = 0;
-    UnpackRecvSpike_timer->stopRecordHost();
-
-    // delay
-    SendRecvSpikeRemote_delay_timer->startRecordHost();
-    for (int i = 0; i < n_hosts; ++i) {
-        h_ExternalTargetSpikeNodeId_delay[it_ % 2][i * max_spike_per_host] =
-            h_ExternalTargetSpikeNum_delay[i];
-    }
-    MPI_Startall(n_hosts * 2, persistent_request[it_ % 2].data());
-    // for (int i = 0; i < n_hosts; ++i) {
-    //     MPI_Isend(
-    //         &h_ExternalTargetSpikeNodeId_delay[it_ % 2][i *
-    //         max_spike_per_host], max_spike_per_host, MPI_INT, i,
-    //         tag_delay, MPI_COMM_WORLD, &persistent_request[it_ % 2][i]);
-    // }
-    // for (int i = 0; i < n_hosts; i++) {
-    //     MPI_Irecv(&h_ExternalSourceSpikeNodeId_delay[i *
-    //     max_spike_per_host],
-    //               max_spike_per_host, MPI_INT, i, tag_delay,
-    //               MPI_COMM_WORLD, &persistent_request[it_ % 2][n_hosts +
-    //               i]);
-    // }
-
-    if (it_ == Nt_ - 1) {  // final receive
-        MPI_Waitall(n_hosts * 2, persistent_request[it_ % 2].data(),
-                    persistent_status[it_ % 2].data());
-
-        // MPI_Waitall(n_hosts, &send_mpi_request_delay[0],
-        //             &send_mpi_status_delay[0]);
-        // MPI_Waitall(n_hosts, &recv_mpi_request_delay[0],
-        //             &recv_mpi_status_delay[0]);
-    }
-    SendRecvSpikeRemote_delay_timer->stopRecordHost();
-
-    return 0;
-}
-
-// AlltoAll spikes for remote MPI processes
-int ConnectMpi::AlltoallvSpikeforRemote(int n_hosts, int max_spike_per_host) {
-    Other_timer->startRecord();
-    gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNum, d_ExternalTargetSpikeNum,
-                         n_hosts * sizeof(int), cudaMemcpyDeviceToHost));
-    Other_timer->stopRecord();
-
-    SendSpikeToRemote_timer->startRecord();
-    // pack the spikes in GPU memory and copy them to CPU
-    int n_spike_tot = JoinSpikes(n_hosts, max_spike_per_host);
-    // copy spikes from GPU to CPU memory
-    gpuErrchk(cudaMemcpy(h_ExternalTargetSpikeNodeId,
-                         d_ExternalTargetSpikeNodeIdJoin,
-                         n_spike_tot * sizeof(int), cudaMemcpyDeviceToHost));
-    SendSpikeToRemote_timer->stopRecord();
-
-    RecvSpikeFromRemote_timer->startRecordHost();
-    for (int i = n_hosts - 1; i >= 0; --i) {
-        for (int j = h_ExternalTargetSpikeCumul[i + 1] - 1;
-             j >= h_ExternalTargetSpikeCumul[i]; --j) {
-            h_ExternalTargetSpikeNodeId[j + i + 1] =
-                h_ExternalTargetSpikeNodeId[j];
-        }
-        h_ExternalTargetSpikeNodeId[h_ExternalTargetSpikeCumul[i] + i] =
-            h_ExternalTargetSpikeNum[i];
-    }
-    for (int i = 0; i < n_hosts; ++i) {
-        h_ExternalTargetSpikeNum[i]++;
-        h_ExternalTargetSpikeCumul[i] += i;
-    }
-    h_ExternalSourceSpikeNum_recvcounts[mpi_id_] = 1;
-    // only alltoallv
-    MPI_Alltoallv(h_ExternalTargetSpikeNodeId, h_ExternalTargetSpikeNum,
-                  h_ExternalTargetSpikeCumul, MPI_INT,
-                  h_ExternalSourceSpikeNodeId,
-                  h_ExternalSourceSpikeNum_recvcounts,
-                  h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
-    for (int i = 0; i < n_hosts; ++i) {
-        h_ExternalSourceSpikeNum[i] =
-            h_ExternalSourceSpikeNodeId[i * max_spike_per_host];
-        for (int j = 0; j < h_ExternalSourceSpikeNum[i]; ++j) {
-            h_ExternalSourceSpikeNodeId[i * max_spike_per_host + j] =
-                h_ExternalSourceSpikeNodeId[i * max_spike_per_host + j + 1];
-        }
-    }
-
-    // alltoall + alltoallv
-    // MPI_Alltoall(h_ExternalTargetSpikeNum, 1, MPI_INT,
-    //             h_ExternalSourceSpikeNum, 1, MPI_INT, MPI_COMM_WORLD);
-    // MPI_Alltoallv(h_ExternalTargetSpikeNodeId, h_ExternalTargetSpikeNum,
-    // h_ExternalTargetSpikeCumul, MPI_INT,
-    //   h_ExternalSourceSpikeNodeId, h_ExternalSourceSpikeNum,
-    //   h_ExternalSourceSpikeCumul_rdispls, MPI_INT, MPI_COMM_WORLD);
-    RecvSpikeFromRemote_timer->stopRecordHost();
-
-    if (isMode("dump_comm_dist")) {
-        {
-            std::string filename =
-                "comm/send_" + std::to_string(mpi_id_) + ".txt";
-            std::ofstream ofs(filename, std::ios::app);
-            for (int i = 0; i < n_hosts; ++i) {
-                if (i > 0) ofs << ",";
-                int spikes = h_ExternalTargetSpikeNum[i];
-                ofs << spikes;
-            }
-            ofs << std::endl;
-            ofs.close();
-        }
-        {
-            std::string filename =
-                "comm/recv_" + std::to_string(mpi_id_) + ".txt";
-            std::ofstream ofs(filename, std::ios::app);
-            for (int i = 0; i < n_hosts; ++i) {
-                if (i > 0) ofs << ",";
-                int spikes = h_ExternalSourceSpikeNum[i];
-                ofs << spikes;
-            }
-            ofs << std::endl;
-            ofs.close();
-        }
-    }
 
     return 0;
 }
@@ -1134,28 +950,6 @@ int ConnectMpi::CopySpikeFromRemote(int n_hosts, int max_spike_per_host,
         }
         ofs << std::endl;
         ofs.close();
-    }
-
-    return n_spike_tot;
-}
-
-// pack spikes received from remote MPI processes
-// and copy them to GPU memory
-int ConnectMpi::CopySpikeFromRemoteCuda(int n_hosts, int max_spike_per_host,
-                                        int i_remote_node_0) {
-    int n_spike_tot = 0;
-    for (int i_host = 0; i_host < n_hosts; i_host++) {
-        n_spike_tot += h_ExternalSourceSpikeNum[i_host];
-    }
-    // bug: necessary packing head
-
-    printf("rank %d: n_spike_tot=%d\n", mpi_id_, n_spike_tot);
-
-    if (n_spike_tot > 0) {
-        AddOffset<<<(n_spike_tot + 1023) / 1024, 1024>>>(
-            n_spike_tot, d_ExternalSourceSpikeNodeId, i_remote_node_0);
-        PushSpikeFromRemote<<<(n_spike_tot + 1023) / 1024, 1024>>>(
-            n_spike_tot, d_ExternalSourceSpikeNodeId);
     }
 
     return n_spike_tot;
@@ -1279,7 +1073,7 @@ int JoinSpikesAsync(int n_hosts, int max_spike_per_host, int *d_SpikeCumul,
     JoinSpikeKernelForOverlap<<<(n_spike_tot + 1023) / 1024, 1024, 0, stream>>>(
         n_hosts, d_SpikeNum, d_SpikeCumul, d_SpikeNodeId, d_SpikeNodeIdJoin,
         n_spike_tot, max_spike_per_host);
-    return n_spike_tot;  // n_spikeもらっても使わないので計算不要
+    return n_spike_tot;
 }
 
 #endif
