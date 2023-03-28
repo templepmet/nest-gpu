@@ -301,13 +301,11 @@ class Simulation:
         )
 
         self.save_network_gids()
-        MPI.COMM_WORLD.barrier()
 
         ngpu.Calibrate()
         t3b = time.time()
         time_calibrate = t3b - t3
         print("Calibrated network in {0:.2f} seconds.".format(time_calibrate))
-        MPI.COMM_WORLD.barrier()
 
         if self.areas_recorded == []:
             ngpu.Simulate(self.T_presim)
@@ -571,63 +569,60 @@ class Area:
         for pop in self.populations:
             n = int(self.neuron_numbers[pop])
             # print("Creating ", n, " neurons", flush=True)
-            remote_neurons = ngpu.RemoteCreate(
-                self.rank,
+            neurons = ngpu.CreatePar(
                 self.network.params["neuron_params"]["neuron_model"],
                 int(self.neuron_numbers[pop]),
-            ) # rankを増加させながら指定しているのでOK
-            neurons = remote_neurons.node_seq
-            if ngpu.Rank() == self.rank:
-                ngpu.SetStatus(
-                    neurons, self.network.params["neuron_params"]["single_neuron_dict"]
+            )
+            ngpu.SetStatusPar(
+                neurons, self.network.params["neuron_params"]["single_neuron_dict"]
+            )
+            if (
+                self.name
+                in self.simulation.params["recording_dict"]["areas_recorded"]
+            ):
+                ngpu.ActivateRecSpikeTimes(neurons, 100)
+                print(
+                    "Activated spike times recording for area:",
+                    self.name,
+                    " population:",
+                    pop,
                 )
-                if (
-                    self.name
-                    in self.simulation.params["recording_dict"]["areas_recorded"]
-                ):
-                    ngpu.ActivateRecSpikeTimes(neurons, 100)
-                    print(
-                        "Activated spike times recording for area:",
-                        self.name,
-                        " population:",
-                        pop,
-                    )
-                mask = create_vector_mask(
-                    self.network.structure, areas=[self.name], pops=[pop]
+            mask = create_vector_mask(
+                self.network.structure, areas=[self.name], pops=[pop]
+            )
+            I_e = self.network.add_DC_drive[mask][0]
+            if not self.network.params["input_params"]["poisson_input"]:
+                K_ext = self.external_synapses[pop]
+                W_ext = self.network.W[self.name][pop]["external"]["external"]
+                tau_syn = self.network.params["neuron_params"][
+                    "single_neuron_dict"
+                ]["tau_syn"]
+                DC = (
+                    K_ext
+                    * W_ext
+                    * tau_syn
+                    * 1.0e-3
+                    * self.network.params["rate_ext"]
                 )
-                I_e = self.network.add_DC_drive[mask][0]
-                if not self.network.params["input_params"]["poisson_input"]:
-                    K_ext = self.external_synapses[pop]
-                    W_ext = self.network.W[self.name][pop]["external"]["external"]
-                    tau_syn = self.network.params["neuron_params"][
-                        "single_neuron_dict"
-                    ]["tau_syn"]
-                    DC = (
-                        K_ext
-                        * W_ext
-                        * tau_syn
-                        * 1.0e-3
-                        * self.network.params["rate_ext"]
-                    )
-                    I_e += DC
-                ngpu.SetStatus(neurons, {"I_e": I_e})
-                Vm = self.network.params["neuron_params"]["V0_mean"]
-                Vstd = self.network.params["neuron_params"]["V0_sd"]
-                Vmin = Vm - 3 * Vstd
-                Vmax = Vm + 3 * Vstd
-                E_L = self.network.params["neuron_params"]["single_neuron_dict"]["E_L"]
-                ngpu.SetStatus(
-                    neurons,
-                    "V_m_rel",
-                    {
-                        "distribution": "normal_clipped",
-                        "mu": Vm - E_L,
-                        "low": Vmin - E_L,
-                        "high": Vmax - E_L,
-                        "sigma": Vstd,
-                    },
-                )
-                self.num_local_nodes += len(neurons)
+                I_e += DC
+            ngpu.SetStatus(neurons, {"I_e": I_e})
+            Vm = self.network.params["neuron_params"]["V0_mean"]
+            Vstd = self.network.params["neuron_params"]["V0_sd"]
+            Vmin = Vm - 3 * Vstd
+            Vmax = Vm + 3 * Vstd
+            E_L = self.network.params["neuron_params"]["single_neuron_dict"]["E_L"]
+            ngpu.SetStatus(
+                neurons,
+                "V_m_rel",
+                {
+                    "distribution": "normal_clipped",
+                    "mu": Vm - E_L,
+                    "low": Vmin - E_L,
+                    "high": Vmax - E_L,
+                    "sigma": Vstd,
+                },
+            )
+            self.num_local_nodes += len(neurons)
 
             # Store first and last GID of each population
             self.gids[pop] = (neurons[0], neurons[-1])

@@ -134,6 +134,7 @@ class NESTGPU {
     int n_poiss_node_;
     int n_remote_node_;
     int i_remote_node_0_;
+    int n_global_node_;
 
     double start_real_time_;
     double build_real_time_;
@@ -682,6 +683,17 @@ class NESTGPU {
     int IsNeuronGroupParam(int i_node, std::string param_name);
 
     float GetNeuronGroupParam(int i_node, std::string param_name);
+
+    // below: build in parallel
+
+    void ConvertGlobalToLocalId(int &i_node, int &n_node);
+
+    NodeSeq CreatePar(std::string model_name, int n_neuron = 1, int n_port = 1);
+
+    int IsNeuronGroupParamPar(int i_node, std::string param_name);
+
+    int SetNeuronGroupParamPar(int i_node, int n_node, std::string param_name,
+                            float val);
 };
 
 #endif

@@ -7,7 +7,7 @@ import numpy as np
 import pynvml
 from config import base_path, data_path
 from mpi4py import MPI
-from multiarea_model import MultiAreaModel
+from multiarea_model import MultiAreaModel, MultiAreaModelPar
 from multiarea_model.default_params import nested_update
 
 size = MPI.COMM_WORLD.Get_size()
@@ -23,7 +23,6 @@ def print_mpi_info():
     print(
         f"hostname={name}, rank={rank}, size={size}, local_rank={local_rank}, local_size={local_size}, compute_nodes={compute_nodes}"
     )
-
 
 def print_mem_info():
     def getMemInfo():
@@ -45,18 +44,22 @@ def print_mem_info():
     print(f"MPI Rank {rank} : GPU Memory : ", nvmlMemInfo)
     pynvml.nvmlShutdown()
 
-
 def simulation(label):
     ngpu.ConnectMpiInit()
     # ngpu.AddMode("dump_syndelay")
     # ngpu.AddMode("dump_comm_dist")
     # ngpu.AddMode("comm_throughput")
     # ngpu.AddMode("comm_cuda")
-    ngpu.AddMode("comm_overlap")
+    # ngpu.AddMode("comm_overlap")
     # ngpu.AddMode("comm_persistent")
-    M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
+    # build_par = False
+    build_par = True
+    if build_par:
+        ngpu.AddMode("build_par")
+        M = MultiAreaModelPar(label=label, network_spec=label, simulation=True, sim_spec=label)
+    else:
+        M = MultiAreaModel(label=label, network_spec=label, simulation=True, sim_spec=label)
     M.simulation.simulate()
-
 
 def main():
     print_mpi_info()
@@ -65,7 +68,6 @@ def main():
     simulation(label)
     print_mem_info()
     # free NEST-GPU memory via call deconstructa
-
 
 if __name__ == "__main__":
     main()

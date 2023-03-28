@@ -23,6 +23,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <algorithm>
+#include <cassert>
 #include <chrono>
 #include <cmath>
 #include <filesystem>
@@ -110,6 +111,7 @@ NESTGPU::NESTGPU() {
     sim_time_ = 1000.0;  // Simulation time in ms
     n_poiss_node_ = 0;
     n_remote_node_ = 0;
+    n_global_node_ = 0;
     SetTimeResolution(0.1);  // time resolution in ms
     max_spike_num_fact_ = 1.0;
     max_spike_per_host_fact_ = 1.0;
@@ -2128,4 +2130,58 @@ RemoteNodeSeq NESTGPU::RemoteCreate(int i_host, std::string model_name,
 #else
     throw ngpu_exception("MPI is not available in your build");
 #endif
+}
+
+void NESTGPU::ConvertGlobalToLocalId(int &i_node, int &n_node) {
+    int p = MpiId();
+    int np = MpiNp();
+    int i_assign_node = i_node + ((p - (i_node % np) + np) % np);
+    if (i_assign_node >= i_node + n_node) {
+        n_node = 0;
+        i_node = -1;
+    } else {
+        n_node = ((i_node + n_node - 1) - i_assign_node) / np + 1;
+        i_node = i_assign_node / np;
+    }
+}
+
+NodeSeq NESTGPU::CreatePar(std::string model_name, int n_node /*=1*/,
+                           int n_port /*=1*/) {
+#ifdef HAVE_MPI
+    int i_node = n_global_node_;
+    NodeSeq node_seq(i_node, n_node);
+    n_global_node_ += n_node;
+    ConvertGlobalToLocalId(i_node, n_node);
+    assert(n_node > 0);
+    Create(model_name, n_node, n_port);
+    return node_seq;
+#else
+    throw ngpu_exception("MPI is not available in your build");
+#endif
+}
+
+int NESTGPU::IsNeuronGroupParamPar(int i_node, std::string param_name) {
+    int is_group_param;
+    int np = MpiNp();
+    if (i_node % np == MpiId()) {
+        int i_group;
+        int i_node_0 = GetNodeSequenceOffset(i_node / np, 1, i_group);
+        is_group_param = node_vect_[i_group]->IsGroupParam(param_name);
+    }
+    MPI_Bcast(&is_group_param, sizeof(int), MPI_INT, i_node % np,
+              MPI_COMM_WORLD);
+    return is_group_param;
+}
+
+int NESTGPU::SetNeuronGroupParamPar(int i_node, int n_node,
+                                    std::string param_name, float val) {
+    ConvertGlobalToLocalId(i_node, n_node);
+    int i_group;
+    int i_node_0 = GetNodeSequenceOffset(i_node, n_node, i_group);
+    if (i_node_0 != i_node || node_vect_[i_group]->n_node_ != n_node) {
+        throw ngpu_exception(std::string("Group parameter ") + param_name +
+                             " can only be set for all and only "
+                             " the nodes of the same group");
+    }
+    return node_vect_[i_group]->SetGroupParam(param_name, val);
 }

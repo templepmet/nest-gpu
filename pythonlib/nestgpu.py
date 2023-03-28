@@ -1,10 +1,11 @@
 """ Python interface for NESTGPU"""
-import sys, platform
-import ctypes, ctypes.util
-import os
-import unicodedata
+import ctypes
+import ctypes.util
 import gc
-
+import os
+import platform
+import sys
+import unicodedata
 
 print('\n              -- NEST GPU --\n')
 print('  Copyright (C) 2004 The NEST Initiative\n')
@@ -2487,7 +2488,7 @@ def SetKernelStatus(params, val=None):
 NESTGPU_RemoteCreate = _nestgpu.NESTGPU_RemoteCreate
 NESTGPU_RemoteCreate.argtypes = (ctypes.c_int, c_char_p, ctypes.c_int,
                                    ctypes.c_int)
-NESTGPU_Create.restype = ctypes.c_int
+NESTGPU_RemoteCreate.restype = ctypes.c_int
 def RemoteCreate(i_host, model_name, n_node=1, n_ports=1, status_dict=None):
     "Create a remote neuron group"
     if (type(status_dict)==dict):
@@ -2503,6 +2504,118 @@ def RemoteCreate(i_host, model_name, n_node=1, n_ports=1, status_dict=None):
                                     ctypes.c_int(n_ports))
     node_seq = NodeSeq(i_node, n_node)
     ret = RemoteNodeSeq(i_host, node_seq)
+    if GetErrorCode() != 0:
+        raise ValueError(GetErrorMessage())
+    return ret
+
+
+#####################################################################
+##                     Build in Parallel                           ##
+#####################################################################
+
+NESTGPU_CreatePar = _nestgpu.NESTGPU_CreatePar
+NESTGPU_CreatePar.argtypes = (c_char_p, ctypes.c_int, ctypes.c_int)
+NESTGPU_CreatePar.restype = ctypes.c_int
+def CreatePar(model_name, n_node=1, n_ports=1):
+    "Create a neuron group in parallel"
+    
+    c_model_name = ctypes.create_string_buffer(to_byte_str(model_name), len(model_name)+1)
+    i_node = NESTGPU_CreatePar(c_model_name, ctypes.c_int(n_node), ctypes.c_int(n_ports))
+    ret = NodeSeq(i_node, n_node)
+    if GetErrorCode() != 0:
+        raise ValueError(GetErrorMessage())
+    return ret
+
+
+def SetStatusPar(gen_object, params, val=None):
+    "Set neuron or synapse group parameters or variables using dictionaries"
+    
+    gc.disable()
+    if type(gen_object)==SynGroup:
+        ret = SetSynGroupStatus(gen_object, params, val)
+        gc.enable()
+        return ret
+    nodes = gen_object
+    if val != None:
+         SetNeuronStatusPar(nodes, params, val)
+    elif type(params)==dict:
+        for param_name in params:
+            SetNeuronStatusPar(nodes, param_name, params[param_name])
+    elif (type(params)==list)  | (type(params) is tuple):
+        if len(params) != len(nodes):
+            raise ValueError("List should have the same size as nodes")
+        for param_dict in params:
+            if type(param_dict)!=dict:
+                raise ValueError("Type of list elements should be dict")
+            for param_name in param_dict:
+                SetNeuronStatusPar(nodes, param_name, param_dict[param_name])
+    else:
+        raise ValueError("Wrong argument in SetStatus")
+    if GetErrorCode() != 0:
+        raise ValueError(GetErrorMessage())
+    gc.enable()
+
+
+def SetNeuronStatusPar(nodes, var_name, val):
+    "Set neuron group scalar or array variable or parameter"
+    if (type(nodes)!=list) & (type(nodes)!=tuple) & (type(nodes)!=NodeSeq):
+        raise ValueError("Unknown node type")
+    if (type(val)==dict):
+        array_size = len(nodes)
+        arr = DictToArray(val, array_size)
+        for i in range(array_size):
+            SetNeuronStatusPar([nodes[i]], var_name, arr[i])
+        return
+    
+    c_var_name = ctypes.create_string_buffer(to_byte_str(var_name),
+                                               len(var_name)+1)
+    if type(nodes)==NodeSeq:
+        if IsNeuronGroupParamPar(nodes.i0, var_name):
+            SetNeuronGroupParamPar(nodes, var_name, val)
+        elif IsNeuronScalParam(nodes.i0, var_name):
+            SetNeuronScalParam(nodes.i0, nodes.n, var_name, val)
+        elif (IsNeuronPortParam(nodes.i0, var_name) |
+              IsNeuronArrayParam(nodes.i0, var_name)):
+            SetNeuronArrayParam(nodes.i0, nodes.n, var_name, val)
+        elif IsNeuronIntVar(nodes.i0, var_name):
+            SetNeuronIntVar(nodes.i0, nodes.n, var_name, val)
+        elif IsNeuronScalVar(nodes.i0, var_name):
+            SetNeuronScalVar(nodes.i0, nodes.n, var_name, val)
+        elif (IsNeuronPortVar(nodes.i0, var_name) |
+              IsNeuronArrayVar(nodes.i0, var_name)):
+            SetNeuronArrayVar(nodes.i0, nodes.n, var_name, val)
+        else:
+            raise ValueError("Unknown neuron variable or parameter")
+    else:
+        raise ValueError("Not implemented")
+
+
+NESTGPU_IsNeuronGroupParamPar = _nestgpu.NESTGPU_IsNeuronGroupParamPar
+NESTGPU_IsNeuronGroupParamPar.argtypes = (ctypes.c_int, c_char_p)
+NESTGPU_IsNeuronGroupParamPar.restype = ctypes.c_int
+def IsNeuronGroupParamPar(i_node, param_name):
+    "Check name of neuron scalar parameter"
+    c_param_name = ctypes.create_string_buffer(to_byte_str(param_name),
+                                               len(param_name)+1)
+    ret = (NESTGPU_IsNeuronGroupParamPar(ctypes.c_int(i_node), c_param_name)!=0) 
+    if GetErrorCode() != 0:
+        raise ValueError(GetErrorMessage())
+    return ret
+
+NESTGPU_SetNeuronGroupParamPar = _nestgpu.NESTGPU_SetNeuronGroupParamPar
+NESTGPU_SetNeuronGroupParamPar.argtypes = (ctypes.c_int, ctypes.c_int,
+                                          c_char_p, ctypes.c_float)
+NESTGPU_SetNeuronGroupParamPar.restype = ctypes.c_int
+def SetNeuronGroupParamPar(nodes, param_name, val):
+    "Set neuron group parameter value"
+    if type(nodes)!=NodeSeq:
+        raise ValueError("Wrong argument type in SetNeuronGroupParamPar")
+
+    c_param_name = ctypes.create_string_buffer(to_byte_str(param_name),
+                                               len(param_name)+1)
+    ret = NESTGPU_SetNeuronGroupParamPar(ctypes.c_int(nodes.i0),
+                                        ctypes.c_int(nodes.n),
+                                        c_param_name, ctypes.c_float(val))
     if GetErrorCode() != 0:
         raise ValueError(GetErrorMessage())
     return ret

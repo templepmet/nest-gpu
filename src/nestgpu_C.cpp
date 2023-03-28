@@ -1391,4 +1391,36 @@ int NESTGPU_RemoteCreate(int i_host, char *model_name, int n_neuron,
     }
     END_ERR_PROP return ret;
 }
+
+int NESTGPU_CreatePar(char *model_name, int n_neuron, int n_port) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string model_name_str = std::string(model_name);
+        NodeSeq neur =
+            NESTGPU_instance->CreatePar(model_name_str, n_neuron, n_port);
+        ret = neur[0];
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_IsNeuronGroupParamPar(int i_node, char *param_name) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string param_name_str = std::string(param_name);
+
+        ret = NESTGPU_instance->IsNeuronGroupParamPar(i_node, param_name_str);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_SetNeuronGroupParamPar(int i_node, int n_node, char *param_name,
+                                   float val) {
+    float ret = 0.0;
+    BEGIN_ERR_PROP {
+        std::string param_name_str = std::string(param_name);
+        ret = NESTGPU_instance->SetNeuronGroupParamPar(i_node, n_node,
+                                                       param_name_str, val);
+    }
+    END_ERR_PROP return ret;
+}
 }

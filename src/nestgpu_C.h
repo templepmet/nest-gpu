@@ -329,6 +329,15 @@ int NESTGPU_SetIntParam(char *param_name, int val);
 int NESTGPU_RemoteCreate(int i_host, char *model_name, int n_neuron,
                          int n_port);
 
+// below build in parallel
+
+int NESTGPU_CreatePar(char *model_name, int n_neuron, int n_port);
+
+int NESTGPU_IsNeuronGroupParamPar(int i_node, char *param_name);
+
+int NESTGPU_SetNeuronGroupParamPar(int i_node, int n_node, char *param_name,
+                                   float val);
+
 #ifdef __cplusplus
 }
 #endif

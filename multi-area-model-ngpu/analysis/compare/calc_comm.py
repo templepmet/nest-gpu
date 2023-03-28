@@ -80,19 +80,20 @@ for lab in time_base:
     time_y[lab] = [time_base[lab], time_prop[lab]]
 
 plt.rcParams["axes.axisbelow"] = True
-plt.rcParams["font.size"] = 14
+plt.rcParams["font.size"] = 16
 plt.figure()
 plt.grid()
 plt.ylabel("処理時間 [s]")
 
-lab_table = {"calc": "計算", "comm_immed": "通信（即時）", "comm_delay": "通信（オーバラップ）"}
+lab_table = {"calc": "計算", "comm_immed": "通信（非オーバラップ）", "comm_delay": "通信（オーバラップ）"}
 
 bottom = [0, 0]
 for lab in time_base:
     plt.bar(
-        ["既存手法", "提案手法"],
+        [0, 0.3],
         time_y[lab],
-        width=0.5,
+        tick_label=["既存手法", "提案手法"],
+        width=0.1,
         bottom=bottom,
         align="center",
         label=lab_table[lab],
@@ -100,5 +101,9 @@ for lab in time_base:
     bottom += np.array(time_y[lab])
 plt.ylim(0, 330)
 
-plt.legend(ncol=3, bbox_to_anchor=(1, 1), loc="lower right")
+ax = plt.gca()
+handles, labels = ax.get_legend_handles_labels()
+plt.legend(handles[::-1], labels[::-1], bbox_to_anchor=(1, 1), loc="lower right")
 plt.savefig("time.png", bbox_inches="tight", pad_inches=0.2)
+
+print(bottom)
