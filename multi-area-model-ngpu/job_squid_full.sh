@@ -2,7 +2,7 @@
 #----- qsub option -----
 #PBS -q SQUID
 #PBS --group=${GROUP_NAME}
-#PBS -l elapstim_req=01:00:00
+#PBS -l elapstim_req=02:00:00
 #PBS -o ./log/job_%s_out.txt
 #PBS -e ./log/job_%s_err.txt
 #PBS -b 8  # ノード数

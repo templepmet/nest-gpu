@@ -694,6 +694,7 @@ int ConnectMpi::RecvSpikeFromRemote(int n_hosts, int max_spike_per_host) {
                   max_spike_per_host, MPI_INT, i, tag, MPI_COMM_WORLD,
                   &recv_mpi_request[i]);
     }
+    MPI_Waitall(n_hosts, send_mpi_request, send_mpi_status);
     MPI_Waitall(n_hosts, recv_mpi_request, recv_mpi_status);
     for (int i = 0; i < n_hosts; ++i) {
         MPI_Get_count(&recv_mpi_status[i], MPI_INT, &count);
