@@ -686,14 +686,37 @@ class NESTGPU {
 
     // below: build in parallel
 
-    void ConvertGlobalToLocalId(int &i_node, int &n_node);
+    int ConvertGlobalToLocalId(int &i_node, int &n_node);
 
     NodeSeq CreatePar(std::string model_name, int n_neuron = 1, int n_port = 1);
 
     int IsNeuronGroupParamPar(int i_node, std::string param_name);
 
+    int IsNeuronScalParamPar(int i_node, std::string param_name);
+
+    int IsNeuronPortParamPar(int i_node, std::string param_name);
+
+    int IsNeuronArrayParamPar(int i_node, std::string param_name);
+
+    int IsNeuronIntVarPar(int i_node, std::string var_name);
+
+    int IsNeuronScalVarPar(int i_node, std::string var_name);
+
+    int IsNeuronPortVarPar(int i_node, std::string var_name);
+
+    int IsNeuronArrayVarPar(int i_node, std::string var_name);
+
     int SetNeuronGroupParamPar(int i_node, int n_node, std::string param_name,
-                            float val);
+                               float val);
+
+    int SetNeuronParamPar(int i_node, int n_neuron, std::string param_name,
+                          float val);
+
+    int SetNeuronVarPar(int i_node, int n_neuron, std::string var_name,
+                        float val);
+
+    int ActivateRecSpikeTimesPar(int i_node, int n_node,
+                                 int max_n_rec_spike_times);
 };
 
 #endif

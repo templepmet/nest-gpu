@@ -1413,6 +1413,76 @@ int NESTGPU_IsNeuronGroupParamPar(int i_node, char *param_name) {
     END_ERR_PROP return ret;
 }
 
+int NESTGPU_IsNeuronScalParamPar(int i_node, char *param_name) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string param_name_str = std::string(param_name);
+
+        ret = NESTGPU_instance->IsNeuronScalParamPar(i_node, param_name_str);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_IsNeuronPortParamPar(int i_node, char *param_name) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string param_name_str = std::string(param_name);
+
+        ret = NESTGPU_instance->IsNeuronPortParamPar(i_node, param_name_str);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_IsNeuronArrayParamPar(int i_node, char *param_name) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string param_name_str = std::string(param_name);
+
+        ret = NESTGPU_instance->IsNeuronArrayParamPar(i_node, param_name_str);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_IsNeuronIntVarPar(int i_node, char *var_name) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string var_name_str = std::string(var_name);
+
+        ret = NESTGPU_instance->IsNeuronIntVarPar(i_node, var_name_str);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_IsNeuronScalVarPar(int i_node, char *var_name) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string var_name_str = std::string(var_name);
+
+        ret = NESTGPU_instance->IsNeuronScalVarPar(i_node, var_name_str);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_IsNeuronPortVarPar(int i_node, char *var_name) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string var_name_str = std::string(var_name);
+
+        ret = NESTGPU_instance->IsNeuronPortVarPar(i_node, var_name_str);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_IsNeuronArrayVarPar(int i_node, char *var_name) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string var_name_str = std::string(var_name);
+
+        ret = NESTGPU_instance->IsNeuronArrayVarPar(i_node, var_name_str);
+    }
+    END_ERR_PROP return ret;
+}
+
 int NESTGPU_SetNeuronGroupParamPar(int i_node, int n_node, char *param_name,
                                    float val) {
     float ret = 0.0;
@@ -1420,6 +1490,38 @@ int NESTGPU_SetNeuronGroupParamPar(int i_node, int n_node, char *param_name,
         std::string param_name_str = std::string(param_name);
         ret = NESTGPU_instance->SetNeuronGroupParamPar(i_node, n_node,
                                                        param_name_str, val);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_SetNeuronScalParamPar(int i_node, int n_neuron, char *param_name,
+                                  float val) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string param_name_str = std::string(param_name);
+        ret = NESTGPU_instance->SetNeuronParamPar(i_node, n_neuron,
+                                                  param_name_str, val);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_SetNeuronScalVarPar(int i_node, int n_neuron, char *var_name,
+                                float val) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        std::string var_name_str = std::string(var_name);
+        ret =
+            NESTGPU_instance->SetNeuronVar(i_node, n_neuron, var_name_str, val);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_ActivateRecSpikeTimesPar(int i_node, int n_node,
+                                     int max_n_rec_spike_times) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        ret = NESTGPU_instance->ActivateRecSpikeTimesPar(i_node, n_node,
+                                                         max_n_rec_spike_times);
     }
     END_ERR_PROP return ret;
 }

@@ -3,6 +3,7 @@ import re
 import sys
 from collections import defaultdict
 
+import japanize_matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -40,15 +41,15 @@ part = {
     "SpikeBufferUpdate_time": "calc",
     "poisson_generator_time": "calc",
     "neuron_Update_time": "calc",
-    "copy_ext_spike_time": "deliver",
-    "SendExternalSpike_time": "deliver",
+    "copy_ext_spike_time": "calc",
+    "SendExternalSpike_time": "calc",
     "SendSpikeToRemote_time": "comm",
     "RecvSpikeFromRemote_time": "comm",
     "CopySpikeFromRemote_time": "comm",
     "MpiBarrier_time": "comm",
-    "copy_spike_time": "deliver",
-    "ClearGetSpikeArrays_time": "deliver",
-    "NestedLoop_time": "deliver",
+    "copy_spike_time": "calc",
+    "ClearGetSpikeArrays_time": "calc",
+    "NestedLoop_time": "calc",
     "GetSpike_time": "calc",
     "SpikeReset_time": "calc",
     "ExternalSpikeReset_time": "calc",
@@ -94,8 +95,9 @@ max_time = max(sim_time)
 
 # time
 # convert for plot
-plot_label = ["calc", "deliver", "comm"]
-plot_color = {"calc":"tab:orange", "deliver":"tab:blue", "comm":"tab:green"}
+plot_label = ["calc", "comm"]
+label_table = {"calc": "計算", "comm": "通信"}
+plot_color = {"calc":"tab:orange", "comm":"tab:blue"}
 y = {}
 for l in plot_label:
     y[l] = [0.0] * procs
@@ -111,11 +113,11 @@ for lab in time_label:
         y[part[lab]] += np.array(yt)
 
 plt.rcParams["axes.axisbelow"] = True
-plt.rcParams["font.size"] = 12
+plt.rcParams["font.size"] = 16
 plt.figure()
 plt.grid()
-plt.xlabel("MPI Process")
-plt.ylabel("Processing Time [s]")
+plt.xlabel("GPU ID")
+plt.ylabel("処理時間 [s]")
 bottom = np.array([0.0] * procs)
 x = [i for i in range(procs)]
 idx = 0
@@ -124,9 +126,9 @@ for lab in plot_label:
         x,
         y[lab],
         bottom=bottom,
-        color=plot_color[lab],
+        # color=plot_color[lab],
         align="center",
-        label=lab,
+        label=label_table[lab],
     )
     bottom += np.array(y[lab])
     idx += 1
@@ -134,8 +136,8 @@ plt.ylim(0.0, np.max(bottom) * 1.1)
 
 ax = plt.gca()
 handles, labels = ax.get_legend_handles_labels()
-plt.legend(handles[::-1], labels[::-1], bbox_to_anchor=(1, 0), loc="lower left")
-plt.savefig(os.path.join(sim_dir, "time_3p.png"), bbox_inches="tight", pad_inches=0.2)
+plt.legend(ncol=2, bbox_to_anchor=(1, 1), loc="lower right")
+plt.savefig(os.path.join(sim_dir, "time_2p.png"), bbox_inches="tight", pad_inches=0.2)
 
 # print(y["calc"][14])
 # print(y["comm"][14])

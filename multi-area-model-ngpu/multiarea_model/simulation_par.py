@@ -580,7 +580,7 @@ class Area:
                 self.name
                 in self.simulation.params["recording_dict"]["areas_recorded"]
             ):
-                ngpu.ActivateRecSpikeTimes(neurons, 100)
+                ngpu.ActivateRecSpikeTimesPar(neurons, 100)
                 print(
                     "Activated spike times recording for area:",
                     self.name,
@@ -605,13 +605,13 @@ class Area:
                     * self.network.params["rate_ext"]
                 )
                 I_e += DC
-            ngpu.SetStatus(neurons, {"I_e": I_e})
+            ngpu.SetStatusPar(neurons, {"I_e": I_e})
             Vm = self.network.params["neuron_params"]["V0_mean"]
             Vstd = self.network.params["neuron_params"]["V0_sd"]
             Vmin = Vm - 3 * Vstd
             Vmax = Vm + 3 * Vstd
             E_L = self.network.params["neuron_params"]["single_neuron_dict"]["E_L"]
-            ngpu.SetStatus(
+            ngpu.SetStatusPar(
                 neurons,
                 "V_m_rel",
                 {

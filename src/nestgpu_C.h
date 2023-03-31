@@ -335,8 +335,31 @@ int NESTGPU_CreatePar(char *model_name, int n_neuron, int n_port);
 
 int NESTGPU_IsNeuronGroupParamPar(int i_node, char *param_name);
 
+int NESTGPU_IsNeuronScalParamPar(int i_node, char *param_name);
+
+int NESTGPU_IsNeuronPortParamPar(int i_node, char *param_name);
+
+int NESTGPU_IsNeuronArrayParamPar(int i_node, char *param_name);
+
+int NESTGPU_IsNeuronIntVarPar(int i_node, char *var_name);
+
+int NESTGPU_IsNeuronScalVarPar(int i_node, char *var_name);
+
+int NESTGPU_IsNeuronPortVarPar(int i_node, char *var_name);
+
+int NESTGPU_IsNeuronArrayVarPar(int i_node, char *var_name);
+
 int NESTGPU_SetNeuronGroupParamPar(int i_node, int n_node, char *param_name,
                                    float val);
+
+int NESTGPU_SetNeuronScalParamPar(int i_node, int n_neuron, char *param_name,
+                                  float val);
+
+int NESTGPU_SetNeuronScalVarPar(int i_node, int n_neuron, char *var_name,
+                                float val);
+
+int NESTGPU_ActivateRecSpikeTimesPar(int i_node, int n_node,
+                                     int max_n_rec_spike_times);
 
 #ifdef __cplusplus
 }
