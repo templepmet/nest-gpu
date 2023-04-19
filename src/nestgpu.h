@@ -717,6 +717,12 @@ class NESTGPU {
 
     int ActivateRecSpikeTimesPar(int i_node, int n_node,
                                  int max_n_rec_spike_times);
+
+    int ConnectPar(int i_source, int n_source, int i_target, int n_target,
+                   ConnSpec &conn_spec, SynSpec &syn_spec);
+
+    int _ConnectPar(int i_source, int n_source, int i_target, int n_target,
+                    ConnSpec &conn_spec, SynSpec &syn_spec);
 };
 
 #endif

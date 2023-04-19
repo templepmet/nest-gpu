@@ -1556,7 +1556,7 @@ def SetSynParamFromArray(param_name, par_dict, array_size):
     array_pt = ctypes.cast(arr, ctypes.c_void_p)
     SetSynSpecFloatPtParam(arr_param_name, array_pt)
 
-    
+
 NESTGPU_ConnectSeqSeq = _nestgpu.NESTGPU_ConnectSeqSeq
 NESTGPU_ConnectSeqSeq.argtypes = (ctypes.c_int, ctypes.c_int, ctypes.c_int,
                                     ctypes.c_int)
@@ -2521,6 +2521,8 @@ def CreatePar(model_name, n_node=1, n_ports=1):
     
     c_model_name = ctypes.create_string_buffer(to_byte_str(model_name), len(model_name)+1)
     i_node = NESTGPU_CreatePar(c_model_name, ctypes.c_int(n_node), ctypes.c_int(n_ports))
+    if model_name == "poisson_generator": # 本当はi_node,n_node両方をgetすべき
+        n_node *= MpiNp()
     ret = NodeSeq(i_node, n_node)
     if GetErrorCode() != 0:
         raise ValueError(GetErrorMessage())
@@ -2750,4 +2752,60 @@ def ActivateRecSpikeTimesPar(nodes, max_n_rec_spike_times):
 
     if GetErrorCode() != 0:
         raise ValueError(GetErrorMessage())
+    return ret
+
+
+NESTGPU_ConnectSeqSeqPar = _nestgpu.NESTGPU_ConnectSeqSeqPar
+NESTGPU_ConnectSeqSeqPar.argtypes = (ctypes.c_int, ctypes.c_int, ctypes.c_int,
+                                    ctypes.c_int)
+NESTGPU_ConnectSeqSeqPar.restype = ctypes.c_int
+
+def ConnectPar(source, target, conn_dict, syn_dict): 
+    "Connect two node groups"
+    if type(source)!=NodeSeq:
+        raise ValueError("Unknown source type")
+    if type(target)!=NodeSeq:
+        raise ValueError("Unknown target type")
+
+    gc.disable()
+    ConnSpecInit()
+    SynSpecInit()
+    for param_name in conn_dict:
+        if param_name=="rule":
+            for i_rule in range(len(conn_rule_name)):
+                if conn_dict[param_name]==conn_rule_name[i_rule]:
+                    break
+            if i_rule < len(conn_rule_name):
+                SetConnSpecParam(param_name, i_rule)
+            else:
+                raise ValueError("Unknown connection rule")
+        elif ConnSpecIsParam(param_name):
+            SetConnSpecParam(param_name, conn_dict[param_name])
+        else:
+            raise ValueError("Unknown connection parameter")
+    
+    array_size = RuleArraySize(conn_dict, source, target)
+    
+    for param_name in syn_dict:
+        if SynSpecIsIntParam(param_name):
+            val = syn_dict[param_name]
+            if ((param_name=="synapse_group") & (type(val)==SynGroup)):
+                val = val.i_syn_group
+            SetSynSpecIntParam(param_name, val)
+        elif SynSpecIsFloatParam(param_name):
+            fpar = syn_dict[param_name]
+            if (type(fpar)==dict):
+                SetSynParamFromArray(param_name, fpar, array_size)
+            else:
+                SetSynSpecFloatParam(param_name, fpar)
+
+        elif SynSpecIsFloatPtParam(param_name):
+            SetSynSpecFloatPtParam(param_name, syn_dict[param_name])
+        else:
+            raise ValueError("Unknown synapse parameter")
+    
+    ret = NESTGPU_ConnectSeqSeqPar(source.i0, source.n, target.i0, target.n)
+    if GetErrorCode() != 0:
+        raise ValueError(GetErrorMessage())
+    gc.enable()
     return ret

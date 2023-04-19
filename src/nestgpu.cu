@@ -962,6 +962,8 @@ std::vector<std::vector<float>> *NESTGPU::GetRecordData(int i_record) {
 }
 
 int NESTGPU::GetNodeSequenceOffset(int i_node, int n_node, int &i_group) {
+    // printf("GetNodeSequenceOffset: mpi=%d, i_node=%d, n_node=%d,
+    // map_size=%d\n", MpiId(), i_node, n_node, node_group_map_.size());
     if (i_node < 0 || (i_node + n_node > (int)node_group_map_.size())) {
         throw ngpu_exception(
             "Unrecognized node in getting node sequence offset");
@@ -2139,21 +2141,25 @@ int NESTGPU::ConvertGlobalToLocalId(int &i_node, int &n_node) {
     if (i_assign_node >= i_node + n_node) {
         n_node = 0;
         i_node = -1;
-        return 1;
     } else {
         n_node = ((i_node + n_node - 1) - i_assign_node) / np + 1;
         i_node = i_assign_node / np;
-        return 0;
     }
+    return n_node;
 }
 
 NodeSeq NESTGPU::CreatePar(std::string model_name, int n_node /*=1*/,
                            int n_port /*=1*/) {
 #ifdef HAVE_MPI
     int i_node = n_global_node_;
+    if (model_name == "poisson_generator") {
+        n_node *= MpiNp();
+    }
     NodeSeq node_seq(i_node, n_node);
     n_global_node_ += n_node;
-    if (ConvertGlobalToLocalId(i_node, n_node)) {
+    if (ConvertGlobalToLocalId(i_node, n_node) > 0) {
+        // printf("CreatePar: mpi=%d, i_node=%d, n_node=%d\n", MpiId(),
+        // i_node, n_node);
         Create(model_name, n_node, n_port);
     }
     return node_seq;
@@ -2167,11 +2173,11 @@ int NESTGPU::IsNeuronGroupParamPar(int i_node, std::string param_name) {
     int np = MpiNp();
     if (i_node % np == MpiId()) {
         int i_group;
+        // printf("i_node=%d,mpi_id=%d\n", i_node, MpiId());
         GetNodeSequenceOffset(i_node / np, 1, i_group);
         ret = node_vect_[i_group]->IsGroupParam(param_name);
     }
     MPI_Bcast(&ret, sizeof(int), MPI_INT, i_node % np, MPI_COMM_WORLD);
-    printf("i_node=%d,ret=%d\n", i_node, ret);
     return ret;
 }
 
@@ -2261,7 +2267,7 @@ int NESTGPU::IsNeuronArrayVarPar(int i_node, std::string var_name) {
 
 int NESTGPU::SetNeuronGroupParamPar(int i_node, int n_node,
                                     std::string param_name, float val) {
-    if (ConvertGlobalToLocalId(i_node, n_node)) {
+    if (ConvertGlobalToLocalId(i_node, n_node) == 0) {
         return 0;
     }
     int i_group;
@@ -2276,7 +2282,7 @@ int NESTGPU::SetNeuronGroupParamPar(int i_node, int n_node,
 
 int NESTGPU::SetNeuronParamPar(int i_node, int n_node, std::string param_name,
                                float val) {
-    if (ConvertGlobalToLocalId(i_node, n_node)) {
+    if (ConvertGlobalToLocalId(i_node, n_node) == 0) {
         return 0;
     }
     int i_group;
@@ -2287,7 +2293,7 @@ int NESTGPU::SetNeuronParamPar(int i_node, int n_node, std::string param_name,
 
 int NESTGPU::SetNeuronVarPar(int i_node, int n_node, std::string var_name,
                              float val) {
-    if (ConvertGlobalToLocalId(i_node, n_node)) {
+    if (ConvertGlobalToLocalId(i_node, n_node) == 0) {
         return 0;
     }
     int i_group;
@@ -2297,7 +2303,7 @@ int NESTGPU::SetNeuronVarPar(int i_node, int n_node, std::string var_name,
 
 int NESTGPU::ActivateRecSpikeTimesPar(int i_node, int n_node,
                                       int max_n_rec_spike_times) {
-    if (ConvertGlobalToLocalId(i_node, n_node)) {
+    if (ConvertGlobalToLocalId(i_node, n_node) == 0) {
         return 0;
     }
     CheckUncalibrated(

@@ -15,7 +15,7 @@
 
 cd $PBS_O_WORKDIR
 
-module load BaseGPU/2022
+module load BaseGPU/2023
 
 SINGULARITY_PWD=`mpirun -np 1 pwd`
 # SINGULARITY_IMAGE=../singularity/nestgpu.sif

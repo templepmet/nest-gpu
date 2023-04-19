@@ -361,6 +361,9 @@ int NESTGPU_SetNeuronScalVarPar(int i_node, int n_neuron, char *var_name,
 int NESTGPU_ActivateRecSpikeTimesPar(int i_node, int n_node,
                                      int max_n_rec_spike_times);
 
+int NESTGPU_ConnectSeqSeqPar(int i_source, int n_source, int i_target,
+                          int n_target);
+
 #ifdef __cplusplus
 }
 #endif

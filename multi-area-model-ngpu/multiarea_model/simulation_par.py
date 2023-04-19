@@ -528,15 +528,16 @@ class Area:
             ]
 
         self.create_populations()
-        if rank == ngpu.Rank():
+        if self.rank == 0:
             print(
                 "Rank {}: created area {} with {} local nodes".format(
                     ngpu.Rank(), self.name, self.num_local_nodes
                 ),
                 flush=True,
             )
-            self.connect_devices()
-            self.connect_populations()
+        self.connect_devices()
+        self.connect_populations()
+        if self.rank == 0:
             print(
                 "Created internal connections of area n. ",
                 rank,
@@ -573,6 +574,7 @@ class Area:
                 self.network.params["neuron_params"]["neuron_model"],
                 int(self.neuron_numbers[pop]),
             )
+            # MPI.COMM_WORLD.barrier()
             ngpu.SetStatusPar(
                 neurons, self.network.params["neuron_params"]["single_neuron_dict"]
             )
@@ -581,12 +583,13 @@ class Area:
                 in self.simulation.params["recording_dict"]["areas_recorded"]
             ):
                 ngpu.ActivateRecSpikeTimesPar(neurons, 100)
-                print(
-                    "Activated spike times recording for area:",
-                    self.name,
-                    " population:",
-                    pop,
-                )
+                if self.rank == 0:
+                    print(
+                        "Activated spike times recording for area:",
+                        self.name,
+                        " population:",
+                        pop,
+                    )
             mask = create_vector_mask(
                 self.network.structure, areas=[self.name], pops=[pop]
             )
@@ -646,7 +649,7 @@ class Area:
             for pop in self.populations:
                 K_ext = self.external_synapses[pop]
                 W_ext = self.network.W[self.name][pop]["external"]["external"]
-                pg = ngpu.Create("poisson_generator", 1)
+                pg = ngpu.CreatePar("poisson_generator", 1)
                 print(
                     "Created 1 poisson generator for area n. ",
                     self.rank,
@@ -654,7 +657,7 @@ class Area:
                     pop,
                     flush=True,
                 )
-                ngpu.SetStatus(
+                ngpu.SetStatusPar(
                     pg,
                     {"rate": self.network.params["input_params"]["rate_ext"] * K_ext},
                 )
@@ -662,7 +665,7 @@ class Area:
                 syn_spec = {"weight": W_ext, "delay": 0.1}
                 i0 = self.gids[pop][0]
                 n = self.gids[pop][1] - i0 + 1
-                ngpu.Connect(pg, ngpu.NodeSeq(i0, n), conn_spec, syn_spec)
+                ngpu.ConnectPar(pg, ngpu.NodeSeq(i0, n), conn_spec, syn_spec)
                 self.poisson_generators.append(pg[0])
 
     def create_additional_input(self, input_type, source_area_name, cc_input):
@@ -763,10 +766,8 @@ def connect(simulation, target_area, source_area):
             source_n = source_area.gids[source][1] - source_i0 + 1
             target_i0 = target_area.gids[target][0]
             target_n = target_area.gids[target][1] - target_i0 + 1
-            ngpu.RemoteConnect(
-                source_area.rank,
+            ngpu.ConnectPar(
                 ngpu.NodeSeq(source_i0, source_n),
-                target_area.rank,
                 ngpu.NodeSeq(target_i0, target_n),
                 conn_spec,
                 syn_spec,

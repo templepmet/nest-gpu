@@ -22,9 +22,11 @@
 #define CONNECTRULES_H
 
 #include <stdio.h>
+#include <cassert>
 #include <iostream>
 #include <numeric>
 #include "nestgpu.h"
+#include "neuron_models.h"
 
 #ifdef HAVE_MPI
 #include "connect_mpi.h"
@@ -828,6 +830,60 @@ int NESTGPU::_RemoteConnectFixedOutdegree(RemoteNode<T1> source, int n_source,
     }
     MPI_Barrier(MPI_COMM_WORLD);
 
+    return 0;
+}
+
+int NESTGPU::_ConnectPar(int i_source, int n_source, int i_target, int n_target,
+                         ConnSpec &conn_spec, SynSpec &syn_spec) {
+    CheckUncalibrated("Connections cannot be created after calibration");
+
+    ConvertGlobalToLocalId(i_source, n_source);
+    ConvertGlobalToLocalId(i_target, n_target);
+    int i_group = node_group_map_[i_source];
+    int node_type = node_vect_[i_group]->GetNodeType();
+    if (node_type == i_poisson_generator_model) {
+        assert(conn_spec.rule_ == ALL_TO_ALL);
+        return _ConnectAllToAll<int, int>(i_source, n_source, i_target,
+                                          n_target, syn_spec);
+    }
+
+    // printf(
+    //     "rank=%d,i_source=%d,n_source=%d,i_target=%d,n_target=%d,i_group=%d,"
+    //     "node_type=%d\n",
+    //     MpiId(), i_source, n_source, i_target, n_target, i_group, node_type);
+
+    switch (conn_spec.rule_) {
+        case ONE_TO_ONE:
+            throw ngpu_exception("Not implemented");
+            // if (n_source != n_target) {
+            //     throw ngpu_exception(
+            //         "Number of source and target nodes must be equal "
+            //         "for the one-to-one connection rule");
+            // }
+            // return _ConnectOneToOne<int, int>(i_source, i_target, n_source,
+            //                                   syn_spec);
+        case ALL_TO_ALL:
+            throw ngpu_exception("Not implemented");
+            // return _ConnectAllToAll<int, int>(i_source, n_source, i_target,
+            //                                   n_target, syn_spec);
+        case FIXED_TOTAL_NUMBER:
+            return _ConnectFixedTotalNumber<int, int>(
+                i_source, n_source, i_target, n_target, conn_spec.total_num_,
+                syn_spec);
+            break;
+        case FIXED_INDEGREE:
+            throw ngpu_exception("Not implemented");
+            // return _ConnectFixedIndegree<int, int>(
+            //     i_source, n_source, i_target, n_target, conn_spec.indegree_,
+            //     syn_spec);
+        case FIXED_OUTDEGREE:
+            throw ngpu_exception("Not implemented");
+            // return _ConnectFixedOutdegree<int, int>(
+            //     i_source, n_source, i_target, n_target, conn_spec.outdegree_,
+            //     syn_spec);
+        default:
+            throw ngpu_exception("Unknown connection rule");
+    }
     return 0;
 }
 

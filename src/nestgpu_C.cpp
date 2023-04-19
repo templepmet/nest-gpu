@@ -1510,8 +1510,8 @@ int NESTGPU_SetNeuronScalVarPar(int i_node, int n_neuron, char *var_name,
     int ret = 0;
     BEGIN_ERR_PROP {
         std::string var_name_str = std::string(var_name);
-        ret =
-            NESTGPU_instance->SetNeuronVar(i_node, n_neuron, var_name_str, val);
+        ret = NESTGPU_instance->SetNeuronVarPar(i_node, n_neuron, var_name_str,
+                                                val);
     }
     END_ERR_PROP return ret;
 }
@@ -1522,6 +1522,17 @@ int NESTGPU_ActivateRecSpikeTimesPar(int i_node, int n_node,
     BEGIN_ERR_PROP {
         ret = NESTGPU_instance->ActivateRecSpikeTimesPar(i_node, n_node,
                                                          max_n_rec_spike_times);
+    }
+    END_ERR_PROP return ret;
+}
+
+int NESTGPU_ConnectSeqSeqPar(int i_source, int n_source, int i_target,
+                             int n_target) {
+    int ret = 0;
+    BEGIN_ERR_PROP {
+        ret =
+            NESTGPU_instance->ConnectPar(i_source, n_source, i_target, n_target,
+                                         ConnSpec_instance, SynSpec_instance);
     }
     END_ERR_PROP return ret;
 }
